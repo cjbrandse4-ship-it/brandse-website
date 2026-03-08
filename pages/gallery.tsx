@@ -7,39 +7,39 @@ import { useLanguage } from '../lib/useLanguage';
 
 const galleryItems = [
   {
-    src: '/gallery/arborist-chainsaw.jpg',
-    en: 'Certified arborist with professional chainsaw equipment',
-    fr: 'Arboriste certifie avec equipement de tronconneuse professionnel',
-  },
-  {
-    src: '/gallery/climber-with-crane.jpg',
-    en: 'Tree removal with crane assistance',
-    fr: 'Abattage d\'arbre avec assistance de grue',
+    src: '/gallery/hedge-trimming.jpg',
+    en: 'Cedar hedge trimming in West Island Montreal',
+    fr: 'Taille de haie de cedres dans l\'Ouest de l\'Ile de Montreal',
   },
   {
     src: '/gallery/tree-removal-stone-house.jpg',
-    en: 'Residential tree removal near heritage stone home',
-    fr: 'Abattage d\'arbre residentiel pres d\'une maison en pierre',
+    en: 'Tree removal next to a stone house in Pointe-Claire',
+    fr: 'Abattage d\'arbre pres d\'une maison en pierre a Pointe-Claire',
+  },
+  {
+    src: '/gallery/climber-with-crane.jpg',
+    en: 'Climber sectioning a large tree with crane support in Dorval',
+    fr: 'Grimpeur sectionnant un grand arbre avec grue a Dorval',
   },
   {
     src: '/gallery/climber-top-of-tree.jpg',
-    en: 'Arborist climbing for safe section-by-section removal',
-    fr: 'Arboriste en grimpe pour abattage securitaire section par section',
+    en: 'Arborist at the top of a dead tree in a backyard in Kirkland',
+    fr: 'Arboriste au sommet d\'un arbre mort dans une cour a Kirkland',
   },
   {
     src: '/gallery/stump-grinding.jpg',
-    en: 'Stump grinding with Vermeer professional equipment',
-    fr: 'Essouchage avec equipement professionnel Vermeer',
+    en: 'Stump grinding with a Vermeer machine in Beaconsfield',
+    fr: 'Essouchage avec une machine Vermeer a Beaconsfield',
   },
   {
-    src: '/gallery/hedge-trimming.jpg',
-    en: 'Precision cedar hedge trimming',
-    fr: 'Taille de haie de cedres de precision',
+    src: '/gallery/arborist-chainsaw.jpg',
+    en: 'Arborist cutting into a large trunk with a chainsaw in Ile-Bizard',
+    fr: 'Arboriste coupant un gros tronc a la tronconneuse a l\'Ile-Bizard',
   },
   {
     src: '/gallery/high-climb-removal.jpg',
-    en: 'High-altitude tree removal by experienced climber',
-    fr: 'Abattage en hauteur par grimpeur experimente',
+    en: 'High climb tree removal in Saint-Lazare',
+    fr: 'Abattage en hauteur a Saint-Lazare',
   },
 ];
 
