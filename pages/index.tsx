@@ -1,115 +1,166 @@
-import Image from "next/image";
-import localFont from "next/font/local";
+import Link from 'next/link';
+import { Shield, Award, Clock, MapPin, Star, Phone, ArrowRight } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../lib/useLanguage';
+import { siteConfig } from '../lib/seo';
+import { testimonials } from '../data/testimonials';
+import { locations } from '../data/locations';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+export default function HomePage() {
+  const { lang, t, getLocalizedPath } = useLanguage();
 
-export default function Home() {
+  const whyChoose = [
+    { icon: Shield, title: t.home.whyChoose1Title, desc: t.home.whyChoose1Desc },
+    { icon: Award, title: t.home.whyChoose2Title, desc: t.home.whyChoose2Desc },
+    { icon: Clock, title: t.home.whyChoose3Title, desc: t.home.whyChoose3Desc },
+  ];
+
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <SEOHead
+        title={t.home.metaTitle}
+        description={t.home.metaDesc}
+        path={lang === 'fr' ? '/fr' : '/'}
+        lang={lang}
+      />
+      <Header />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero */}
+      <section className="relative min-h-[600px] flex items-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${siteConfig.defaultImage})` }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative max-w-7xl mx-auto px-4 py-24 text-center text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            {t.home.heroTitle}
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-10">
+            {t.home.heroSubtitle}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href={getLocalizedPath('/contact')}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#2D5016] text-white rounded-lg font-semibold text-lg hover:bg-[#3a6b1d] transition-colors"
+            >
+              {t.common.getFreeQuote} <ArrowRight className="w-5 h-5" />
+            </Link>
+            <a
+              href={`tel:${siteConfig.contact.phone}`}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#2D5016] rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+            >
+              <Phone className="w-5 h-5" /> {t.common.callNow}
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+            {t.home.whyChooseTitle}
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            {whyChoose.map((item, i) => (
+              <div key={i} className="text-center p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-16 h-16 mx-auto mb-6 bg-[#2D5016]/10 rounded-full flex items-center justify-center">
+                  <item.icon className="w-8 h-8 text-[#2D5016]" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+            {t.home.servingTitle}
+          </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            {t.home.servingDesc}
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {locations.map((loc) => (
+              <Link
+                key={loc.slug}
+                href={getLocalizedPath(`/${loc.slug}`)}
+                className="flex items-center gap-3 p-4 bg-white rounded-lg border border-gray-200 hover:border-[#2D5016] hover:shadow-md transition-all group"
+              >
+                <MapPin className="w-5 h-5 text-[#2D5016] shrink-0" />
+                <span className="text-gray-700 font-medium group-hover:text-[#2D5016] transition-colors">
+                  {loc.name}
+                </span>
+              </Link>
+            ))}
+          </div>
+          <p className="text-center text-sm text-gray-500 mt-8">{t.home.servingFooter}</p>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+            {t.home.testimonialsTitle}
+          </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            {t.home.testimonialsDesc}
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.map((item) => (
+              <div key={item.id} className="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: item.rating }).map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4 italic">&ldquo;{item.text[lang]}&rdquo;</p>
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-full bg-[#2D5016]/10 flex items-center justify-center text-[#2D5016] font-bold">
+                    {item.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 text-sm">{item.name}</p>
+                    <p className="text-gray-500 text-xs">{item.location}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-[#2D5016]">
+        <div className="max-w-4xl mx-auto px-4 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.home.ctaTitle}</h2>
+          <p className="text-lg text-green-100 mb-8">{t.home.ctaDesc}</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href={getLocalizedPath('/contact')}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#2D5016] rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+            >
+              {t.common.getFreeQuote} <ArrowRight className="w-5 h-5" />
+            </Link>
+            <a
+              href={`tel:${siteConfig.contact.phone}`}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors"
+            >
+              <Phone className="w-5 h-5" /> {siteConfig.contact.phoneDisplay}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
   );
 }
