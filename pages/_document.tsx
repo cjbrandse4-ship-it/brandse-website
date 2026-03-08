@@ -40,7 +40,7 @@ export default function Document() {
           "sameAs": ["https://www.facebook.com/brandsetreeservice", "https://www.instagram.com/brandsetreeservice"],
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5.0",
+            "ratingValue": "4.9",
             "reviewCount": "18",
             "bestRating": "5"
           }

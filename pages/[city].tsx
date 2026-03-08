@@ -81,7 +81,7 @@ export default function CityPage({ location }: Props) {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5.0',
+      ratingValue: '4.9',
       reviewCount: '18',
       bestRating: '5',
     },
