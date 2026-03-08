@@ -103,7 +103,7 @@ export default function EmergencyServicesPage() {
         <section className="relative flex items-center justify-center min-h-[60vh]">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: 'url(https://horizons-cdn.hostinger.com/e1153006-2afb-49ee-92e0-b73c646df449/7d7b8c44f72d161152e6520f3e3e292b.jpg)' }}
+            style={{ backgroundImage: 'url(/og-image.jpg)' }}
           >
             <div className="absolute inset-0 bg-gray-900/85" />
           </div>
