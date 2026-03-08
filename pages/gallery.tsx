@@ -7,34 +7,39 @@ import { useLanguage } from '../lib/useLanguage';
 
 const galleryItems = [
   {
-    src: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&q=80',
-    en: 'Large tree removal in Pointe-Claire',
-    fr: 'Abattage d\'un grand arbre a Pointe-Claire',
+    src: '/gallery/arborist-chainsaw.jpg',
+    en: 'Certified arborist with professional chainsaw equipment',
+    fr: 'Arboriste certifie avec equipement de tronconneuse professionnel',
   },
   {
-    src: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80',
-    en: 'Professional tree trimming and pruning',
-    fr: 'Elagage et taille professionnels',
+    src: '/gallery/climber-with-crane.jpg',
+    en: 'Tree removal with crane assistance',
+    fr: 'Abattage d\'arbre avec assistance de grue',
   },
   {
-    src: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&q=80',
-    en: 'Hedge maintenance in Beaconsfield',
-    fr: 'Entretien de haies a Beaconsfield',
+    src: '/gallery/tree-removal-stone-house.jpg',
+    en: 'Residential tree removal near heritage stone home',
+    fr: 'Abattage d\'arbre residentiel pres d\'une maison en pierre',
   },
   {
-    src: 'https://images.unsplash.com/photo-1477322524744-0eece9e79640?w=800&q=80',
-    en: 'Stump grinding and removal service',
-    fr: 'Service d\'essouchage et d\'enlevement de souches',
+    src: '/gallery/climber-top-of-tree.jpg',
+    en: 'Arborist climbing for safe section-by-section removal',
+    fr: 'Arboriste en grimpe pour abattage securitaire section par section',
   },
   {
-    src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
-    en: 'Emergency storm damage cleanup',
-    fr: 'Nettoyage d\'urgence apres tempete',
+    src: '/gallery/stump-grinding.jpg',
+    en: 'Stump grinding with Vermeer professional equipment',
+    fr: 'Essouchage avec equipement professionnel Vermeer',
   },
   {
-    src: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&q=80',
-    en: 'New tree planting in Hudson',
-    fr: 'Plantation de nouveaux arbres a Hudson',
+    src: '/gallery/hedge-trimming.jpg',
+    en: 'Precision cedar hedge trimming',
+    fr: 'Taille de haie de cedres de precision',
+  },
+  {
+    src: '/gallery/high-climb-removal.jpg',
+    en: 'High-altitude tree removal by experienced climber',
+    fr: 'Abattage en hauteur par grimpeur experimente',
   },
 ];
 
