@@ -16,9 +16,9 @@ export default function Document() {
           "@context": "https://schema.org",
           "@type": "TreeService",
           "name": "Service d'Arbres Brandse Inc",
-          "url": "https://servicedarbresbrandse.com",
-          "logo": "https://servicedarbresbrandse.com/logo-schema.png",
-          "image": "https://servicedarbresbrandse.com/og-image.jpg",
+          "url": "https://www.servicedarbresbrandse.com",
+          "logo": "https://www.servicedarbresbrandse.com/logo-schema.png",
+          "image": "https://www.servicedarbresbrandse.com/og-image.jpg",
           "telephone": "+1-438-365-5410",
           "email": "info@brandses.com",
           "address": { "@type": "PostalAddress", "streetAddress": "West Island", "addressLocality": "Montreal", "addressRegion": "QC", "postalCode": "H9W 1K1", "addressCountry": "CA" },
@@ -50,7 +50,7 @@ export default function Document() {
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Service d'Arbres Brandse Inc",
-          "url": "https://servicedarbresbrandse.com",
+          "url": "https://www.servicedarbresbrandse.com",
           "inLanguage": ["en", "fr"]
         }) }} />
       </Head>

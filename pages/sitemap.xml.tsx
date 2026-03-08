@@ -3,7 +3,7 @@ import { locations } from '../data/locations';
 import { blogPosts } from '../data/blogPosts';
 
 function generateSitemap(): string {
-  const domain = 'https://servicedarbresbrandse.com';
+  const domain = 'https://www.servicedarbresbrandse.com';
   const now = new Date().toISOString().split('T')[0];
 
   interface SitemapEntry {

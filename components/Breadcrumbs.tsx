@@ -14,7 +14,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
       "@type": "ListItem",
       "position": i + 1,
       "name": item.name,
-      ...(item.href ? { "item": `https://servicedarbresbrandse.com${item.href}` } : {})
+      ...(item.href ? { "item": `https://www.servicedarbresbrandse.com${item.href}` } : {})
     }))
   };
 

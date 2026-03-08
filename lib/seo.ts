@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Service d'Arbres Brandse Inc",
   shortName: "Brandse Trees",
-  domain: "https://servicedarbresbrandse.com",
-  defaultImage: "https://servicedarbresbrandse.com/og-image.jpg",
-  logo: "https://servicedarbresbrandse.com/logo.jpg",
+  domain: "https://www.servicedarbresbrandse.com",
+  defaultImage: "https://www.servicedarbresbrandse.com/og-image.jpg",
+  logo: "https://www.servicedarbresbrandse.com/logo.jpg",
   contact: {
     phone: "+1-438-365-5410",
     phoneDisplay: "(438) 365-5410",

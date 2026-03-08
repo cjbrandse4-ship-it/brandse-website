@@ -78,6 +78,7 @@ export default function Header() {
           <Link href={getLocalizedPath('/gallery')} className="px-3 py-2 text-gray-700 hover:text-[#2D5016] rounded-lg hover:bg-gray-50">{lang === 'fr' ? 'Galerie' : 'Gallery'}</Link>
           <Link href={getLocalizedPath('/blog')} className="px-3 py-2 text-gray-700 hover:text-[#2D5016] rounded-lg hover:bg-gray-50">Blog</Link>
           <Link href={getLocalizedPath('/faq')} className="px-3 py-2 text-gray-700 hover:text-[#2D5016] rounded-lg hover:bg-gray-50">{t.nav.faq}</Link>
+          <Link href={getLocalizedPath('/contact')} className="px-3 py-2 text-gray-700 hover:text-[#2D5016] rounded-lg hover:bg-gray-50">{t.nav.contact}</Link>
 
           {/* Areas dropdown */}
           <div className="relative" onMouseEnter={() => setAreasOpen(true)} onMouseLeave={() => setAreasOpen(false)}>

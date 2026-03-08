@@ -97,7 +97,7 @@ export default function EmergencyServicesPage() {
       "@type": "TreeService",
       "name": "Service d'Arbres Brandse Inc",
       "telephone": "+1-438-365-5410",
-      "url": "https://servicedarbresbrandse.com"
+      "url": "https://www.servicedarbresbrandse.com"
     },
     "areaServed": [
       { "@type": "City", "name": "Pointe-Claire" },
