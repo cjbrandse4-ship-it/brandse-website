@@ -48,5 +48,15 @@ export const testimonials = [
       en: "Very friendly and efficient. We had 3 trees pruned and Connor went above and beyond to remove all of the branches that were broken and hanging. Great job, highly recommend them!",
       fr: "Très sympathiques et efficaces. Nous avons fait élaguer 3 arbres et Connor a fait plus que nécessaire pour enlever toutes les branches cassées et pendantes. Excellent travail, je les recommande vivement !"
     }
+  },
+  {
+    id: 6,
+    name: "Craig Emblem",
+    rating: 5,
+    date: "2025-06-08",
+    text: {
+      en: "I had four very large trees that were either dying or posed a hazard of falling, which required climber expertise to cut them down. Connor and his team did not disappoint. They were efficient and very careful with my yard and the surrounding areas, all while ensuring cleanliness. I highly recommend Service d'Arbres Brandse for your tree cutting and stump removal needs.",
+      fr: "J'avais quatre très grands arbres qui mouraient ou risquaient de tomber, nécessitant l'expertise d'un grimpeur pour les abattre. Connor et son équipe n'ont pas déçu. Ils étaient efficaces et très soigneux avec ma cour et les zones environnantes, tout en assurant la propreté. Je recommande vivement Service d'Arbres Brandse pour vos besoins en abattage d'arbres et essouchage."
+    }
   }
 ];
