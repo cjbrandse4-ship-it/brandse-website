@@ -35,7 +35,7 @@ export default function CityPage({ location }: Props) {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'TreeService',
     name: siteConfig.name,
     description: metaDesc,
     url: `${siteConfig.domain}${path}`,
@@ -57,10 +57,34 @@ export default function CityPage({ location }: Props) {
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '08:00',
+        opens: '07:00',
         closes: '18:00',
       },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Saturday',
+        opens: '08:00',
+        closes: '16:00',
+      },
     ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Tree Services',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tree Removal' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Stump Grinding' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tree Trimming' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hedge Trimming' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tree Planting' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Emergency Tree Service' } },
+      ],
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '6',
+      bestRating: '5',
+    },
   };
 
   return (

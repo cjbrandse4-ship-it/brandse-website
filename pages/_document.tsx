@@ -6,10 +6,7 @@ export default function Document() {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="theme-color" content="#2D5016" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         {/* Google Analytics + Ads (single gtag load) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FDDZP7VD44" />
@@ -40,7 +37,21 @@ export default function Document() {
           ],
           "priceRange": "$$",
           "contactPoint": { "@type": "ContactPoint", "telephone": "+1-438-365-5410", "contactType": "customer service", "email": "info@brandses.com", "availableLanguage": ["en", "fr"] },
-          "sameAs": ["https://www.facebook.com/brandsetreeservice", "https://www.instagram.com/brandsetreeservice"]
+          "sameAs": ["https://www.facebook.com/brandsetreeservice", "https://www.instagram.com/brandsetreeservice"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "6",
+            "bestRating": "5"
+          }
+        }) }} />
+        {/* WebSite Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Service d'Arbres Brandse Inc",
+          "url": "https://servicedarbresbrandse.com",
+          "inLanguage": ["en", "fr"]
         }) }} />
       </Head>
       <body className="antialiased">

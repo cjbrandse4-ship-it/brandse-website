@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { Search, ChevronDown, Phone, Mail, ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
@@ -28,6 +29,20 @@ export default function FAQPage() {
         path={lang === 'fr' ? '/fr/faq' : '/faq'}
         lang={lang}
       />
+      <Head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": questions.map((item) => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": item.a
+            }
+          }))
+        }) }} />
+      </Head>
       <Header />
 
       {/* Hero */}

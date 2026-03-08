@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: Googlebot
+Allow: /
 
 Sitemap: https://servicedarbresbrandse.com/sitemap.xml

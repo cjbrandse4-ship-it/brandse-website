@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
@@ -16,6 +17,9 @@ export default function CookiePolicyPage() {
         path={lang === 'fr' ? '/fr/cookie-policy' : '/cookie-policy'}
         lang={lang}
       />
+      <Head>
+        <meta name="robots" content="noindex, follow" />
+      </Head>
       <Header />
 
       <section className="py-20 bg-white">

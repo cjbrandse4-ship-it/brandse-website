@@ -23,6 +23,11 @@ export default function SEOHead({ title, description, path = '/', image, lang = 
       <link rel="canonical" href={url} />
       <link rel="alternate" hrefLang="en" href={`${siteConfig.domain}${lang === 'en' ? path : altPath}`} />
       <link rel="alternate" hrefLang="fr" href={`${siteConfig.domain}${lang === 'fr' ? path : altPath}`} />
+      <link rel="alternate" hrefLang="x-default" href={`${siteConfig.domain}${lang === 'en' ? path : altPath}`} />
+      <meta name="geo.region" content="CA-QC" />
+      <meta name="geo.placename" content="Montreal, West Island" />
+      <meta name="geo.position" content="45.4715;-73.8103" />
+      <meta name="ICBM" content="45.4715, -73.8103" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />

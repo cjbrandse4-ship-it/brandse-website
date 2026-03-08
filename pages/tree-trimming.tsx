@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import { Phone, CheckCircle, ChevronRight, Scissors, ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
+import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
 
 export default function TreeTrimmingPage() {
@@ -78,6 +80,38 @@ export default function TreeTrimmingPage() {
     }
   ];
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Tree Trimming",
+    "provider": {
+      "@type": "TreeService",
+      "name": "Service d'Arbres Brandse Inc",
+      "telephone": "+1-438-365-5410",
+      "url": "https://servicedarbresbrandse.com"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Pointe-Claire" },
+      { "@type": "City", "name": "Beaconsfield" },
+      { "@type": "City", "name": "Kirkland" },
+      { "@type": "City", "name": "Dorval" },
+      { "@type": "City", "name": "Hudson" },
+      { "@type": "City", "name": "Saint-Lazare" },
+      { "@type": "City", "name": "Vaudreuil-Dorion" },
+      { "@type": "City", "name": "Dollard-des-Ormeaux" },
+      { "@type": "City", "name": "Senneville" },
+      { "@type": "City", "name": "Baie-d'Urfe" },
+      { "@type": "City", "name": "Ile-Perrot" },
+      { "@type": "City", "name": "Pincourt" }
+    ],
+    "description": "Expert tree trimming and pruning services to maintain tree health in West Island Montreal.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "CAD",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
     <>
       <SEOHead
@@ -86,8 +120,16 @@ export default function TreeTrimmingPage() {
         path={getLocalizedPath('/tree-trimming')}
         lang={lang}
       />
+      <Head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      </Head>
 
       <Header />
+      <Breadcrumbs items={[
+        { name: 'Home', href: '/' },
+        { name: 'Services', href: '/services' },
+        { name: 'Tree Trimming' }
+      ]} />
 
       <main>
         {/* Hero */}
