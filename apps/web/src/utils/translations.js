@@ -1,0 +1,483 @@
+
+export const translations = {
+  en: {
+    common: {
+      getFreeQuote: 'Get Free Quote',
+      callNow: 'Call Now',
+      call: 'Call',
+      requestQuote: 'Request Free Quote',
+      contactUs: 'Contact Us',
+      learnMore: 'Learn More',
+      readMore: 'Read More',
+      licensedInsured: 'Licensed & CNESST Insured',
+      certifiedArborists: 'Certified Arborists',
+      emergency247: '24/7 Emergency Service',
+      serviceAreas: 'Service Areas',
+      allServices: 'All Services',
+      phone: 'Phone',
+      email: 'Email',
+      businessHours: 'Business Hours',
+      address: 'West Island Montreal',
+      rights: 'All rights reserved.',
+      tagline: 'Professional Tree Services | West Island Montreal | 24/7 Emergency Response',
+      areas: [
+        'Saint-Lazare', 'Pointe-Claire', 'Hudson', 'Beaconsfield', 
+        'Vaudreuil', 'Kirkland', 'Dollard-des-Ormeaux', 'Dorval', 
+        'Senneville', "Baie-D'Urfé", 'Île-Perrot', 'Pincourt'
+      ],
+      hours: 'Monday-Friday 8am-6pm, 24/7 for emergencies'
+    },
+    nav: {
+      home: 'Home',
+      services: 'Services',
+      about: 'About',
+      faq: 'FAQ',
+      contact: 'Contact'
+    },
+    services: {
+      treeRemoval: {
+        title: 'Tree Removal',
+        desc: 'Safe and efficient removal of trees of any size across Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot, and Pincourt.'
+      },
+      stumpGrinding: {
+        title: 'Stump Grinding & Removal',
+        desc: 'Complete stump removal using professional grinding equipment. We leave your yard clean and ready for new landscaping in all our 12 service areas.'
+      },
+      treeTrimming: {
+        title: 'Tree Trimming & Pruning',
+        desc: 'Expert pruning to maintain tree health, improve appearance, and ensure safety. Seasonal trimming for optimal growth throughout the West Island.'
+      },
+      hedgeTrimming: {
+        title: 'Hedge Trimming',
+        desc: 'Professional hedge shaping and maintenance. Keep your hedges neat, healthy, and beautifully manicured year-round.'
+      },
+      treePlanting: {
+        title: 'Tree Planting',
+        desc: 'Expert tree selection and planting services. We help you choose the right species and ensure proper planting for long-term health.'
+      },
+      emergency: {
+        title: 'Emergency Services',
+        desc: '24/7 emergency response for storm damage, fallen trees, and hazardous situations. Fast, safe, and reliable service when you need it most across all 12 cities.'
+      }
+    },
+    home: {
+      metaTitle: "Service d'Arbres Brandse | Professional Tree Services West Island Montreal",
+      metaDesc: "Licensed & CNESST insured tree service company serving Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D'Urfé, Île-Perrot, and Pincourt. 24/7 Emergency.",
+      heroTitle: 'Professional Tree Services for West Island Montreal',
+      heroSubtitle: 'Expert arborists providing safe, reliable tree care across Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot, and Pincourt.',
+      servingTitle: 'Our Service Areas',
+      servingDesc: 'We proudly serve 12 communities across the West Island with professional tree care services',
+      servingFooter: 'Fast response times • Local expertise • Community trusted',
+      requestArea: 'Request Service in Your Area',
+      testimonialsTitle: 'What Our Customers Say',
+      testimonialsDesc: 'Trusted by hundreds of homeowners across West Island Montreal',
+      joinCustomers: 'Join Our Satisfied Customers',
+      whyChooseTitle: "Why Choose Service d'Arbres Brandse?",
+      whyChoose1Title: 'Licensed & CNESST Insured',
+      whyChoose1Desc: 'Complete protection for your property and peace of mind',
+      whyChoose2Title: 'Certified Arborists',
+      whyChoose2Desc: 'Expert knowledge and professional tree care techniques',
+      whyChoose3Title: '24/7 Emergency Service',
+      whyChoose3Desc: 'Always available when you need us most',
+      ctaTitle: 'Ready to Get Started?',
+      ctaDesc: 'Contact us today for a free consultation and quote',
+      testimonials: [
+        { name: 'Marie Dubois', location: 'Pointe-Claire', text: 'Excellent service! They removed a large oak tree from my backyard quickly and safely. The team was professional and cleaned up everything perfectly.' },
+        { name: 'John Smith', location: 'Hudson', text: 'I called them for emergency tree removal after a storm. They arrived within 2 hours and handled everything professionally. Highly recommend!' },
+        { name: 'Sophie Tremblay', location: 'Beaconsfield', text: 'Great experience with tree trimming service. They were punctual, efficient, and the pricing was very fair. Will definitely use them again.' },
+        { name: 'David Chen', location: 'Vaudreuil', text: 'Professional arborists who really know their craft. They helped us plant new trees and provided excellent advice on tree care. Very satisfied!' }
+      ]
+    },
+    servicesPage: {
+      metaTitle: "Tree Services | Service d'Arbres Brandse | West Island Montreal",
+      metaDesc: "Comprehensive tree care services including removal, trimming, stump grinding, hedge trimming, planting, and 24/7 emergency services. Serving 12 West Island cities.",
+      heroTitle: 'Professional Tree Care Services',
+      heroSubtitle: 'From routine maintenance to 24/7 emergency response, we provide comprehensive tree care solutions for residential and commercial properties across Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot, and Pincourt.',
+      whyChooseTitle: 'Why Choose Our Services?',
+      whyChooseDesc: 'We combine expertise, safety, and customer satisfaction in every project',
+      stat1Title: 'Years Experience',
+      stat1Desc: 'Serving West Island since 2010',
+      stat2Title: 'Satisfaction Rate',
+      stat2Desc: 'Customer satisfaction guaranteed',
+      stat3Title: 'Emergency Service',
+      stat3Desc: '24/7 availability when needed',
+      stat4Title: 'Service Areas',
+      stat4Desc: 'Covering 12 West Island cities',
+      ctaTitle: 'Ready to Schedule Your Service?',
+      ctaDesc: 'Get a free quote today and experience professional tree care'
+    },
+    about: {
+      metaTitle: "About Us | Service d'Arbres Brandse | West Island Montreal Tree Experts",
+      metaDesc: "Learn about Service d'Arbres Brandse - West Island Montreal's trusted tree care experts. Licensed, CNESST insured, certified arborists serving 12 cities.",
+      heroTitle: "About Service d'Arbres Brandse",
+      heroSubtitle: 'Your trusted partner for professional tree care in West Island Montreal since 2010',
+      storyTitle: 'Our Story',
+      story1: 'Service d\'Arbres Brandse was founded in 2010 with a simple mission: to provide West Island Montreal homeowners with professional, reliable tree care services they can trust. What started as a small family operation has grown into one of the region\'s most respected tree service companies.',
+      story2: 'Over the past 15 years, we\'ve built our reputation on quality workmanship, safety, and customer satisfaction. Our team of certified arborists brings decades of combined experience to every project, from routine maintenance to complex tree removals.',
+      story3: 'Today, we\'re proud to serve 12 communities: Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot, and Pincourt. We maintain the health and beauty of thousands of trees while ensuring the safety of properties and families.',
+      missionTitle: 'Our Mission',
+      missionDesc: 'To provide exceptional tree care services that enhance the beauty, health, and safety of our community\'s urban forest while delivering outstanding customer service and value.',
+      valuesTitle: 'Our Values',
+      values: [
+        'Safety first in every operation',
+        'Environmental stewardship and sustainability',
+        'Honest, transparent communication',
+        'Continuous education and improvement'
+      ],
+      whyChooseTitle: "Why Choose Service d'Arbres Brandse?",
+      whyChoose: [
+        { title: 'Licensed & CNESST Insured', desc: 'Full liability and workers compensation insurance for your complete protection and peace of mind.' },
+        { title: 'Certified Arborists', desc: 'Our team includes ISA certified arborists with extensive knowledge of tree biology and care.' },
+        { title: '15+ Years Experience', desc: 'Over a decade of serving West Island Montreal with professional tree care services.' }
+      ],
+      certTitle: 'Certifications & Credentials',
+      certDesc: 'Our commitment to excellence is backed by professional certifications',
+      certs: [
+        'ISA Certified Arborists',
+        'Licensed Tree Care Professionals',
+        'Fully Insured & Bonded',
+        'CNESST Compliant',
+        'Safety Training Certified'
+      ],
+      guaranteeTitle: 'Our Service Guarantee',
+      guaranteeDesc: 'We stand behind our work with a 100% satisfaction guarantee. If you\'re not completely satisfied with our service, we\'ll make it right. Your property\'s safety and beauty are our top priorities, and we\'re committed to delivering exceptional results on every project.',
+      guarantee1Title: 'Quality Work',
+      guarantee1Desc: 'Professional results every time',
+      guarantee2Title: 'Fair Pricing',
+      guarantee2Desc: 'Transparent, competitive rates',
+      guarantee3Title: 'Reliable Service',
+      guarantee3Desc: 'On-time, professional crews',
+      teamTitle: 'Our Expert Team',
+      teamDesc: 'Experienced professionals dedicated to tree care excellence',
+      teamText: 'Our team consists of ISA certified arborists, experienced climbers, and skilled ground crew members. Each team member undergoes rigorous safety training and continues their education to stay current with the latest tree care techniques and industry best practices.',
+      teamStats: [
+        { val: '5+', label: 'Certified Arborists' },
+        { val: '15+', label: 'Team Members' },
+        { val: '100%', label: 'Safety Trained' }
+      ],
+      ctaTitle: 'Experience the Brandse Difference',
+      ctaDesc: 'Join hundreds of satisfied customers across West Island Montreal'
+    },
+    faq: {
+      metaTitle: "FAQ | Service d'Arbres Brandse | Tree Service Questions Answered",
+      metaDesc: "Frequently asked questions about tree removal, trimming, pricing, safety, and emergency services. Get answers from West Island Montreal's tree care experts.",
+      heroTitle: 'Frequently Asked Questions',
+      heroSubtitle: 'Find answers to common questions about our tree care services',
+      searchPlaceholder: 'Search questions...',
+      noResults: 'No questions found matching your search.',
+      questions: [
+        { q: 'What areas do you serve?', a: 'We proudly serve 12 communities in the West Island: Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot, and Pincourt.' },
+        { q: 'How much does tree removal cost?', a: 'Tree removal costs vary based on the tree\'s size, location, accessibility, and complexity. Small trees typically range from $500-$1,500, medium trees $1,500-$3,500, and large trees $3,500+. We provide free, detailed quotes with no hidden fees.' },
+        { q: 'Do I need a permit in Quebec?', a: 'Yes, most municipalities in Quebec require a permit for tree removal, especially for trees over a certain diameter. We can help guide you through your specific city\'s permit application process.' },
+        { q: 'How fast can you remove a tree?', a: 'For routine removals, we typically schedule within 1-2 weeks. For hazardous or emergency situations, our 24/7 response team can often be on-site within hours to safely remove the threat.' },
+        { q: 'Are you available 24/7?', a: 'Yes! We offer 24/7 emergency tree services for urgent situations like storm damage, fallen trees, or immediate safety hazards. Call us anytime at (438) 365-5410.' },
+        { q: 'What\'s the difference between tree trimming and pruning?', a: 'Trimming generally refers to cutting back overgrown branches for aesthetic purposes or clearance. Pruning is a more targeted approach focused on the tree\'s health, removing dead, diseased, or structurally weak branches.' },
+        { q: 'When is the best time to trim trees?', a: 'Late winter to early spring (during dormancy) is generally the best time for most species, as it minimizes stress and sap loss. However, dead, diseased, or hazardous branches should be removed immediately regardless of the season.' },
+        { q: 'What\'s the difference between stump grinding and removal?', a: 'Stump grinding uses a machine to shred the stump 6-12 inches below ground level, leaving the root system to decay naturally. Stump removal involves excavating the entire stump and root ball, which is more invasive and costly.' },
+        { q: 'How much does stump grinding cost?', a: 'Stump grinding is usually priced based on the diameter of the stump. Costs typically range from $150 to $600+, depending on size, location, and accessibility.' },
+        { q: 'Can you remove trees near my house?', a: 'Absolutely. Our certified arborists specialize in complex removals. We use advanced rigging techniques, cranes, and protective measures to safely dismantle trees near homes, power lines, and other structures without causing damage.' },
+        { q: 'How do I know if my tree is diseased?', a: 'Look for signs such as dead or dying branches, discolored or sparse foliage, fungal growth (mushrooms) at the base, deep cracks in the trunk, or unusual leaning. If you notice these, contact us for a professional assessment.' },
+        { q: 'Are you licensed, certified, and insured?', a: 'Yes. We are fully licensed, CNESST insured for workers\' compensation, carry comprehensive liability insurance, and our team includes ISA Certified Arborists.' }
+      ],
+      ctaTitle: 'Still Have Questions?',
+      ctaDesc: 'Our team is here to help. Contact us for personalized answers to your tree care questions.'
+    },
+    contact: {
+      metaTitle: "Contact Us | Service d'Arbres Brandse | Get Free Quote",
+      metaDesc: "Contact Service d'Arbres Brandse for professional tree services in West Island Montreal. Call (438) 365-5410 or request a free quote online.",
+      heroTitle: 'Get in Touch',
+      heroSubtitle: 'Request a free quote or contact us for any tree care questions',
+      formTitle: 'Request a Free Quote',
+      nameLabel: 'Name *',
+      namePlaceholder: 'Your full name',
+      emailLabel: 'Email *',
+      emailPlaceholder: 'your.email@example.com',
+      phoneLabel: 'Phone',
+      phonePlaceholder: '(438) 123-4567',
+      areaLabel: 'Service Area',
+      areaPlaceholder: 'Select your area',
+      messageLabel: 'Message *',
+      messagePlaceholder: 'Tell us about your tree service needs...',
+      sending: 'Sending...',
+      sendMessage: 'Send Message',
+      successTitle: 'Message Sent!',
+      successDesc: 'Thank you for contacting us. We\'ll get back to you within 24 hours.',
+      errorTitle: 'Error',
+      errorDesc: 'Failed to send message. Please try again or call us directly.',
+      infoTitle: 'Contact Information',
+      phoneDesc: '24/7 Emergency Service Available',
+      emailDesc: 'We respond within 24 hours',
+      areaDesc: 'Serving 12 communities',
+      hours1: 'Monday - Friday: 8:00 AM - 6:00 PM',
+      hours2: '24/7 for emergencies',
+      areasTitle: 'Areas We Serve',
+      coverageTitle: 'West Island Montreal Coverage',
+      coverageDesc: 'Fast, reliable service across all 12 West Island communities',
+      stat1Title: 'Communities Served',
+      stat1Desc: 'Comprehensive coverage across West Island',
+      stat2Title: 'Response Time',
+      stat2Desc: 'Quick arrival for emergency services',
+      stat3Title: 'Availability',
+      stat3Desc: 'Always ready for emergencies'
+    },
+    locationTemplate: {
+      title: "Tree Services in {city} | Service d'Arbres Brandse",
+      metaDesc: "Professional tree services in {city}. Expert tree removal, trimming, stump grinding, and emergency services. Licensed, CNESST insured, and certified arborists.",
+      heroTitle: 'Tree Services in {city}',
+      heroSubtitle: 'Your local tree care experts serving the {city} community with professional, reliable service',
+      headline: '{city} Tree Removal & Stump Grinding Services',
+      whyChooseTitle: 'Why Choose Service d\'Arbres Brandse in {city}',
+      desc1: 'As a locally-operated tree service company, we understand the unique needs of {city} properties. From mature trees in older neighborhoods to newer developments, we provide expert care tailored to your specific situation.',
+      desc2: 'Our team knows {city}\'s tree species, local regulations, and seasonal challenges. We\'re your neighbors, committed to keeping our community\'s trees healthy and beautiful while ensuring safety for all residents.',
+      features: ['Licensed & CNESST Insured', 'Certified Arborists', '24/7 Availability', 'Fast Local Response'],
+      servicesTitle: 'Services Available in {city}',
+      footerStrong: 'Quick Response Times:',
+      footerText: 'We\'re based locally and can typically arrive within hours for emergencies.',
+      testimonialsTitle: 'What {city} Residents Say',
+      resident: '{city} Resident',
+      ctaTitle: 'Need Tree Services in {city}?',
+      ctaDesc: 'Contact your local tree care experts today',
+      otherAreasTitle: 'Other Areas We Serve'
+    }
+  },
+  fr: {
+    common: {
+      getFreeQuote: 'Obtenir une soumission gratuite',
+      callNow: 'Appelez maintenant',
+      call: 'Appeler',
+      requestQuote: 'Demander une soumission gratuite',
+      contactUs: 'Contactez-nous',
+      learnMore: 'En savoir plus',
+      readMore: 'Lire la suite',
+      licensedInsured: 'Licencié et assuré CNESST',
+      certifiedArborists: 'Arboriculteurs certifiés',
+      emergency247: 'Service d\'urgence 24/7',
+      serviceAreas: 'Zones de service',
+      allServices: 'Tous les services',
+      phone: 'Téléphone',
+      email: 'Courriel',
+      businessHours: 'Heures d\'ouverture',
+      address: 'Ouest de l\'Île de Montréal',
+      rights: 'Tous droits réservés.',
+      tagline: 'Services d\'arbres professionnels | Ouest de l\'Île de Montréal | Urgence 24/7',
+      areas: [
+        'Saint-Lazare', 'Pointe-Claire', 'Hudson', 'Beaconsfield', 
+        'Vaudreuil', 'Kirkland', 'Dollard-des-Ormeaux', 'Dorval', 
+        'Senneville', "Baie-D'Urfé", 'Île-Perrot', 'Pincourt'
+      ],
+      hours: 'Lundi-Vendredi 8h-18h, 24/7 pour les urgences'
+    },
+    nav: {
+      home: 'Accueil',
+      services: 'Services',
+      about: 'À propos',
+      faq: 'FAQ',
+      contact: 'Contact'
+    },
+    services: {
+      treeRemoval: {
+        title: 'Abattage d\'arbres',
+        desc: 'Abattage sécuritaire et efficace d\'arbres de toute taille à travers Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot et Pincourt.'
+      },
+      stumpGrinding: {
+        title: 'Essouchage',
+        desc: 'Enlèvement complet des souches à l\'aide d\'équipement professionnel. Nous laissons votre cour propre dans nos 12 zones de service.'
+      },
+      treeTrimming: {
+        title: 'Élagage et taille',
+        desc: 'Élagage expert pour maintenir la santé des arbres, améliorer leur apparence et assurer la sécurité partout dans l\'Ouest de l\'Île.'
+      },
+      hedgeTrimming: {
+        title: 'Taille de haies',
+        desc: 'Taille et entretien professionnels des haies. Gardez vos haies soignées, saines et magnifiquement taillées toute l\'année.'
+      },
+      treePlanting: {
+        title: 'Plantation d\'arbres',
+        desc: 'Services experts de sélection et de plantation d\'arbres. Nous vous aidons à choisir la bonne espèce et assurons une plantation adéquate.'
+      },
+      emergency: {
+        title: 'Services d\'urgence',
+        desc: 'Intervention d\'urgence 24/7 pour les dommages causés par les tempêtes et les situations dangereuses. Service rapide dans les 12 villes.'
+      }
+    },
+    home: {
+      metaTitle: "Service d'Arbres Brandse | Services d'arbres professionnels Ouest de l'Île",
+      metaDesc: "Entreprise licenciée et assurée CNESST desservant Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D'Urfé, Île-Perrot et Pincourt. Urgence 24/7.",
+      heroTitle: 'Services d\'arbres professionnels pour l\'Ouest de l\'Île de Montréal',
+      heroSubtitle: 'Arboriculteurs experts offrant des soins sécuritaires à travers Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot et Pincourt.',
+      servingTitle: 'Nos zones de service',
+      servingDesc: 'Nous sommes fiers de desservir 12 communautés de l\'Ouest de l\'Île avec des services professionnels',
+      servingFooter: 'Temps de réponse rapides • Expertise locale • Confiance de la communauté',
+      requestArea: 'Demander un service dans votre région',
+      testimonialsTitle: 'Ce que disent nos clients',
+      testimonialsDesc: 'La confiance de centaines de propriétaires à travers l\'Ouest de l\'Île de Montréal',
+      joinCustomers: 'Rejoignez nos clients satisfaits',
+      whyChooseTitle: "Pourquoi choisir Service d'Arbres Brandse?",
+      whyChoose1Title: 'Licencié et assuré CNESST',
+      whyChoose1Desc: 'Protection complète pour votre propriété et tranquillité d\'esprit',
+      whyChoose2Title: 'Arboriculteurs certifiés',
+      whyChoose2Desc: 'Connaissances expertes et techniques professionnelles',
+      whyChoose3Title: 'Service d\'urgence 24/7',
+      whyChoose3Desc: 'Toujours disponibles quand vous avez le plus besoin de nous',
+      ctaTitle: 'Prêt à commencer?',
+      ctaDesc: 'Contactez-nous aujourd\'hui pour une consultation et une soumission gratuites',
+      testimonials: [
+        { name: 'Marie Dubois', location: 'Pointe-Claire', text: 'Excellent service! Ils ont enlevé un grand chêne de ma cour arrière rapidement et en toute sécurité. L\'équipe était professionnelle et a tout nettoyé parfaitement.' },
+        { name: 'John Smith', location: 'Hudson', text: 'Je les ai appelés pour un abattage d\'urgence après une tempête. Ils sont arrivés en 2 heures et ont tout géré de manière professionnelle. Je recommande vivement!' },
+        { name: 'Sophie Tremblay', location: 'Beaconsfield', text: 'Excellente expérience avec le service d\'élagage. Ils étaient ponctuels, efficaces et le prix était très juste. Je ferai certainement appel à eux à nouveau.' },
+        { name: 'David Chen', location: 'Vaudreuil', text: 'Des arboriculteurs professionnels qui connaissent vraiment leur métier. Ils nous ont aidés à planter de nouveaux arbres et ont donné d\'excellents conseils. Très satisfait!' }
+      ]
+    },
+    servicesPage: {
+      metaTitle: "Services d'arbres | Service d'Arbres Brandse | Ouest de l'Île de Montréal",
+      metaDesc: "Services complets d'entretien des arbres incluant l'abattage, l'élagage, l'essouchage, la taille de haies, la plantation et les urgences 24/7. Desservant 12 villes.",
+      heroTitle: 'Services professionnels d\'entretien des arbres',
+      heroSubtitle: 'De l\'entretien de routine aux interventions d\'urgence 24/7, nous offrons des solutions complètes pour les propriétés à travers Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot et Pincourt.',
+      whyChooseTitle: 'Pourquoi choisir nos services?',
+      whyChooseDesc: 'Nous combinons expertise, sécurité et satisfaction client dans chaque projet',
+      stat1Title: 'Années d\'expérience',
+      stat1Desc: 'Desservant l\'Ouest de l\'Île depuis 2010',
+      stat2Title: 'Taux de satisfaction',
+      stat2Desc: 'Satisfaction client garantie',
+      stat3Title: 'Service d\'urgence',
+      stat3Desc: 'Disponibilité 24/7 au besoin',
+      stat4Title: 'Zones de service',
+      stat4Desc: 'Couvrant 12 villes de l\'Ouest de l\'Île',
+      ctaTitle: 'Prêt à planifier votre service?',
+      ctaDesc: 'Obtenez une soumission gratuite aujourd\'hui et découvrez nos soins professionnels'
+    },
+    about: {
+      metaTitle: "À propos de nous | Service d'Arbres Brandse | Experts en arbres Ouest de l'Île",
+      metaDesc: "Découvrez Service d'Arbres Brandse - Les experts en entretien d'arbres de confiance. Licenciés, assurés CNESST, arboriculteurs certifiés desservant 12 villes.",
+      heroTitle: "À propos de Service d'Arbres Brandse",
+      heroSubtitle: 'Votre partenaire de confiance pour l\'entretien professionnel des arbres dans l\'Ouest de l\'Île de Montréal depuis 2010',
+      storyTitle: 'Notre histoire',
+      story1: 'Service d\'Arbres Brandse a été fondé en 2010 avec une mission simple : fournir aux propriétaires de l\'Ouest de l\'Île de Montréal des services d\'entretien d\'arbres professionnels et fiables en qui ils peuvent avoir confiance.',
+      story2: 'Au cours des 15 dernières années, nous avons bâti notre réputation sur la qualité du travail, la sécurité et la satisfaction du client. Notre équipe d\'arboriculteurs certifiés apporte des décennies d\'expérience combinée à chaque projet.',
+      story3: 'Aujourd\'hui, nous sommes fiers de desservir 12 communautés : Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot et Pincourt. Nous maintenons la santé et la beauté de milliers d\'arbres.',
+      missionTitle: 'Notre mission',
+      missionDesc: 'Fournir des services exceptionnels d\'entretien des arbres qui rehaussent la beauté, la santé et la sécurité de la forêt urbaine de notre communauté tout en offrant un service à la clientèle et une valeur exceptionnels.',
+      valuesTitle: 'Nos valeurs',
+      values: [
+        'La sécurité d\'abord dans chaque opération',
+        'Gérance de l\'environnement et durabilité',
+        'Communication honnête et transparente',
+        'Éducation et amélioration continues'
+      ],
+      whyChooseTitle: "Pourquoi choisir Service d'Arbres Brandse?",
+      whyChoose: [
+        { title: 'Licencié et assuré CNESST', desc: 'Assurance responsabilité civile complète et assurance contre les accidents du travail pour votre protection totale.' },
+        { title: 'Arboriculteurs certifiés', desc: 'Notre équipe comprend des arboriculteurs certifiés ISA ayant une connaissance approfondie de la biologie des arbres.' },
+        { title: '15+ ans d\'expérience', desc: 'Plus d\'une décennie au service de l\'Ouest de l\'Île de Montréal avec des services professionnels.' }
+      ],
+      certTitle: 'Certifications et accréditations',
+      certDesc: 'Notre engagement envers l\'excellence est soutenu par des certifications professionnelles',
+      certs: [
+        'Arboriculteurs certifiés ISA',
+        'Professionnels de l\'entretien des arbres licenciés',
+        'Entièrement assuré et cautionné',
+        'Conforme à la CNESST',
+        'Certifié en formation sur la sécurité'
+      ],
+      guaranteeTitle: 'Notre garantie de service',
+      guaranteeDesc: 'Nous soutenons notre travail avec une garantie de satisfaction à 100%. Si vous n\'êtes pas entièrement satisfait de notre service, nous corrigerons la situation. La sécurité et la beauté de votre propriété sont nos priorités absolues.',
+      guarantee1Title: 'Travail de qualité',
+      guarantee1Desc: 'Des résultats professionnels à chaque fois',
+      guarantee2Title: 'Prix justes',
+      guarantee2Desc: 'Tarifs transparents et compétitifs',
+      guarantee3Title: 'Service fiable',
+      guarantee3Desc: 'Équipes ponctuelles et professionnelles',
+      teamTitle: 'Notre équipe d\'experts',
+      teamDesc: 'Des professionnels expérimentés dédiés à l\'excellence de l\'entretien des arbres',
+      teamText: 'Notre équipe est composée d\'arboriculteurs certifiés ISA, de grimpeurs expérimentés et de membres d\'équipe au sol qualifiés. Chaque membre de l\'équipe suit une formation rigoureuse sur la sécurité et poursuit ses études pour rester à jour.',
+      teamStats: [
+        { val: '5+', label: 'Arboriculteurs certifiés' },
+        { val: '15+', label: 'Membres de l\'équipe' },
+        { val: '100%', label: 'Formés à la sécurité' }
+      ],
+      ctaTitle: 'Découvrez la différence Brandse',
+      ctaDesc: 'Rejoignez des centaines de clients satisfaits à travers l\'Ouest de l\'Île de Montréal'
+    },
+    faq: {
+      metaTitle: "FAQ | Service d'Arbres Brandse | Questions sur les services d'arbres",
+      metaDesc: "Foire aux questions sur l'abattage d'arbres, l'élagage, les prix, la sécurité et les services d'urgence. Obtenez des réponses des experts de l'Ouest de l'Île.",
+      heroTitle: 'Foire aux questions',
+      heroSubtitle: 'Trouvez des réponses aux questions courantes sur nos services d\'entretien des arbres',
+      searchPlaceholder: 'Rechercher des questions...',
+      noResults: 'Aucune question ne correspond à votre recherche.',
+      questions: [
+        { q: 'Quelles régions desservez-vous ?', a: 'Nous desservons fièrement 12 communautés de l\'Ouest de l\'Île : Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot et Pincourt.' },
+        { q: 'Combien coûte l\'abattage d\'un arbre ?', a: 'Les coûts d\'abattage varient en fonction de la taille de l\'arbre, de l\'emplacement, de l\'accessibilité et de la complexité. Les petits arbres varient généralement de 500$ à 1 500$, les arbres moyens de 1 500$ à 3 500$ et les grands arbres de 3 500$ et plus. Nous fournissons des soumissions gratuites et détaillées sans frais cachés.' },
+        { q: 'Ai-je besoin d\'un permis au Québec ?', a: 'Oui, la plupart des municipalités du Québec exigent un permis pour l\'abattage d\'arbres, en particulier pour les arbres dépassant un certain diamètre. Nous pouvons vous guider dans le processus de demande de permis de votre ville.' },
+        { q: 'À quelle vitesse pouvez-vous abattre un arbre ?', a: 'Pour les abattages de routine, nous planifions généralement dans un délai de 1 à 2 semaines. Pour les situations dangereuses ou d\'urgence, notre équipe d\'intervention 24/7 peut souvent être sur place en quelques heures pour éliminer la menace en toute sécurité.' },
+        { q: 'Êtes-vous disponible 24/7 ?', a: 'Oui ! Nous offrons des services d\'arbres d\'urgence 24/7 pour les situations urgentes comme les dommages causés par les tempêtes, les arbres tombés ou les risques immédiats pour la sécurité. Appelez-nous en tout temps au (438) 365-5410.' },
+        { q: 'Quelle est la différence entre l\'élagage et la taille d\'arbres ?', a: 'La taille fait généralement référence à la coupe de branches envahissantes à des fins esthétiques ou de dégagement. L\'élagage est une approche plus ciblée axée sur la santé de l\'arbre, en enlevant les branches mortes, malades ou structurellement faibles.' },
+        { q: 'Quel est le meilleur moment pour tailler les arbres ?', a: 'La fin de l\'hiver au début du printemps (pendant la dormance) est généralement le meilleur moment pour la plupart des espèces, car cela minimise le stress et la perte de sève. Cependant, les branches mortes, malades ou dangereuses doivent être enlevées immédiatement, peu importe la saison.' },
+        { q: 'Quelle est la différence entre l\'essouchage et l\'enlèvement de souche ?', a: 'L\'essouchage utilise une machine pour déchiqueter la souche de 6 à 12 pouces sous le niveau du sol, laissant le système racinaire se décomposer naturellement. L\'enlèvement de souche implique l\'excavation de la souche entière et de la motte de racines, ce qui est plus invasif et coûteux.' },
+        { q: 'Combien coûte l\'essouchage ?', a: 'L\'essouchage est généralement tarifé en fonction du diamètre de la souche. Les coûts varient généralement de 150$ à 600$+, selon la taille, l\'emplacement et l\'accessibilité.' },
+        { q: 'Pouvez-vous abattre des arbres près de ma maison ?', a: 'Absolument. Nos arboriculteurs certifiés se spécialisent dans les abattages complexes. Nous utilisons des techniques de gréage avancées, des grues et des mesures de protection pour démonter en toute sécurité les arbres près des maisons, des lignes électriques et d\'autres structures sans causer de dommages.' },
+        { q: 'Comment puis-je savoir si mon arbre est malade ?', a: 'Recherchez des signes tels que des branches mortes ou mourantes, un feuillage décoloré ou clairsemé, une croissance fongique (champignons) à la base, des fissures profondes dans le tronc ou une inclinaison inhabituelle. Si vous remarquez ces signes, contactez-nous pour une évaluation professionnelle.' },
+        { q: 'Êtes-vous licencié, certifié et assuré ?', a: 'Oui. Nous sommes entièrement licenciés, assurés par la CNESST pour l\'indemnisation des accidents du travail, détenons une assurance responsabilité civile complète et notre équipe comprend des arboriculteurs certifiés ISA.' }
+      ],
+      ctaTitle: 'Vous avez encore des questions ?',
+      ctaDesc: 'Notre équipe est là pour vous aider. Contactez-nous pour des réponses personnalisées à vos questions sur l\'entretien des arbres.'
+    },
+    contact: {
+      metaTitle: "Contactez-nous | Service d'Arbres Brandse | Obtenir une soumission",
+      metaDesc: "Contactez Service d'Arbres Brandse pour des services d'arbres professionnels dans l'Ouest de l'Île de Montréal. Appelez le (438) 365-5410 ou demandez une soumission gratuite en ligne.",
+      heroTitle: 'Contactez-nous',
+      heroSubtitle: 'Demandez une soumission gratuite ou contactez-nous pour toute question sur l\'entretien des arbres',
+      formTitle: 'Demander une soumission gratuite',
+      nameLabel: 'Nom *',
+      namePlaceholder: 'Votre nom complet',
+      emailLabel: 'Courriel *',
+      emailPlaceholder: 'votre.courriel@exemple.com',
+      phoneLabel: 'Téléphone',
+      phonePlaceholder: '(438) 123-4567',
+      areaLabel: 'Zone de service',
+      areaPlaceholder: 'Sélectionnez votre zone',
+      messageLabel: 'Message *',
+      messagePlaceholder: 'Parlez-nous de vos besoins en services d\'arbres...',
+      sending: 'Envoi en cours...',
+      sendMessage: 'Envoyer le message',
+      successTitle: 'Message envoyé !',
+      successDesc: 'Merci de nous avoir contactés. Nous vous répondrons dans les 24 heures.',
+      errorTitle: 'Erreur',
+      errorDesc: 'Échec de l\'envoi du message. Veuillez réessayer ou nous appeler directement.',
+      infoTitle: 'Coordonnées',
+      phoneDesc: 'Service d\'urgence 24/7 disponible',
+      emailDesc: 'Nous répondons dans les 24 heures',
+      areaDesc: 'Desservant 12 communautés',
+      hours1: 'Lundi - Vendredi : 8h00 - 18h00',
+      hours2: '24/7 pour les urgences',
+      areasTitle: 'Zones que nous desservons',
+      coverageTitle: 'Couverture de l\'Ouest de l\'Île de Montréal',
+      coverageDesc: 'Service rapide et fiable dans les 12 communautés de l\'Ouest de l\'Île',
+      stat1Title: 'Communautés desservies',
+      stat1Desc: 'Couverture complète à travers l\'Ouest de l\'Île',
+      stat2Title: 'Temps de réponse',
+      stat2Desc: 'Arrivée rapide pour les services d\'urgence',
+      stat3Title: 'Disponibilité',
+      stat3Desc: 'Toujours prêts pour les urgences'
+    },
+    locationTemplate: {
+      title: "Services d'arbres à {city} | Service d'Arbres Brandse",
+      metaDesc: "Services d'arbres professionnels à {city}. Abattage expert, élagage, essouchage et services d'urgence. Licencié, assuré CNESST et arboriculteurs certifiés.",
+      heroTitle: 'Services d\'arbres à {city}',
+      heroSubtitle: 'Vos experts locaux en entretien d\'arbres desservant la communauté de {city} avec un service professionnel et fiable',
+      headline: 'Services d\'abattage d\'arbres et d\'essouchage à {city}',
+      whyChooseTitle: 'Pourquoi choisir Service d\'Arbres Brandse à {city}',
+      desc1: 'En tant qu\'entreprise locale de services d\'arbres, nous comprenons les besoins uniques des propriétés de {city}. Des arbres matures dans les quartiers plus anciens aux nouveaux développements, nous fournissons des soins experts adaptés à votre situation spécifique.',
+      desc2: 'Notre équipe connaît les espèces d\'arbres de {city}, les réglementations locales et les défis saisonniers. Nous sommes vos voisins, engagés à garder les arbres de notre communauté sains et beaux tout en assurant la sécurité de tous les résidents.',
+      features: ['Licencié et assuré CNESST', 'Arboriculteurs certifiés', 'Disponibilité 24/7', 'Réponse locale rapide'],
+      servicesTitle: 'Services disponibles à {city}',
+      footerStrong: 'Temps de réponse rapides :',
+      footerText: 'Nous sommes basés localement et pouvons généralement arriver en quelques heures pour les urgences.',
+      testimonialsTitle: 'Ce que disent les résidents de {city}',
+      resident: 'Résident de {city}',
+      ctaTitle: 'Besoin de services d\'arbres à {city} ?',
+      ctaDesc: 'Contactez vos experts locaux en entretien d\'arbres aujourd\'hui',
+      otherAreasTitle: 'Autres zones que nous desservons'
+    }
+  }
+};

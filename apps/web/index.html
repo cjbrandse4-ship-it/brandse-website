@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+		<meta name="theme-color" content="#2D5016" />
+		
+		<!-- Preconnect to critical origins -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://horizons-cdn.hostinger.com" crossorigin />
+		
+		<!-- DNS Prefetch for secondary resources -->
+		<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+		<!-- Preload critical fonts with display swap -->
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		
+		<!-- Preload critical hero image -->
+		<link rel="preload" as="image" href="https://horizons-cdn.hostinger.com/e1153006-2afb-49ee-92e0-b73c646df449/7d7b8c44f72d161152e6520f3e3e292b.jpg" fetchpriority="high" />
+
+		<!-- Critical CSS for above-the-fold content -->
+		<style>
+			body { margin: 0; padding: 0; background-color: #ffffff; font-family: 'DM Sans', 'Inter', 'Poppins', system-ui, sans-serif; }
+			#root { display: flex; flex-direction: column; min-height: 100vh; }
+			.initial-loader { display: flex; justify-content: center; align-items: center; height: 100vh; background: #f9fafb; }
+			.spinner { width: 40px; height: 40px; border: 3px solid #e5e7eb; border-top-color: #2D5016; border-radius: 50%; animation: spin 1s linear infinite; }
+			@keyframes spin { to { transform: rotate(360deg); } }
+		</style>
+
+		<!-- Google tag (gtag.js) - Deferred -->
+		<script async defer src="https://www.googletagmanager.com/gtag/js?id=G-FDDZP7VD44"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-FDDZP7VD44');
+		</script>
+
+		<!-- Google tag (gtag.js) - Google Ads -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16516759047"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'AW-16516759047');
+		</script>
+
+		<!-- Favicon Tags -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		
+		<!-- Default SEO Meta Tags -->
+		<title>Service d'Arbres Brandse Inc | Professional Tree Care</title>
+		<meta name="description" content="Expert tree removal, trimming, stump grinding & emergency services in West Island Montreal. Certified arborists, fully insured. Call for a free quote today!" />
+		
+		<!-- Default Open Graph Meta Tags -->
+		<meta property="og:site_name" content="Service d'Arbres Brandse Inc" />
+		<meta property="og:title" content="Service d'Arbres Brandse Inc - Professional Tree Services" />
+		<meta property="og:description" content="Expert tree removal, trimming, stump grinding & emergency services in West Island Montreal. Certified arborists, fully insured. Call for a free quote today!" />
+		<meta property="og:image" content="https://horizons-cdn.hostinger.com/e1153006-2afb-49ee-92e0-b73c646df449/7d7b8c44f72d161152e6520f3e3e292b.jpg" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://servicedarbresbrandse.com" />
+
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Service d'Arbres Brandse Inc - Professional Tree Services" />
+		<meta name="twitter:description" content="Expert tree removal, trimming, stump grinding & emergency services in West Island Montreal. Certified arborists, fully insured. Call for a free quote today!" />
+		<meta name="twitter:image" content="https://horizons-cdn.hostinger.com/e1153006-2afb-49ee-92e0-b73c646df449/7d7b8c44f72d161152e6520f3e3e292b.jpg" />
+
+		<!-- Organization Schema JSON-LD -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Organization",
+		  "name": "Service d'Arbres Brandse Inc",
+		  "url": "https://servicedarbresbrandse.com",
+		  "logo": "https://horizons-cdn.hostinger.com/e1153006-2afb-49ee-92e0-b73c646df449/89f8c014b47a89e47a3f9a116ff52955.png",
+		  "contactPoint": {
+		    "@type": "ContactPoint",
+		    "telephone": "+1-438-365-5410",
+		    "contactType": "customer service",
+		    "email": "info@brandses.com",
+		    "areaServed": "CA",
+		    "availableLanguage": ["en", "fr"]
+		  },
+		  "sameAs": [
+		    "https://www.facebook.com/brandsetreeservice",
+		    "https://www.instagram.com/brandsetreeservice"
+		  ]
+		}
+		</script>
+	</head>
+	<body>
+		<div id="root">
+			<div class="initial-loader"><div class="spinner"></div></div>
+		</div>
+		<script type="module" defer src="/src/main.jsx"></script>
+	</body>
+</html>
