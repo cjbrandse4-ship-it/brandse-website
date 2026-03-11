@@ -6,7 +6,9 @@ export default function Document() {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="theme-color" content="#2D5016" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         {/* Google Analytics + Ads (single gtag load) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FDDZP7VD44" />
