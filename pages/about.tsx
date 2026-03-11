@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import { Shield, Award, Timer, CheckCircle, Heart, Users, Target, Phone, ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -11,6 +12,32 @@ export default function AboutPage() {
 
   const valueIcons = [Shield, Heart, Users, Target];
 
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Service d'Arbres Brandse Inc",
+    "url": "https://www.servicedarbresbrandse.com",
+    "logo": "https://www.servicedarbresbrandse.com/logo-schema.png",
+    "foundingDate": "2020",
+    "founder": { "@type": "Person", "name": "John Brandse" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Montreal",
+      "addressRegion": "QC",
+      "addressCountry": "CA"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-438-365-5410",
+      "contactType": "customer service",
+      "availableLanguage": ["en", "fr"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/brandsetreeservice",
+      "https://www.instagram.com/brandsetreeservice"
+    ]
+  };
+
   return (
     <>
       <SEOHead
@@ -19,6 +46,9 @@ export default function AboutPage() {
         path={lang === 'fr' ? '/fr/about' : '/about'}
         lang={lang}
       />
+      <Head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      </Head>
       <Header />
 
       {/* Hero */}

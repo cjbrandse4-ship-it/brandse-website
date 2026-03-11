@@ -12,8 +12,8 @@ export default function TreePlantingPage() {
   const isFr = lang === 'fr';
 
   const pageTitle = isFr
-    ? "Services de Plantation d'Arbres | Service d'Arbres Brandse"
-    : "Tree Planting Services | Service d'Arbres Brandse";
+    ? "Plantation d'Arbres | Ouest de l'Île de Montréal | Brandse"
+    : "Tree Planting Services | West Island Montreal | Brandse";
   const pageDesc = isFr
     ? "Services experts de sélection et de plantation d'arbres pour embellir votre propriété. Arboriculteurs certifiés dans l'Ouest de l'Île de Montréal."
     : 'Expert tree selection and planting services to beautify your property. Certified arborists in West Island Montreal.';

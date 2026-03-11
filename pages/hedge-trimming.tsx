@@ -12,8 +12,8 @@ export default function HedgeTrimmingPage() {
   const isFr = lang === 'fr';
 
   const pageTitle = isFr
-    ? "Taille de Haies et Arbustes | Service d'Arbres Brandse"
-    : "Hedge Trimming & Shrub Pruning | Service d'Arbres Brandse";
+    ? "Taille de Haies et Arbustes | Ouest de l'Île de Montréal | Brandse"
+    : "Hedge Trimming & Shrub Pruning | West Island Montreal | Brandse";
   const pageDesc = isFr
     ? "Taille de haies professionnelle, taille d'arbustes et entretien paysager dans l'Ouest de l'Île de Montréal. Estimations gratuites."
     : 'Professional hedge trimming, shrub pruning & landscape maintenance in West Island Montreal. Free estimates.';

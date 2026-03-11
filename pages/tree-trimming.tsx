@@ -12,8 +12,8 @@ export default function TreeTrimmingPage() {
   const isFr = lang === 'fr';
 
   const pageTitle = isFr
-    ? "Élagage et Taille d'Arbres | Service d'Arbres Brandse"
-    : "Tree Trimming & Pruning Services | Service d'Arbres Brandse";
+    ? "Élagage et Taille d'Arbres | Ouest de l'Île de Montréal | Brandse"
+    : "Tree Trimming & Pruning | West Island Montreal | Brandse";
   const pageDesc = isFr
     ? "Élagage expert, taille et réduction de cime dans l'Ouest de l'Île de Montréal. Améliorez la santé, la sécurité et l'esthétique de vos arbres. Arboriculteurs certifiés."
     : "Expert tree trimming, pruning & crown reduction in West Island Montreal. Improve tree health, safety & aesthetics. Certified arborists.";

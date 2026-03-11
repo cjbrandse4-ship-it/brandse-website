@@ -12,8 +12,8 @@ export default function EmergencyServicesPage() {
   const isFr = lang === 'fr';
 
   const pageTitle = isFr
-    ? "Services d'Urgence Arbres 24/7 | Service d'Arbres Brandse"
-    : "24/7 Emergency Tree Services | Service d'Arbres Brandse";
+    ? "Services d'Urgence Arbres 24/7 | Ouest de l'Île de Montréal | Brandse"
+    : "24/7 Emergency Tree Services | West Island Montreal | Brandse";
   const pageDesc = isFr
     ? "Intervention rapide pour les arbres tombés ou dangereux suite aux tempêtes. Service d'urgence 24/7 dans l'Ouest de l'Île de Montréal. Appelez le (438) 365-5410."
     : 'Rapid response for fallen or hazardous trees following storms. 24/7 emergency tree service in West Island Montreal. Call (438) 365-5410.';

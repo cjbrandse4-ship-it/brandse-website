@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import { X } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -66,6 +67,21 @@ export default function GalleryPage() {
         path={lang === 'fr' ? '/fr/gallery' : '/gallery'}
         lang={lang}
       />
+      <Head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          "name": lang === 'fr' ? "Galerie - Service d'Arbres Brandse" : "Gallery - Service d'Arbres Brandse",
+          "description": metaDesc,
+          "url": `https://www.servicedarbresbrandse.com${lang === 'fr' ? '/fr/gallery' : '/gallery'}`,
+          "image": galleryItems.map(item => ({
+            "@type": "ImageObject",
+            "contentUrl": `https://www.servicedarbresbrandse.com${item.src}`,
+            "description": item[lang],
+            "name": item[lang]
+          }))
+        }) }} />
+      </Head>
       <Header />
 
       {/* Hero */}

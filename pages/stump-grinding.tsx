@@ -12,8 +12,8 @@ export default function StumpGrindingPage() {
   const isFr = lang === 'fr';
 
   const pageTitle = isFr
-    ? "Services d'Essouchage | Service d'Arbres Brandse"
-    : "Stump Grinding Services | Service d'Arbres Brandse";
+    ? "Services d'Essouchage | Ouest de l'Île de Montréal | Brandse"
+    : "Stump Grinding Services | West Island Montreal | Brandse";
   const pageDesc = isFr
     ? "Essouchage professionnel dans l'Ouest de l'Île de Montréal. Enlèvement complet des souches, nettoyage du site, prix compétitifs. Estimations gratuites."
     : "Professional stump grinding in West Island Montreal. Complete stump removal, site cleanup, competitive pricing. Free estimates.";

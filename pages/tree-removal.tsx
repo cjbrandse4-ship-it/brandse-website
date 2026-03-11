@@ -12,8 +12,8 @@ export default function TreeRemovalPage() {
   const isFr = lang === 'fr';
 
   const pageTitle = isFr
-    ? "Services d'Abattage d'Arbres | Service d'Arbres Brandse"
-    : "Professional Tree Removal Services | Service d'Arbres Brandse";
+    ? "Services d'Abattage d'Arbres | Ouest de l'Île de Montréal | Brandse"
+    : "Professional Tree Removal | West Island Montreal | Brandse";
   const pageDesc = isFr
     ? "Services d'abattage d'arbres sécuritaires et efficaces dans l'Ouest de l'Île de Montréal. Arboriculteurs certifiés. Soumission gratuite!"
     : "Safe and efficient tree removal services in West Island Montreal. Certified arborists handle hazardous trees with precision. Free quote!";
