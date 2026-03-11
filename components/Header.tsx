@@ -117,9 +117,7 @@ export default function Header() {
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t shadow-lg max-h-[80vh] overflow-y-auto">
           <div className="px-4 py-4 space-y-1">
-            {navLinks.map(l => (
-              <Link key={l.href} href={getLocalizedPath(l.href)} onClick={() => setMobileOpen(false)} className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg">{l.label}</Link>
-            ))}
+            <Link href={getLocalizedPath('/')} onClick={() => setMobileOpen(false)} className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg">{t.nav.home}</Link>
             <div className="border-t my-2 pt-2">
               <p className="px-4 py-2 text-xs text-gray-500 uppercase tracking-wider">{t.nav.services}</p>
               {serviceLinks.map(s => (
@@ -135,6 +133,17 @@ export default function Header() {
                   <Link key={loc.slug} href={getLocalizedPath(`/${loc.slug}`)} onClick={() => setMobileOpen(false)} className="py-1.5 text-gray-600 hover:text-[#2D5016] text-sm">{loc.name}</Link>
                 ))}
               </div>
+            </div>
+            <div className="border-t my-2 pt-2">
+              {[
+                { label: t.nav.about, href: '/about' },
+                { label: 'Gallery', href: '/gallery' },
+                { label: 'Blog', href: '/blog' },
+                { label: t.nav.faq, href: '/faq' },
+                { label: t.nav.contact, href: '/contact' },
+              ].map(l => (
+                <Link key={l.href} href={getLocalizedPath(l.href)} onClick={() => setMobileOpen(false)} className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg">{l.label}</Link>
+              ))}
             </div>
             <div className="pt-3">
               <Link href={getLocalizedPath('/contact')} onClick={() => setMobileOpen(false)} className="block w-full text-center px-5 py-3 bg-[#2D5016] text-white rounded-lg font-medium">
