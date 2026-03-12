@@ -36,6 +36,10 @@ export default function ContactPage() {
       if (!res.ok) throw new Error();
       setStatus('success');
       setForm({ name: '', email: '', phone: '', area: '', message: '' });
+      // Google Ads conversion tracking
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'conversion', { send_to: 'AW-16516759047/mXt_CJjNyaMZEIf85sM9' });
+      }
     } catch {
       setStatus('error');
     } finally {
