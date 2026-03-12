@@ -19,6 +19,8 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [areasOpen, setAreasOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -119,20 +121,28 @@ export default function Header() {
           <div className="px-4 py-4 space-y-1">
             <Link href={getLocalizedPath('/')} onClick={() => setMobileOpen(false)} className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg">{t.nav.home}</Link>
             <div className="border-t my-2 pt-2">
-              <p className="px-4 py-2 text-xs text-gray-500 uppercase tracking-wider">{t.nav.services}</p>
-              {serviceLinks.map(s => (
+              <button onClick={() => setMobileServicesOpen(!mobileServicesOpen)} className="w-full flex items-center justify-between px-4 py-2 text-xs text-gray-500 uppercase tracking-wider">
+                {t.nav.services}
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileServicesOpen && serviceLinks.map(s => (
                 <Link key={s.key} href={getLocalizedPath(s.href)} onClick={() => setMobileOpen(false)} className="block px-6 py-2 text-gray-600 hover:bg-gray-50 rounded-lg text-sm">
                   {(t.services as any)[s.key]?.title}
                 </Link>
               ))}
             </div>
             <div className="border-t my-2 pt-2">
-              <p className="px-4 py-2 text-xs text-gray-500 uppercase tracking-wider">{t.common.serviceAreas}</p>
-              <div className="grid grid-cols-2 gap-1 px-4">
-                {locations.map(loc => (
-                  <Link key={loc.slug} href={getLocalizedPath(`/${loc.slug}`)} onClick={() => setMobileOpen(false)} className="py-1.5 text-gray-600 hover:text-[#2D5016] text-sm">{loc.name}</Link>
-                ))}
-              </div>
+              <button onClick={() => setMobileAreasOpen(!mobileAreasOpen)} className="w-full flex items-center justify-between px-4 py-2 text-xs text-gray-500 uppercase tracking-wider">
+                {t.common.serviceAreas}
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileAreasOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileAreasOpen && (
+                <div className="grid grid-cols-2 gap-1 px-4">
+                  {locations.map(loc => (
+                    <Link key={loc.slug} href={getLocalizedPath(`/${loc.slug}`)} onClick={() => setMobileOpen(false)} className="py-1.5 text-gray-600 hover:text-[#2D5016] text-sm">{loc.name}</Link>
+                  ))}
+                </div>
+              )}
             </div>
             <div className="border-t my-2 pt-2">
               {[
