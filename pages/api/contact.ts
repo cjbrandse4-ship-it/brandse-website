@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const firstName = parts[0] || name;
   const lastName = parts.slice(1).join(' ') || '-';
 
-  // 1) Forward to CRM (non-blocking — don't let CRM failure block the response)
+  // 1) Forward to CRM
   const crmPromise = fetch(CRM_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -45,18 +45,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!r.ok) {
       const text = await r.text();
       console.error('[Contact] CRM error:', r.status, text);
-    } else {
-      console.log('[Contact] CRM forwarded OK');
+      throw new Error(`CRM error: ${r.status}`);
     }
-  }).catch((err) => {
-    console.error('[Contact] CRM fetch failed:', err);
+    console.log('[Contact] CRM forwarded OK');
   });
 
   // 2) Send direct email notification (always, as reliable backup)
   const emailPromise = sendDirectEmail({ name, email, phone, area, message });
 
   // Wait for both in parallel
-  await Promise.allSettled([crmPromise, emailPromise]);
+  const [crmResult, emailResult] = await Promise.allSettled([crmPromise, emailPromise]);
+
+  const crmOk = crmResult.status === 'fulfilled';
+  const emailOk = emailResult.status === 'fulfilled';
+
+  if (!crmOk && !emailOk) {
+    return res.status(500).json({ error: 'Failed to send message. Please call or email us directly.' });
+  }
 
   return res.status(200).json({ ok: true });
 }
@@ -64,41 +69,37 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 async function sendDirectEmail(data: { name: string; email: string; phone: string; area: string; message: string }) {
   if (!SMTP_USER || !SMTP_PASS || !NOTIFY_EMAIL) {
     console.warn('[Contact] SMTP not configured — skipping direct email');
-    return;
+    throw new Error('SMTP not configured');
   }
 
-  try {
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: SMTP_PORT,
-      secure: SMTP_PORT === 465,
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
-    });
+  const transporter = nodemailer.createTransport({
+    host: SMTP_HOST,
+    port: SMTP_PORT,
+    secure: SMTP_PORT === 465,
+    auth: { user: SMTP_USER, pass: SMTP_PASS },
+  });
 
-    await transporter.sendMail({
-      from: `"Website Contact Form" <${SMTP_FROM}>`,
-      to: NOTIFY_EMAIL,
-      replyTo: data.email,
-      subject: `New Contact Form: ${data.name}${data.area ? ' — ' + data.area : ''}`,
-      html: `
-        <div style="font-family:Arial,sans-serif;max-width:600px;">
-          <h2 style="color:#2D5016;margin-bottom:16px;">New Website Contact Form Submission</h2>
-          <table style="width:100%;border-collapse:collapse;">
-            <tr><td style="padding:8px 12px;font-weight:bold;color:#555;width:100px;">Name</td><td style="padding:8px 12px;">${data.name}</td></tr>
-            <tr style="background:#f9f9f9;"><td style="padding:8px 12px;font-weight:bold;color:#555;">Email</td><td style="padding:8px 12px;"><a href="mailto:${data.email}">${data.email}</a></td></tr>
-            <tr><td style="padding:8px 12px;font-weight:bold;color:#555;">Phone</td><td style="padding:8px 12px;">${data.phone || '—'}</td></tr>
-            <tr style="background:#f9f9f9;"><td style="padding:8px 12px;font-weight:bold;color:#555;">Area</td><td style="padding:8px 12px;">${data.area || '—'}</td></tr>
-          </table>
-          <div style="margin-top:16px;padding:16px;background:#f5f5f5;border-left:4px solid #2D5016;border-radius:4px;">
-            <p style="margin:0;font-weight:bold;color:#555;margin-bottom:8px;">Message:</p>
-            <p style="margin:0;white-space:pre-wrap;">${data.message}</p>
-          </div>
-          <p style="margin-top:24px;color:#999;font-size:12px;">Sent from servicedarbresbrandse.com contact form</p>
+  await transporter.sendMail({
+    from: `"Website Contact Form" <${SMTP_FROM}>`,
+    to: NOTIFY_EMAIL,
+    replyTo: data.email,
+    subject: `New Contact Form: ${data.name}${data.area ? ' — ' + data.area : ''}`,
+    html: `
+      <div style="font-family:Arial,sans-serif;max-width:600px;">
+        <h2 style="color:#2D5016;margin-bottom:16px;">New Website Contact Form Submission</h2>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr><td style="padding:8px 12px;font-weight:bold;color:#555;width:100px;">Name</td><td style="padding:8px 12px;">${data.name}</td></tr>
+          <tr style="background:#f9f9f9;"><td style="padding:8px 12px;font-weight:bold;color:#555;">Email</td><td style="padding:8px 12px;"><a href="mailto:${data.email}">${data.email}</a></td></tr>
+          <tr><td style="padding:8px 12px;font-weight:bold;color:#555;">Phone</td><td style="padding:8px 12px;">${data.phone || '—'}</td></tr>
+          <tr style="background:#f9f9f9;"><td style="padding:8px 12px;font-weight:bold;color:#555;">Area</td><td style="padding:8px 12px;">${data.area || '—'}</td></tr>
+        </table>
+        <div style="margin-top:16px;padding:16px;background:#f5f5f5;border-left:4px solid #2D5016;border-radius:4px;">
+          <p style="margin:0;font-weight:bold;color:#555;margin-bottom:8px;">Message:</p>
+          <p style="margin:0;white-space:pre-wrap;">${data.message}</p>
         </div>
-      `,
-    });
-    console.log('[Contact] Direct email sent OK');
-  } catch (err) {
-    console.error('[Contact] Direct email failed:', err);
-  }
+        <p style="margin-top:24px;color:#999;font-size:12px;">Sent from servicedarbresbrandse.com contact form</p>
+      </div>
+    `,
+  });
+  console.log('[Contact] Direct email sent OK');
 }
