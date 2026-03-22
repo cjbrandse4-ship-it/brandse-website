@@ -91,14 +91,12 @@ export default function EmergencyServicesPage() {
 
   const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Emergency Tree Service",
-    "provider": {
-      "@type": "TreeService",
-      "name": "Service d'Arbres Brandse Inc",
-      "telephone": "+1-438-365-5410",
-      "url": "https://www.servicedarbresbrandse.com"
-    },
+    "@type": "TreeService",
+    "name": "Service d'Arbres Brandse Inc",
+    "telephone": "+1-438-365-5410",
+    "url": "https://www.servicedarbresbrandse.com",
+    "image": "https://www.servicedarbresbrandse.com/og-image.jpg",
+    "address": { "@type": "PostalAddress", "addressLocality": "Montreal", "addressRegion": "QC", "addressCountry": "CA" },
     "areaServed": [
       { "@type": "City", "name": "Pointe-Claire" },
       { "@type": "City", "name": "Beaconsfield" },
@@ -114,8 +112,9 @@ export default function EmergencyServicesPage() {
       { "@type": "City", "name": "Pincourt" }
     ],
     "description": "24/7 emergency tree removal for storm damage and hazardous situations in West Island Montreal.",
-    "offers": {
+    "makesOffer": {
       "@type": "Offer",
+      "itemOffered": { "@type": "Service", "name": "Emergency Tree Service", "description": "24/7 rapid response for fallen or hazardous trees after storms." },
       "priceCurrency": "CAD",
       "availability": "https://schema.org/InStock"
     }

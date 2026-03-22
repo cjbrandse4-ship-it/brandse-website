@@ -82,14 +82,12 @@ export default function TreeTrimmingPage() {
 
   const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Tree Trimming",
-    "provider": {
-      "@type": "TreeService",
-      "name": "Service d'Arbres Brandse Inc",
-      "telephone": "+1-438-365-5410",
-      "url": "https://www.servicedarbresbrandse.com"
-    },
+    "@type": "TreeService",
+    "name": "Service d'Arbres Brandse Inc",
+    "telephone": "+1-438-365-5410",
+    "url": "https://www.servicedarbresbrandse.com",
+    "image": "https://www.servicedarbresbrandse.com/og-image.jpg",
+    "address": { "@type": "PostalAddress", "addressLocality": "Montreal", "addressRegion": "QC", "addressCountry": "CA" },
     "areaServed": [
       { "@type": "City", "name": "Pointe-Claire" },
       { "@type": "City", "name": "Beaconsfield" },
@@ -105,8 +103,9 @@ export default function TreeTrimmingPage() {
       { "@type": "City", "name": "Pincourt" }
     ],
     "description": "Expert tree trimming and pruning services to maintain tree health in West Island Montreal.",
-    "offers": {
+    "makesOffer": {
       "@type": "Offer",
+      "itemOffered": { "@type": "Service", "name": "Tree Trimming", "description": "Professional pruning, deadwooding, and crown reduction for healthy trees." },
       "priceCurrency": "CAD",
       "availability": "https://schema.org/InStock"
     }
