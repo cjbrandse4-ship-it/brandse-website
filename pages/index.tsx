@@ -113,6 +113,12 @@ export default function HomePage() {
             "@context": "https://schema.org",
             "@type": "TreeService",
             "name": "Service d'Arbres Brandse Inc",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": String(testimonials.length),
+              "bestRating": "5"
+            },
             "review": testimonials.map((item) => ({
               "@type": "Review",
               "author": { "@type": "Person", "name": item.name },
