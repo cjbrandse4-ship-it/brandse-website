@@ -111,7 +111,7 @@ export default function HomePage() {
         <Head>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "TreeService",
+            "@type": ["LocalBusiness", "TreeService"],
             "name": "Service d'Arbres Brandse Inc",
             "aggregateRating": {
               "@type": "AggregateRating",
