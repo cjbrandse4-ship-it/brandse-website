@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
-import CtaBanner from '../components/CtaBanner';
 
 export default function TreeTrimmingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -247,8 +246,7 @@ export default function TreeTrimmingPage() {
         </section>
 
         {/* CTA */}
-        <CtaBanner />
-      </main>
+</main>
 
       <Footer />
     </>

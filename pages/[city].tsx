@@ -8,7 +8,6 @@ import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../lib/useLanguage';
 import { siteConfig } from '../lib/seo';
 import { locations, getLocation, getLocationSlug, Location } from '../data/locations';
-import CtaBanner from '../components/CtaBanner';
 
 interface Props {
   location: Location;
@@ -201,10 +200,7 @@ export default function CityPage({ location }: Props) {
           </div>
         </div>
       </section>
-
-      <CtaBanner title={r(lt.ctaTitle)} subtitle={r(lt.ctaDesc)} />
-
-      <Footer />
+<Footer />
     </>
   );
 }

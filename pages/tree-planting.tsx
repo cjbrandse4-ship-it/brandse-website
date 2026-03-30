@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
-import CtaBanner from '../components/CtaBanner';
 
 export default function TreePlantingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -249,8 +248,7 @@ export default function TreePlantingPage() {
         </section>
 
         {/* CTA */}
-        <CtaBanner />
-      </main>
+</main>
 
       <Footer />
     </>

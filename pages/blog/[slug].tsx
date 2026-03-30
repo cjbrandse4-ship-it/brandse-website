@@ -8,7 +8,6 @@ import SEOHead from '../../components/SEOHead';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { useLanguage } from '../../lib/useLanguage';
 import { blogPosts, BlogPost } from '../../data/blogPosts';
-import CtaBanner from '../../components/CtaBanner';
 
 interface Props {
   post: BlogPost;
@@ -204,9 +203,7 @@ export default function BlogPostPage({ post }: Props) {
             </div>
           </div>
         </section>
-
-        <CtaBanner />
-      </main>
+</main>
 
       <Footer />
     </>

@@ -7,7 +7,6 @@ import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../lib/useLanguage';
 import { blogPosts } from '../data/blogPosts';
 import PageHero from '../components/PageHero';
-import CtaBanner from '../components/CtaBanner';
 
 export default function BlogPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -97,10 +96,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
-      <CtaBanner />
-
-      <Footer />
+<Footer />
     </>
   );
 }
