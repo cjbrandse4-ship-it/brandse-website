@@ -59,6 +59,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Social Proof Bar */}
+      <section className="bg-[#2D5016] py-5">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-white">
+            <div>
+              <div className="text-2xl md:text-3xl font-bold">15+</div>
+              <div className="text-sm text-green-200">{lang === 'fr' ? "Annees d'experience" : 'Years Experience'}</div>
+            </div>
+            <div>
+              <div className="text-2xl md:text-3xl font-bold flex items-center justify-center gap-1">5.0 <span className="text-yellow-400 text-lg">&#9733;</span></div>
+              <div className="text-sm text-green-200">{lang === 'fr' ? 'Avis Google' : 'Google Reviews'}</div>
+            </div>
+            <div>
+              <div className="text-2xl md:text-3xl font-bold">12</div>
+              <div className="text-sm text-green-200">{lang === 'fr' ? 'Villes desservies' : 'Cities Served'}</div>
+            </div>
+            <div>
+              <div className="text-2xl md:text-3xl font-bold">24/7</div>
+              <div className="text-sm text-green-200">{lang === 'fr' ? "Service d'urgence" : 'Emergency Service'}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
