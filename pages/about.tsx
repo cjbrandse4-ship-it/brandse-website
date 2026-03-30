@@ -172,28 +172,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-[#2D5016]">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.about.ctaTitle}</h2>
-          <p className="text-lg text-green-100 mb-8">{t.about.ctaDesc}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href={getLocalizedPath('/contact')}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#2D5016] rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-            >
-              {t.common.getFreeQuote} <ArrowRight className="w-5 h-5" />
-            </Link>
-            <a
-              href={`tel:${siteConfig.contact.phone}`}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors"
-            >
-              <Phone className="w-5 h-5" /> {siteConfig.contact.phoneDisplay}
-            </a>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </>
   );
