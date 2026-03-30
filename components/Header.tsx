@@ -41,9 +41,10 @@ export default function Header() {
   return (
     <header className={`sticky top-0 z-50 bg-white transition-shadow ${scrolled ? 'shadow-md' : ''}`}>
       {/* Emergency bar */}
-      <div className="bg-red-700 text-white text-center text-sm py-1.5 px-4">
-        <a href={`tel:${siteConfig.contact.phone}`} className="hover:underline">
-          {lang === 'fr' ? 'Service d\'urgence 24/7 — Appelez' : '24/7 Emergency Service — Call'} {siteConfig.contact.phoneDisplay}
+      <div className="bg-red-700 text-white text-center text-sm py-2 px-4">
+        <a href={`tel:${siteConfig.contact.phone}`} className="hover:underline inline-flex items-center gap-1.5 min-h-[44px] justify-center" aria-label={lang === 'fr' ? 'Appeler pour urgence' : 'Call for emergency service'}>
+          <Phone className="w-4 h-4" />
+          {lang === 'fr' ? 'Service d\'urgence 24/7' : '24/7 Emergency Service'} {siteConfig.contact.phoneDisplay}
         </a>
       </div>
 
@@ -98,8 +99,8 @@ export default function Header() {
             )}
           </div>
 
-          <Link href={toggleLangPath()} className="px-3 py-2 text-gray-500 hover:text-gray-900 font-semibold">{lang === 'en' ? 'FR' : 'EN'}</Link>
-          <a href={`tel:${siteConfig.contact.phone}`} className="px-3 py-2 text-gray-700 hover:text-[#2D5016] flex items-center gap-1"><Phone className="w-4 h-4" /></a>
+          <Link href={toggleLangPath()} className="px-3 py-2 text-gray-500 hover:text-gray-900 font-semibold min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label={lang === 'en' ? 'Passer au francais' : 'Switch to English'}>{lang === 'en' ? 'FR' : 'EN'}</Link>
+          <a href={`tel:${siteConfig.contact.phone}`} className="px-3 py-2 text-gray-700 hover:text-[#2D5016] flex items-center gap-1 min-w-[44px] min-h-[44px] justify-center" aria-label={lang === 'fr' ? 'Appeler' : 'Call us'}><Phone className="w-4 h-4" /></a>
           <Link href={getLocalizedPath('/contact')} className="ml-2 px-5 py-2.5 bg-[#2D5016] text-white rounded-lg font-medium hover:bg-[#3a6b1d] transition-colors">
             {t.common.getFreeQuote}
           </Link>
@@ -107,8 +108,8 @@ export default function Header() {
 
         {/* Mobile toggle */}
         <div className="flex items-center gap-3 lg:hidden">
-          <Link href={toggleLangPath()} className="text-gray-500 font-semibold text-sm">{lang === 'en' ? 'FR' : 'EN'}</Link>
-          <a href={`tel:${siteConfig.contact.phone}`} className="text-[#2D5016]"><Phone className="w-5 h-5" /></a>
+          <Link href={toggleLangPath()} className="text-gray-500 font-semibold text-sm min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label={lang === 'en' ? 'Passer au francais' : 'Switch to English'}>{lang === 'en' ? 'FR' : 'EN'}</Link>
+          <a href={`tel:${siteConfig.contact.phone}`} className="text-[#2D5016] min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label={lang === 'fr' ? 'Appeler' : 'Call us'}><Phone className="w-5 h-5" /></a>
           <button onClick={() => setMobileOpen(!mobileOpen)} className="text-gray-700">
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

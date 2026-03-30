@@ -74,7 +74,7 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">{t.contact.formTitle}</h2>
 
               {status === 'success' && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
+                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3" role="alert">
                   <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-green-800">{t.contact.successTitle}</p>
@@ -84,7 +84,7 @@ export default function ContactPage() {
               )}
 
               {status === 'error' && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3" role="alert">
                   <XCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
                   <div>
                     <p className="font-semibold text-red-800">{t.contact.errorTitle}</p>
@@ -99,6 +99,7 @@ export default function ContactPage() {
                   <input
                     type="text"
                     required
+                    autoComplete="name"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder={t.contact.namePlaceholder}
@@ -112,6 +113,7 @@ export default function ContactPage() {
                     <input
                       type="email"
                       required
+                      autoComplete="email"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       placeholder={t.contact.emailPlaceholder}
@@ -122,6 +124,7 @@ export default function ContactPage() {
                     <label className="block text-sm font-medium text-gray-700 mb-1">{t.contact.phoneLabel}</label>
                     <input
                       type="tel"
+                      autoComplete="tel"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       placeholder={t.contact.phonePlaceholder}

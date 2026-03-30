@@ -29,7 +29,7 @@ export default function HomePage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative min-h-[600px] flex items-center">
+      <section id="main-content" className="relative min-h-[50vh] sm:min-h-[600px] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${siteConfig.defaultImage})` }}

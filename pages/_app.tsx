@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div className={`${dmSans.variable} ${inter.variable}`}>
+      <a href="#main-content" className="skip-link">Skip to content</a>
       <Component {...pageProps} />
     </div>
   );

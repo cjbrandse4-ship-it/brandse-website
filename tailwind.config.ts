@@ -11,6 +11,16 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        brand: {
+          green: "var(--brand-green)",
+          "green-hover": "var(--brand-green-hover)",
+          "green-light": "var(--brand-green-light)",
+          red: "var(--brand-red)",
+          gray: "var(--brand-gray)",
+        },
+      },
+      maxWidth: {
+        prose: "65ch",
       },
     },
   },
