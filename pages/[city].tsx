@@ -8,6 +8,7 @@ import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../lib/useLanguage';
 import { siteConfig } from '../lib/seo';
 import { locations, getLocation, getLocationSlug, Location } from '../data/locations';
+import CtaBanner from '../components/CtaBanner';
 
 interface Props {
   location: Location;
@@ -201,27 +202,7 @@ export default function CityPage({ location }: Props) {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 sm:py-20 bg-[#2D5016] text-white text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{r(lt.ctaTitle)}</h2>
-          <p className="text-lg text-gray-200 mb-8">{r(lt.ctaDesc)}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href={getLocalizedPath('/contact')}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#2D5016] rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-            >
-              {t.common.getFreeQuote} <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              href={`tel:${siteConfig.contact.phone}`}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors"
-            >
-              <Phone className="w-5 h-5" /> {t.common.callNow}
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CtaBanner title={r(lt.ctaTitle)} subtitle={r(lt.ctaDesc)} />
 
       <Footer />
     </>

@@ -8,6 +8,7 @@ import SEOHead from '../../components/SEOHead';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { useLanguage } from '../../lib/useLanguage';
 import { blogPosts, BlogPost } from '../../data/blogPosts';
+import CtaBanner from '../../components/CtaBanner';
 
 interface Props {
   post: BlogPost;
@@ -204,35 +205,7 @@ export default function BlogPostPage({ post }: Props) {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-16 bg-[#2D5016] text-white text-center">
-          <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-4">
-              {isFr
-                ? 'Besoin de services professionnels ?'
-                : 'Need Professional Tree Services?'}
-            </h2>
-            <p className="text-lg text-gray-200 mb-8">
-              {isFr
-                ? "Contactez nos arboriculteurs certifiés pour une soumission gratuite"
-                : 'Contact our certified arborists for a free quote today'}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href={getLocalizedPath('/contact')}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#2D5016] rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
-                {t.common.getFreeQuote}
-              </Link>
-              <a
-                href="tel:4383655410"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors"
-              >
-                <Phone className="w-5 h-5" /> (438) 365-5410
-              </a>
-            </div>
-          </div>
-        </section>
+        <CtaBanner />
       </main>
 
       <Footer />

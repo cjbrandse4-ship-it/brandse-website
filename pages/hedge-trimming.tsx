@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
+import CtaBanner from '../components/CtaBanner';
 
 export default function HedgeTrimmingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -245,26 +246,7 @@ export default function HedgeTrimmingPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 bg-[#2D5016]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              {isFr ? 'Vos haies ont besoin d\'entretien ?' : 'Need Your Hedges Trimmed?'}
-            </h2>
-            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-              {isFr
-                ? "Réservez un entretien professionnel et gardez votre terrain impeccable toute l'année."
-                : 'Book professional maintenance and keep your yard looking pristine all year.'}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={getLocalizedPath('/contact')} className="inline-flex items-center justify-center bg-white text-[#2D5016] hover:bg-gray-100 text-lg px-8 py-4 rounded-lg font-semibold transition-colors">
-                {t.common.getFreeQuote}
-              </Link>
-              <a href="tel:4383655410" className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-[#2D5016] text-lg px-8 py-4 rounded-lg font-semibold transition-colors">
-                <Phone className="mr-2 h-5 w-5" />(438) 365-5410
-              </a>
-            </div>
-          </div>
-        </section>
+        <CtaBanner />
       </main>
 
       <Footer />

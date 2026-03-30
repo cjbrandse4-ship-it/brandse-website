@@ -6,6 +6,8 @@ import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../lib/useLanguage';
 import { blogPosts } from '../data/blogPosts';
+import PageHero from '../components/PageHero';
+import CtaBanner from '../components/CtaBanner';
 
 export default function BlogPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -29,19 +31,12 @@ export default function BlogPage() {
       />
       <Header />
 
-      {/* Hero */}
-      <section className="bg-[#2D5016] text-white py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-            {lang === 'fr' ? 'Blogue' : 'Blog'}
-          </h1>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
-            {lang === 'fr'
-              ? "Conseils d'experts, guides saisonniers et nouvelles locales sur l'entretien des arbres"
-              : 'Expert tips, seasonal guides, and local news about tree care'}
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title={lang === 'fr' ? 'Blogue' : 'Blog'}
+        subtitle={lang === 'fr'
+          ? "Conseils d'experts, guides saisonniers et nouvelles locales sur l'entretien des arbres"
+          : 'Expert tips, seasonal guides, and local news about tree care'}
+      />
 
       {/* Blog Grid */}
       <section className="py-16 sm:py-20 bg-gray-50">
@@ -103,25 +98,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-[#2D5016] text-white text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4">
-            {lang === 'fr' ? 'Besoin de services professionnels ?' : 'Need Professional Tree Services?'}
-          </h2>
-          <p className="text-lg text-gray-200 mb-8">
-            {lang === 'fr'
-              ? "Contactez nos arboriculteurs certifiés pour une soumission gratuite"
-              : 'Contact our certified arborists for a free quote today'}
-          </p>
-          <Link
-            href={getLocalizedPath('/contact')}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#2D5016] rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-          >
-            {t.common.getFreeQuote} <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
+      <CtaBanner />
 
       <Footer />
     </>
