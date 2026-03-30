@@ -18,7 +18,7 @@ export default function AboutPage() {
     "name": "Service d'Arbres Brandse Inc",
     "url": "https://www.servicedarbresbrandse.com",
     "logo": "https://www.servicedarbresbrandse.com/logo-schema.png",
-    "foundingDate": "2010",
+    "foundingDate": "2020",
     "founder": { "@type": "Person", "name": "John Brandse" },
     "address": {
       "@type": "PostalAddress",

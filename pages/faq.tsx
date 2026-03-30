@@ -91,11 +91,13 @@ export default function FAQPage() {
                         }`}
                       />
                     </button>
-                    {isOpen && (
-                      <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
-                        {item.a}
+                    <div className={`grid transition-all duration-200 ease-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                      <div className="overflow-hidden">
+                        <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                          {item.a}
+                        </div>
                       </div>
-                    )}
+                    </div>
                   </div>
                 );
               })}

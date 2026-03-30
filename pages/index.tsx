@@ -64,7 +64,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-white">
             <div>
-              <div className="text-2xl md:text-3xl font-bold">15+</div>
+              <div className="text-2xl md:text-3xl font-bold">5+</div>
               <div className="text-sm text-green-200">{lang === 'fr' ? "Annees d'experience" : 'Years Experience'}</div>
             </div>
             <div>
