@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../lib/useLanguage';
 import { siteConfig } from '../lib/seo';
+import PageHero from '../components/PageHero';
 
 export default function FAQPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -45,13 +46,7 @@ export default function FAQPage() {
       </Head>
       <Header />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-[#2D5016] to-[#1a3a0a] py-20">
-        <div className="max-w-7xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t.faq.heroTitle}</h1>
-          <p className="text-lg text-green-100 max-w-3xl mx-auto">{t.faq.heroSubtitle}</p>
-        </div>
-      </section>
+      <PageHero title={t.faq.heroTitle} subtitle={t.faq.heroSubtitle} />
 
       {/* Search + Accordion */}
       <section className="py-20 bg-white">

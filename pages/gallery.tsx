@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../lib/useLanguage';
+import PageHero from '../components/PageHero';
 
 const galleryItems = [
   {
@@ -84,13 +85,7 @@ export default function GalleryPage() {
       </Head>
       <Header />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-[#2D5016] to-[#1a3a0a] py-20">
-        <div className="max-w-7xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">{title}</h1>
-          <p className="text-lg text-green-100 max-w-3xl mx-auto">{subtitle}</p>
-        </div>
-      </section>
+      <PageHero title={title} subtitle={subtitle} />
 
       {/* Gallery Grid */}
       <section className="py-20 bg-white">
