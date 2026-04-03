@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 1,
     slug: 'spring-tree-maintenance',
-    image: 'https://images.unsplash.com/photo-1691483720561-bf62eb4b7d00?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1598791318878-10e76d178023?w=800&h=500&fit=crop',
     author: 'John Brandse',
     date: '2024-03-10',
     readingTime: '5 min',
@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 2,
     slug: 'when-to-remove-a-tree',
-    image: 'https://images.unsplash.com/photo-1550002079-5b59db6b6df9?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1601000938259-9e92002320b2?w=800&h=500&fit=crop',
     author: 'Sarah Brandse',
     date: '2024-04-05',
     readingTime: '6 min',
@@ -94,7 +94,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 3,
     slug: 'stump-grinding-vs-removal',
-    image: 'https://images.unsplash.com/photo-1588878129387-e37104f9a87d?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1562077981-4d7eafd44932?w=800&h=500&fit=crop',
     author: 'John Brandse',
     date: '2024-05-12',
     readingTime: '4 min',
@@ -129,7 +129,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 4,
     slug: 'emergency-tree-services-guide',
-    image: 'https://images.unsplash.com/photo-1663634980758-1e3c0e475752?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?w=800&h=500&fit=crop',
     author: 'Sarah Brandse',
     date: '2024-06-20',
     readingTime: '5 min',
@@ -166,7 +166,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 5,
     slug: 'tree-trimming-tips',
-    image: 'https://images.unsplash.com/photo-1674915621696-400feb364e5f?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?w=800&h=500&fit=crop',
     author: 'John Brandse',
     date: '2024-07-15',
     readingTime: '6 min',
@@ -203,7 +203,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 6,
     slug: 'best-trees-to-plant',
-    image: 'https://images.unsplash.com/photo-1597069787525-716e99359f4c?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=500&fit=crop',
     author: 'Sarah Brandse',
     date: '2024-08-22',
     readingTime: '7 min',
@@ -240,7 +240,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 7,
     slug: 'fall-tree-care',
-    image: 'https://images.unsplash.com/photo-1702309301069-c42775bd71be?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=800&h=500&fit=crop',
     author: 'John Brandse',
     date: '2024-09-30',
     readingTime: '5 min',
@@ -277,7 +277,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 8,
     slug: 'why-professional-services-matter',
-    image: 'https://images.unsplash.com/photo-1553492300-e644077f7cc3?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=500&fit=crop',
     author: 'Sarah Brandse',
     date: '2024-10-15',
     readingTime: '4 min',
@@ -314,7 +314,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 9,
     slug: 'tree-removal-permits-pointe-claire-dorval-beaconsfield',
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=500&fit=crop',
     author: 'John Brandse',
     date: '2025-01-15',
     readingTime: '6 min read',
@@ -349,7 +349,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 10,
     slug: 'emerald-ash-borer-kirkland-baie-durfe',
-    image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800&h=500&fit=crop',
     author: 'Sarah Brandse',
     date: '2025-02-01',
     readingTime: '7 min read',
@@ -384,7 +384,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 11,
     slug: 'best-trees-to-plant-ddo-pierrefonds',
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=800&h=500&fit=crop',
     author: 'John Brandse',
     date: '2025-02-20',
     readingTime: '6 min read',
@@ -419,7 +419,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 12,
     slug: 'ice-storm-tree-damage-sainte-anne-senneville',
-    image: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1517299321609-52687d1bc55a?w=800&h=500&fit=crop',
     author: 'Sarah Brandse',
     date: '2025-03-05',
     readingTime: '6 min read',
@@ -489,7 +489,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 14,
     slug: 'fall-tree-maintenance-beaconsfield-baie-durfe',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1477414348463-c0eb7f1a585e?w=800&h=500&fit=crop',
     author: 'Sarah Brandse',
     date: '2025-04-05',
     readingTime: '6 min read',
@@ -524,7 +524,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 15,
     slug: 'tree-removal-cost-west-island-montreal',
-    image: 'https://images.unsplash.com/photo-1611843467160-25afb8df1074?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=500&fit=crop',
     author: 'John Brandse',
     date: '2025-04-20',
     readingTime: '7 min read',
@@ -559,7 +559,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 16,
     slug: 'hedge-trimming-pointe-claire-dorval',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1504507926084-34cf0b939964?w=800&h=500&fit=crop',
     author: 'John Brandse',
     date: '2025-05-05',
     readingTime: '6 min read',
@@ -594,7 +594,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 17,
     slug: 'crane-tree-removal-kirkland-ddo',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&h=500&fit=crop',
     author: 'Sarah Brandse',
     date: '2025-05-20',
     readingTime: '7 min read',
@@ -629,7 +629,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 18,
     slug: 'signs-tree-is-dying-pierrefonds-roxboro',
-    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800&h=500&fit=crop',
     author: 'John Brandse',
     date: '2025-06-05',
     readingTime: '7 min read',
@@ -664,7 +664,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 19,
     slug: 'tree-pruning-guide-west-island',
-    image: 'https://images.unsplash.com/photo-1598902468171-480a2cfdd750?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=500&fit=crop',
     author: 'Sarah Brandse',
     date: '2025-06-20',
     readingTime: '7 min read',
@@ -699,7 +699,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 20,
     slug: 'after-storm-tree-inspection-west-island',
-    image: 'https://images.unsplash.com/photo-1527482797697-8795b05a13fe?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1446034295857-c899f4c4fbbe?w=800&h=500&fit=crop',
     author: 'John Brandse',
     date: '2025-07-05',
     readingTime: '6 min read',
@@ -734,7 +734,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 21,
     slug: 'tree-root-damage-foundations-west-island',
-    image: 'https://images.unsplash.com/photo-1558882224-dda166ffe594?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1518882460390-04e2ea2b1e3e?w=800&h=500&fit=crop',
     author: 'Sarah Brandse',
     date: '2025-07-20',
     readingTime: '7 min read',
@@ -769,7 +769,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 22,
     slug: 'choosing-arborist-west-island-montreal',
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&h=500&fit=crop',
     author: 'John Brandse',
     date: '2025-08-05',
     readingTime: '6 min read',
