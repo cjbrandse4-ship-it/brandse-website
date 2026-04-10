@@ -139,8 +139,12 @@ export default function CityPage({ location }: Props) {
       <Header />
 
       {/* Hero */}
-      <section className="relative bg-[#2D5016] text-white py-20 sm:py-28">
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="relative min-h-[500px] flex items-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${siteConfig.defaultImage})` }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center mb-6">
             <MapPin className="h-8 w-8 sm:h-10 sm:w-10 mr-3 text-green-300" />
