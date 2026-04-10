@@ -145,7 +145,7 @@ export default function CityPage({ location }: Props) {
           style={{ backgroundImage: `url(${siteConfig.defaultImage})` }}
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="flex items-center justify-center mb-6">
             <MapPin className="h-8 w-8 sm:h-10 sm:w-10 mr-3 text-green-300" />
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">{r(lt.heroTitle)}</h1>
