@@ -63,8 +63,8 @@ export const translations = {
     home: {
       metaTitle: "Service d'Arbres Brandse | Professional Tree Services West Island Montreal",
       metaDesc: "Licensed & CNESST insured tree service company serving Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D'Urfé, Île-Perrot, and Pincourt. 24/7 Emergency.",
-      heroTitle: 'Professional Tree Care for Montreal\'s West Island',
-      heroSubtitle: 'Certified arborists providing safe, reliable tree care across Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Kirkland, Dollard-des-Ormeaux, and surrounding West Island communities.',
+      heroTitle: 'Professional Tree Care for the West Island',
+      heroSubtitle: 'Certified arborists providing safe, reliable tree care across Saint-Lazare, Hudson, Vaudreuil, Pointe-Claire, Beaconsfield, Kirkland, and surrounding areas.',
       servingTitle: 'Our Service Areas',
       servingDesc: 'We proudly serve 12 communities across the West Island with professional tree care services',
       servingFooter: 'Fast response times • Local expertise • Community trusted',
@@ -307,8 +307,8 @@ export const translations = {
     home: {
       metaTitle: "Service d'Arbres Brandse | Services d'arbres professionnels Ouest de l'Île",
       metaDesc: "Entreprise licenciée et assurée CNESST desservant Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D'Urfé, Île-Perrot et Pincourt. Urgence 24/7.",
-      heroTitle: 'Soins d\'arbres professionnels pour l\'Ouest de l\'Île de Montréal',
-      heroSubtitle: 'Arboriculteurs certifiés offrant des soins sécuritaires à travers Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Kirkland, Dollard-des-Ormeaux et les communautés avoisinantes de l\'Ouest de l\'Île.',
+      heroTitle: 'Soins d\'arbres professionnels pour l\'Ouest de l\'Île',
+      heroSubtitle: 'Arboriculteurs certifiés offrant des soins sécuritaires à travers Saint-Lazare, Hudson, Vaudreuil, Pointe-Claire, Beaconsfield, Kirkland et les régions avoisinantes.',
       servingTitle: 'Nos zones de service',
       servingDesc: 'Nous sommes fiers de desservir 12 communautés de l\'Ouest de l\'Île avec des services professionnels',
       servingFooter: 'Temps de réponse rapides • Expertise locale • Confiance de la communauté',
