@@ -237,7 +237,11 @@ export const translations = {
       resident: '{city} Resident',
       ctaTitle: 'Need Tree Services in {city}?',
       ctaDesc: 'Contact your local tree care experts today',
-      otherAreasTitle: 'Other Areas We Serve'
+      otherAreasTitle: 'Other Areas We Serve',
+      recentWorkTitle: 'Recent Work in {city}',
+      faqTitle: 'Frequently Asked Questions — {city}',
+      commonTreeSpecies: 'Common Tree Species in {city}',
+      permitInfo: 'Permit & Regulation Info'
     }
   },
   fr: {
@@ -477,7 +481,11 @@ export const translations = {
       resident: 'Résident de {city}',
       ctaTitle: 'Besoin de services d\'arbres à {city} ?',
       ctaDesc: 'Contactez vos experts locaux en entretien d\'arbres aujourd\'hui',
-      otherAreasTitle: 'Autres zones que nous desservons'
+      otherAreasTitle: 'Autres zones que nous desservons',
+      recentWorkTitle: 'Travaux récents à {city}',
+      faqTitle: 'Questions fréquentes — {city}',
+      commonTreeSpecies: 'Espèces d\'arbres courantes à {city}',
+      permitInfo: 'Permis et réglementation'
     }
   }
 };

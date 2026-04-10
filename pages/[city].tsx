@@ -1,13 +1,14 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { MapPin, CheckCircle, TreePine, Shield, Scissors, Sprout, AlertTriangle, Phone, ArrowRight } from 'lucide-react';
+import { MapPin, CheckCircle, TreePine, Shield, Scissors, Sprout, AlertTriangle, Phone, ArrowRight, ChevronDown, Wrench, HelpCircle, Leaf } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../lib/useLanguage';
 import { siteConfig } from '../lib/seo';
 import { locations, getLocation, getLocationSlug, Location } from '../data/locations';
+import { useState } from 'react';
 
 interface Props {
   location: Location;
@@ -22,16 +23,50 @@ const serviceLinks = [
   { key: 'emergency', href: '/emergency-services', icon: AlertTriangle },
 ];
 
+function FaqItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border border-gray-200 rounded-xl overflow-hidden">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors"
+      >
+        <span className="font-semibold text-gray-900 pr-4">{q}</span>
+        <ChevronDown className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${open ? 'rotate-180' : ''}`} />
+      </button>
+      {open && (
+        <div className="px-6 pb-4">
+          <p className="text-gray-600 leading-relaxed">{a}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function CityPage({ location }: Props) {
   const { lang, t, getLocalizedPath } = useLanguage();
   const lt = t.locationTemplate;
   const city = location.name;
+  const cityContent = location.content[lang];
 
   const r = (s: string) => s.replace(/\{city\}/g, city);
 
   const title = r(lt.title);
   const metaDesc = r(lt.metaDesc);
   const path = lang === 'fr' ? `/fr/${location.slug}` : `/${location.slug}`;
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: cityContent.faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  };
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -47,6 +82,7 @@ export default function CityPage({ location }: Props) {
       addressLocality: city,
       addressRegion: 'QC',
       addressCountry: 'CA',
+      postalCode: location.postalCodes[0],
     },
     areaServed: {
       '@type': 'City',
@@ -95,6 +131,10 @@ export default function CityPage({ location }: Props) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
       </Head>
       <Header />
 
@@ -127,8 +167,11 @@ export default function CityPage({ location }: Props) {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 {r(lt.whyChooseTitle)}
               </h2>
-              <p className="text-gray-600 text-lg mb-6 leading-relaxed">{r(lt.desc1)}</p>
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">{r(lt.desc2)}</p>
+
+              {/* Unique city paragraphs */}
+              {cityContent.paragraphs.map((p, i) => (
+                <p key={i} className="text-gray-600 text-lg mb-6 leading-relaxed">{p}</p>
+              ))}
 
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {lt.features.map((f: string) => (
@@ -138,6 +181,21 @@ export default function CityPage({ location }: Props) {
                   </li>
                 ))}
               </ul>
+
+              {/* Common Tree Species */}
+              <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+                <div className="flex items-center gap-2 mb-3">
+                  <Leaf className="w-5 h-5 text-[#2D5016]" />
+                  <h3 className="font-bold text-gray-900">{r(lt.commonTreeSpecies)}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {location.treeSpecies.map(species => (
+                    <span key={species} className="px-3 py-1 bg-white border border-green-300 rounded-full text-sm text-gray-700 font-medium">
+                      {species}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
               <div className="bg-green-50 border border-green-200 rounded-xl p-6">
                 <p className="text-gray-700">
@@ -180,6 +238,41 @@ export default function CityPage({ location }: Props) {
         </div>
       </section>
 
+      {/* Recent Work */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-8">
+            <Wrench className="w-7 h-7 text-[#2D5016]" />
+            <h2 className="text-3xl font-bold text-gray-900">{r(lt.recentWorkTitle)}</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {cityContent.recentWork.map((item, i) => (
+              <div key={i} className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-[#2D5016] flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700 leading-relaxed">{item}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-8">
+            <HelpCircle className="w-7 h-7 text-[#2D5016]" />
+            <h2 className="text-3xl font-bold text-gray-900">{r(lt.faqTitle)}</h2>
+          </div>
+          <div className="space-y-3">
+            {cityContent.faqs.map((faq, i) => (
+              <FaqItem key={i} q={faq.q} a={faq.a} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Nearby Cities */}
       <section className="py-12 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -200,7 +293,7 @@ export default function CityPage({ location }: Props) {
           </div>
         </div>
       </section>
-<Footer />
+      <Footer />
     </>
   );
 }
