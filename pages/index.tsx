@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Head from 'next/head';
+import Image from 'next/image';
 import { Shield, Award, Clock, MapPin, Star, Phone, ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -30,9 +30,14 @@ export default function HomePage() {
 
       {/* Hero */}
       <section id="main-content" className="relative min-h-[600px] flex items-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${siteConfig.defaultImage})` }}
+        <Image
+          src="/og-image.jpg"
+          alt=""
+          aria-hidden="true"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative max-w-7xl mx-auto px-4 py-24 text-center text-white">
@@ -108,26 +113,6 @@ export default function HomePage() {
 
       {/* Google Reviews */}
       <section className="py-20 bg-white">
-        <Head>
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": ["LocalBusiness", "TreeService"],
-            "name": "Service d'Arbres Brandse Inc",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5.0",
-              "reviewCount": String(testimonials.length),
-              "bestRating": "5"
-            },
-            "review": testimonials.map((item) => ({
-              "@type": "Review",
-              "author": { "@type": "Person", "name": item.name },
-              "datePublished": item.date,
-              "reviewRating": { "@type": "Rating", "ratingValue": item.rating, "bestRating": 5 },
-              "reviewBody": item.text.en
-            }))
-          }) }} />
-        </Head>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -142,7 +127,7 @@ export default function HomePage() {
               </h2>
             </div>
             <div className="flex items-center justify-center gap-2 mb-2">
-              <span className="text-4xl font-bold text-gray-900">4.9</span>
+              <span className="text-4xl font-bold text-gray-900">{siteConfig.rating.value}</span>
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-yellow-400" />
@@ -150,7 +135,7 @@ export default function HomePage() {
               </div>
             </div>
             <p className="text-gray-500">
-              {lang === 'fr' ? 'Basé sur 18 avis Google' : 'Based on 18 Google reviews'}
+              {lang === 'fr' ? `Basé sur ${siteConfig.rating.count} avis Google` : `Based on ${siteConfig.rating.count} Google reviews`}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

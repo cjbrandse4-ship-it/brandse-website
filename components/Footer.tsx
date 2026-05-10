@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, Clock, MapPin, Facebook, Instagram, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../lib/useLanguage';
 import { locations } from '../data/locations';
@@ -52,7 +53,7 @@ export default function Footer() {
         {/* Company */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <img src={siteConfig.logo} alt="Brandse" className="h-10 w-10 rounded-full object-cover" />
+            <Image src="/logo.jpg" alt="Brandse" width={40} height={40} loading="lazy" className="h-10 w-10 rounded-full object-cover" />
             <span className="font-bold text-white text-sm leading-tight">Service d&apos;Arbres<br/>Brandse Inc</span>
           </div>
           <p className="text-sm text-gray-400 mb-4">{t.common.tagline}</p>

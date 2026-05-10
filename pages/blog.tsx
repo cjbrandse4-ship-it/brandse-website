@@ -49,13 +49,15 @@ export default function BlogPage() {
                   className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col"
                 >
                   <div className="relative h-48 w-full bg-gray-200">
-                    <img
+                    <Image
                       src={post.image}
                       alt={content.title}
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       loading="lazy"
+                      className="object-cover"
                     />
-                    <span className="absolute top-4 left-4 bg-[#2D5016] text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    <span className="absolute top-4 left-4 bg-[#2D5016] text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
                       {post.category}
                     </span>
                   </div>

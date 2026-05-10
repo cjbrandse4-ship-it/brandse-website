@@ -1,12 +1,13 @@
 import Link from 'next/link';
-import { TreePine, Home, Phone, ArrowLeft } from 'lucide-react';
+import Head from 'next/head';
+import { TreePine, Home, Phone } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../lib/useLanguage';
+import { siteConfig } from '../lib/seo';
 
 export default function Custom404() {
-  const { lang, t } = useLanguage();
+  const { lang, getLocalizedPath } = useLanguage();
 
   const title = lang === 'fr' ? 'Page introuvable' : 'Page Not Found';
   const subtitle = lang === 'fr'
@@ -16,9 +17,15 @@ export default function Custom404() {
   const contactLabel = lang === 'fr' ? 'Contactez-nous' : 'Contact Us';
   const callLabel = lang === 'fr' ? 'Appelez-nous' : 'Call Us';
 
+  // Inline minimal head for 404 — intentionally not via SEOHead, which would
+  // emit a self-canonical pointing at the missing URL. 404 pages should be
+  // noindex; canonical/og are not appropriate.
   return (
     <>
-      <SEOHead title={title} description={subtitle} path="/404" lang={lang} />
+      <Head>
+        <title>{`${title} | ${siteConfig.name}`}</title>
+        <meta name="robots" content="noindex, follow" />
+      </Head>
       <Header />
 
       <main id="main-content" className="py-32 bg-white">
@@ -29,16 +36,16 @@ export default function Custom404() {
           <p className="text-gray-500 text-lg mb-10 max-w-lg mx-auto">{subtitle}</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#2D5016] text-white rounded-lg font-semibold hover:bg-[#3a6b1d] transition-colors">
+            <Link href={getLocalizedPath('/')} className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#2D5016] text-white rounded-lg font-semibold hover:bg-[#3a6b1d] transition-colors">
               <Home className="w-5 h-5" /> {homeLabel}
             </Link>
-            <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-[#2D5016] text-[#2D5016] rounded-lg font-semibold hover:bg-[#2D5016] hover:text-white transition-colors">
+            <Link href={getLocalizedPath('/contact')} className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-[#2D5016] text-[#2D5016] rounded-lg font-semibold hover:bg-[#2D5016] hover:text-white transition-colors">
               <Phone className="w-5 h-5" /> {contactLabel}
             </Link>
           </div>
 
           <p className="mt-8 text-gray-400 text-sm">
-            {callLabel}: <a href="tel:+14383655410" className="text-[#2D5016] font-medium hover:underline">(438) 365-5410</a>
+            {callLabel}: <a href={`tel:${siteConfig.contact.phone}`} className="text-[#2D5016] font-medium hover:underline">{siteConfig.contact.phoneDisplay}</a>
           </p>
         </div>
       </main>

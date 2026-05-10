@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 import { Phone, Shield, AlertTriangle, Clock, ChevronRight, ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
+import { buildServiceSchema } from '../lib/seo';
 
 export default function EmergencyServicesPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -89,36 +91,13 @@ export default function EmergencyServicesPage() {
     }
   ];
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "TreeService",
-    "name": "Service d'Arbres Brandse Inc",
-    "telephone": "+1-438-365-5410",
-    "url": "https://www.servicedarbresbrandse.com",
-    "image": "https://www.servicedarbresbrandse.com/og-image.jpg",
-    "address": { "@type": "PostalAddress", "addressLocality": "Montreal", "addressRegion": "QC", "addressCountry": "CA" },
-    "areaServed": [
-      { "@type": "City", "name": "Pointe-Claire" },
-      { "@type": "City", "name": "Beaconsfield" },
-      { "@type": "City", "name": "Kirkland" },
-      { "@type": "City", "name": "Dorval" },
-      { "@type": "City", "name": "Hudson" },
-      { "@type": "City", "name": "Saint-Lazare" },
-      { "@type": "City", "name": "Vaudreuil-Dorion" },
-      { "@type": "City", "name": "Dollard-des-Ormeaux" },
-      { "@type": "City", "name": "Senneville" },
-      { "@type": "City", "name": "Baie-d'Urfe" },
-      { "@type": "City", "name": "Ile-Perrot" },
-      { "@type": "City", "name": "Pincourt" }
-    ],
-    "description": "24/7 emergency tree removal for storm damage and hazardous situations in West Island Montreal.",
-    "makesOffer": {
-      "@type": "Offer",
-      "itemOffered": { "@type": "Service", "name": "Emergency Tree Service", "description": "24/7 rapid response for fallen or hazardous trees after storms." },
-      "priceCurrency": "CAD",
-      "availability": "https://schema.org/InStock"
-    }
-  };
+  const serviceSchema = buildServiceSchema({
+    name: isFr ? "Service d'urgence d'arbres" : "Emergency Tree Service",
+    description: isFr
+      ? "Intervention d'urgence 24/7 pour arbres tombés, dommages de tempête et situations dangereuses dans l'Ouest de l'Île de Montréal."
+      : "24/7 emergency tree removal for storm damage, fallen trees, and hazardous situations in West Island Montreal.",
+    slug: getLocalizedPath('/emergency-services'),
+  });
 
   return (
     <>
@@ -134,20 +113,24 @@ export default function EmergencyServicesPage() {
 
       <Header />
       <Breadcrumbs items={[
-        { name: 'Home', href: '/' },
-        { name: 'Services', href: '/services' },
-        { name: 'Emergency Services' }
+        { name: isFr ? 'Accueil' : 'Home', href: getLocalizedPath('/') },
+        { name: 'Services', href: getLocalizedPath('/services') },
+        { name: isFr ? "Service d'urgence" : 'Emergency Services' }
       ]} />
 
       <main>
         {/* Hero */}
         <section className="relative flex items-center justify-center min-h-[60vh]">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: 'url(/og-image.jpg)' }}
-          >
-            <div className="absolute inset-0 bg-gray-900/85" />
-          </div>
+          <Image
+            src="/og-image.jpg"
+            alt=""
+            aria-hidden="true"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gray-900/85" />
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
             <nav className="flex items-center justify-center gap-2 text-sm text-gray-300 mb-6">
               <Link href={getLocalizedPath('/')} className="hover:text-white">{isFr ? 'Accueil' : 'Home'}</Link>

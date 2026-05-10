@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 import { Phone, Shield, CheckCircle, ChevronRight, Sprout, ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
+import { buildServiceSchema } from '../lib/seo';
 
 export default function TreePlantingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -89,36 +91,13 @@ export default function TreePlantingPage() {
     }
   ];
 
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "TreeService",
-    "name": "Service d'Arbres Brandse Inc",
-    "telephone": "+1-438-365-5410",
-    "url": "https://www.servicedarbresbrandse.com",
-    "image": "https://www.servicedarbresbrandse.com/og-image.jpg",
-    "address": { "@type": "PostalAddress", "addressLocality": "Montreal", "addressRegion": "QC", "addressCountry": "CA" },
-    "areaServed": [
-      { "@type": "City", "name": "Pointe-Claire" },
-      { "@type": "City", "name": "Beaconsfield" },
-      { "@type": "City", "name": "Kirkland" },
-      { "@type": "City", "name": "Dorval" },
-      { "@type": "City", "name": "Hudson" },
-      { "@type": "City", "name": "Saint-Lazare" },
-      { "@type": "City", "name": "Vaudreuil-Dorion" },
-      { "@type": "City", "name": "Dollard-des-Ormeaux" },
-      { "@type": "City", "name": "Senneville" },
-      { "@type": "City", "name": "Baie-d'Urfe" },
-      { "@type": "City", "name": "Ile-Perrot" },
-      { "@type": "City", "name": "Pincourt" }
-    ],
-    "description": "Tree planting services with species selection guidance for West Island Montreal properties.",
-    "makesOffer": {
-      "@type": "Offer",
-      "itemOffered": { "@type": "Service", "name": "Tree Planting", "description": "Expert tree species selection, soil assessment, and professional planting." },
-      "priceCurrency": "CAD",
-      "availability": "https://schema.org/InStock"
-    }
-  };
+  const serviceSchema = buildServiceSchema({
+    name: isFr ? "Plantation d'arbres" : "Tree Planting",
+    description: isFr
+      ? "Services de plantation d'arbres avec conseils sur le choix d'espèces, évaluation du sol et plantation professionnelle pour les propriétés de l'Ouest de l'Île de Montréal."
+      : "Tree planting services with expert species selection, soil assessment, and professional installation for West Island Montreal properties.",
+    slug: getLocalizedPath('/tree-planting'),
+  });
 
   return (
     <>
@@ -134,20 +113,24 @@ export default function TreePlantingPage() {
 
       <Header />
       <Breadcrumbs items={[
-        { name: 'Home', href: '/' },
-        { name: 'Services', href: '/services' },
-        { name: 'Tree Planting' }
+        { name: isFr ? 'Accueil' : 'Home', href: getLocalizedPath('/') },
+        { name: 'Services', href: getLocalizedPath('/services') },
+        { name: isFr ? "Plantation d'arbres" : 'Tree Planting' }
       ]} />
 
       <main>
         {/* Hero */}
         <section className="relative flex items-center justify-center min-h-[60vh]">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: 'url(/og-image.jpg)' }}
-          >
-            <div className="absolute inset-0 bg-gray-900/75" />
-          </div>
+          <Image
+            src="/og-image.jpg"
+            alt=""
+            aria-hidden="true"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gray-900/75" />
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
             <nav className="flex items-center justify-center gap-2 text-sm text-gray-300 mb-6">
               <Link href={getLocalizedPath('/')} className="hover:text-white">{isFr ? 'Accueil' : 'Home'}</Link>

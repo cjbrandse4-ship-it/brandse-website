@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface PageHeroProps {
   title: string;
   subtitle?: string;
@@ -7,9 +9,14 @@ interface PageHeroProps {
 export default function PageHero({ title, subtitle, children }: PageHeroProps) {
   return (
     <section className="relative py-20 overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/og-image.jpg)' }}
+      <Image
+        src="/og-image.jpg"
+        alt=""
+        aria-hidden="true"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
       />
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative max-w-7xl mx-auto px-4 text-center text-white">

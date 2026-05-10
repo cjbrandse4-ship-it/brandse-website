@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Menu, X, ChevronDown, MapPin } from 'lucide-react';
 import { useLanguage } from '../lib/useLanguage';
 import { locations } from '../data/locations';
@@ -51,7 +52,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href={getLocalizedPath('/')} className="flex items-center gap-2 shrink-0">
-          <img src={siteConfig.logo} alt="Brandse Trees" className="h-10 w-10 rounded-full object-cover" />
+          <Image src="/logo.jpg" alt="Brandse Trees" width={40} height={40} priority className="h-10 w-10 rounded-full object-cover" />
           <span className="hidden sm:block font-bold text-gray-900 text-sm leading-tight">Service d&apos;Arbres<br/>Brandse Inc</span>
         </Link>
 

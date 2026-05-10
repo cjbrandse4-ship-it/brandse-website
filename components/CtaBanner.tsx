@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../lib/useLanguage';
 import { siteConfig } from '../lib/seo';
@@ -19,7 +20,15 @@ export default function CtaBanner({ title, subtitle }: CtaBannerProps) {
 
   return (
     <section className="relative py-16 sm:py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/og-image.jpg)' }} />
+      <Image
+        src="/og-image.jpg"
+        alt=""
+        aria-hidden="true"
+        fill
+        loading="lazy"
+        sizes="100vw"
+        className="object-cover object-center"
+      />
       <div className="absolute inset-0 bg-black/70" />
       <div className="relative max-w-4xl mx-auto px-4 text-center text-white">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">{heading}</h2>

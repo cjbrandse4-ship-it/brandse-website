@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, CheckCircle, TreePine, Shield, Scissors, Sprout, AlertTriangle, Phone, ArrowRight, ChevronDown, Wrench, HelpCircle, Leaf } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -117,8 +118,8 @@ export default function CityPage({ location }: Props) {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '18',
+      ratingValue: siteConfig.rating.value,
+      reviewCount: String(siteConfig.rating.count),
       bestRating: '5',
     },
   };
@@ -140,9 +141,14 @@ export default function CityPage({ location }: Props) {
 
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${siteConfig.defaultImage})` }}
+        <Image
+          src="/og-image.jpg"
+          alt=""
+          aria-hidden="true"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">

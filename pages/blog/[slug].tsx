@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 import { Calendar, Clock, User, ArrowLeft, Phone, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -81,8 +82,8 @@ export default function BlogPostPage({ post }: Props) {
       <Header />
       <Breadcrumbs
         items={[
-          { name: isFr ? 'Accueil' : 'Home', href: '/' },
-          { name: isFr ? 'Blogue' : 'Blog', href: '/blog' },
+          { name: isFr ? 'Accueil' : 'Home', href: getLocalizedPath('/') },
+          { name: isFr ? 'Blogue' : 'Blog', href: getLocalizedPath('/blog') },
           { name: content.title },
         ]}
       />
@@ -91,10 +92,13 @@ export default function BlogPostPage({ post }: Props) {
         {/* Hero */}
         <section className="relative">
           <div className="h-64 sm:h-80 w-full bg-gray-200 relative">
-            <img
+            <Image
               src={post.image}
               alt={content.title}
-              className="w-full h-full object-cover"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </div>

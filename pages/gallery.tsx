@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import { X } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -97,11 +98,13 @@ export default function GalleryPage() {
                 onClick={() => setLightbox(i)}
                 className="group relative overflow-hidden rounded-xl aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-[#2D5016]"
               >
-                <img
+                <Image
                   src={item.src}
                   alt={item[lang]}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   loading="lazy"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-end">
                   <p className="text-white font-medium p-4 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -127,10 +130,12 @@ export default function GalleryPage() {
             <X className="w-8 h-8" />
           </button>
           <div className="max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
-            <img
+            <Image
               src={galleryItems[lightbox].src}
               alt={galleryItems[lightbox][lang]}
-              className="w-full rounded-lg"
+              width={1200}
+              height={900}
+              className="w-full h-auto rounded-lg"
             />
             <p className="text-white text-center mt-4 text-lg">
               {galleryItems[lightbox][lang]}

@@ -1,0 +1,13 @@
+{
+  "name": "Service d'Arbres Brandse Inc",
+  "short_name": "Brandse Trees",
+  "description": "Professional tree care services in West Island Montreal — removal, trimming, stump grinding, hedge trimming, planting, and 24/7 emergency response.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2D5016",
+  "icons": [
+    { "src": "/favicon-48.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
