@@ -150,11 +150,6 @@ export const translations = {
       teamTitle: 'Our Expert Team',
       teamDesc: 'Experienced professionals dedicated to tree care excellence',
       teamText: 'Our team consists of ISA certified arborists, experienced climbers, and skilled ground crew members. Each team member undergoes rigorous safety training and continues their education to stay current with the latest tree care techniques and industry best practices.',
-      teamStats: [
-        { val: '2', label: 'Certified Arborists' },
-        { val: '5', label: 'Team Members' },
-        { val: '100%', label: 'Safety Trained' }
-      ],
       ctaTitle: 'Experience the Brandse Difference',
       ctaDesc: 'Join hundreds of satisfied customers across West Island Montreal'
     },
@@ -394,11 +389,6 @@ export const translations = {
       teamTitle: 'Notre équipe d\'experts',
       teamDesc: 'Des professionnels expérimentés dédiés à l\'excellence de l\'entretien des arbres',
       teamText: 'Notre équipe est composée d\'arboriculteurs certifiés ISA, de grimpeurs expérimentés et de membres d\'équipe au sol qualifiés. Chaque membre de l\'équipe suit une formation rigoureuse sur la sécurité et poursuit ses études pour rester à jour.',
-      teamStats: [
-        { val: '2', label: 'Arboriculteurs certifiés' },
-        { val: '5', label: 'Membres de l\'équipe' },
-        { val: '100%', label: 'Formés à la sécurité' }
-      ],
       ctaTitle: 'Découvrez la différence Brandse',
       ctaDesc: 'Rejoignez des centaines de clients satisfaits à travers l\'Ouest de l\'Île de Montréal'
     },

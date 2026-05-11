@@ -139,15 +139,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">{t.about.teamTitle}</h2>
           <p className="text-gray-600 mb-6 text-center max-w-2xl mx-auto">{t.about.teamDesc}</p>
-          <p className="text-gray-600 mb-12 text-center max-w-3xl mx-auto">{t.about.teamText}</p>
-          <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto">
-            {t.about.teamStats.map((stat: { val: string; label: string }, i: number) => (
-              <div key={i} className="text-center">
-                <div className="text-3xl font-bold text-[#2D5016]">{stat.val}</div>
-                <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+          <p className="text-gray-600 text-center max-w-3xl mx-auto">{t.about.teamText}</p>
         </div>
       </section>
 
