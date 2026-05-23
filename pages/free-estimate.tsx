@@ -1,4 +1,5 @@
 import { useState, FormEvent } from 'react';
+import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,7 +8,6 @@ import {
   Phone, Star, ShieldCheck, TreeDeciduous, Home as HomeIcon, Zap,
   CheckCircle, XCircle, ArrowRight, Clock, ChevronDown, MapPin, Mail,
 } from 'lucide-react';
-import { useLanguage } from '../lib/useLanguage';
 import { siteConfig } from '../lib/seo';
 
 // ──────────────────────────────────────────────────────────────────────────
@@ -254,15 +254,25 @@ function isValidCanadianPhone(raw: string): boolean {
 // ──────────────────────────────────────────────────────────────────────────
 // Page
 // ──────────────────────────────────────────────────────────────────────────
-export default function FreeEstimatePage() {
+// Pages Router quirk: when two route files share the same default export
+// (re-export pattern), router.asPath AND router.pathname both become
+// unreliable at SSG — both /free-estimate and /fr/devis-gratuit end up with
+// the same `asPath` baked into prerendered HTML, so the same lang renders on
+// both URLs. We sidestep this entirely by injecting `initialLang` per route
+// via getStaticProps. The FR route file (pages/fr/devis-gratuit.tsx) exports
+// its own getStaticProps that sets initialLang='fr'.
+export const getStaticProps: GetStaticProps<{ initialLang: 'en' | 'fr' }> = async () => ({
+  props: { initialLang: 'en' },
+});
+
+export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 'fr' }) {
   const router = useRouter();
-  const { lang } = useLanguage();
+  const lang = initialLang;
   const c = copy[lang];
   const isFr = lang === 'fr';
 
   // The EN and FR routes use different slugs (/free-estimate vs
-  // /fr/devis-gratuit), so the shared toggleLangPath() helper (which assumes
-  // the same slug in both languages) would 404 here. Map explicitly.
+  // /fr/devis-gratuit), so the shared toggleLangPath() helper would 404 here.
   const path = isFr ? '/fr/devis-gratuit' : '/free-estimate';
   const altPath = isFr ? '/free-estimate' : '/fr/devis-gratuit';
   const langTogglePath = altPath;
