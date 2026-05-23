@@ -702,21 +702,21 @@ export default function FreeEstimatePage() {
         </section>
 
         {/* ─────────────────────────── Final CTA ─────────────────────────── */}
-        <section className="bg-[#2D5016] text-white py-14 md:py-20">
+        <section className="bg-[#f5f3ed] py-14 md:py-20">
           <div className="max-w-3xl mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-4xl font-bold">{c.finalHeading}</h2>
-            <p className="text-white/85 mt-3 mb-8">{c.finalSub}</p>
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900">{c.finalHeading}</h2>
+            <p className="text-gray-600 mt-3 mb-8">{c.finalSub}</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 onClick={() => handlePhoneClick('final-cta')}
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-white text-[#2D5016] rounded-lg font-bold text-base hover:bg-gray-100 transition-colors min-h-[52px]"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#2D5016] text-white rounded-lg font-bold text-base hover:bg-[#3a6b1d] transition-colors min-h-[52px] shadow-sm"
               >
                 <Phone className="w-5 h-5" /> {c.finalCall}
               </a>
               <a
                 href="#quote-form"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 border-2 border-white text-white rounded-lg font-bold text-base hover:bg-white/10 transition-colors min-h-[52px]"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 border-2 border-[#2D5016] text-[#2D5016] rounded-lg font-bold text-base hover:bg-[#2D5016] hover:text-white transition-colors min-h-[52px]"
               >
                 {c.finalForm} <ArrowRight className="w-5 h-5" />
               </a>
