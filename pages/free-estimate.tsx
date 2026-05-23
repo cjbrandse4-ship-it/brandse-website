@@ -626,8 +626,8 @@ export default function FreeEstimatePage() {
               />
               <GalleryCard
                 src="/gallery/hedge-trimming.jpg"
-                alt={isFr ? 'Élagage — Pointe-Claire' : 'Pruning — Pointe-Claire'}
-                caption={isFr ? 'Émondage — Pointe-Claire, mars 2026' : 'Pruning — Pointe-Claire, March 2026'}
+                alt={isFr ? 'Taille de haies — Pointe-Claire' : 'Hedge trimming — Pointe-Claire'}
+                caption={isFr ? 'Taille de haies — Pointe-Claire, mars 2026' : 'Hedge trimming — Pointe-Claire, March 2026'}
               />
             </div>
           </div>
