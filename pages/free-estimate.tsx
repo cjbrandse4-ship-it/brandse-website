@@ -348,9 +348,9 @@ export default function FreeEstimatePage() {
         <link rel="alternate" hrefLang="en-CA" href={`${siteConfig.domain}/free-estimate`} />
         <link rel="alternate" hrefLang="fr-CA" href={`${siteConfig.domain}/fr/devis-gratuit`} />
         <link rel="alternate" hrefLang="x-default" href={`${siteConfig.domain}/free-estimate`} />
-        {/* Preload the hero image so LCP fires fast. */}
-        {/* TODO: Connor — swap /gallery/climber-with-crane.jpg for a dedicated hero photo */}
-        <link rel="preload" as="image" href="/gallery/climber-with-crane.jpg" />
+        {/* Preload the hero image so LCP fires fast. Same hero asset as the
+            main homepage so the LP feels visually continuous with the site. */}
+        <link rel="preload" as="image" href="/og-image.jpg" />
       </Head>
 
       <a href="#quote-form" className="skip-link">{c.skipToForm}</a>
@@ -390,18 +390,18 @@ export default function FreeEstimatePage() {
 
         {/* ─────────────────────────── Hero ─────────────────────────── */}
         <section className="relative isolate">
-          {/* Background image + gradient */}
+          {/* Background image + overlay (matches /index.tsx hero) */}
           <div className="absolute inset-0 -z-10">
-            {/* TODO: Connor — replace with dedicated /hero-crew.jpg */}
             <Image
-              src="/gallery/climber-with-crane.jpg"
+              src="/og-image.jpg"
               alt=""
+              aria-hidden="true"
               fill
               priority
               sizes="100vw"
-              className="object-cover"
+              className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/55 to-black/75" />
+            <div className="absolute inset-0 bg-black/60" />
           </div>
 
           <div className="max-w-7xl mx-auto px-4 pt-10 pb-12 md:pt-16 md:pb-20 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
