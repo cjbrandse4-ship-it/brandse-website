@@ -256,14 +256,17 @@ function isValidCanadianPhone(raw: string): boolean {
 // ──────────────────────────────────────────────────────────────────────────
 export default function FreeEstimatePage() {
   const router = useRouter();
-  const { lang, toggleLangPath } = useLanguage();
+  const { lang } = useLanguage();
   const c = copy[lang];
   const isFr = lang === 'fr';
 
+  // The EN and FR routes use different slugs (/free-estimate vs
+  // /fr/devis-gratuit), so the shared toggleLangPath() helper (which assumes
+  // the same slug in both languages) would 404 here. Map explicitly.
   const path = isFr ? '/fr/devis-gratuit' : '/free-estimate';
   const altPath = isFr ? '/free-estimate' : '/fr/devis-gratuit';
+  const langTogglePath = altPath;
   const canonical = `${siteConfig.domain}${path}`;
-  const altUrl = `${siteConfig.domain}${altPath}`;
 
   const [form, setForm] = useState({ name: '', email: '', phone: '', city: '', service: '', message: '' });
   const [showMessage, setShowMessage] = useState(false);
@@ -367,7 +370,7 @@ export default function FreeEstimatePage() {
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <Link
-              href={toggleLangPath()}
+              href={langTogglePath}
               className="text-gray-500 hover:text-gray-900 text-sm font-semibold min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label={isFr ? 'Switch to English' : 'Passer au français'}
             >
