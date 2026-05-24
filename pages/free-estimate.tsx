@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import {
   Phone, Star, ShieldCheck, TreeDeciduous, Home as HomeIcon, Zap,
   CheckCircle, XCircle, ArrowRight, Clock, ChevronDown, MapPin, Mail,
+  Scissors, AlertTriangle, DollarSign,
 } from 'lucide-react';
 import { siteConfig } from '../lib/seo';
 
@@ -95,8 +96,13 @@ const copy = {
     messagePlaceholder: 'Anything else we should know? (size of tree, access, urgency, photos can come by text)',
     nameRequired: 'Please enter your name',
     submit: 'Get My Free Quote',
+    submitPromise: 'Reply in 2 hours',
     submitting: 'Sending…',
     callbackPromise: 'We\'ll call you back within 2 hours during business hours.',
+    // TODO: Connor — update the month range each month so it stays current.
+    bookingUrgency: 'Booking 1-2 weeks out for May/June',
+    priceAnchor: 'Most tree removals: $800–3,500.',
+    priceAnchorNote: 'Quotes always free.',
     orCall: 'Or call now:',
     successTitle: 'Sent!',
     successDesc: 'Redirecting to confirmation…',
@@ -115,6 +121,8 @@ const copy = {
       { title: 'Tree Removal',       desc: 'Safe removal of trees of any size, including hazardous and tight-access jobs.' },
       { title: 'Stump Grinding',     desc: 'Complete stump removal below grade — leaves your yard ready to landscape.' },
       { title: 'Pruning & Trimming', desc: 'Healthier trees, better shape, less risk in a storm. Crown raising, thinning, deadwood.' },
+      { title: 'Hedge Trimming',     desc: 'Cedar and mixed hedges shaped clean. Annual or seasonal maintenance.' },
+      { title: 'Emergency',          desc: 'Storm damage, fallen trees, hazardous limbs. 24/7 response.' },
     ],
     servicesCta: 'Get a quote',
     // Gallery
@@ -185,8 +193,13 @@ const copy = {
     messagePlaceholder: 'Autre chose à savoir? (taille de l\'arbre, accès, urgence — photos par texto possibles)',
     nameRequired: 'Veuillez entrer votre nom',
     submit: 'Obtenir mon devis gratuit',
+    submitPromise: 'Réponse en 2 heures',
     submitting: 'Envoi en cours…',
     callbackPromise: 'Nous vous rappelons dans les 2 heures pendant les heures d\'ouverture.',
+    // TODO: Connor — update the month range each month so it stays current.
+    bookingUrgency: 'Réservations 1-2 semaines à l\'avance pour mai/juin',
+    priceAnchor: 'La plupart des abattages : 800 $ – 3 500 $.',
+    priceAnchorNote: 'Les devis sont toujours gratuits.',
     orCall: 'Ou appelez maintenant :',
     successTitle: 'Envoyé !',
     successDesc: 'Redirection vers la confirmation…',
@@ -203,6 +216,8 @@ const copy = {
       { title: 'Abattage d\'arbres',       desc: 'Abattage sécuritaire d\'arbres de toute taille, incluant les cas dangereux et accès difficiles.' },
       { title: 'Essouchage',               desc: 'Enlèvement complet des souches sous le niveau du sol — votre cour est prête à aménager.' },
       { title: 'Émondage et élagage',      desc: 'Des arbres en santé, mieux formés et plus résistants aux tempêtes. Éclaircissage, bois mort, levée de couronne.' },
+      { title: 'Taille de haies',          desc: 'Haies de cèdres et mixtes taillées proprement. Entretien annuel ou saisonnier.' },
+      { title: 'Urgences',                 desc: 'Dommages de tempête, arbres tombés, branches dangereuses. Réponse 24/7.' },
     ],
     servicesCta: 'Demander un devis',
     galleryHeading: 'Travaux récents dans le quartier',
@@ -437,7 +452,10 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
             {/* Quote form */}
             <div id="quote-form" className="scroll-mt-24 bg-white rounded-2xl shadow-2xl p-5 sm:p-7">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900">{c.formTitle}</h2>
-              <p className="text-sm text-gray-600 mt-1 mb-5">{c.formIntro}</p>
+              <p className="text-sm text-gray-600 mt-1 mb-3">{c.formIntro}</p>
+              <div className="mb-5 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-semibold">
+                <Zap className="w-3.5 h-3.5" /> {c.bookingUrgency}
+              </div>
 
               {status === 'error' && (
                 <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg flex items-start gap-2" role="alert">
@@ -555,9 +573,16 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
                 <button
                   type="submit"
                   disabled={sending}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-[#2D5016] text-white rounded-lg font-bold text-lg hover:bg-[#3a6b1d] transition-colors disabled:opacity-60 disabled:cursor-not-allowed min-h-[52px]"
+                  className="w-full flex flex-col items-center justify-center gap-0.5 px-6 py-3.5 bg-[#2D5016] text-white rounded-lg font-bold hover:bg-[#3a6b1d] transition-colors disabled:opacity-60 disabled:cursor-not-allowed min-h-[60px]"
                 >
-                  {sending ? c.submitting : <>{c.submit} <ArrowRight className="w-5 h-5" /></>}
+                  {sending ? (
+                    <span className="text-lg">{c.submitting}</span>
+                  ) : (
+                    <>
+                      <span className="text-lg inline-flex items-center gap-2">{c.submit} <ArrowRight className="w-5 h-5" /></span>
+                      <span className="text-xs font-medium opacity-90">{c.submitPromise}</span>
+                    </>
+                  )}
                 </button>
 
                 <p className="flex items-center justify-center gap-1.5 text-xs text-gray-500">
@@ -596,9 +621,10 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
         <section className="py-14 md:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">{c.servicesHeading}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {c.services.map((s, i) => {
-                const icons = [TreeDeciduous, ShieldCheck, TreeDeciduous];
+                // 5 cards on lg → 3 + 2 layout. Icons match the form's service list.
+                const icons = [TreeDeciduous, ShieldCheck, TreeDeciduous, Scissors, AlertTriangle];
                 const Icon = icons[i];
                 return (
                   <div key={i} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex flex-col">
@@ -684,6 +710,21 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
               </div>
               <p className="text-sm text-gray-600 italic">{c.areasFallback}</p>
             </div>
+          </div>
+        </section>
+
+        {/* ─────────────────────────── Price anchor ─────────────────────────── */}
+        {/* Pre-empts the "is this affordable?" objection before the FAQ. Single
+            line, calm tone — not a sale, just a number range customers can map
+            their job against. */}
+        <section className="bg-[#2D5016]/5 border-y border-[#2D5016]/15 py-5">
+          <div className="max-w-3xl mx-auto px-4">
+            <p className="flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3 text-center text-base md:text-lg">
+              <span className="inline-flex items-center gap-1.5 font-bold text-gray-900">
+                <DollarSign className="w-5 h-5 text-[#2D5016]" /> {c.priceAnchor}
+              </span>
+              <span className="text-gray-600">{c.priceAnchorNote}</span>
+            </p>
           </div>
         </section>
 
