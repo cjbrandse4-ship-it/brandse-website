@@ -694,7 +694,7 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
                       </div>
                       <span className="text-xs text-gray-500">{formatReviewDate(t.date, lang)}</span>
                     </div>
-                    <blockquote className="text-gray-700 text-sm leading-relaxed mb-4">&ldquo;{t.text[lang]}&rdquo;</blockquote>
+                    <blockquote className="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-6">&ldquo;{t.text[lang]}&rdquo;</blockquote>
                     <figcaption className="text-sm font-semibold text-gray-900">— {t.name}</figcaption>
                   </figure>
                 ))}
