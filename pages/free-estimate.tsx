@@ -10,6 +10,18 @@ import {
   Scissors, AlertTriangle, DollarSign,
 } from 'lucide-react';
 import { siteConfig } from '../lib/seo';
+import { testimonials } from '../data/testimonials';
+
+const GOOGLE_REVIEWS_URL = 'https://www.google.com/maps/place/Service+d%27Arbres+Brandse+Inc';
+
+function formatReviewDate(iso: string, lang: 'en' | 'fr'): string {
+  // SSG-safe: same formatter on server + client, no timezone surprises since
+  // the source is a plain YYYY-MM-DD date.
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString(lang === 'fr' ? 'fr-CA' : 'en-CA', {
+    year: 'numeric', month: 'short', day: 'numeric',
+  });
+}
 
 // ──────────────────────────────────────────────────────────────────────────
 // Google Ads conversion tracking
@@ -99,8 +111,7 @@ const copy = {
     submitPromise: 'Reply in 2 hours',
     submitting: 'Sending…',
     callbackPromise: 'We\'ll call you back within 2 hours during business hours.',
-    // TODO: Connor — update the month range each month so it stays current.
-    bookingUrgency: 'Booking 1-2 weeks out for May/June',
+    bookingUrgency: 'Booking 1-2 weeks out',
     priceAnchor: 'Most tree removals: $800–3,500.',
     priceAnchorNote: 'Quotes always free.',
     orCall: 'Or call now:',
@@ -127,13 +138,11 @@ const copy = {
     servicesCta: 'Get a quote',
     // Gallery
     galleryHeading: 'Recent work in the neighbourhood',
-    // Testimonials
+    // Testimonials — actual reviews are pulled live from data/testimonials.ts
+    // and sorted by date, so newly-added Google reviews surface here without
+    // touching this file.
     testimonialsHeading: 'What your neighbours are saying',
-    testimonials: [
-      { quote: 'Excellent service. They removed a large oak from the back yard quickly and safely. Crew was professional and cleaned up perfectly.', name: 'Marie D.', city: 'Pointe-Claire' },
-      { quote: 'Called them after a storm took down a tree on the driveway. They were there within 2 hours and had it cleared the same day.', name: 'John S.', city: 'Hudson' },
-      { quote: 'Punctual, efficient, and the price came in exactly where they quoted. Already booked them again for the front yard cedars.', name: 'Sophie T.', city: 'Beaconsfield' },
-    ],
+    seeAllReviews: 'Read all {count} reviews on Google',
     // Service area
     areasHeading: 'Areas we serve',
     areasIntro: 'Family-owned and based in the West Island.',
@@ -196,8 +205,7 @@ const copy = {
     submitPromise: 'Réponse en 2 heures',
     submitting: 'Envoi en cours…',
     callbackPromise: 'Nous vous rappelons dans les 2 heures pendant les heures d\'ouverture.',
-    // TODO: Connor — update the month range each month so it stays current.
-    bookingUrgency: 'Réservations 1-2 semaines à l\'avance pour mai/juin',
+    bookingUrgency: 'Réservations 1-2 semaines à l\'avance',
     priceAnchor: 'La plupart des abattages : 800 $ – 3 500 $.',
     priceAnchorNote: 'Les devis sont toujours gratuits.',
     orCall: 'Ou appelez maintenant :',
@@ -222,11 +230,7 @@ const copy = {
     servicesCta: 'Demander un devis',
     galleryHeading: 'Travaux récents dans le quartier',
     testimonialsHeading: 'Ce que disent vos voisins',
-    testimonials: [
-      { quote: 'Excellent service. Ils ont enlevé un grand chêne dans la cour arrière rapidement et en toute sécurité. Équipe professionnelle et nettoyage impeccable.', name: 'Marie D.', city: 'Pointe-Claire' },
-      { quote: 'Appelés après qu\'une tempête a fait tomber un arbre sur l\'entrée. Sur place en 2 heures et nettoyé la même journée.', name: 'John S.', city: 'Hudson' },
-      { quote: 'Ponctuels, efficaces et le prix correspondait exactement au devis. Déjà rebookés pour les cèdres en avant.', name: 'Sophie T.', city: 'Beaconsfield' },
-    ],
+    seeAllReviews: 'Voir les {count} avis sur Google',
     areasHeading: 'Zones que nous desservons',
     areasIntro: 'Entreprise familiale basée dans l\'Ouest de l\'Île.',
     areasFallback: 'Votre ville n\'est pas listée ? Appelez quand même — si on peut s\'y rendre, on vous aide.',
@@ -677,15 +681,34 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">{c.testimonialsHeading}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {c.testimonials.map((t, i) => (
-                <figure key={i} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                  <div className="flex gap-0.5 mb-3">
-                    {[0,1,2,3,4].map(s => <Star key={s} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
-                  </div>
-                  <blockquote className="text-gray-700 text-sm leading-relaxed mb-4">&ldquo;{t.quote}&rdquo;</blockquote>
-                  <figcaption className="text-sm font-semibold text-gray-900">— {t.name}, {t.city}</figcaption>
-                </figure>
-              ))}
+              {[...testimonials]
+                .sort((a, b) => b.date.localeCompare(a.date))
+                .slice(0, 3)
+                .map((t) => (
+                  <figure key={t.id} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex gap-0.5">
+                        {Array.from({ length: t.rating }).map((_, s) => (
+                          <Star key={s} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                      <span className="text-xs text-gray-500">{formatReviewDate(t.date, lang)}</span>
+                    </div>
+                    <blockquote className="text-gray-700 text-sm leading-relaxed mb-4">&ldquo;{t.text[lang]}&rdquo;</blockquote>
+                    <figcaption className="text-sm font-semibold text-gray-900">— {t.name}</figcaption>
+                  </figure>
+                ))}
+            </div>
+            <div className="text-center mt-8">
+              <a
+                href={GOOGLE_REVIEWS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#2D5016] font-semibold hover:underline"
+              >
+                {c.seeAllReviews.replace('{count}', String(siteConfig.rating.count))}
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </section>
