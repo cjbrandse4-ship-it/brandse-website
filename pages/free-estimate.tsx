@@ -631,8 +631,8 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
         <section className="bg-[#f5f3ed] border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 py-6">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-2">
-              <TrustItem icon={<div className="flex"><Star className="w-5 h-5 fill-yellow-400 text-yellow-400" /></div>} title={c.trustGoogle} sub={c.trustGoogleSub} />
-              <TrustItem icon={<div className="flex"><Star className="w-5 h-5 fill-yellow-400 text-yellow-400" /></div>} title={c.trustFacebook} sub={c.trustFacebookSub} />
+              <TrustItem icon={<GoogleGLogo className="w-6 h-6" />} title={c.trustGoogle} sub={c.trustGoogleSub} />
+              <TrustItem icon={<FacebookLogo className="w-6 h-6" />} title={c.trustFacebook} sub={c.trustFacebookSub} />
               <TrustItem icon={<ShieldCheck className="w-6 h-6 text-[#2D5016]" />} title={c.trustInsured} />
               <TrustItem icon={<TreeDeciduous className="w-6 h-6 text-[#2D5016]" />} title={c.trustCertified} />
               <TrustItem icon={<HomeIcon className="w-6 h-6 text-[#2D5016]" />} title={c.trustLocal} />
