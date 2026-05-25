@@ -122,6 +122,11 @@ const copy = {
     // Trust row
     trustGoogle: `${siteConfig.rating.value} on Google`,
     trustGoogleSub: `${siteConfig.rating.count} reviews`,
+    // TODO: Connor — move 5.0 / 14 to siteConfig if Facebook reviews start
+    // appearing in more places. Hardcoded here for now since this is the
+    // only surface using them.
+    trustFacebook: '5.0 on Facebook',
+    trustFacebookSub: '14 reviews',
     trustInsured: 'Fully Insured & CNESST',
     trustCertified: 'Certified Arborists',
     trustLocal: 'Local & Family-Owned',
@@ -215,6 +220,8 @@ const copy = {
     errorDesc: 'Veuillez nous appeler directement au (438) 365-5410.',
     trustGoogle: `${siteConfig.rating.value.replace('.', ',')} sur Google`,
     trustGoogleSub: `${siteConfig.rating.count} avis`,
+    trustFacebook: '5,0 sur Facebook',
+    trustFacebookSub: '14 avis',
     trustInsured: 'Entièrement assuré CNESST',
     trustCertified: 'Arboriculteurs certifiés',
     trustLocal: 'Entreprise locale et familiale',
@@ -445,11 +452,19 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
               <p className="mt-4 text-lg md:text-xl text-white/90">
                 {c.heroSub}
               </p>
-              <div className="mt-6 hidden md:flex items-center gap-3 text-white/90">
-                <div className="flex items-center gap-1">
-                  {[0,1,2,3,4].map(i => <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
+              <div className="mt-6 hidden md:block text-white/90 space-y-1.5">
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-1">
+                    {[0,1,2,3,4].map(i => <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
+                  </div>
+                  <span className="text-sm">{c.trustGoogle} · {c.trustGoogleSub}</span>
                 </div>
-                <span className="text-sm">{c.trustGoogle} · {c.trustGoogleSub}</span>
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-1">
+                    {[0,1,2,3,4].map(i => <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
+                  </div>
+                  <span className="text-sm">{c.trustFacebook} · {c.trustFacebookSub}</span>
+                </div>
               </div>
             </div>
 
@@ -611,8 +626,9 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
         {/* ─────────────────────────── Trust Row ─────────────────────────── */}
         <section className="bg-[#f5f3ed] border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 py-6">
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-2">
               <TrustItem icon={<div className="flex"><Star className="w-5 h-5 fill-yellow-400 text-yellow-400" /></div>} title={c.trustGoogle} sub={c.trustGoogleSub} />
+              <TrustItem icon={<div className="flex"><Star className="w-5 h-5 fill-yellow-400 text-yellow-400" /></div>} title={c.trustFacebook} sub={c.trustFacebookSub} />
               <TrustItem icon={<ShieldCheck className="w-6 h-6 text-[#2D5016]" />} title={c.trustInsured} />
               <TrustItem icon={<TreeDeciduous className="w-6 h-6 text-[#2D5016]" />} title={c.trustCertified} />
               <TrustItem icon={<HomeIcon className="w-6 h-6 text-[#2D5016]" />} title={c.trustLocal} />
