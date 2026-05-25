@@ -84,7 +84,7 @@ const copy = {
     metaDesc: 'Free quote in 24 hours. Tree removal, stump grinding, pruning. Family-owned, fully insured. Serving West Island Montreal & Vaudreuil-Soulanges. Call (438) 365-5410.',
     langToggle: 'FR',
     skipToForm: 'Skip to quote form',
-    heroHeadline: 'Tree Services in West Island, Vaudreuil & Surrounding Areas — Quoted in 2 Hours',
+    heroHeadline: 'Tree Services in West Island, Vaudreuil & Surrounding — Quoted in 2 Hours',
     heroSub: 'Free quote in 24 hours · Family-owned · Fully insured',
     formTitle: 'Get your free quote',
     formIntro: 'Tell us about your tree — we\'ll call you back in under 2 hours.',
