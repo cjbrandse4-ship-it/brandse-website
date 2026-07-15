@@ -56,7 +56,7 @@ class MyDocument extends Document<MyDocumentProps> {
             { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "16:00" }
           ],
           "priceRange": "$$",
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "18", "bestRating": "5" },
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "26", "bestRating": "5" },
           "contactPoint": { "@type": "ContactPoint", "telephone": "+1-438-365-5410", "contactType": "customer service", "email": "info@brandses.com", "availableLanguage": ["en", "fr"] },
           "sameAs": ["https://www.facebook.com/brandsetreeservice", "https://www.instagram.com/brandsetreeservice"]
         }) }} />

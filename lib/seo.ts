@@ -21,8 +21,8 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/brandsetreeservice"
   },
   rating: {
-    value: "4.9",
-    count: 18
+    value: "5.0",
+    count: 26
   },
   serviceAreas: [
     "Pointe-Claire", "Beaconsfield", "Kirkland", "Dorval", "Hudson",
