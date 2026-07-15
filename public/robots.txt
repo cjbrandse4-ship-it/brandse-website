@@ -1,9 +1,61 @@
+# Default: allow everything except API routes and build internals
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /_next/
 
 User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# ── AI assistants & answer engines — explicitly welcome ──
+# ChatGPT search (index + live browsing)
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+
+# Claude
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /api/
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /api/
+
+# Google Gemini grounding
+User-agent: Google-Extended
+Allow: /
+
+# Bing (powers ChatGPT search results index)
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+# Apple Siri / Spotlight
+User-agent: Applebot
+Allow: /
+Disallow: /api/
+
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://www.servicedarbresbrandse.com/sitemap.xml
