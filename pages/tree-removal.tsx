@@ -74,6 +74,13 @@ export default function TreeRemovalPage() {
       titleFr: 'Élagage',
       descEn: 'Expert pruning to maintain tree health and improve safety.',
       descFr: "Élagage expert pour maintenir la santé de l'arbre et assurer la sécurité."
+    },
+    {
+      href: '/hard-to-reach-tree-removal',
+      titleEn: 'Hard-to-Reach Tree Removal',
+      titleFr: "Arbres difficiles d'accès",
+      descEn: 'Tall or boxed-in trees reached safely with our CELA DT25 spider lift.',
+      descFr: 'Arbres hauts ou enclavés atteints en sécurité avec notre nacelle araignée CELA DT25.'
     }
   ];
 

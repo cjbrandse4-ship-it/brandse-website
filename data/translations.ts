@@ -58,6 +58,10 @@ export const translations = {
       emergency: {
         title: 'Emergency Services',
         desc: '24/7 emergency response for storm damage, fallen trees, and hazardous situations. Fast, safe, and reliable service when you need it most across all 12 cities.'
+      },
+      hardToReach: {
+        title: 'Hard-to-Reach Tree Removal',
+        desc: 'Tall, hazardous, or hard-to-access trees handled with our CELA DT25 spider lift — reaches up to 25 m (82 ft), fits through a garden gate, and protects your lawn.'
       }
     },
     home: {
@@ -297,6 +301,10 @@ export const translations = {
       emergency: {
         title: 'Services d\'urgence',
         desc: 'Intervention d\'urgence 24/7 pour les dommages causés par les tempêtes et les situations dangereuses. Service rapide dans les 12 villes.'
+      },
+      hardToReach: {
+        title: 'Arbres difficiles d\'accès',
+        desc: 'Arbres hauts, dangereux ou difficiles d\'accès traités avec notre nacelle araignée CELA DT25 — portée jusqu\'à 25 m (82 pi), passe par un portail de jardin et protège votre pelouse.'
       }
     },
     home: {

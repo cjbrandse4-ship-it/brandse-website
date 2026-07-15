@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Trash2, Disc, Scissors, Leaf, Sprout, AlertTriangle, Phone, ArrowRight } from 'lucide-react';
+import { Trash2, Disc, Scissors, Leaf, Sprout, AlertTriangle, MoveUp, Phone, ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
@@ -17,6 +17,7 @@ export default function ServicesPage() {
     { icon: Leaf, key: 'hedgeTrimming', href: '/hedge-trimming' },
     { icon: Sprout, key: 'treePlanting', href: '/tree-planting' },
     { icon: AlertTriangle, key: 'emergency', href: '/emergency-services' },
+    { icon: MoveUp, key: 'hardToReach', href: '/hard-to-reach-tree-removal' },
   ];
 
   const stats = [

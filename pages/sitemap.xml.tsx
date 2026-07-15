@@ -26,6 +26,7 @@ function generateSitemap(): string {
     { path: '/hedge-trimming', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
     { path: '/tree-planting', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
     { path: '/emergency-services', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
+    { path: '/hard-to-reach-tree-removal', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
     { path: '/about', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
     { path: '/gallery', priority: '0.6', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
     { path: '/blog', priority: '0.7', changefreq: 'weekly', lastmod: STATIC_PAGES_RELEASE },

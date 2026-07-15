@@ -16,6 +16,7 @@ export default function Footer() {
     { key: 'hedgeTrimming', href: '/hedge-trimming' },
     { key: 'treePlanting', href: '/tree-planting' },
     { key: 'emergency', href: '/emergency-services' },
+    { key: 'hardToReach', href: '/hard-to-reach-tree-removal' },
   ];
 
   return (

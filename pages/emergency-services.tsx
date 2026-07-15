@@ -88,6 +88,13 @@ export default function EmergencyServicesPage() {
       titleFr: 'Élagage',
       descEn: 'Preventive pruning to reduce storm damage risk.',
       descFr: 'Élagage préventif pour réduire les risques de dommages par la tempête.'
+    },
+    {
+      href: '/hard-to-reach-tree-removal',
+      titleEn: 'Hard-to-Reach Tree Removal',
+      titleFr: "Arbres difficiles d'accès",
+      descEn: 'Reaching tall or awkward storm-damaged trees with our spider lift.',
+      descFr: 'Atteindre les arbres hauts ou difficiles endommagés par la tempête avec notre nacelle araignée.'
     }
   ];
 

@@ -13,6 +13,7 @@ const serviceLinks = [
   { key: 'hedgeTrimming', href: '/hedge-trimming' },
   { key: 'treePlanting', href: '/tree-planting' },
   { key: 'emergency', href: '/emergency-services' },
+  { key: 'hardToReach', href: '/hard-to-reach-tree-removal' },
 ];
 
 export default function Header() {
