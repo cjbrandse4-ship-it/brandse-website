@@ -57,13 +57,9 @@ export function buildServiceSchema(args: {
       "url": siteConfig.domain,
       "telephone": siteConfig.contact.phone,
       "image": siteConfig.defaultImage,
-      "address": { "@type": "PostalAddress", ...siteConfig.contact.address },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": siteConfig.rating.value,
-        "reviewCount": String(siteConfig.rating.count),
-        "bestRating": "5"
-      }
+      "address": { "@type": "PostalAddress", ...siteConfig.contact.address }
+      // Rating lives on the single global business entity in _document.tsx to
+      // avoid emitting multiple self-rated LocalBusiness nodes on one page.
     },
     "areaServed": siteConfig.serviceAreas.map(name => ({ "@type": "City", name })),
     "offers": {

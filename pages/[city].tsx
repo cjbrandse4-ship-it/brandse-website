@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../lib/useLanguage';
 import { siteConfig } from '../lib/seo';
-import { locations, getLocation, getLocationSlug, Location } from '../data/locations';
+import { locations, getLocation, getLocationSlug, citySeo, Location } from '../data/locations';
 import { useState } from 'react';
 
 interface Props {
@@ -52,8 +52,11 @@ export default function CityPage({ location }: Props) {
 
   const r = (s: string) => s.replace(/\{city\}/g, city);
 
-  const title = r(lt.title);
-  const metaDesc = r(lt.metaDesc);
+  // Prefer the per-city SEO override (unique title/description); fall back to
+  // the generic template for any slug without one.
+  const seoOverride = citySeo[location.slug]?.[lang];
+  const title = seoOverride?.title ?? r(lt.title);
+  const metaDesc = seoOverride?.description ?? r(lt.metaDesc);
   const path = lang === 'fr' ? `/fr/${location.slug}` : `/${location.slug}`;
 
   const faqJsonLd = {
@@ -116,12 +119,8 @@ export default function CityPage({ location }: Props) {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Emergency Tree Service' } },
       ],
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: siteConfig.rating.value,
-      reviewCount: String(siteConfig.rating.count),
-      bestRating: '5',
-    },
+    // Rating lives on the single global business entity in _document.tsx to
+    // avoid emitting multiple self-rated LocalBusiness nodes on one page.
   };
 
   return (

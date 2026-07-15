@@ -587,6 +587,66 @@ export const locations: Location[] = [
   },
 ];
 
+// Per-city SEO overrides — unique <title> and meta description per location so
+// city pages don't read as one duplicated template. Each leads with the city's
+// real signature issue (species, pest, terrain, bylaw). [city].tsx falls back
+// to the generic locationTemplate strings for any slug not listed here.
+interface CitySeoCopy { title: string; description: string; }
+export const citySeo: Record<string, { en: CitySeoCopy; fr: CitySeoCopy }> = {
+  'pointe-claire': {
+    en: { title: 'Tree Removal & Pruning in Pointe-Claire | Brandse', description: 'Certified arborists in Pointe-Claire — tree removal, pruning & stump grinding for mature lakeshore maples and Emerald Ash Borer trees. Free on-site quote.' },
+    fr: { title: "Abattage et élagage d'arbres à Pointe-Claire | Brandse", description: "Arboriculteurs certifiés à Pointe-Claire — abattage, élagage et essouchage pour les érables matures et les frênes touchés par l'agrile. Estimation gratuite." },
+  },
+  'hudson': {
+    en: { title: 'Tree Service in Hudson | Estate & Wooded-Lot Specialists', description: "Tree removal, crane work & pruning on Hudson's large wooded lots and waterfront. Certified arborists who know Hudson's strict tree bylaw. Free quote." },
+    fr: { title: "Service d'arbres à Hudson | Spécialistes des grands terrains", description: "Abattage, travail à la grue et élagage sur les grands terrains boisés de Hudson. Arboriculteurs certifiés connaissant le règlement strict de Hudson." },
+  },
+  'beaconsfield': {
+    en: { title: 'Tree Removal in Beaconsfield | Ash Borer & Permit Experts', description: 'Beaconsfield tree removal, pruning & stump grinding. We handle Emerald Ash Borer removals and full permit applications. Licensed, insured, free quote.' },
+    fr: { title: "Abattage d'arbres à Beaconsfield | Agrile et permis", description: "Abattage, élagage et essouchage à Beaconsfield. Nous gérons les frênes touchés par l'agrile et les demandes de permis. Licencié et assuré. Estimation gratuite." },
+  },
+  'saint-lazare': {
+    en: { title: 'Tree Service in Saint-Lazare | Wooded & Equestrian Lots', description: "Tree removal and storm cleanup on Saint-Lazare's wooded and equestrian properties. Experts in sandy-soil windthrow and permit handling. Free quote." },
+    fr: { title: "Service d'arbres à Saint-Lazare | Terrains boisés", description: "Abattage et nettoyage après tempête sur les propriétés boisées et équestres de Saint-Lazare. Experts du sol sablonneux et des permis. Estimation gratuite." },
+  },
+  'vaudreuil': {
+    en: { title: 'Tree Removal in Vaudreuil-Dorion | Lot Clearing & Elms', description: 'Vaudreuil-Dorion tree removal, Dutch Elm Disease treatment & lot clearing for new builds. Certified arborists, permit handling included. Free quote.' },
+    fr: { title: "Abattage d'arbres à Vaudreuil-Dorion | Déboisement", description: "Abattage, traitement de la maladie hollandaise de l'orme et déboisement à Vaudreuil-Dorion. Arboriculteurs certifiés, permis inclus. Estimation gratuite." },
+  },
+  'kirkland': {
+    en: { title: 'Tree Removal in Kirkland | Emerald Ash Borer Specialists', description: 'Kirkland tree removal & pruning for aging Sugar Maples and Ash Borer-killed trees. We manage Environmental Committee permits. Free on-site quote.' },
+    fr: { title: "Abattage d'arbres à Kirkland | Agrile du frêne", description: "Abattage et élagage à Kirkland pour les érables vieillissants et les frênes tués par l'agrile. Nous gérons les permis du comité. Estimation gratuite." },
+  },
+  'dollard-des-ormeaux': {
+    en: { title: 'Tree Removal in DDO (Dollard-des-Ormeaux) | Brandse', description: 'Dollard-des-Ormeaux tree removal & pruning — specialists in brittle Manitoba Maples and Montreal agglomeration permits. Licensed, insured. Free quote.' },
+    fr: { title: "Abattage d'arbres à Dollard-des-Ormeaux (DDO) | Brandse", description: "Abattage et élagage à Dollard-des-Ormeaux — spécialistes des érables à Giguère cassants et des permis de l'agglomération. Licencié. Estimation gratuite." },
+  },
+  'dorval': {
+    en: { title: 'Tree Removal in Dorval | Tight-Access & Rigging Experts', description: 'Dorval tree removal on compact lots using precise sectional rigging over pools and garages. Certified arborists, permit handling. Free quote.' },
+    fr: { title: "Abattage d'arbres à Dorval | Accès restreint et gréage", description: "Abattage à Dorval sur terrains compacts avec gréage précis au-dessus des piscines et garages. Arboriculteurs certifiés, permis. Estimation gratuite." },
+  },
+  'senneville': {
+    en: { title: 'Tree Service in Senneville | Estate & Heritage Trees', description: "Senneville tree care for century-old estate oaks and pines — crane-assisted removals and preservation pruning. Experts in Senneville's strict bylaw." },
+    fr: { title: "Service d'arbres à Senneville | Arbres patrimoniaux", description: "Soins d'arbres à Senneville pour les chênes et pins centenaires — abattage à la grue et élagage de préservation. Experts du règlement strict de Senneville." },
+  },
+  'baie-d-urfe': {
+    en: { title: "Tree Service in Baie-D'Urfé | Hemlock & Oak Care", description: "Baie-D'Urfé tree removal, pruning & Hemlock Woolly Adelgid treatment on wooded lakeshore lots. Certified arborists, permit documentation. Free quote." },
+    fr: { title: "Service d'arbres à Baie-D'Urfé | Pruches et chênes", description: "Abattage, élagage et traitement du puceron lanigère à Baie-D'Urfé sur les terrains boisés. Arboriculteurs certifiés, documentation de permis fournie." },
+  },
+  'ile-perrot': {
+    en: { title: 'Tree Removal on Île-Perrot | Windthrow & Walnut Experts', description: 'Île-Perrot tree removal & crown reduction — specialists in windthrow on high water-table soil and Black Walnut removals. Permit handling. Free quote.' },
+    fr: { title: "Abattage d'arbres à l'Île-Perrot | Renversement et noyers", description: "Abattage et réduction de couronne à l'Île-Perrot — experts du renversement sur sol humide et des noyers noirs. Gestion des permis. Estimation gratuite." },
+  },
+  'pincourt': {
+    en: { title: 'Tree Removal in Pincourt | Lombardy Poplar Specialists', description: 'Pincourt tree removal & pruning — specialists in hazardous aging Lombardy Poplars and waterfront wind exposure. Permit handling included. Free quote.' },
+    fr: { title: "Abattage d'arbres à Pincourt | Peupliers de Lombardie", description: "Abattage et élagage à Pincourt — spécialistes des peupliers de Lombardie vieillissants et de l'exposition au vent. Permis inclus. Estimation gratuite." },
+  },
+  'pierrefonds': {
+    en: { title: 'Tree Removal in Pierrefonds-Roxboro | Spider Lift Access', description: 'Pierrefonds tree removal, Ash Borer takedowns & hard-to-reach work with our CELA DT25 spider lift. Montreal agglomeration permits handled. Free quote.' },
+    fr: { title: "Abattage d'arbres à Pierrefonds-Roxboro | Nacelle araignée", description: "Abattage à Pierrefonds, frênes touchés par l'agrile et travaux difficiles d'accès avec notre nacelle araignée CELA DT25. Permis gérés. Estimation gratuite." },
+  },
+};
+
 export function getLocation(slug: string) {
   return locations.find(l => l.slug === slug);
 }
