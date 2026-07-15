@@ -10,6 +10,7 @@ import {
   Scissors, AlertTriangle, DollarSign,
 } from 'lucide-react';
 import { siteConfig } from '../lib/seo';
+import { trackLead, FORM_CONVERSION_LABEL } from '../lib/analytics';
 import { testimonials } from '../data/testimonials';
 
 const GOOGLE_REVIEWS_URL = 'https://www.google.com/maps/place/Service+d%27Arbres+Brandse+Inc';
@@ -23,41 +24,9 @@ function formatReviewDate(iso: string, lang: 'en' | 'fr'): string {
   });
 }
 
-// ──────────────────────────────────────────────────────────────────────────
-// Google Ads conversion tracking
-// ──────────────────────────────────────────────────────────────────────────
-// The site-wide gtag is loaded in pages/_document.tsx with AW-16516759047.
-// TODO: Connor — create dedicated Google Ads conversion actions for the
-// free-estimate landing page (one for form submissions, one for phone clicks)
-// so paid-traffic leads can be distinguished from organic. Paste the labels
-// below. Until then we fall back to the existing form-conversion label
-// (mXt_CJjNyaMZEIf85sM9) for form submissions, and phone clicks are
-// log-only.
-const GADS_ID = siteConfig.gads; // 'AW-16516759047'
-const FORM_CONVERSION_LABEL: string | null = 'mXt_CJjNyaMZEIf85sM9'; // TODO: Connor swap to a landing-page-specific label
-const PHONE_CONVERSION_LABEL: string | null = null;                   // TODO: Connor paste phone-call conversion label
-// Estimated revenue per lead: average job $2,500 × ~65% close rate ≈ $1,625 CAD.
-const CONVERSION_VALUE = 1625.0;
-const CONVERSION_CURRENCY = 'CAD';
-
-function fireConversion(label: string | null, eventName: string, extra: Record<string, unknown> = {}) {
-  if (typeof window === 'undefined') return;
-  const payload = { event: eventName, label, value: CONVERSION_VALUE, currency: CONVERSION_CURRENCY, ...extra };
-  // eslint-disable-next-line no-console
-  console.log('[Ads conversion]', payload);
-  const gtag = (window as any).gtag;
-  if (!gtag) return;
-  if (label) {
-    gtag('event', 'conversion', {
-      send_to: `${GADS_ID}/${label}`,
-      value: CONVERSION_VALUE,
-      currency: CONVERSION_CURRENCY,
-    });
-  }
-  // Also fire a GA4 event so the conversion is visible in Analytics regardless
-  // of whether the Ads label is wired up yet.
-  gtag('event', eventName, extra);
-}
+// Lead tracking (form submits + phone taps) is centralized in lib/analytics.
+// Form submits fire GA4 generate_lead + the shared Ads conversion; phone taps
+// are handled site-wide by the tel: listener in pages/_app.tsx (GA4 only).
 
 // ──────────────────────────────────────────────────────────────────────────
 // Copy — kept inline (not in data/translations.ts) so this paid-traffic
@@ -355,10 +324,11 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
       });
       if (!res.ok) throw new Error();
       setStatus('success');
-      fireConversion(FORM_CONVERSION_LABEL, 'form_submit', {
-        source: 'free-estimate-page',
-        service: form.service,
-        city: form.city,
+      trackLead({
+        source: 'free-estimate',
+        method: 'form',
+        adsLabel: FORM_CONVERSION_LABEL,
+        extra: { service: form.service, city: form.city },
       });
       const dest = isFr ? '/fr/merci' : '/thank-you';
       router.push(dest);
@@ -367,10 +337,6 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
     } finally {
       setSending(false);
     }
-  }
-
-  function handlePhoneClick(location: string) {
-    fireConversion(PHONE_CONVERSION_LABEL, 'phone_call', { source: 'free-estimate-page', location });
   }
 
   // Clear inline error on the field when user starts typing/changing.
@@ -416,7 +382,6 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
             </Link>
             <a
               href={`tel:${siteConfig.contact.phone}`}
-              onClick={() => handlePhoneClick('header')}
               className="inline-flex items-center gap-2 px-3 sm:px-4 py-2.5 bg-[#2D5016] text-white rounded-lg font-semibold text-sm sm:text-base hover:bg-[#3a6b1d] transition-colors min-h-[44px]"
             >
               <Phone className="w-4 h-4" />
@@ -617,7 +582,6 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
                 <span className="text-gray-600">{c.orCall} </span>
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  onClick={() => handlePhoneClick('hero-fallback')}
                   className="font-semibold text-[#2D5016] hover:underline"
                 >
                   {siteConfig.contact.phoneDisplay}
@@ -806,7 +770,6 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href={`tel:${siteConfig.contact.phone}`}
-                onClick={() => handlePhoneClick('final-cta')}
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#2D5016] text-white rounded-lg font-bold text-base hover:bg-[#3a6b1d] transition-colors min-h-[52px] shadow-sm"
               >
                 <Phone className="w-5 h-5" /> {c.finalCall}
@@ -827,7 +790,6 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 justify-center sm:justify-start">
               <a
                 href={`tel:${siteConfig.contact.phone}`}
-                onClick={() => handlePhoneClick('footer')}
                 className="inline-flex items-center gap-1.5 text-white hover:text-[#7cb342] transition-colors"
               >
                 <Phone className="w-4 h-4" /> {siteConfig.contact.phoneDisplay}
@@ -851,7 +813,6 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
       <div className="md:hidden fixed bottom-0 inset-x-0 z-50 grid grid-cols-2 border-t border-gray-200 shadow-2xl">
         <a
           href={`tel:${siteConfig.contact.phone}`}
-          onClick={() => handlePhoneClick('mobile-sticky')}
           className="flex items-center justify-center gap-2 py-3.5 bg-[#2D5016] text-white font-semibold min-h-[52px]"
         >
           <Phone className="w-5 h-5" /> {c.barCall}

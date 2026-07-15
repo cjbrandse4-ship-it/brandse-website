@@ -39,13 +39,7 @@ export default function ThankYouPage() {
   const path = isFr ? '/fr/merci' : '/thank-you';
   const canonical = `${siteConfig.domain}${path}`;
 
-  function handlePhoneClick() {
-    if (typeof window === 'undefined') return;
-    // eslint-disable-next-line no-console
-    console.log('[Ads conversion]', { event: 'phone_call', source: 'thank-you' });
-    const gtag = (window as any).gtag;
-    if (gtag) gtag('event', 'phone_call', { source: 'thank-you' });
-  }
+  // Phone taps are tracked site-wide by the tel: listener in pages/_app.tsx.
 
   return (
     <>
@@ -82,7 +76,6 @@ export default function ThankYouPage() {
               <p className="text-sm text-gray-700 mb-4">{c.urgentBody}</p>
               <a
                 href={`tel:${siteConfig.contact.phone}`}
-                onClick={handlePhoneClick}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#2D5016] text-white rounded-lg font-bold hover:bg-[#3a6b1d] transition-colors min-h-[48px]"
               >
                 <Phone className="w-5 h-5" /> {c.callButton}

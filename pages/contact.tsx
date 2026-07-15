@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../lib/useLanguage';
 import { siteConfig } from '../lib/seo';
+import { trackLead, FORM_CONVERSION_LABEL } from '../lib/analytics';
 import PageHero from '../components/PageHero';
 
 export default function ContactPage() {
@@ -37,10 +38,8 @@ export default function ContactPage() {
       if (!res.ok) throw new Error();
       setStatus('success');
       setForm({ name: '', email: '', phone: '', area: '', message: '' });
-      // Google Ads conversion tracking
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'conversion', { send_to: 'AW-16516759047/mXt_CJjNyaMZEIf85sM9' });
-      }
+      // GA4 lead event + Google Ads conversion (shared helper).
+      trackLead({ source: 'contact', method: 'form', adsLabel: FORM_CONVERSION_LABEL });
     } catch {
       setStatus('error');
     } finally {
