@@ -48,7 +48,8 @@ class MyDocument extends Document<MyDocumentProps> {
             { "@type": "City", "name": "Hudson" }, { "@type": "City", "name": "Saint-Lazare" },
             { "@type": "City", "name": "Vaudreuil-Dorion" }, { "@type": "City", "name": "Dollard-des-Ormeaux" },
             { "@type": "City", "name": "Senneville" }, { "@type": "City", "name": "Baie-d'Urfé" },
-            { "@type": "City", "name": "Île-Perrot" }, { "@type": "City", "name": "Pincourt" }
+            { "@type": "City", "name": "Île-Perrot" }, { "@type": "City", "name": "Pincourt" },
+            { "@type": "City", "name": "Pierrefonds" }
           ],
           "openingHoursSpecification": [
             { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "18:00" },

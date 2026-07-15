@@ -542,6 +542,49 @@ export const locations: Location[] = [
       },
     },
   },
+  {
+    slug: 'pierrefonds',
+    name: 'Pierrefonds',
+    nearby: ['Dollard-des-Ormeaux', 'Kirkland', 'Senneville'],
+    postalCodes: ['H8Y', 'H8Z', 'H9K'],
+    treeSpecies: ['Silver Maple', 'Green Ash', 'Eastern White Cedar'],
+    content: {
+      en: {
+        paragraphs: [
+          'Pierrefonds-Roxboro stretches along the Rivière des Prairies on the north side of the West Island, and its established neighborhoods along Gouin Boulevard and around the Cap-Saint-Jacques nature park hold a dense canopy of mature Silver Maples, Green Ash, and Eastern White Cedars. Many of these street and backyard trees were planted decades ago and now need structural pruning, deadwood removal, or full removal as they age.',
+          'The riverfront exposure along the Rivière des Prairies means high winds and ice loading put extra stress on larger trees, and the clay-heavy soil common in the borough can cause root instability. Our crew works frequently in the Pierrefonds, Roxboro, and Gouin corridor areas, and often uses sectional takedown and rigging on the tighter suburban lots where felling isn\'t an option.',
+          'Pierrefonds is part of the Agglomeration of Montreal and falls under its tree protection bylaw — a permit is required before removing any tree with a trunk diameter of 10 cm or more on private property. Our team handles the permit application and ensures full compliance with the municipal regulations.',
+        ],
+        recentWork: [
+          'Removed a row of dead Green Ash trees killed by Emerald Ash Borer along Gouin Boulevard',
+          'Sectional takedown of a 65-foot Silver Maple in a tight Roxboro backyard with limited access',
+          'Storm cleanup near Cap-Saint-Jacques after high winds off the Rivière des Prairies',
+        ],
+        faqs: [
+          { q: 'Do I need a permit to remove a tree in Pierrefonds?', a: 'Yes. As part of the Agglomeration of Montreal, Pierrefonds requires a permit for removing any tree with a trunk diameter of 10 cm or more. We handle the permit application as part of our service.' },
+          { q: 'My Ash tree looks sick — is it the Emerald Ash Borer?', a: 'Very likely. Green Ash trees across Pierrefonds have been hit hard by EAB. Signs include a thinning canopy, D-shaped exit holes, and bark splitting. We can assess your tree and recommend treatment or removal.' },
+          { q: 'Can you remove a tree in a tight backyard in Pierrefonds?', a: 'Yes. Many Pierrefonds and Roxboro lots have limited access, so we specialize in sectional removal — dismantling the tree piece by piece with rigging to protect homes, fences, and pools.' },
+        ],
+      },
+      fr: {
+        paragraphs: [
+          'Pierrefonds-Roxboro s\'étend le long de la rivière des Prairies au nord de l\'Ouest de l\'Île, et ses quartiers établis le long du boulevard Gouin et autour du parc-nature du Cap-Saint-Jacques abritent une canopée dense d\'érables argentés, de frênes verts et de cèdres blancs matures. Beaucoup de ces arbres de rue et de cour arrière ont été plantés il y a des décennies et nécessitent maintenant un élagage structurel, un enlèvement du bois mort ou un abattage complet à mesure qu\'ils vieillissent.',
+          'L\'exposition riveraine le long de la rivière des Prairies fait que les vents forts et le verglas mettent un stress supplémentaire sur les plus gros arbres, et le sol argileux commun dans l\'arrondissement peut causer une instabilité racinaire. Notre équipe travaille fréquemment dans les secteurs de Pierrefonds, Roxboro et le corridor Gouin, et utilise souvent le démontage par sections et le gréage sur les terrains suburbains plus restreints où l\'abattage simple n\'est pas possible.',
+          'Pierrefonds fait partie de l\'Agglomération de Montréal et relève de son règlement de protection des arbres — un permis est requis avant d\'abattre tout arbre dont le diamètre du tronc est de 10 cm ou plus sur une propriété privée. Notre équipe s\'occupe de la demande de permis et assure la conformité totale avec les réglementations municipales.',
+        ],
+        recentWork: [
+          'Abattage d\'une rangée de frênes verts morts tués par l\'agrile du frêne le long du boulevard Gouin',
+          'Démontage par sections d\'un érable argenté de 65 pieds dans une cour arrière restreinte à Roxboro avec accès limité',
+          'Nettoyage après tempête près du Cap-Saint-Jacques suite à des vents forts venant de la rivière des Prairies',
+        ],
+        faqs: [
+          { q: 'Ai-je besoin d\'un permis pour abattre un arbre à Pierrefonds?', a: 'Oui. En tant que partie de l\'Agglomération de Montréal, Pierrefonds exige un permis pour abattre tout arbre dont le diamètre du tronc est de 10 cm ou plus. Nous nous occupons de la demande de permis dans le cadre de notre service.' },
+          { q: 'Mon frêne semble malade — est-ce l\'agrile du frêne?', a: 'Très probablement. Les frênes verts partout à Pierrefonds ont été durement touchés par l\'agrile du frêne. Les signes incluent une canopée clairsemée, des trous de sortie en forme de D et le fendillement de l\'écorce. Nous pouvons évaluer votre arbre et recommander un traitement ou l\'abattage.' },
+          { q: 'Pouvez-vous abattre un arbre dans une cour arrière restreinte à Pierrefonds?', a: 'Oui. Beaucoup de terrains à Pierrefonds et Roxboro ont un accès limité, alors nous sommes spécialisés dans l\'abattage par sections — en démontant l\'arbre pièce par pièce avec du gréage pour protéger les maisons, les clôtures et les piscines.' },
+        ],
+      },
+    },
+  },
 ];
 
 export function getLocation(slug: string) {

@@ -27,7 +27,7 @@ export const siteConfig = {
   serviceAreas: [
     "Pointe-Claire", "Beaconsfield", "Kirkland", "Dorval", "Hudson",
     "Saint-Lazare", "Vaudreuil-Dorion", "Dollard-des-Ormeaux", "Senneville",
-    "Baie-d'Urfe", "Ile-Perrot", "Pincourt",
+    "Baie-d'Urfe", "Ile-Perrot", "Pincourt", "Pierrefonds",
   ],
   ga: "G-FDDZP7VD44",
   gads: "AW-16516759047"

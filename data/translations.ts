@@ -23,7 +23,7 @@ export const translations = {
       areas: [
         'Saint-Lazare', 'Pointe-Claire', 'Hudson', 'Beaconsfield', 
         'Vaudreuil', 'Kirkland', 'Dollard-des-Ormeaux', 'Dorval', 
-        'Senneville', "Baie-D'Urfé", 'Île-Perrot', 'Pincourt'
+        'Senneville', "Baie-D'Urfé", 'Île-Perrot', 'Pincourt', 'Pierrefonds'
       ],
       hours: 'Monday-Friday 8am-6pm, 24/7 for emergencies'
     },
@@ -262,7 +262,7 @@ export const translations = {
       areas: [
         'Saint-Lazare', 'Pointe-Claire', 'Hudson', 'Beaconsfield', 
         'Vaudreuil', 'Kirkland', 'Dollard-des-Ormeaux', 'Dorval', 
-        'Senneville', "Baie-D'Urfé", 'Île-Perrot', 'Pincourt'
+        'Senneville', "Baie-D'Urfé", 'Île-Perrot', 'Pincourt', 'Pierrefonds'
       ],
       hours: 'Lundi-Vendredi 8h-18h, 24/7 pour les urgences'
     },

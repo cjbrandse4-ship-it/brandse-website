@@ -75,7 +75,7 @@ const SERVICE_OPTIONS = [
 const SERVICE_AREAS = [
   'Saint-Lazare', 'Pointe-Claire', 'Hudson', 'Beaconsfield',
   'Vaudreuil-Dorion', 'Kirkland', 'Dollard-des-Ormeaux', 'Dorval',
-  'Senneville', "Baie-d'Urfé", 'Île-Perrot', 'Pincourt',
+  'Senneville', "Baie-d'Urfé", 'Île-Perrot', 'Pincourt', 'Pierrefonds',
 ];
 
 const copy = {
