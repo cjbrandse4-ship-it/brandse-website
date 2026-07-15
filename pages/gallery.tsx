@@ -10,6 +10,11 @@ import PageHero from '../components/PageHero';
 
 const galleryItems = [
   {
+    src: '/gallery/spider-lift.jpg',
+    en: 'Our CELA DT25 spider lift — 82 ft reach for hard-to-access tree work',
+    fr: 'Notre nacelle araignee CELA DT25 — portee de 82 pi pour les arbres difficiles d\'acces',
+  },
+  {
     src: '/gallery/hedge-trimming.jpg',
     en: 'Cedar hedge trimming in West Island Montreal',
     fr: 'Taille de haie de cedres dans l\'Ouest de l\'Ile de Montreal',
