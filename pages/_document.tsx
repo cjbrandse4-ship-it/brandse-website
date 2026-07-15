@@ -56,14 +56,10 @@ class MyDocument extends Document<MyDocumentProps> {
             { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "16:00" }
           ],
           "priceRange": "$$",
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "26", "bestRating": "5" },
-          // Sample of real Google reviews so the aggregateRating is backed by
-          // review content (reviewCount above is the true total across Google).
-          "review": [
-            { "@type": "Review", "author": { "@type": "Person", "name": "Jameka Reilly" }, "datePublished": "2026-03-06", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "They made a big job look easy! Professional, clean, and super nice to work with. If you need tree work done right, these are the people to call." },
-            { "@type": "Review", "author": { "@type": "Person", "name": "Craig Emblem" }, "datePublished": "2025-06-08", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "I had four very large trees that were either dying or posed a hazard of falling, which required climber expertise to cut them down. Connor and his team did not disappoint. They were efficient and very careful with my yard and the surrounding areas, all while ensuring cleanliness. I highly recommend Service d'Arbres Brandse." },
-            { "@type": "Review", "author": { "@type": "Person", "name": "Karen Fitzpatrick" }, "datePublished": "2025-05-10", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Fast, efficient, knowledgeable and they left the driveway and yard cleaner than when they arrived. Highly recommend." }
-          ],
+          // No aggregateRating/review here — Google disallows "self-serving"
+          // review markup on a business's own LocalBusiness/Organization entity
+          // (GSC flags it as: Invalid object type for field "<parent_node>").
+          // Star ratings for the business come from Google Business Profile.
           "contactPoint": { "@type": "ContactPoint", "telephone": "+1-438-365-5410", "contactType": "customer service", "email": "info@brandses.com", "availableLanguage": ["en", "fr"] },
           "sameAs": ["https://www.facebook.com/brandsetreeservice", "https://www.instagram.com/brandsetreeservice"]
         }) }} />

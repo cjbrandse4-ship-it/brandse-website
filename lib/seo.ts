@@ -58,8 +58,8 @@ export function buildServiceSchema(args: {
       "telephone": siteConfig.contact.phone,
       "image": siteConfig.defaultImage,
       "address": { "@type": "PostalAddress", ...siteConfig.contact.address }
-      // Rating lives on the single global business entity in _document.tsx to
-      // avoid emitting multiple self-rated LocalBusiness nodes on one page.
+      // No aggregateRating — self-serving review markup on our own business
+      // entity is disallowed by Google (see note in _document.tsx).
     },
     "areaServed": siteConfig.serviceAreas.map(name => ({ "@type": "City", name })),
     "offers": {
