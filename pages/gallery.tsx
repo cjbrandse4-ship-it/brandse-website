@@ -38,6 +38,11 @@ const galleryItems: GalleryItem[] = [
     fr: 'Notre nacelle araignee CELA DT25 — portee de 82 pi pour les arbres difficiles d\'acces',
   },
   {
+    src: '/gallery/mini-loader.jpg',
+    en: 'Our tracked mini loader hauling logs on a waterfront property in Beaconsfield',
+    fr: 'Notre mini-chargeur sur chenilles transportant des billots sur une propriete riveraine a Beaconsfield',
+  },
+  {
     src: '/gallery/hedge-trimming.jpg',
     en: 'Cedar hedge trimming in West Island Montreal',
     fr: 'Taille de haie de cedres dans l\'Ouest de l\'Ile de Montreal',
