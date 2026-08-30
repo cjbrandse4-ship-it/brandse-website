@@ -23,7 +23,10 @@ export const translations = {
       areas: [
         'Saint-Lazare', 'Pointe-Claire', 'Hudson', 'Beaconsfield', 
         'Vaudreuil', 'Kirkland', 'Dollard-des-Ormeaux', 'Dorval', 
-        'Senneville', "Baie-D'Urfé", 'Île-Perrot', 'Pincourt', 'Pierrefonds'
+        'Senneville', "Baie-D'Urfé", 'Île-Perrot', 'Pincourt', 'Pierrefonds',
+        'Sainte-Anne-de-Bellevue', "L'Île-Bizard", "Notre-Dame-de-l'Île-Perrot",
+        'Terrasse-Vaudreuil', 'Rigaud', 'Les Cèdres', 'Coteau-du-Lac',
+        'Pointe-des-Cascades', 'Saint-Clet', 'Lachine'
       ],
       hours: 'Monday-Friday 8am-6pm, 24/7 for emergencies'
     },
@@ -37,11 +40,11 @@ export const translations = {
     services: {
       treeRemoval: {
         title: 'Tree Removal',
-        desc: 'Safe and efficient removal of trees of any size across Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot, and Pincourt.'
+        desc: 'Safe and efficient removal of trees of any size across the West Island of Montreal and all of Vaudreuil-Soulanges — from Lachine to Rigaud.'
       },
       stumpGrinding: {
         title: 'Stump Grinding & Removal',
-        desc: 'Complete stump removal using professional grinding equipment. We leave your yard clean and ready for new landscaping in all our 12 service areas.'
+        desc: 'Complete stump removal using professional grinding equipment. We leave your yard clean and ready for new landscaping in all our 23 service areas.'
       },
       treeTrimming: {
         title: 'Tree Trimming & Pruning',
@@ -57,7 +60,7 @@ export const translations = {
       },
       emergency: {
         title: 'Emergency Services',
-        desc: '24/7 emergency response for storm damage, fallen trees, and hazardous situations. Fast, safe, and reliable service when you need it most across all 12 cities.'
+        desc: '24/7 emergency response for storm damage, fallen trees, and hazardous situations. Fast, safe, and reliable service when you need it most across all 23 cities.'
       },
       hardToReach: {
         title: 'Hard-to-Reach Tree Removal',
@@ -66,11 +69,11 @@ export const translations = {
     },
     home: {
       metaTitle: "Service d'Arbres Brandse | Professional Tree Services West Island Montreal",
-      metaDesc: "Licensed & CNESST insured tree service company serving Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D'Urfé, Île-Perrot, and Pincourt. 24/7 Emergency.",
+      metaDesc: "Licensed & CNESST insured tree service serving 23 communities across the West Island of Montreal and Vaudreuil-Soulanges — from Lachine to Rigaud. 24/7 Emergency.",
       heroTitle: 'Professional Tree Care for the West Island',
       heroSubtitle: 'Certified arborists providing safe, reliable tree care across Saint-Lazare, Hudson, Vaudreuil, Pointe-Claire, Beaconsfield, Kirkland, and surrounding areas.',
       servingTitle: 'Our Service Areas',
-      servingDesc: 'We proudly serve 12 communities across the West Island with professional tree care services',
+      servingDesc: 'We proudly serve 23 communities across the West Island and Vaudreuil-Soulanges with professional tree care services',
       servingFooter: 'Fast response times • Local expertise • Community trusted',
       requestArea: 'Request Service in Your Area',
       testimonialsTitle: 'What Our Customers Say',
@@ -106,19 +109,19 @@ export const translations = {
       stat3Title: 'Emergency Service',
       stat3Desc: '24/7 availability when needed',
       stat4Title: 'Service Areas',
-      stat4Desc: 'Covering 12 West Island cities',
+      stat4Desc: 'Covering the West Island & Vaudreuil-Soulanges',
       ctaTitle: 'Ready to Schedule Your Service?',
       ctaDesc: 'Get a free quote today and experience professional tree care'
     },
     about: {
       metaTitle: "About Us | Service d'Arbres Brandse | West Island Montreal Tree Experts",
-      metaDesc: "Learn about Service d'Arbres Brandse - West Island Montreal's trusted tree care experts. Licensed, CNESST insured, certified arborists serving 12 cities.",
+      metaDesc: "Learn about Service d'Arbres Brandse - West Island Montreal's trusted tree care experts. Licensed, CNESST insured, certified arborists serving 23 communities.",
       heroTitle: "About Service d'Arbres Brandse",
       heroSubtitle: 'Your trusted partner for professional tree care in West Island Montreal since 2020',
       storyTitle: 'Our Story',
       story1: 'Service d\'Arbres Brandse was founded in 2020 with a simple mission: to provide West Island Montreal homeowners with professional, reliable tree care services they can trust. What started as a small family operation has grown into one of the region\'s most respected tree service companies.',
       story2: 'Over the past 5 years, we\'ve built our reputation on quality workmanship, safety, and customer satisfaction. Our team of certified arborists brings decades of combined experience to every project, from routine maintenance to complex tree removals.',
-      story3: 'Today, we\'re proud to serve 12 communities: Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot, and Pincourt. We maintain the health and beauty of thousands of trees while ensuring the safety of properties and families.',
+      story3: 'Today, we\'re proud to serve 23 communities across the West Island of Montreal and Vaudreuil-Soulanges — from Lachine in the east to Rigaud in the west, and everywhere in between. We maintain the health and beauty of thousands of trees while ensuring the safety of properties and families.',
       missionTitle: 'Our Mission',
       missionDesc: 'To provide exceptional tree care services that enhance the beauty, health, and safety of our community\'s urban forest while delivering outstanding customer service and value.',
       valuesTitle: 'Our Values',
@@ -165,7 +168,7 @@ export const translations = {
       searchPlaceholder: 'Search questions...',
       noResults: 'No questions found matching your search.',
       questions: [
-        { q: 'What areas do you serve?', a: 'We proudly serve 12 communities in the West Island: Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot, and Pincourt.' },
+        { q: 'What areas do you serve?', a: 'We proudly serve 23 communities across the West Island and Vaudreuil-Soulanges — including Saint-Lazare, Vaudreuil-Dorion, Hudson, Rigaud, Pointe-Claire, Beaconsfield, Kirkland, Dollard-des-Ormeaux, Pierrefonds, Lachine, Île-Perrot, Les Cèdres, Coteau-du-Lac, and more. See our Service Areas menu for the full list.' },
         { q: 'How much does tree removal cost?', a: 'Tree removal costs vary based on the tree\'s size, location, accessibility, and complexity. Small trees typically range from $500-$1,500, medium trees $1,500-$3,500, and large trees $3,500+. We provide free, detailed quotes with no hidden fees.' },
         { q: 'Do I need a permit in Quebec?', a: 'Yes, most municipalities in Quebec require a permit for tree removal, especially for trees over a certain diameter. We can help guide you through your specific city\'s permit application process.' },
         { q: 'How fast can you remove a tree?', a: 'For routine removals, we typically schedule within 1-2 weeks. For hazardous or emergency situations, our 24/7 response team can often be on-site within hours to safely remove the threat.' },
@@ -206,7 +209,7 @@ export const translations = {
       infoTitle: 'Contact Information',
       phoneDesc: '24/7 Emergency Service Available',
       emailDesc: 'We respond within 24 hours',
-      areaDesc: 'Serving 12 communities',
+      areaDesc: 'Serving 23 communities',
       hours1: 'Monday - Friday: 8:00 AM - 6:00 PM',
       hours2: '24/7 for emergencies',
       areasTitle: 'Areas We Serve',
@@ -266,7 +269,10 @@ export const translations = {
       areas: [
         'Saint-Lazare', 'Pointe-Claire', 'Hudson', 'Beaconsfield', 
         'Vaudreuil', 'Kirkland', 'Dollard-des-Ormeaux', 'Dorval', 
-        'Senneville', "Baie-D'Urfé", 'Île-Perrot', 'Pincourt', 'Pierrefonds'
+        'Senneville', "Baie-D'Urfé", 'Île-Perrot', 'Pincourt', 'Pierrefonds',
+        'Sainte-Anne-de-Bellevue', "L'Île-Bizard", "Notre-Dame-de-l'Île-Perrot",
+        'Terrasse-Vaudreuil', 'Rigaud', 'Les Cèdres', 'Coteau-du-Lac',
+        'Pointe-des-Cascades', 'Saint-Clet', 'Lachine'
       ],
       hours: 'Lundi-Vendredi 8h-18h, 24/7 pour les urgences'
     },
@@ -280,11 +286,11 @@ export const translations = {
     services: {
       treeRemoval: {
         title: 'Abattage d\'arbres',
-        desc: 'Abattage sécuritaire et efficace d\'arbres de toute taille à travers Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot et Pincourt.'
+        desc: 'Abattage sécuritaire et efficace d\'arbres de toute taille à travers l\'Ouest de l\'Île de Montréal et tout Vaudreuil-Soulanges — de Lachine à Rigaud.'
       },
       stumpGrinding: {
         title: 'Essouchage',
-        desc: 'Enlèvement complet des souches à l\'aide d\'équipement professionnel. Nous laissons votre cour propre dans nos 12 zones de service.'
+        desc: 'Enlèvement complet des souches à l\'aide d\'équipement professionnel. Nous laissons votre cour propre dans nos 23 zones de service.'
       },
       treeTrimming: {
         title: 'Élagage et taille',
@@ -300,7 +306,7 @@ export const translations = {
       },
       emergency: {
         title: 'Services d\'urgence',
-        desc: 'Intervention d\'urgence 24/7 pour les dommages causés par les tempêtes et les situations dangereuses. Service rapide dans les 12 villes.'
+        desc: 'Intervention d\'urgence 24/7 pour les dommages causés par les tempêtes et les situations dangereuses. Service rapide dans les 23 villes.'
       },
       hardToReach: {
         title: 'Arbres difficiles d\'accès',
@@ -309,11 +315,11 @@ export const translations = {
     },
     home: {
       metaTitle: "Service d'Arbres Brandse | Services d'arbres professionnels Ouest de l'Île",
-      metaDesc: "Entreprise licenciée et assurée CNESST desservant Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D'Urfé, Île-Perrot et Pincourt. Urgence 24/7.",
+      metaDesc: "Entreprise licenciée et assurée CNESST desservant 23 communautés de l'Ouest de l'Île de Montréal et de Vaudreuil-Soulanges — de Lachine à Rigaud. Urgence 24/7.",
       heroTitle: 'Soins d\'arbres professionnels pour l\'Ouest de l\'Île',
       heroSubtitle: 'Arboriculteurs certifiés offrant des soins sécuritaires à travers Saint-Lazare, Hudson, Vaudreuil, Pointe-Claire, Beaconsfield, Kirkland et les régions avoisinantes.',
       servingTitle: 'Nos zones de service',
-      servingDesc: 'Nous sommes fiers de desservir 12 communautés de l\'Ouest de l\'Île avec des services professionnels',
+      servingDesc: 'Nous sommes fiers de desservir 23 communautés de l\'Ouest de l\'Île et de Vaudreuil-Soulanges avec des services professionnels',
       servingFooter: 'Temps de réponse rapides • Expertise locale • Confiance de la communauté',
       requestArea: 'Demander un service dans votre région',
       testimonialsTitle: 'Ce que disent nos clients',
@@ -337,7 +343,7 @@ export const translations = {
     },
     servicesPage: {
       metaTitle: "Services d'arbres | Service d'Arbres Brandse | Ouest de l'Île de Montréal",
-      metaDesc: "Services complets d'entretien des arbres incluant l'abattage, l'élagage, l'essouchage, la taille de haies, la plantation et les urgences 24/7. Desservant 12 villes.",
+      metaDesc: "Services complets d'entretien des arbres incluant l'abattage, l'élagage, l'essouchage, la taille de haies, la plantation et les urgences 24/7. Desservant 23 villes.",
       heroTitle: 'Services professionnels d\'entretien des arbres',
       heroSubtitle: 'De l\'entretien de routine aux interventions d\'urgence 24/7, nous offrons des solutions complètes pour les propriétés à travers Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot et Pincourt.',
       whyChooseTitle: 'Pourquoi choisir nos services?',
@@ -349,19 +355,19 @@ export const translations = {
       stat3Title: 'Service d\'urgence',
       stat3Desc: 'Disponibilité 24/7 au besoin',
       stat4Title: 'Zones de service',
-      stat4Desc: 'Couvrant 12 villes de l\'Ouest de l\'Île',
+      stat4Desc: 'Couvrant l\'Ouest de l\'Île et Vaudreuil-Soulanges',
       ctaTitle: 'Prêt à planifier votre service?',
       ctaDesc: 'Obtenez une soumission gratuite aujourd\'hui et découvrez nos soins professionnels'
     },
     about: {
       metaTitle: "À propos de nous | Service d'Arbres Brandse | Experts en arbres Ouest de l'Île",
-      metaDesc: "Découvrez Service d'Arbres Brandse - Les experts en entretien d'arbres de confiance. Licenciés, assurés CNESST, arboriculteurs certifiés desservant 12 villes.",
+      metaDesc: "Découvrez Service d'Arbres Brandse - Les experts en entretien d'arbres de confiance. Licenciés, assurés CNESST, arboriculteurs certifiés desservant 23 communautés.",
       heroTitle: "À propos de Service d'Arbres Brandse",
       heroSubtitle: 'Votre partenaire de confiance pour l\'entretien professionnel des arbres dans l\'Ouest de l\'Île de Montréal depuis 2020',
       storyTitle: 'Notre histoire',
       story1: 'Service d\'Arbres Brandse a été fondé en 2020 avec une mission simple : fournir aux propriétaires de l\'Ouest de l\'Île de Montréal des services d\'entretien d\'arbres professionnels et fiables en qui ils peuvent avoir confiance.',
       story2: 'Au cours des 5 dernières années, nous avons bâti notre réputation sur la qualité du travail, la sécurité et la satisfaction du client. Notre équipe d\'arboriculteurs certifiés apporte des décennies d\'expérience combinée à chaque projet.',
-      story3: 'Aujourd\'hui, nous sommes fiers de desservir 12 communautés : Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot et Pincourt. Nous maintenons la santé et la beauté de milliers d\'arbres.',
+      story3: 'Aujourd\'hui, nous sommes fiers de desservir 23 communautés de l\'Ouest de l\'Île de Montréal et de Vaudreuil-Soulanges — de Lachine à l\'est jusqu\'à Rigaud à l\'ouest. Nous maintenons la santé et la beauté de milliers d\'arbres.',
       missionTitle: 'Notre mission',
       missionDesc: 'Fournir des services exceptionnels d\'entretien des arbres qui rehaussent la beauté, la santé et la sécurité de la forêt urbaine de notre communauté tout en offrant un service à la clientèle et une valeur exceptionnels.',
       valuesTitle: 'Nos valeurs',
@@ -408,7 +414,7 @@ export const translations = {
       searchPlaceholder: 'Rechercher des questions...',
       noResults: 'Aucune question ne correspond à votre recherche.',
       questions: [
-        { q: 'Quelles régions desservez-vous ?', a: 'Nous desservons fièrement 12 communautés de l\'Ouest de l\'Île : Saint-Lazare, Pointe-Claire, Hudson, Beaconsfield, Vaudreuil, Kirkland, Dollard-des-Ormeaux, Dorval, Senneville, Baie-D\'Urfé, Île-Perrot et Pincourt.' },
+        { q: 'Quelles régions desservez-vous ?', a: 'Nous desservons fièrement 23 communautés de l\'Ouest de l\'Île et de Vaudreuil-Soulanges — incluant Saint-Lazare, Vaudreuil-Dorion, Hudson, Rigaud, Pointe-Claire, Beaconsfield, Kirkland, Dollard-des-Ormeaux, Pierrefonds, Lachine, Île-Perrot, Les Cèdres, Coteau-du-Lac et plus. Consultez le menu Zones de service pour la liste complète.' },
         { q: 'Combien coûte l\'abattage d\'un arbre ?', a: 'Les coûts d\'abattage varient en fonction de la taille de l\'arbre, de l\'emplacement, de l\'accessibilité et de la complexité. Les petits arbres varient généralement de 500$ à 1 500$, les arbres moyens de 1 500$ à 3 500$ et les grands arbres de 3 500$ et plus. Nous fournissons des soumissions gratuites et détaillées sans frais cachés.' },
         { q: 'Ai-je besoin d\'un permis au Québec ?', a: 'Oui, la plupart des municipalités du Québec exigent un permis pour l\'abattage d\'arbres, en particulier pour les arbres dépassant un certain diamètre. Nous pouvons vous guider dans le processus de demande de permis de votre ville.' },
         { q: 'À quelle vitesse pouvez-vous abattre un arbre ?', a: 'Pour les abattages de routine, nous planifions généralement dans un délai de 1 à 2 semaines. Pour les situations dangereuses ou d\'urgence, notre équipe d\'intervention 24/7 peut souvent être sur place en quelques heures pour éliminer la menace en toute sécurité.' },
@@ -449,12 +455,12 @@ export const translations = {
       infoTitle: 'Coordonnées',
       phoneDesc: 'Service d\'urgence 24/7 disponible',
       emailDesc: 'Nous répondons dans les 24 heures',
-      areaDesc: 'Desservant 12 communautés',
+      areaDesc: 'Desservant 23 communautés',
       hours1: 'Lundi - Vendredi : 8h00 - 18h00',
       hours2: '24/7 pour les urgences',
       areasTitle: 'Zones que nous desservons',
       coverageTitle: 'Couverture de l\'Ouest de l\'Île de Montréal',
-      coverageDesc: 'Service rapide et fiable dans les 12 communautés de l\'Ouest de l\'Île',
+      coverageDesc: 'Service rapide et fiable dans les 23 communautés de l\'Ouest de l\'Île et de Vaudreuil-Soulanges',
       stat1Title: 'Communautés desservies',
       stat1Desc: 'Couverture complète à travers l\'Ouest de l\'Île',
       stat2Title: 'Temps de réponse',

@@ -23,7 +23,7 @@ export default function AboutPage() {
     "founder": { "@type": "Person", "name": "John Brandse" },
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Montreal",
+      "addressLocality": "Saint-Lazare",
       "addressRegion": "QC",
       "addressCountry": "CA"
     },

@@ -585,6 +585,436 @@ export const locations: Location[] = [
       },
     },
   },
+  {
+    slug: 'sainte-anne-de-bellevue',
+    name: 'Sainte-Anne-de-Bellevue',
+    nearby: ["Baie-D'Urfé", 'Senneville', 'Île-Perrot'],
+    postalCodes: ['H9X'],
+    treeSpecies: ['Sugar Maple', 'Silver Maple', 'White Pine'],
+    content: {
+      en: {
+        paragraphs: [
+          'Sainte-Anne-de-Bellevue sits at the very western tip of the island, where Lac Saint-Louis meets Lac des Deux Montagnes. The village core around the boardwalk and Sainte-Anne Street is one of the oldest settled areas in the West Island, and its compact lots hold mature Sugar and Silver Maples growing tight against century homes, restaurants, and hydro lines.',
+          'With McGill\'s Macdonald Campus and the Morgan Arboretum next door, Sainte-Anne residents know good tree care when they see it. The double lake exposure funnels strong wind through the village, and older maples over narrow lots usually have to come down in sections — our crew works regularly in these tight quarters with rigging and our spider lift.',
+          'Sainte-Anne-de-Bellevue is part of the Agglomeration of Montreal, so a permit is required before removing any tree with a trunk diameter of 10 cm or more on private property. We prepare and file the permit application as part of every removal.',
+        ],
+        recentWork: [
+          'Sectional removal of a large Silver Maple behind a restaurant near the Sainte-Anne boardwalk',
+          'Preservation pruning on century-old Sugar Maples on a village-core property',
+          'Storm cleanup after high winds funneled off Lac Saint-Louis through the village',
+        ],
+        faqs: [
+          { q: 'Do I need a permit to remove a tree in Sainte-Anne-de-Bellevue?', a: 'Yes. As part of the Agglomeration of Montreal, a permit is required for any tree with a trunk diameter of 10 cm or more. We handle the application for you.' },
+          { q: 'Can you work on the small village lots near the boardwalk?', a: 'Yes. Tight access is our specialty — we dismantle trees in sections using rigging and our compact tracked spider lift, which fits through a standard garden gate.' },
+          { q: 'How quickly can you get to Sainte-Anne-de-Bellevue?', a: 'We\'re based just across the bridge in the Saint-Lazare/Vaudreuil area, so we can typically be on site within the hour for emergencies.' },
+        ],
+      },
+      fr: {
+        paragraphs: [
+          'Sainte-Anne-de-Bellevue se trouve à la pointe ouest de l\'île, là où le lac Saint-Louis rejoint le lac des Deux Montagnes. Le cœur du village autour de la promenade et de la rue Sainte-Anne est l\'un des plus anciens secteurs habités de l\'Ouest de l\'Île, et ses terrains compacts abritent des érables à sucre et argentés matures qui poussent tout contre les maisons centenaires, les restaurants et les lignes électriques.',
+          'Avec le campus Macdonald de McGill et l\'Arboretum Morgan à côté, les résidents de Sainte-Anne reconnaissent un bon travail arboricole. La double exposition aux lacs canalise des vents forts à travers le village, et les vieux érables au-dessus des terrains étroits doivent généralement être démontés par sections — notre équipe travaille régulièrement dans ces espaces restreints avec du gréage et notre nacelle araignée.',
+          'Sainte-Anne-de-Bellevue fait partie de l\'Agglomération de Montréal : un permis est requis avant d\'abattre tout arbre dont le diamètre du tronc est de 10 cm ou plus sur une propriété privée. Nous préparons et déposons la demande de permis pour chaque abattage.',
+        ],
+        recentWork: [
+          'Démontage par sections d\'un grand érable argenté derrière un restaurant près de la promenade de Sainte-Anne',
+          'Élagage de préservation d\'érables à sucre centenaires sur une propriété du cœur du village',
+          'Nettoyage après tempête suite à des vents violents canalisés du lac Saint-Louis à travers le village',
+        ],
+        faqs: [
+          { q: 'Ai-je besoin d\'un permis pour abattre un arbre à Sainte-Anne-de-Bellevue?', a: 'Oui. En tant que partie de l\'Agglomération de Montréal, un permis est requis pour tout arbre dont le diamètre du tronc est de 10 cm ou plus. Nous nous occupons de la demande pour vous.' },
+          { q: 'Pouvez-vous travailler sur les petits terrains du village près de la promenade?', a: 'Oui. L\'accès restreint est notre spécialité — nous démontons les arbres par sections avec du gréage et notre nacelle araignée compacte sur chenilles, qui passe par un portail de jardin standard.' },
+          { q: 'En combien de temps pouvez-vous arriver à Sainte-Anne-de-Bellevue?', a: 'Nous sommes basés juste de l\'autre côté du pont, dans le secteur Saint-Lazare/Vaudreuil, donc nous pouvons généralement être sur place en moins d\'une heure pour les urgences.' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'ile-bizard',
+    name: "L'Île-Bizard",
+    nearby: ['Pierrefonds', 'Senneville', 'Dollard-des-Ormeaux'],
+    postalCodes: ['H9C', 'H9E'],
+    treeSpecies: ['Red Maple', 'Bur Oak', 'Eastern Cottonwood'],
+    content: {
+      en: {
+        paragraphs: [
+          'The borough of L\'Île-Bizard–Sainte-Geneviève combines large wooded estate lots, golf-course properties, and long stretches of natural shoreline along Lac des Deux Montagnes and the Rivière des Prairies. Mature Red Maples, Bur Oaks, and towering Eastern Cottonwoods define the island\'s canopy, with the Bois-de-l\'Île-Bizard nature park at its heart.',
+          'The island\'s shoreline neighborhoods have lived through major spring flooding, and years of saturated soil have left many waterfront trees with weakened root systems. Leaning cottonwoods and willows near the water are the most common hazard we address here — early assessment prevents an uprooting into a house or seawall.',
+          'L\'Île-Bizard–Sainte-Geneviève falls under the Agglomeration of Montreal\'s tree protection bylaw: a permit is required to remove any tree with a trunk diameter of 10 cm or more. We manage the permit process from application to approval, including for Sainte-Geneviève properties on the mainland side of the bridge.',
+        ],
+        recentWork: [
+          'Removed a row of flood-stressed Eastern Cottonwoods leaning over a shoreline home near the nature park',
+          'Preservation pruning and cabling on a heritage Bur Oak on a golf-course estate property',
+          'Cleared storm-downed Red Maples blocking a private road in Sainte-Geneviève',
+        ],
+        faqs: [
+          { q: 'Do I need a permit to remove a tree on L\'Île-Bizard?', a: 'Yes. The borough follows the Agglomeration of Montreal\'s bylaw — any tree 10 cm or more in trunk diameter requires a permit. We handle the full application for you.' },
+          { q: 'My waterfront tree is leaning after the floods — is it dangerous?', a: 'Possibly. Years of saturated soil have weakened root plates along the island\'s shoreline. We assess lean, root heave, and soil condition, and recommend removal or cabling before it fails.' },
+          { q: 'Do you serve Sainte-Geneviève too?', a: 'Yes. We cover the entire borough of L\'Île-Bizard–Sainte-Geneviève, both the island and the mainland side.' },
+        ],
+      },
+      fr: {
+        paragraphs: [
+          'L\'arrondissement de L\'Île-Bizard–Sainte-Geneviève combine de grands terrains boisés, des propriétés en bordure de golf et de longues rives naturelles le long du lac des Deux Montagnes et de la rivière des Prairies. Les érables rouges, chênes à gros fruits et grands peupliers deltoïdes matures définissent la canopée de l\'île, avec le parc-nature du Bois-de-l\'Île-Bizard en son cœur.',
+          'Les quartiers riverains de l\'île ont vécu des inondations printanières majeures, et des années de sols saturés ont affaibli le système racinaire de nombreux arbres au bord de l\'eau. Les peupliers et saules penchés près de l\'eau sont le danger le plus fréquent que nous traitons ici — une évaluation précoce évite un déracinement sur une maison ou un muret.',
+          'L\'Île-Bizard–Sainte-Geneviève relève du règlement de protection des arbres de l\'Agglomération de Montréal : un permis est requis pour abattre tout arbre dont le diamètre du tronc est de 10 cm ou plus. Nous gérons le processus de permis de la demande à l\'approbation, y compris pour les propriétés de Sainte-Geneviève du côté continental du pont.',
+        ],
+        recentWork: [
+          'Abattage d\'une rangée de peupliers deltoïdes affaiblis par les inondations penchant au-dessus d\'une maison riveraine près du parc-nature',
+          'Élagage de préservation et haubanage d\'un chêne à gros fruits patrimonial sur une propriété en bordure de golf',
+          'Dégagement d\'érables rouges tombés lors d\'une tempête bloquant un chemin privé à Sainte-Geneviève',
+        ],
+        faqs: [
+          { q: 'Ai-je besoin d\'un permis pour abattre un arbre à L\'Île-Bizard?', a: 'Oui. L\'arrondissement suit le règlement de l\'Agglomération de Montréal — tout arbre de 10 cm ou plus de diamètre de tronc nécessite un permis. Nous gérons la demande complète pour vous.' },
+          { q: 'Mon arbre au bord de l\'eau penche depuis les inondations — est-il dangereux?', a: 'Possiblement. Des années de sols saturés ont affaibli les plaques racinaires le long des rives de l\'île. Nous évaluons l\'inclinaison, le soulèvement racinaire et l\'état du sol, puis recommandons l\'abattage ou le haubanage avant la rupture.' },
+          { q: 'Desservez-vous aussi Sainte-Geneviève?', a: 'Oui. Nous couvrons tout l\'arrondissement de L\'Île-Bizard–Sainte-Geneviève, l\'île comme le côté continental.' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'notre-dame-de-l-ile-perrot',
+    name: "Notre-Dame-de-l'Île-Perrot",
+    nearby: ['Île-Perrot', 'Pincourt', 'Terrasse-Vaudreuil'],
+    postalCodes: ['J7V', 'J7W'],
+    treeSpecies: ['Silver Maple', 'Black Walnut', 'Eastern White Cedar'],
+    content: {
+      en: {
+        paragraphs: [
+          'Notre-Dame-de-l\'Île-Perrot covers the southern and eastern half of Île-Perrot, from the Pointe-du-Moulin windmill park to long stretches of Lac Saint-Louis waterfront. Its semi-rural character means larger lots, old farm-line Silver Maples, Black Walnuts, and kilometres of cedar hedging between properties.',
+          'The high water table and clay soil common across the island limit rooting depth, so wind coming off Lac Saint-Louis regularly topples shallow-rooted trees. We also handle many Black Walnut issues here — their juglone-producing roots kill surrounding gardens, and their heavy limbs need experienced rigging to remove safely.',
+          'Notre-Dame-de-l\'Île-Perrot has its own tree bylaw, separate from neighbouring L\'Île-Perrot — removals generally require municipal authorization. We know both municipalities\' requirements and file the correct paperwork for your side of the island.',
+        ],
+        recentWork: [
+          'Removed a massive farm-line Silver Maple threatening a barn conversion near Pointe-du-Moulin',
+          'Took down a Black Walnut whose roots were killing a vegetable garden on a waterfront lot',
+          'Trimmed 80 metres of mature cedar hedge along a property line off Boulevard Perrot',
+        ],
+        faqs: [
+          { q: 'Is the permit process different from L\'Île-Perrot?', a: 'Yes. Notre-Dame-de-l\'Île-Perrot is a separate municipality with its own tree bylaw. We know both sets of requirements and handle the correct permit for your address.' },
+          { q: 'Why do trees blow over so often on the island?', a: 'The island\'s high water table and clay soil keep roots shallow, while open lake exposure adds wind load. Crown reduction and preventive assessment greatly reduce the risk.' },
+          { q: 'Do you maintain cedar hedges?', a: 'Yes. Cedar hedging is everywhere in Notre-Dame-de-l\'Île-Perrot and we trim, shape, and rehabilitate hedges of any length.' },
+        ],
+      },
+      fr: {
+        paragraphs: [
+          'Notre-Dame-de-l\'Île-Perrot couvre la moitié sud et est de l\'Île-Perrot, du parc historique de la Pointe-du-Moulin jusqu\'aux longues rives du lac Saint-Louis. Son caractère semi-rural signifie de plus grands terrains, de vieux érables argentés en ligne de ferme, des noyers noirs et des kilomètres de haies de cèdres entre les propriétés.',
+          'La nappe phréatique élevée et le sol argileux communs sur l\'île limitent la profondeur d\'enracinement, alors le vent du lac Saint-Louis renverse régulièrement les arbres à racines peu profondes. Nous traitons aussi beaucoup de problèmes de noyers noirs ici — leurs racines produisant de la juglone tuent les jardins environnants, et leurs lourdes branches exigent un gréage expérimenté pour un abattage sécuritaire.',
+          'Notre-Dame-de-l\'Île-Perrot a son propre règlement sur les arbres, distinct de celui de L\'Île-Perrot voisine — les abattages nécessitent généralement une autorisation municipale. Nous connaissons les exigences des deux municipalités et déposons les bons documents selon votre côté de l\'île.',
+        ],
+        recentWork: [
+          'Abattage d\'un immense érable argenté de ligne de ferme menaçant une grange convertie près de la Pointe-du-Moulin',
+          'Abattage d\'un noyer noir dont les racines tuaient un potager sur un terrain riverain',
+          'Taille de 80 mètres de haie de cèdres mature le long d\'une limite de propriété près du boulevard Perrot',
+        ],
+        faqs: [
+          { q: 'Le processus de permis est-il différent de celui de L\'Île-Perrot?', a: 'Oui. Notre-Dame-de-l\'Île-Perrot est une municipalité distincte avec son propre règlement sur les arbres. Nous connaissons les deux ensembles d\'exigences et gérons le bon permis pour votre adresse.' },
+          { q: 'Pourquoi les arbres tombent-ils si souvent sur l\'île?', a: 'La nappe phréatique élevée et le sol argileux gardent les racines peu profondes, tandis que l\'exposition au lac ajoute une charge de vent. La réduction de couronne et l\'évaluation préventive réduisent grandement le risque.' },
+          { q: 'Entretenez-vous les haies de cèdres?', a: 'Oui. Les haies de cèdres sont partout à Notre-Dame-de-l\'Île-Perrot et nous taillons, façonnons et réhabilitons des haies de toute longueur.' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'terrasse-vaudreuil',
+    name: 'Terrasse-Vaudreuil',
+    nearby: ['Pincourt', 'Île-Perrot', 'Vaudreuil'],
+    postalCodes: ['J7V'],
+    treeSpecies: ['Silver Maple', 'Norway Maple', 'Blue Spruce'],
+    content: {
+      en: {
+        paragraphs: [
+          'Terrasse-Vaudreuil is a tight-knit community on the northwest corner of Île-Perrot, facing Vaudreuil across the bay. Its compact grid of streets was planted decades ago with Silver and Norway Maples that now tower over small lots — beautiful canopy, but trees this size sitting a few metres from homes, garages, and pools leave no room for error when work is needed.',
+          'Nearly every removal in Terrasse-Vaudreuil is a sectional takedown: climbing or lift work, rigging each piece down into a small yard. Our compact spider lift was practically made for these lots — it fits through a gate, sets up on a driveway, and reaches over the house to the back tree.',
+          'Wind exposure off Lac des Deux Montagnes adds storm stress, and aging Blue Spruce rows planted as privacy screens are declining across the community. The municipality generally requires authorization before tree removal — we confirm requirements and handle any paperwork for you.',
+        ],
+        recentWork: [
+          'Sectional removal of a 60-foot Silver Maple wedged between a house and garage with 3 metres of clearance',
+          'Removed a declining Blue Spruce privacy row and ground the stumps for a new fence line',
+          'Cleared a storm-split Norway Maple limb resting on a roof after an autumn windstorm',
+        ],
+        faqs: [
+          { q: 'Can you remove a big tree from a small Terrasse-Vaudreuil lot?', a: 'Yes — that\'s most of our work here. We dismantle trees in sections with rigging and our tracked spider lift, which fits through a standard gate and protects your lawn.' },
+          { q: 'Do I need a permit in Terrasse-Vaudreuil?', a: 'Tree removal generally requires municipal authorization. We verify the current requirements for your property and take care of the paperwork.' },
+          { q: 'My spruce hedge is turning brown — can it be saved?', a: 'Aging Blue Spruce screens are declining across the region due to needle cast fungus and age. We assess whether pruning and treatment can help or whether replacement is the better investment.' },
+        ],
+      },
+      fr: {
+        paragraphs: [
+          'Terrasse-Vaudreuil est une communauté tissée serrée au coin nord-ouest de l\'Île-Perrot, face à Vaudreuil de l\'autre côté de la baie. Son quadrillage compact de rues a été planté il y a des décennies d\'érables argentés et de Norvège qui dominent maintenant les petits terrains — une belle canopée, mais des arbres de cette taille à quelques mètres des maisons, garages et piscines ne laissent aucune marge d\'erreur quand des travaux s\'imposent.',
+          'Presque chaque abattage à Terrasse-Vaudreuil est un démontage par sections : travail en grimpe ou en nacelle, chaque pièce descendue au gréage dans une petite cour. Notre nacelle araignée compacte est pratiquement faite pour ces terrains — elle passe par un portail, s\'installe dans l\'entrée et atteint l\'arbre de la cour arrière par-dessus la maison.',
+          'L\'exposition au vent du lac des Deux Montagnes ajoute du stress lors des tempêtes, et les rangées d\'épinettes bleues vieillissantes plantées comme écrans d\'intimité déclinent partout dans la communauté. La municipalité exige généralement une autorisation avant l\'abattage — nous confirmons les exigences et gérons la paperasse pour vous.',
+        ],
+        recentWork: [
+          'Démontage par sections d\'un érable argenté de 60 pieds coincé entre une maison et un garage avec 3 mètres de dégagement',
+          'Enlèvement d\'une rangée d\'épinettes bleues en déclin et essouchage pour une nouvelle ligne de clôture',
+          'Dégagement d\'une branche d\'érable de Norvège fendue par la tempête reposant sur un toit',
+        ],
+        faqs: [
+          { q: 'Pouvez-vous enlever un gros arbre d\'un petit terrain à Terrasse-Vaudreuil?', a: 'Oui — c\'est l\'essentiel de notre travail ici. Nous démontons les arbres par sections avec du gréage et notre nacelle araignée sur chenilles, qui passe par un portail standard et protège votre pelouse.' },
+          { q: 'Ai-je besoin d\'un permis à Terrasse-Vaudreuil?', a: 'L\'abattage d\'arbres nécessite généralement une autorisation municipale. Nous vérifions les exigences en vigueur pour votre propriété et nous occupons de la paperasse.' },
+          { q: 'Ma haie d\'épinettes brunit — peut-elle être sauvée?', a: 'Les écrans d\'épinettes bleues vieillissants déclinent dans toute la région à cause de champignons et de l\'âge. Nous évaluons si l\'élagage et un traitement peuvent aider ou si le remplacement est le meilleur investissement.' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'rigaud',
+    name: 'Rigaud',
+    nearby: ['Hudson', 'Saint-Lazare', 'Vaudreuil'],
+    postalCodes: ['J0P'],
+    treeSpecies: ['Sugar Maple', 'American Beech', 'Eastern Hemlock'],
+    content: {
+      en: {
+        paragraphs: [
+          'Rigaud is defined by its mountain — Mont Rigaud\'s forested slopes hold some of the region\'s finest Sugar Maple and American Beech stands, along with dark Hemlock ravines. Properties here range from village lots to mountainside estates, cottages, and working sugar bushes, and much of our Rigaud work happens on terrain that flat-land tree companies simply can\'t handle.',
+          'Steep slopes, limited machine access, and big hardwoods mean Rigaud removals often call for advanced rigging, winching, and careful drop-zone planning. Ice storms hit the mountain hard — freezing rain loads the canopy and brings down major limbs across driveways and hydro lines nearly every winter.',
+          'Rigaud is protective of its forested character, and removals generally require municipal authorization — particularly near the mountain and in wooded zones. We confirm the requirements for your property and manage the process, and we can advise sugar bush owners on stand health and hazard-tree management.',
+        ],
+        recentWork: [
+          'Winched out a storm-felled Sugar Maple across a steep private road on Mont Rigaud',
+          'Removed hazardous Hemlocks overhanging a cottage on a ravine lot',
+          'Deadwooded a mature sugar bush stand ahead of tapping season',
+        ],
+        faqs: [
+          { q: 'Can you work on steep mountain lots in Rigaud?', a: 'Yes. Slope work is a specialty — we use advanced rigging, winching, and careful planning where equipment can\'t drive. Many of our Rigaud jobs are on terrain other companies decline.' },
+          { q: 'Do I need a permit to cut trees in Rigaud?', a: 'Removals generally require municipal authorization, especially in wooded zones near the mountain. We verify what applies to your property and handle the paperwork.' },
+          { q: 'Do you work in sugar bushes?', a: 'Yes. We deadwood, thin, and remove hazard trees in working sugar bushes, timed around tapping season to protect your production.' },
+        ],
+      },
+      fr: {
+        paragraphs: [
+          'Rigaud est définie par sa montagne — les pentes boisées du mont Rigaud abritent certains des plus beaux peuplements d\'érables à sucre et de hêtres de la région, ainsi que de sombres ravins de pruches. Les propriétés vont des terrains de village aux domaines à flanc de montagne, chalets et érablières en exploitation, et une grande partie de notre travail à Rigaud se fait sur un terrain que les entreprises de plaine ne peuvent tout simplement pas gérer.',
+          'Pentes raides, accès machine limité et gros feuillus : les abattages à Rigaud exigent souvent du gréage avancé, du treuillage et une planification minutieuse des zones de chute. Les tempêtes de verglas frappent durement la montagne — la pluie verglaçante charge la canopée et fait tomber des branches majeures sur les entrées et les lignes électriques presque chaque hiver.',
+          'Rigaud protège son caractère forestier, et les abattages nécessitent généralement une autorisation municipale — particulièrement près de la montagne et dans les zones boisées. Nous confirmons les exigences pour votre propriété et gérons le processus, et nous pouvons conseiller les propriétaires d\'érablières sur la santé des peuplements et la gestion des arbres dangereux.',
+        ],
+        recentWork: [
+          'Treuillage d\'un érable à sucre abattu par la tempête en travers d\'un chemin privé escarpé du mont Rigaud',
+          'Abattage de pruches dangereuses surplombant un chalet sur un terrain en ravin',
+          'Enlèvement du bois mort d\'une érablière mature avant la saison des entailles',
+        ],
+        faqs: [
+          { q: 'Pouvez-vous travailler sur les terrains escarpés de la montagne à Rigaud?', a: 'Oui. Le travail en pente est une spécialité — nous utilisons du gréage avancé, du treuillage et une planification minutieuse là où l\'équipement ne peut pas rouler. Plusieurs de nos contrats à Rigaud sont sur des terrains que d\'autres refusent.' },
+          { q: 'Ai-je besoin d\'un permis pour couper des arbres à Rigaud?', a: 'Les abattages nécessitent généralement une autorisation municipale, surtout dans les zones boisées près de la montagne. Nous vérifions ce qui s\'applique à votre propriété et gérons la paperasse.' },
+          { q: 'Travaillez-vous dans les érablières?', a: 'Oui. Nous enlevons le bois mort, éclaircissons et abattons les arbres dangereux dans les érablières en exploitation, en planifiant autour de la saison des entailles pour protéger votre production.' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'les-cedres',
+    name: 'Les Cèdres',
+    nearby: ['Coteau-du-Lac', 'Pointe-des-Cascades', 'Saint-Lazare'],
+    postalCodes: ['J7T'],
+    treeSpecies: ['Eastern White Cedar', 'Silver Maple', 'Weeping Willow'],
+    content: {
+      en: {
+        paragraphs: [
+          'True to its name, Les Cèdres is cedar country — hedges, windbreaks, and natural stands of Eastern White Cedar line properties from the St. Lawrence waterfront up through the farmland. The town blends century farmhouses shaded by giant Silver Maples with fast-growing new residential neighbourhoods.',
+          'Along the old Soulanges Canal and the river, Weeping Willows and Silver Maples grow huge in the wet soil — and drop equally huge limbs when storms roll up the St. Lawrence. Farm properties bring their own work: aging windbreak rows that need renewal, and massive yard trees planted generations ago now overhanging houses and equipment sheds.',
+          'Tree removal in Les Cèdres generally requires municipal authorization. We confirm the current bylaw requirements for your property, handle the paperwork, and provide certified-arborist documentation when the town requests it.',
+        ],
+        recentWork: [
+          'Removed a century-old Silver Maple overhanging a farmhouse roof on a Chemin Saint-Féréol property',
+          'Renewed 100 metres of aging cedar windbreak on a working farm',
+          'Crown-reduced a huge Weeping Willow dropping limbs near the old canal',
+        ],
+        faqs: [
+          { q: 'Do you maintain cedar hedges and windbreaks in Les Cèdres?', a: 'Constantly — it\'s the town\'s signature tree. We trim, rehabilitate, and replace cedar hedging and farm windbreaks of any length.' },
+          { q: 'Do I need a permit to remove a tree in Les Cèdres?', a: 'Removals generally require municipal authorization. We verify the current requirements and handle the process for you.' },
+          { q: 'Can you handle large farm trees?', a: 'Yes. Century farmhouse maples and willows are among the biggest trees we work on — we have the rigging, lift equipment, and experience to take them down safely around buildings.' },
+        ],
+      },
+      fr: {
+        paragraphs: [
+          'Fidèle à son nom, Les Cèdres est le pays du cèdre — haies, brise-vent et peuplements naturels de thuyas bordent les propriétés du bord du Saint-Laurent jusqu\'aux terres agricoles. La ville mélange des fermes centenaires ombragées par des érables argentés géants et de nouveaux quartiers résidentiels en pleine croissance.',
+          'Le long de l\'ancien canal de Soulanges et du fleuve, les saules pleureurs et érables argentés deviennent énormes dans le sol humide — et laissent tomber des branches tout aussi énormes quand les tempêtes remontent le Saint-Laurent. Les propriétés agricoles apportent leur propre travail : des rangées de brise-vent vieillissantes à renouveler, et des arbres de cour massifs plantés il y a des générations qui surplombent maintenant les maisons et les hangars.',
+          'L\'abattage d\'arbres aux Cèdres nécessite généralement une autorisation municipale. Nous confirmons les exigences du règlement en vigueur pour votre propriété, gérons la paperasse et fournissons la documentation d\'arboriculteur certifié lorsque la ville la demande.',
+        ],
+        recentWork: [
+          'Abattage d\'un érable argenté centenaire surplombant le toit d\'une ferme sur le chemin Saint-Féréol',
+          'Renouvellement de 100 mètres de brise-vent de cèdres vieillissant sur une ferme en exploitation',
+          'Réduction de couronne d\'un immense saule pleureur perdant des branches près de l\'ancien canal',
+        ],
+        faqs: [
+          { q: 'Entretenez-vous les haies de cèdres et brise-vent aux Cèdres?', a: 'Constamment — c\'est l\'arbre signature de la ville. Nous taillons, réhabilitons et remplaçons les haies de cèdres et brise-vent agricoles de toute longueur.' },
+          { q: 'Ai-je besoin d\'un permis pour abattre un arbre aux Cèdres?', a: 'Les abattages nécessitent généralement une autorisation municipale. Nous vérifions les exigences en vigueur et gérons le processus pour vous.' },
+          { q: 'Pouvez-vous gérer les grands arbres de ferme?', a: 'Oui. Les érables et saules centenaires des fermes comptent parmi les plus gros arbres sur lesquels nous travaillons — nous avons le gréage, la nacelle et l\'expérience pour les abattre en sécurité autour des bâtiments.' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'coteau-du-lac',
+    name: 'Coteau-du-Lac',
+    nearby: ['Les Cèdres', 'Saint-Clet', 'Pointe-des-Cascades'],
+    postalCodes: ['J0P'],
+    treeSpecies: ['Silver Maple', 'Basswood', 'White Spruce'],
+    content: {
+      en: {
+        paragraphs: [
+          'Coteau-du-Lac stretches along the St. Lawrence where the river narrows into historic rapids — the same waters that made it a fortified trade point centuries ago. Today it\'s one of Vaudreuil-Soulanges\' fastest-growing towns, with new subdivisions rising beside riverfront properties shaded by big Silver Maples and Basswoods.',
+          'Riverfront lots here deal with bank erosion and exposed roots as the St. Lawrence works at the shoreline — leaning waterfront maples are a recurring hazard we assess and remove. In the newer neighbourhoods, fast-planted White Spruce rows are maturing into overcrowded screens that need thinning or replacement.',
+          'Tree removal in Coteau-du-Lac generally requires municipal authorization, with particular care near the waterfront and the historic sector. We verify your property\'s requirements and manage the permit process end to end.',
+        ],
+        recentWork: [
+          'Removed a leaning Silver Maple with eroded, exposed roots on a St. Lawrence waterfront lot',
+          'Thinned an overcrowded White Spruce screen between two new subdivision properties',
+          'Pruned mature Basswoods shading a property near the historic canal site',
+        ],
+        faqs: [
+          { q: 'My riverfront tree is leaning — what should I do?', a: 'Bank erosion along the St. Lawrence exposes roots and destabilizes waterfront trees. Have it assessed promptly — we determine whether stabilization or removal is the safe call.' },
+          { q: 'Do I need a permit in Coteau-du-Lac?', a: 'Removals generally require municipal authorization, especially near the water and the historic sector. We confirm the requirements and handle the paperwork.' },
+          { q: 'How fast can you get to Coteau-du-Lac?', a: 'We\'re based in the Saint-Lazare/Vaudreuil area, about 15 minutes away — same-week assessments are the norm and emergency response is available 24/7.' },
+        ],
+      },
+      fr: {
+        paragraphs: [
+          'Coteau-du-Lac s\'étend le long du Saint-Laurent là où le fleuve se resserre en rapides historiques — les mêmes eaux qui en ont fait un poste de traite fortifié il y a des siècles. C\'est aujourd\'hui l\'une des villes de Vaudreuil-Soulanges qui croît le plus vite, avec de nouveaux lotissements qui s\'élèvent à côté de propriétés riveraines ombragées par de grands érables argentés et tilleuls.',
+          'Les terrains riverains composent ici avec l\'érosion des berges et les racines exposées à mesure que le Saint-Laurent gruge la rive — les érables riverains penchés sont un danger récurrent que nous évaluons et enlevons. Dans les quartiers plus récents, les rangées d\'épinettes blanches plantées rapidement deviennent des écrans surpeuplés à éclaircir ou remplacer.',
+          'L\'abattage d\'arbres à Coteau-du-Lac nécessite généralement une autorisation municipale, avec une attention particulière près du bord de l\'eau et du secteur historique. Nous vérifions les exigences de votre propriété et gérons le processus de permis de bout en bout.',
+        ],
+        recentWork: [
+          'Abattage d\'un érable argenté penché aux racines érodées et exposées sur un terrain riverain du Saint-Laurent',
+          'Éclaircissage d\'un écran d\'épinettes blanches surpeuplé entre deux propriétés d\'un nouveau lotissement',
+          'Élagage de tilleuls matures ombrageant une propriété près du lieu historique du canal',
+        ],
+        faqs: [
+          { q: 'Mon arbre riverain penche — que faire?', a: 'L\'érosion des berges le long du Saint-Laurent expose les racines et déstabilise les arbres riverains. Faites-le évaluer rapidement — nous déterminons si la stabilisation ou l\'abattage est le choix sécuritaire.' },
+          { q: 'Ai-je besoin d\'un permis à Coteau-du-Lac?', a: 'Les abattages nécessitent généralement une autorisation municipale, surtout près de l\'eau et du secteur historique. Nous confirmons les exigences et gérons la paperasse.' },
+          { q: 'En combien de temps pouvez-vous arriver à Coteau-du-Lac?', a: 'Nous sommes basés dans le secteur Saint-Lazare/Vaudreuil, à environ 15 minutes — les évaluations dans la semaine sont la norme et l\'intervention d\'urgence est disponible 24/7.' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'pointe-des-cascades',
+    name: 'Pointe-des-Cascades',
+    nearby: ['Les Cèdres', 'Île-Perrot', 'Vaudreuil'],
+    postalCodes: ['J0P'],
+    treeSpecies: ['Eastern Cottonwood', 'Weeping Willow', 'Manitoba Maple'],
+    content: {
+      en: {
+        paragraphs: [
+          'Pointe-des-Cascades sits on the exposed point where the Ottawa River meets the St. Lawrence — a beautiful, windy place to be a tree. The village\'s fast-growing Cottonwoods, Willows, and Manitoba Maples thrived in the wet soil for decades, but these soft-wooded species are now aging into the most storm-vulnerable canopy in the region.',
+          'Wind gets a running start across two rivers before it hits the point, and village streets are narrow with homes close together — when a 70-foot Cottonwood sheds a limb here, it usually lands on something. Preventive crown reduction and timely removal of declining soft-wood trees is most of what we do in Pointe-des-Cascades.',
+          'The village generally requires authorization before removing trees. We confirm requirements with the municipality and handle the process — and being based minutes away, we\'re often the first crew on scene after a storm.',
+        ],
+        recentWork: [
+          'Emergency removal of a Cottonwood limb that dropped onto a village street after a windstorm',
+          'Crown reduction on a large Weeping Willow near the Parc des Ancres',
+          'Removed a multi-trunk Manitoba Maple splitting apart beside a home',
+        ],
+        faqs: [
+          { q: 'Why do trees break so often in Pointe-des-Cascades?', a: 'The village canopy is dominated by fast-growing, soft-wooded species — Cottonwood, Willow, Manitoba Maple — on one of the windiest points in the region. Aging soft wood plus wind exposure means frequent limb failures. Preventive reduction helps greatly.' },
+          { q: 'Do I need a permit to remove a tree in the village?', a: 'Generally yes — we confirm the current requirements with the municipality and take care of the paperwork for you.' },
+          { q: 'How quickly can you respond after a storm?', a: 'We\'re based minutes away in the Saint-Lazare/Vaudreuil area and offer 24/7 emergency response — Pointe-des-Cascades is one of our fastest response zones.' },
+        ],
+      },
+      fr: {
+        paragraphs: [
+          'Pointe-des-Cascades se trouve sur la pointe exposée où la rivière des Outaouais rejoint le Saint-Laurent — un endroit magnifique mais venteux pour un arbre. Les peupliers, saules et érables à Giguère à croissance rapide du village ont prospéré dans le sol humide pendant des décennies, mais ces espèces au bois tendre vieillissent maintenant en la canopée la plus vulnérable aux tempêtes de la région.',
+          'Le vent prend son élan sur deux rivières avant de frapper la pointe, et les rues du village sont étroites avec des maisons rapprochées — quand un peuplier de 70 pieds perd une branche ici, elle atterrit généralement sur quelque chose. La réduction préventive de couronne et l\'abattage opportun des arbres à bois tendre en déclin représentent l\'essentiel de notre travail à Pointe-des-Cascades.',
+          'Le village exige généralement une autorisation avant d\'abattre des arbres. Nous confirmons les exigences auprès de la municipalité et gérons le processus — et étant basés à quelques minutes, nous sommes souvent la première équipe sur place après une tempête.',
+        ],
+        recentWork: [
+          'Enlèvement d\'urgence d\'une branche de peuplier tombée sur une rue du village après une tempête de vent',
+          'Réduction de couronne d\'un grand saule pleureur près du parc des Ancres',
+          'Abattage d\'un érable à Giguère à troncs multiples qui se fendait à côté d\'une maison',
+        ],
+        faqs: [
+          { q: 'Pourquoi les arbres cassent-ils si souvent à Pointe-des-Cascades?', a: 'La canopée du village est dominée par des espèces à croissance rapide et à bois tendre — peuplier, saule, érable à Giguère — sur l\'une des pointes les plus venteuses de la région. Bois tendre vieillissant plus exposition au vent égale ruptures fréquentes. La réduction préventive aide grandement.' },
+          { q: 'Ai-je besoin d\'un permis pour abattre un arbre dans le village?', a: 'Généralement oui — nous confirmons les exigences en vigueur auprès de la municipalité et nous occupons de la paperasse pour vous.' },
+          { q: 'En combien de temps intervenez-vous après une tempête?', a: 'Nous sommes basés à quelques minutes dans le secteur Saint-Lazare/Vaudreuil et offrons une intervention d\'urgence 24/7 — Pointe-des-Cascades est l\'une de nos zones d\'intervention les plus rapides.' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'saint-clet',
+    name: 'Saint-Clet',
+    nearby: ['Saint-Lazare', 'Les Cèdres', 'Coteau-du-Lac'],
+    postalCodes: ['J0P'],
+    treeSpecies: ['Silver Maple', 'White Spruce', 'Trembling Aspen'],
+    content: {
+      en: {
+        paragraphs: [
+          'Saint-Clet is open farm country — flat, fertile fields with full wind exposure in every direction. Trees here work for a living: spruce windbreak rows shelter farmhouses and fields, massive Silver Maples shade century farmyards, and Aspen lines follow the drainage ditches between properties.',
+          'That wind exposure is exactly why Saint-Clet properties need serious tree care. Windbreak rows planted 50+ years ago are losing trees to age and storms, leaving gaps that funnel wind at buildings. Farmyard giants that stood for a century eventually decline, and when they overhang a house, barn, or grain equipment, removal is precision work.',
+          'We work with Saint-Clet\'s farm owners on multi-tree projects — windbreak renewal, farmyard hazard removals, and ditch-line cleanup — and confirm any municipal authorization requirements before cutting.',
+        ],
+        recentWork: [
+          'Removed a declining century Silver Maple overhanging a farmhouse and replaced it with a young Bur Oak',
+          'Rebuilt a 60-metre section of storm-damaged White Spruce windbreak',
+          'Cleared a line of storm-snapped Trembling Aspens along a drainage ditch',
+        ],
+        faqs: [
+          { q: 'Can you renew an old farm windbreak?', a: 'Yes. We remove dead and failing trees, grind stumps, and replant hardy species in staged sections so your farmstead keeps its wind protection throughout the renewal.' },
+          { q: 'Do you handle very large farmyard trees?', a: 'Yes. Century farm maples are among the largest trees in the region — we take them down in sections with rigging and lift equipment, protecting buildings and machinery.' },
+          { q: 'Do I need a permit to cut trees in Saint-Clet?', a: 'Requirements vary by location and tree type — we confirm with the municipality before any work and handle whatever authorization is needed.' },
+        ],
+      },
+      fr: {
+        paragraphs: [
+          'Saint-Clet, c\'est la campagne agricole ouverte — des champs plats et fertiles avec une exposition au vent dans toutes les directions. Ici, les arbres travaillent pour gagner leur vie : les rangées de brise-vent d\'épinettes abritent les fermes et les champs, des érables argentés massifs ombragent les cours de ferme centenaires, et les lignes de peupliers faux-trembles suivent les fossés de drainage entre les propriétés.',
+          'Cette exposition au vent est exactement la raison pour laquelle les propriétés de Saint-Clet ont besoin de soins arboricoles sérieux. Les brise-vent plantés il y a plus de 50 ans perdent des arbres à cause de l\'âge et des tempêtes, laissant des trous qui canalisent le vent vers les bâtiments. Les géants de cour de ferme finissent par décliner, et quand ils surplombent une maison, une grange ou de l\'équipement, l\'abattage est un travail de précision.',
+          'Nous travaillons avec les propriétaires agricoles de Saint-Clet sur des projets multi-arbres — renouvellement de brise-vent, abattages de sécurité en cour de ferme et nettoyage de lignes de fossés — et confirmons toute exigence d\'autorisation municipale avant de couper.',
+        ],
+        recentWork: [
+          'Abattage d\'un érable argenté centenaire en déclin surplombant une ferme, remplacé par un jeune chêne à gros fruits',
+          'Reconstruction d\'une section de 60 mètres de brise-vent d\'épinettes blanches endommagé par la tempête',
+          'Dégagement d\'une ligne de peupliers faux-trembles cassés par la tempête le long d\'un fossé de drainage',
+        ],
+        faqs: [
+          { q: 'Pouvez-vous renouveler un vieux brise-vent de ferme?', a: 'Oui. Nous enlevons les arbres morts et défaillants, essouchons et replantons des espèces rustiques par sections échelonnées pour que votre ferme garde sa protection contre le vent pendant tout le renouvellement.' },
+          { q: 'Gérez-vous les très grands arbres de cour de ferme?', a: 'Oui. Les érables de ferme centenaires comptent parmi les plus grands arbres de la région — nous les démontons par sections avec du gréage et de l\'équipement de levage, en protégeant les bâtiments et la machinerie.' },
+          { q: 'Ai-je besoin d\'un permis pour couper des arbres à Saint-Clet?', a: 'Les exigences varient selon l\'emplacement et le type d\'arbre — nous confirmons auprès de la municipalité avant tout travail et gérons toute autorisation nécessaire.' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'lachine',
+    name: 'Lachine',
+    nearby: ['Dorval', 'Pointe-Claire', 'Dollard-des-Ormeaux'],
+    postalCodes: ['H8S', 'H8T'],
+    treeSpecies: ['Norway Maple', 'Silver Maple', 'Green Ash'],
+    content: {
+      en: {
+        paragraphs: [
+          'Lachine\'s dense residential streets and waterfront parks hold one of the oldest urban canopies on the island. Norway and Silver Maples planted along its grid decades ago now arch completely over streets and duplexes, while the borough\'s Green Ash population has been devastated by the Emerald Ash Borer.',
+          'Working in Lachine means working tight: back alleys, shared driveways, duplex courtyards, and trees wedged between buildings and fences. Sectional dismantling with rigging is standard here, and our compact spider lift reaches over buildings where a bucket truck can\'t park.',
+          'Lachine is a borough of Montreal, so the agglomeration\'s tree bylaw applies — a permit is required to remove any tree with a trunk diameter of 10 cm or more. We handle the application and the borough\'s follow-up requirements as part of our service.',
+        ],
+        recentWork: [
+          'Removed 6 dead Green Ash trees killed by Emerald Ash Borer on a residential street near the canal',
+          'Alley-access sectional removal of a Silver Maple between two duplexes',
+          'Pruned mature Norway Maples overhanging a waterfront property near the Lachine Canal',
+        ],
+        faqs: [
+          { q: 'Do I need a permit to remove a tree in Lachine?', a: 'Yes. As a Montreal borough, Lachine requires a permit for any tree with a trunk diameter of 10 cm or more. We manage the full application for you.' },
+          { q: 'Can you access a tree behind my duplex?', a: 'Yes. Alley and courtyard access is routine for us in Lachine — we dismantle trees in sections and our tracked spider lift fits through narrow gates and passages.' },
+          { q: 'My Ash tree is dying — is that the Emerald Ash Borer?', a: 'Almost certainly. EAB has killed most untreated Ash in Lachine. Dead Ash becomes brittle and dangerous fast — have it assessed and removed before limbs start dropping.' },
+        ],
+      },
+      fr: {
+        paragraphs: [
+          'Les rues résidentielles denses de Lachine et ses parcs riverains abritent l\'une des plus vieilles canopées urbaines de l\'île. Les érables de Norvège et argentés plantés le long de son quadrillage il y a des décennies forment maintenant des arches complètes au-dessus des rues et des duplex, tandis que la population de frênes verts de l\'arrondissement a été dévastée par l\'agrile du frêne.',
+          'Travailler à Lachine, c\'est travailler serré : ruelles, entrées partagées, cours de duplex et arbres coincés entre bâtiments et clôtures. Le démontage par sections avec gréage est la norme ici, et notre nacelle araignée compacte atteint par-dessus les bâtiments là où un camion-nacelle ne peut pas se stationner.',
+          'Lachine est un arrondissement de Montréal, donc le règlement sur les arbres de l\'agglomération s\'applique — un permis est requis pour abattre tout arbre dont le diamètre du tronc est de 10 cm ou plus. Nous gérons la demande et les exigences de suivi de l\'arrondissement dans le cadre de notre service.',
+        ],
+        recentWork: [
+          'Abattage de 6 frênes verts morts tués par l\'agrile du frêne sur une rue résidentielle près du canal',
+          'Démontage par sections avec accès par ruelle d\'un érable argenté entre deux duplex',
+          'Élagage d\'érables de Norvège matures surplombant une propriété riveraine près du canal de Lachine',
+        ],
+        faqs: [
+          { q: 'Ai-je besoin d\'un permis pour abattre un arbre à Lachine?', a: 'Oui. En tant qu\'arrondissement de Montréal, Lachine exige un permis pour tout arbre dont le diamètre du tronc est de 10 cm ou plus. Nous gérons la demande complète pour vous.' },
+          { q: 'Pouvez-vous accéder à un arbre derrière mon duplex?', a: 'Oui. L\'accès par ruelle et cour intérieure est routinier pour nous à Lachine — nous démontons les arbres par sections et notre nacelle araignée sur chenilles passe par les portails et passages étroits.' },
+          { q: 'Mon frêne dépérit — est-ce l\'agrile du frêne?', a: 'Presque certainement. L\'agrile a tué la plupart des frênes non traités à Lachine. Un frêne mort devient cassant et dangereux rapidement — faites-le évaluer et abattre avant que les branches ne tombent.' },
+        ],
+      },
+    },
+  },
 ];
 
 // Per-city SEO overrides — unique <title> and meta description per location so
@@ -644,6 +1074,46 @@ export const citySeo: Record<string, { en: CitySeoCopy; fr: CitySeoCopy }> = {
   'pierrefonds': {
     en: { title: 'Tree Removal in Pierrefonds-Roxboro | Spider Lift Access', description: 'Pierrefonds tree removal, Ash Borer takedowns & hard-to-reach work with our CELA DT25 spider lift. Montreal agglomeration permits handled. Free quote.' },
     fr: { title: "Abattage d'arbres à Pierrefonds-Roxboro | Nacelle araignée", description: "Abattage à Pierrefonds, frênes touchés par l'agrile et travaux difficiles d'accès avec notre nacelle araignée CELA DT25. Permis gérés. Estimation gratuite." },
+  },
+  'sainte-anne-de-bellevue': {
+    en: { title: 'Tree Service in Sainte-Anne-de-Bellevue | Village-Lot Experts', description: 'Tree removal & pruning on Sainte-Anne\'s compact village lots — sectional takedowns, spider lift access, Montreal agglomeration permits handled. Free quote.' },
+    fr: { title: "Service d'arbres à Sainte-Anne-de-Bellevue | Brandse", description: "Abattage et élagage sur les terrains compacts du village de Sainte-Anne — démontage par sections, nacelle araignée, permis de l'agglomération gérés. Estimation gratuite." },
+  },
+  'ile-bizard': {
+    en: { title: "Tree Removal on L'Île-Bizard | Waterfront & Estate Trees", description: "Tree removal on L'Île-Bizard & Sainte-Geneviève — flood-stressed shoreline trees, estate oaks, Montreal agglomeration permits handled. Free quote." },
+    fr: { title: "Abattage d'arbres à L'Île-Bizard | Riverains et domaines", description: "Abattage à L'Île-Bizard et Sainte-Geneviève — arbres riverains affaiblis par les inondations, chênes de domaine, permis de l'agglomération gérés. Estimation gratuite." },
+  },
+  'notre-dame-de-l-ile-perrot': {
+    en: { title: "Tree Service in Notre-Dame-de-l'Île-Perrot | Brandse", description: 'Tree removal, Black Walnut experts & cedar hedge care in Notre-Dame-de-l\'Île-Perrot. We handle NDIP\'s own permit process. Certified arborists, free quote.' },
+    fr: { title: "Service d'arbres à Notre-Dame-de-l'Île-Perrot | Brandse", description: "Abattage, experts en noyers noirs et entretien de haies de cèdres à Notre-Dame-de-l'Île-Perrot. Nous gérons le processus de permis de NDIP. Estimation gratuite." },
+  },
+  'terrasse-vaudreuil': {
+    en: { title: 'Tree Removal in Terrasse-Vaudreuil | Tight-Lot Specialists', description: 'Big-tree removal on Terrasse-Vaudreuil\'s compact lots — sectional dismantling and spider lift access that protects your yard. Free on-site quote.' },
+    fr: { title: "Abattage d'arbres à Terrasse-Vaudreuil | Terrains restreints", description: "Abattage de grands arbres sur les terrains compacts de Terrasse-Vaudreuil — démontage par sections et nacelle araignée qui protège votre cour. Estimation gratuite." },
+  },
+  'rigaud': {
+    en: { title: 'Tree Service in Rigaud | Mountain & Sugar Bush Experts', description: 'Steep-slope tree removal on Mont Rigaud, sugar bush management & ice-storm cleanup. Rigging and winching where machines can\'t go. Free quote.' },
+    fr: { title: "Service d'arbres à Rigaud | Montagne et érablières", description: "Abattage en pente raide sur le mont Rigaud, gestion d'érablières et nettoyage après verglas. Gréage et treuillage là où les machines ne passent pas. Estimation gratuite." },
+  },
+  'les-cedres': {
+    en: { title: 'Tree Service in Les Cèdres | Hedges, Windbreaks & Farm Trees', description: 'Cedar hedge care, farm windbreak renewal & century-maple removal in Les Cèdres. Certified arborists 15 minutes away. Free on-site quote.' },
+    fr: { title: "Service d'arbres aux Cèdres | Haies, brise-vent et fermes", description: "Entretien de haies de cèdres, renouvellement de brise-vent agricoles et abattage d'érables centenaires aux Cèdres. Arboriculteurs certifiés à 15 minutes. Estimation gratuite." },
+  },
+  'coteau-du-lac': {
+    en: { title: 'Tree Removal in Coteau-du-Lac | Riverfront Specialists', description: 'Leaning waterfront trees, spruce screens & subdivision tree care in Coteau-du-Lac. Bank-erosion assessments and permits handled. Free quote.' },
+    fr: { title: "Abattage d'arbres à Coteau-du-Lac | Spécialistes riverains", description: "Arbres riverains penchés, écrans d'épinettes et entretien d'arbres de lotissement à Coteau-du-Lac. Évaluations d'érosion des berges et permis gérés. Estimation gratuite." },
+  },
+  'pointe-des-cascades': {
+    en: { title: 'Tree Service in Pointe-des-Cascades | Storm-Tree Experts', description: 'Cottonwood, willow & Manitoba maple removal in wind-exposed Pointe-des-Cascades. Preventive crown reduction and 24/7 storm response, minutes away.' },
+    fr: { title: "Service d'arbres à Pointe-des-Cascades | Experts tempêtes", description: "Abattage de peupliers, saules et érables à Giguère dans Pointe-des-Cascades exposée au vent. Réduction préventive et intervention 24/7, à quelques minutes." },
+  },
+  'saint-clet': {
+    en: { title: 'Tree Service in Saint-Clet | Farm Windbreaks & Yard Giants', description: 'Windbreak renewal, century farmyard maple removal & ditch-line cleanup for Saint-Clet farm properties. Multi-tree project pricing. Free quote.' },
+    fr: { title: "Service d'arbres à Saint-Clet | Brise-vent et arbres de ferme", description: "Renouvellement de brise-vent, abattage d'érables centenaires de cour de ferme et nettoyage de fossés pour les propriétés agricoles de Saint-Clet. Estimation gratuite." },
+  },
+  'lachine': {
+    en: { title: 'Tree Removal in Lachine | Alley & Duplex Access Experts', description: 'Lachine tree removal in tight spots — alleys, duplex courtyards, canal-side maples, dead Ash takedowns. Montreal borough permits handled. Free quote.' },
+    fr: { title: "Abattage d'arbres à Lachine | Accès ruelles et duplex", description: "Abattage à Lachine dans les espaces restreints — ruelles, cours de duplex, érables du canal, frênes morts. Permis d'arrondissement gérés. Estimation gratuite." },
   },
 };
 

@@ -41,7 +41,7 @@ class MyDocument extends Document<MyDocumentProps> {
           "image": "https://www.servicedarbresbrandse.com/og-image.jpg",
           "telephone": "+1-438-365-5410",
           "email": "info@brandses.com",
-          "address": { "@type": "PostalAddress", "addressLocality": "Montreal", "addressRegion": "QC", "postalCode": "H9W 1K1", "addressCountry": "CA" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Saint-Lazare", "addressRegion": "QC", "addressCountry": "CA" },
           "areaServed": [
             { "@type": "City", "name": "Pointe-Claire" }, { "@type": "City", "name": "Beaconsfield" },
             { "@type": "City", "name": "Kirkland" }, { "@type": "City", "name": "Dorval" },
@@ -49,7 +49,12 @@ class MyDocument extends Document<MyDocumentProps> {
             { "@type": "City", "name": "Vaudreuil-Dorion" }, { "@type": "City", "name": "Dollard-des-Ormeaux" },
             { "@type": "City", "name": "Senneville" }, { "@type": "City", "name": "Baie-d'Urfé" },
             { "@type": "City", "name": "Île-Perrot" }, { "@type": "City", "name": "Pincourt" },
-            { "@type": "City", "name": "Pierrefonds" }
+            { "@type": "City", "name": "Pierrefonds" }, { "@type": "City", "name": "Sainte-Anne-de-Bellevue" },
+            { "@type": "City", "name": "L'Île-Bizard" }, { "@type": "City", "name": "Notre-Dame-de-l'Île-Perrot" },
+            { "@type": "City", "name": "Terrasse-Vaudreuil" }, { "@type": "City", "name": "Rigaud" },
+            { "@type": "City", "name": "Les Cèdres" }, { "@type": "City", "name": "Coteau-du-Lac" },
+            { "@type": "City", "name": "Pointe-des-Cascades" }, { "@type": "City", "name": "Saint-Clet" },
+            { "@type": "City", "name": "Lachine" }
           ],
           "openingHoursSpecification": [
             { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "18:00" },

@@ -45,6 +45,9 @@ const SERVICE_AREAS = [
   'Saint-Lazare', 'Pointe-Claire', 'Hudson', 'Beaconsfield',
   'Vaudreuil-Dorion', 'Kirkland', 'Dollard-des-Ormeaux', 'Dorval',
   'Senneville', "Baie-d'Urfé", 'Île-Perrot', 'Pincourt', 'Pierrefonds',
+  'Sainte-Anne-de-Bellevue', "L'Île-Bizard", "Notre-Dame-de-l'Île-Perrot",
+  'Terrasse-Vaudreuil', 'Rigaud', 'Les Cèdres', 'Coteau-du-Lac',
+  'Pointe-des-Cascades', 'Saint-Clet', 'Lachine',
 ];
 
 const copy = {

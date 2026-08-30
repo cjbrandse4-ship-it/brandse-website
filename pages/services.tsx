@@ -24,7 +24,7 @@ export default function ServicesPage() {
     { val: '15+', title: t.servicesPage.stat1Title, desc: t.servicesPage.stat1Desc },
     { val: '100%', title: t.servicesPage.stat2Title, desc: t.servicesPage.stat2Desc },
     { val: '24/7', title: t.servicesPage.stat3Title, desc: t.servicesPage.stat3Desc },
-    { val: '12', title: t.servicesPage.stat4Title, desc: t.servicesPage.stat4Desc },
+    { val: '23', title: t.servicesPage.stat4Title, desc: t.servicesPage.stat4Desc },
   ];
 
   return (
