@@ -23,6 +23,16 @@ const galleryItems: GalleryItem[] = [
     fr: 'Abattage d\'arbre en action — notre equipe au travail dans l\'Ouest de l\'Ile de Montreal',
   },
   {
+    src: '/gallery/pine-removal-before.jpg',
+    en: 'Before — towering White Pine crowding a home in Saint-Lazare',
+    fr: 'Avant — pin blanc imposant collant une maison a Saint-Lazare',
+  },
+  {
+    src: '/gallery/pine-removal-after.jpg',
+    en: 'After — pine removed safely, stump cut flush, yard left clean',
+    fr: 'Apres — pin abattu en securite, souche coupee au ras, terrain laisse propre',
+  },
+  {
     src: '/gallery/spider-lift.jpg',
     en: 'Our CELA DT25 spider lift — 82 ft reach for hard-to-access tree work',
     fr: 'Notre nacelle araignee CELA DT25 — portee de 82 pi pour les arbres difficiles d\'acces',
