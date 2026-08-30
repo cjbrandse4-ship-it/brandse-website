@@ -1,14 +1,27 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { X } from 'lucide-react';
+import { X, Play } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import { useLanguage } from '../lib/useLanguage';
 import PageHero from '../components/PageHero';
 
-const galleryItems = [
+interface GalleryItem {
+  src: string;
+  en: string;
+  fr: string;
+  video?: boolean;
+}
+
+const galleryItems: GalleryItem[] = [
+  {
+    src: '/gallery/tree-removal-video.mp4',
+    video: true,
+    en: 'Tree removal in action — our crew at work in West Island Montreal',
+    fr: 'Abattage d\'arbre en action — notre equipe au travail dans l\'Ouest de l\'Ile de Montreal',
+  },
   {
     src: '/gallery/spider-lift.jpg',
     en: 'Our CELA DT25 spider lift — 82 ft reach for hard-to-access tree work',
@@ -81,7 +94,9 @@ export default function GalleryPage() {
           "name": lang === 'fr' ? "Galerie - Service d'Arbres Brandse" : "Gallery - Service d'Arbres Brandse",
           "description": metaDesc,
           "url": `https://www.servicedarbresbrandse.com${lang === 'fr' ? '/fr/gallery' : '/gallery'}`,
-          "image": galleryItems.map(item => ({
+          // Images only — a valid VideoObject needs thumbnailUrl/uploadDate,
+          // so video items are deliberately left out of the schema.
+          "image": galleryItems.filter(item => !item.video).map(item => ({
             "@type": "ImageObject",
             "contentUrl": `https://www.servicedarbresbrandse.com${item.src}`,
             "description": item[lang],
@@ -103,14 +118,31 @@ export default function GalleryPage() {
                 onClick={() => setLightbox(i)}
                 className="group relative overflow-hidden rounded-xl aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-[#2D5016]"
               >
-                <Image
-                  src={item.src}
-                  alt={item[lang]}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  loading="lazy"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                {item.video ? (
+                  <>
+                    <video
+                      src={item.src}
+                      preload="metadata"
+                      muted
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <span className="w-16 h-16 rounded-full bg-black/50 group-hover:bg-[#2D5016]/80 transition-colors flex items-center justify-center">
+                        <Play className="w-8 h-8 text-white ml-1" fill="currentColor" />
+                      </span>
+                    </div>
+                  </>
+                ) : (
+                  <Image
+                    src={item.src}
+                    alt={item[lang]}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                )}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-end">
                   <p className="text-white font-medium p-4 opacity-0 group-hover:opacity-100 transition-opacity">
                     {item[lang]}
@@ -135,13 +167,23 @@ export default function GalleryPage() {
             <X className="w-8 h-8" />
           </button>
           <div className="max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
-            <Image
-              src={galleryItems[lightbox].src}
-              alt={galleryItems[lightbox][lang]}
-              width={1200}
-              height={900}
-              className="w-full h-auto rounded-lg"
-            />
+            {galleryItems[lightbox].video ? (
+              <video
+                src={galleryItems[lightbox].src}
+                controls
+                autoPlay
+                playsInline
+                className="w-full max-h-[75vh] rounded-lg bg-black"
+              />
+            ) : (
+              <Image
+                src={galleryItems[lightbox].src}
+                alt={galleryItems[lightbox][lang]}
+                width={1200}
+                height={900}
+                className="w-full h-auto rounded-lg"
+              />
+            )}
             <p className="text-white text-center mt-4 text-lg">
               {galleryItems[lightbox][lang]}
             </p>
