@@ -14,9 +14,8 @@ export const siteConfig = {
     // Service-area business — no streetAddress in schema. addressRegion +
     // postalCode area + areaServed cities cover local SEO without claiming a
     // physical storefront that doesn't match Google Business Profile.
-    // Shop is in the Saint-Lazare/Vaudreuil area. TODO: Connor — add the exact
-    // postal code matching your Google Business Profile for NAP consistency.
-    address: { addressLocality: "Saint-Lazare", addressRegion: "QC", addressCountry: "CA" }
+    // Matches the Google Business Profile address for NAP consistency.
+    address: { streetAddress: "2489 Rue Sandmere", addressLocality: "Saint-Lazare", addressRegion: "QC", postalCode: "J7T 0A7", addressCountry: "CA" }
   },
   social: {
     facebook: "https://www.facebook.com/brandsetreeservice",

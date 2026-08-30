@@ -23,7 +23,9 @@ export default function AboutPage() {
     "founder": { "@type": "Person", "name": "John Brandse" },
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "2489 Rue Sandmere",
       "addressLocality": "Saint-Lazare",
+      "postalCode": "J7T 0A7",
       "addressRegion": "QC",
       "addressCountry": "CA"
     },

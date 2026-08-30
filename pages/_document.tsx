@@ -30,10 +30,9 @@ class MyDocument extends Document<MyDocumentProps> {
         {/* LocalBusiness Schema */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
-          // Service-area business: no streetAddress, no precise geo. Google's
-          // local model handles SABs via areaServed alone — adding a synthetic
-          // street address mismatches Google Business Profile and risks
-          // incorrect map pins / suspended listings.
+          // Address matches the Google Business Profile (2489 Rue Sandmere,
+          // Saint-Lazare) for NAP consistency. Keep the two in sync — a
+          // mismatch between site schema and GBP hurts local rankings.
           "@type": "TreeService",
           "name": "Service d'Arbres Brandse Inc",
           "url": "https://www.servicedarbresbrandse.com",
@@ -41,7 +40,7 @@ class MyDocument extends Document<MyDocumentProps> {
           "image": "https://www.servicedarbresbrandse.com/og-image.jpg",
           "telephone": "+1-438-365-5410",
           "email": "info@brandses.com",
-          "address": { "@type": "PostalAddress", "addressLocality": "Saint-Lazare", "addressRegion": "QC", "addressCountry": "CA" },
+          "address": { "@type": "PostalAddress", "streetAddress": "2489 Rue Sandmere", "addressLocality": "Saint-Lazare", "addressRegion": "QC", "postalCode": "J7T 0A7", "addressCountry": "CA" },
           "areaServed": [
             { "@type": "City", "name": "Pointe-Claire" }, { "@type": "City", "name": "Beaconsfield" },
             { "@type": "City", "name": "Kirkland" }, { "@type": "City", "name": "Dorval" },
