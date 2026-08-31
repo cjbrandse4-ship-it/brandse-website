@@ -169,7 +169,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-8">
             <a
-              href="https://www.google.com/maps/place/Service+d'Arbres+Brandse+Inc"
+              href="https://www.google.com/maps/search/?api=1&query=Service%20d%27Arbres%20Brandse%20Inc%2C%20Saint-Lazare%2C%20QC"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[#2D5016] font-semibold hover:underline"

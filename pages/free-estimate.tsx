@@ -13,7 +13,12 @@ import { siteConfig } from '../lib/seo';
 import { trackLead, FORM_CONVERSION_LABEL } from '../lib/analytics';
 import { testimonials } from '../data/testimonials';
 
-const GOOGLE_REVIEWS_URL = 'https://www.google.com/maps/place/Service+d%27Arbres+Brandse+Inc';
+// Official Maps URL API — resolves reliably to the GBP listing. The old
+// /maps/place/<name> format only worked on a lucky unique name match.
+// TODO: Connor — for a bulletproof link that opens the reviews panel directly,
+// grab the short share link from Google Business Profile (Share profile →
+// g.page/...) and paste it here + in index.tsx.
+const GOOGLE_REVIEWS_URL = 'https://www.google.com/maps/search/?api=1&query=Service%20d%27Arbres%20Brandse%20Inc%2C%20Saint-Lazare%2C%20QC';
 
 function formatReviewDate(iso: string, lang: 'en' | 'fr'): string {
   // SSG-safe: same formatter on server + client, no timezone surprises since
