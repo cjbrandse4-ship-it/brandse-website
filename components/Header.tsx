@@ -5,6 +5,7 @@ import { Phone, Menu, X, ChevronDown, MapPin } from 'lucide-react';
 import { useLanguage } from '../lib/useLanguage';
 import { locations } from '../data/locations';
 import { siteConfig } from '../lib/seo';
+import PromoBanner from './PromoBanner';
 
 const serviceLinks = [
   { key: 'treeRemoval', href: '/tree-removal' },
@@ -41,6 +42,10 @@ export default function Header() {
   ];
 
   return (
+    <>
+    {/* Seasonal promo bar — above the sticky header so it scrolls away and
+        never pins extra chrome on mobile */}
+    <PromoBanner />
     <header className={`sticky top-0 z-50 bg-white transition-shadow ${scrolled ? 'shadow-md' : ''}`}>
       {/* Emergency bar */}
       <div className="bg-red-700 text-white text-center text-sm py-2 px-4">
@@ -167,5 +172,6 @@ export default function Header() {
         </div>
       )}
     </header>
+    </>
   );
 }

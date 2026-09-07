@@ -8,9 +8,12 @@ import { useLanguage } from '../lib/useLanguage';
 import { siteConfig } from '../lib/seo';
 import { testimonials } from '../data/testimonials';
 import { locations } from '../data/locations';
+import { useActivePromotion } from '../lib/usePromotion';
+import { CheckCircle } from 'lucide-react';
 
 export default function HomePage() {
   const { lang, t, getLocalizedPath } = useLanguage();
+  const activePromo = useActivePromotion(lang);
 
   const whyChoose = [
     { icon: Shield, title: t.home.whyChoose1Title, desc: t.home.whyChoose1Desc },
@@ -63,6 +66,36 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Seasonal promotion (auto-shows while a campaign window is active) */}
+      {activePromo && (
+        <section className="py-16 bg-[#2D5016]">
+          <div className="max-w-5xl mx-auto px-4 text-center">
+            <span className="inline-block bg-amber-400 text-gray-900 text-xs font-bold uppercase tracking-wider rounded-full px-3 py-1 mb-5">
+              {activePromo.copy.deadlineLabel} · {activePromo.daysLeft}{' '}
+              {activePromo.daysLeft === 1
+                ? (lang === 'fr' ? 'jour restant' : 'day left')
+                : (lang === 'fr' ? 'jours restants' : 'days left')}
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{activePromo.copy.homeTitle}</h2>
+            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">{activePromo.copy.homeSub}</p>
+            <ul className="text-left max-w-2xl mx-auto space-y-3 mb-9">
+              {activePromo.copy.homeBullets.map((b, i) => (
+                <li key={i} className="flex items-start gap-3 text-white/95">
+                  <CheckCircle className="w-5 h-5 text-amber-400 shrink-0 mt-1" />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+            <Link
+              href={lang === 'fr' ? '/fr/devis-gratuit' : '/free-estimate'}
+              className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-gray-900 text-lg font-bold px-8 py-4 rounded-lg transition-colors shadow-xl"
+            >
+              {activePromo.copy.homeCta} <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* Why Choose Us */}
       <section className="py-20 bg-white">

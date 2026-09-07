@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { siteConfig } from '../lib/seo';
 import { trackLead, FORM_CONVERSION_LABEL } from '../lib/analytics';
+import { useActivePromotion } from '../lib/usePromotion';
 import { testimonials } from '../data/testimonials';
 
 // Official Maps URL API — resolves reliably to the GBP listing. The old
@@ -290,6 +291,12 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+  // Active seasonal promotion (null outside campaign windows / before mount).
+  const activePromo = useActivePromotion(lang);
+  const faqList = activePromo
+    ? [...c.faqs, { q: activePromo.copy.faqQ, a: activePromo.copy.faqA }]
+    : c.faqs;
+
   function validate(): boolean {
     const next: typeof errors = {};
     if (!form.name.trim()) next.name = c.nameRequired;
@@ -316,6 +323,7 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
       const composedMessage = [
         `Service: ${serviceLabel}`,
         `Source: free-estimate-page`,
+        activePromo ? `Promo: ${activePromo.promo.code}` : '',
         form.message.trim() ? `\nNotes from customer:\n${form.message.trim()}` : '',
       ].filter(Boolean).join('\n');
 
@@ -336,7 +344,11 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
         source: 'free-estimate',
         method: 'form',
         adsLabel: FORM_CONVERSION_LABEL,
-        extra: { service: form.service, city: form.city },
+        extra: {
+          service: form.service,
+          city: form.city,
+          ...(activePromo ? { promo: activePromo.promo.code } : {}),
+        },
       });
       const dest = isFr ? '/fr/merci' : '/thank-you';
       router.push(dest);
@@ -427,6 +439,12 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
               <p className="mt-4 text-lg md:text-xl text-white/90">
                 {c.heroSub}
               </p>
+              {activePromo && (
+                <div className="mt-4 inline-flex flex-wrap items-center justify-center gap-2 bg-amber-400 text-gray-900 rounded-2xl px-4 py-1.5 text-sm font-bold shadow-lg">
+                  <span>{activePromo.copy.heroBadge}</span>
+                  <span className="bg-gray-900 text-amber-300 rounded-full px-2 py-0.5 text-xs whitespace-nowrap">{activePromo.copy.deadlineLabel}</span>
+                </div>
+              )}
               {/* Review chips — compact, brand-recognizable side-by-side pills
                   with the actual Google G and Facebook F logos. Replaces the
                   two-row stars layout. Desktop-only; the trust strip below the
@@ -452,6 +470,11 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
               <div className="mb-5 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-semibold">
                 <Zap className="w-3.5 h-3.5" /> {c.bookingUrgency}
               </div>
+              {activePromo && (
+                <p className="mb-4 -mt-2 text-sm font-semibold text-[#2D5016] bg-green-50 border border-green-200 rounded-lg px-3 py-2">
+                  {activePromo.copy.formNote}
+                </p>
+              )}
 
               {status === 'error' && (
                 <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg flex items-start gap-2" role="alert">
@@ -538,6 +561,12 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
                     </select>
                   </FormField>
                 </div>
+
+                {activePromo && activePromo.promo.unlockServices.includes(form.service) && (
+                  <p className="text-sm font-semibold text-[#2D5016] bg-green-50 border border-green-200 rounded-lg px-3 py-2">
+                    ✓ {activePromo.copy.formUnlock}
+                  </p>
+                )}
 
                 {!showMessage ? (
                   <button
@@ -748,7 +777,7 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">{c.faqHeading}</h2>
             <div className="space-y-3">
-              {c.faqs.map((f, i) => (
+              {faqList.map((f, i) => (
                 <div key={i} className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
                   <button
                     type="button"
