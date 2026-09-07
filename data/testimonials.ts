@@ -60,6 +60,28 @@ export const testimonials = [
     }
   },
   {
+    id: 8,
+    name: "Cynthia Shinn",
+    rating: 5,
+    // Google says "3 months ago" as of 2026-09-06 → ~June 2026.
+    date: "2026-06-06",
+    text: {
+      en: "Outstanding service. Timely response, fair price, professional crew and fast service. Happy to recommend these guys.",
+      fr: "Service exceptionnel. Réponse rapide, prix juste, équipe professionnelle et service efficace. Heureuse de recommander cette équipe."
+    }
+  },
+  {
+    id: 9,
+    name: "hannah myles",
+    rating: 5,
+    // Google says "6 months ago" as of 2026-09-06 → ~March 2026.
+    date: "2026-03-06",
+    text: {
+      en: "Very knowledgeable and professional! I will for sure use their services in the future and highly recommend to anyone needing tree service!",
+      fr: "Très compétents et professionnels ! Je ferai certainement appel à leurs services à l'avenir et je les recommande vivement à quiconque a besoin de services d'arbres !"
+    }
+  },
+  {
     id: 7,
     name: "Pascal Letourneau",
     rating: 5,
