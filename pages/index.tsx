@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Shield, Award, Clock, MapPin, Star, Phone, ArrowRight } from 'lucide-react';
@@ -14,6 +15,8 @@ import { CheckCircle } from 'lucide-react';
 export default function HomePage() {
   const { lang, t, getLocalizedPath } = useLanguage();
   const activePromo = useActivePromotion(lang);
+  // Long reviews are clamped to keep the grid even; tap to expand.
+  const [expandedReview, setExpandedReview] = useState<number | null>(null);
 
   const whyChoose = [
     { icon: Shield, title: t.home.whyChoose1Title, desc: t.home.whyChoose1Desc },
@@ -225,7 +228,20 @@ export default function HomePage() {
                     <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                   </svg>
                 </div>
-                <p className="text-gray-700 mb-4 italic">&ldquo;{item.text[lang]}&rdquo;</p>
+                <p className={`text-gray-700 italic ${expandedReview === item.id ? '' : 'line-clamp-5'}`}>&ldquo;{item.text[lang]}&rdquo;</p>
+                {item.text[lang].length > 250 ? (
+                  <button
+                    type="button"
+                    onClick={() => setExpandedReview(expandedReview === item.id ? null : item.id)}
+                    className="mt-2 mb-4 text-sm font-semibold text-[#2D5016] hover:underline"
+                  >
+                    {expandedReview === item.id
+                      ? (lang === 'fr' ? 'Réduire' : 'Show less')
+                      : (lang === 'fr' ? 'Lire la suite' : 'Read more')}
+                  </button>
+                ) : (
+                  <div className="mb-4" />
+                )}
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 rounded-full bg-[#2D5016]/10 flex items-center justify-center text-[#2D5016] font-bold">
                     {item.name.charAt(0)}
