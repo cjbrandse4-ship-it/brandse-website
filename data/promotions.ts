@@ -21,6 +21,8 @@ export interface PromoCopy {
   faqQ: string;
   faqA: string;
   deadlineLabel: string;  // e.g. "Ends Nov 30"
+  imageAlt: string;       // alt text for the homepage promo photo
+  photoBadge: string;     // floating value badge on the promo photo
 }
 
 export interface Promotion {
@@ -29,6 +31,7 @@ export interface Promotion {
   start: string;          // YYYY-MM-DD inclusive (local time)
   end: string;            // YYYY-MM-DD inclusive (local time)
   unlockServices: string[]; // free-estimate service dropdown values that trigger formUnlock
+  image: string;          // homepage promo photo (a real job photo, not stock)
   en: PromoCopy;
   fr: PromoCopy;
 }
@@ -40,6 +43,7 @@ export const promotions: Promotion[] = [
     start: '2026-09-01',
     end: '2026-11-30',
     unlockServices: ['tree-removal', 'pruning', 'emergency'],
+    image: '/gallery/pine-removal-before.jpg',
     en: {
       bar: 'Storm-Ready: FREE hazard check + 25% off hazard trees',
       heroBadge: 'FREE hazard check + 25% off hazard trees',
@@ -56,6 +60,8 @@ export const promotions: Promotion[] = [
       faqQ: 'How do I know if my tree is a hazard?',
       faqA: 'Warning signs include large dead limbs, cracks in the trunk, a sudden lean, mushrooms at the base, and branches over your roof or hydro line. Our free 15-point assessment reads these signs the way an engineer reads a structure — factually, in writing, with photos. If your tree is healthy, we\'ll tell you that too.',
       deadlineLabel: 'Ends Nov 30',
+      imageAlt: 'A towering pine looming over a home — the kind of tree our free hazard check catches before winter',
+      photoBadge: '$150 value — FREE',
     },
     fr: {
       bar: 'Storm-Ready : inspection GRATUITE + 25 % de rabais — arbres dangereux',
@@ -73,6 +79,8 @@ export const promotions: Promotion[] = [
       faqQ: 'Comment savoir si mon arbre est dangereux ?',
       faqA: 'Les signes avant-coureurs incluent de grosses branches mortes, des fissures dans le tronc, une inclinaison soudaine, des champignons à la base et des branches au-dessus de votre toit ou des fils électriques. Notre évaluation gratuite en 15 points lit ces signes de façon factuelle, par écrit, avec photos. Si votre arbre est en santé, nous vous le dirons aussi.',
       deadlineLabel: 'Se termine le 30 nov.',
+      imageAlt: 'Un pin imposant surplombant une maison — le genre d\'arbre que notre inspection gratuite détecte avant l\'hiver',
+      photoBadge: 'Valeur de 150 $ — GRATUIT',
     },
   },
   {
@@ -81,6 +89,7 @@ export const promotions: Promotion[] = [
     start: '2026-12-01',
     end: '2027-03-15',
     unlockServices: ['tree-removal'],
+    image: '/gallery/pine-removal-after.jpg',
     en: {
       bar: 'Winter Special: FREE stump grinding with removals of $1,200+',
       heroBadge: 'FREE stump grinding with removals of $1,200+',
@@ -97,6 +106,8 @@ export const promotions: Promotion[] = [
       faqQ: 'Is winter really a good time to remove a tree?',
       faqA: 'It\'s often the best time. Frozen ground protects your lawn and lets our equipment reach the tree without mats or repairs, leafless canopies mean better visibility and precision, and winter scheduling is the fastest of the year. Trees are dormant, so the yard heals invisibly by spring.',
       deadlineLabel: 'Ends March 15',
+      imageAlt: 'A stump ground flush after a tree removal — included free this winter',
+      photoBadge: 'Up to $450 — FREE',
     },
     fr: {
       bar: 'Spécial hiver : essouchage GRATUIT avec tout abattage de 1 200 $+',
@@ -114,6 +125,8 @@ export const promotions: Promotion[] = [
       faqQ: 'L\'hiver est-il vraiment un bon moment pour abattre un arbre ?',
       faqA: 'C\'est souvent le meilleur moment. Le sol gelé protège votre pelouse et permet à notre équipement d\'atteindre l\'arbre sans plaques ni réparations, les canopées sans feuilles offrent une meilleure visibilité et précision, et l\'horaire d\'hiver est le plus rapide de l\'année. Les arbres sont en dormance, alors le terrain se rétablit invisiblement d\'ici le printemps.',
       deadlineLabel: 'Se termine le 15 mars',
+      imageAlt: 'Une souche rabotée au ras du sol après un abattage — incluse gratuitement cet hiver',
+      photoBadge: 'Jusqu\'à 450 $ — GRATUIT',
     },
   },
 ];

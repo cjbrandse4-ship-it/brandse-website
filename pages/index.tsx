@@ -69,30 +69,68 @@ export default function HomePage() {
 
       {/* Seasonal promotion (auto-shows while a campaign window is active) */}
       {activePromo && (
-        <section className="py-16 bg-[#2D5016]">
-          <div className="max-w-5xl mx-auto px-4 text-center">
-            <span className="inline-block bg-amber-400 text-gray-900 text-xs font-bold uppercase tracking-wider rounded-full px-3 py-1 mb-5">
-              {activePromo.copy.deadlineLabel} · {activePromo.daysLeft}{' '}
-              {activePromo.daysLeft === 1
-                ? (lang === 'fr' ? 'jour restant' : 'day left')
-                : (lang === 'fr' ? 'jours restants' : 'days left')}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{activePromo.copy.homeTitle}</h2>
-            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">{activePromo.copy.homeSub}</p>
-            <ul className="text-left max-w-2xl mx-auto space-y-3 mb-9">
-              {activePromo.copy.homeBullets.map((b, i) => (
-                <li key={i} className="flex items-start gap-3 text-white/95">
-                  <CheckCircle className="w-5 h-5 text-amber-400 shrink-0 mt-1" />
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
-            <Link
-              href={lang === 'fr' ? '/fr/devis-gratuit' : '/free-estimate'}
-              className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-gray-900 text-lg font-bold px-8 py-4 rounded-lg transition-colors shadow-xl"
-            >
-              {activePromo.copy.homeCta} <ArrowRight className="w-5 h-5" />
-            </Link>
+        <section className="relative overflow-hidden py-16 md:py-20 bg-gradient-to-br from-[#1c330d] via-[#2D5016] to-[#3a6b1e]">
+          {/* Soft depth accents (decorative) */}
+          <div aria-hidden="true" className="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-amber-400/10 blur-3xl" />
+          <div aria-hidden="true" className="pointer-events-none absolute -bottom-32 -left-20 w-80 h-80 rounded-full bg-white/5 blur-3xl" />
+
+          <div className="relative max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+            {/* Left: offer */}
+            <div className="text-center md:text-left">
+              <span className="inline-flex items-center gap-2 bg-amber-400 text-gray-900 text-xs font-bold uppercase tracking-wider rounded-full px-3.5 py-1.5 mb-6 shadow-md">
+                <span aria-hidden="true" className="w-2 h-2 rounded-full bg-red-600 motion-safe:animate-pulse" />
+                {activePromo.copy.deadlineLabel} · {activePromo.daysLeft}{' '}
+                {activePromo.daysLeft === 1
+                  ? (lang === 'fr' ? 'jour restant' : 'day left')
+                  : (lang === 'fr' ? 'jours restants' : 'days left')}
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight [text-wrap:balance]">
+                {activePromo.copy.homeTitle}
+              </h2>
+              <p className="text-lg text-white/85 mb-8 max-w-xl mx-auto md:mx-0">{activePromo.copy.homeSub}</p>
+              <ul className="text-left space-y-4 mb-9 max-w-xl mx-auto md:mx-0">
+                {activePromo.copy.homeBullets.map((b, i) => (
+                  <li key={i} className="flex items-start gap-3.5">
+                    <span className="shrink-0 w-9 h-9 rounded-full bg-amber-400/15 border border-amber-400/40 flex items-center justify-center mt-0.5">
+                      <CheckCircle className="w-5 h-5 text-amber-300" />
+                    </span>
+                    <span className="text-white/95 leading-relaxed">{b}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-5 justify-center md:justify-start">
+                <Link
+                  href={lang === 'fr' ? '/fr/devis-gratuit' : '/free-estimate'}
+                  className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-gray-900 text-lg font-bold px-8 py-4 rounded-xl transition-all shadow-xl shadow-black/25 motion-safe:hover:scale-[1.02]"
+                >
+                  {activePromo.copy.homeCta} <ArrowRight className="w-5 h-5" />
+                </Link>
+                <a
+                  href="tel:4383655410"
+                  className="inline-flex items-center gap-2 text-white/90 hover:text-white font-semibold py-4 transition-colors"
+                >
+                  <Phone className="w-5 h-5 text-amber-300" /> (438) 365-5410
+                </a>
+              </div>
+            </div>
+
+            {/* Right: real job photo with floating value badge */}
+            <div className="relative max-w-md w-full mx-auto md:max-w-none">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-white/25 shadow-2xl shadow-black/40">
+                <Image
+                  src={activePromo.promo.image}
+                  alt={activePromo.copy.imageAlt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                  className="object-cover"
+                />
+                <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+              </div>
+              <span className="absolute -top-3 -right-2 md:-right-4 bg-amber-400 text-gray-900 text-sm font-extrabold rounded-full px-4 py-2 shadow-xl rotate-2">
+                {activePromo.copy.photoBadge}
+              </span>
+            </div>
           </div>
         </section>
       )}
