@@ -11,6 +11,7 @@ import LastUpdated from '../components/LastUpdated';
 import { useLanguage } from '../lib/useLanguage';
 import { siteConfig, ORG_ID } from '../lib/seo';
 import { cityPagesDate } from '../data/pageDates';
+import { bylawLinks } from '../data/bylawLinks';
 import { locations, getLocation, getLocationSlug, citySeo, Location } from '../data/locations';
 import { useState } from 'react';
 
@@ -165,6 +166,25 @@ export default function CityPage({ location }: Props) {
               {cityContent.paragraphs.map((p, i) => (
                 <p key={i} className="text-gray-600 text-lg mb-6 leading-relaxed">{p}</p>
               ))}
+
+              {/* Authoritative source citation — link to the municipality's
+                  own tree-bylaw/permit page (verified URLs only). */}
+              {bylawLinks[location.slug] && (
+                <p className="text-sm text-gray-500 mb-8 border-l-2 border-gray-200 pl-3">
+                  {lang === 'fr' ? 'Source officielle : ' : 'Official source: '}
+                  <a
+                    href={bylawLinks[location.slug].url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2D5016] underline hover:no-underline"
+                  >
+                    {lang === 'fr'
+                      ? `règlement sur les arbres — ${city}`
+                      : `tree regulations — ${city}`}
+                  </a>
+                  {lang === 'en' && bylawLinks[location.slug].lang === 'fr' ? ' (in French)' : ''}
+                </p>
+              )}
 
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {lt.features.map((f: string) => (
