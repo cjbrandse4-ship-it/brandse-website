@@ -20,7 +20,7 @@ export default function AboutPage() {
     "url": "https://www.servicedarbresbrandse.com",
     "logo": "https://www.servicedarbresbrandse.com/logo-schema.png",
     "foundingDate": "2020",
-    "founder": { "@type": "Person", "name": "John Brandse" },
+    "founder": { "@type": "Person", "name": "Connor Brandse" },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "2489 Rue Sandmere",

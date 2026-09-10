@@ -73,9 +73,14 @@ class MyDocument extends Document<MyDocumentProps> {
           // (GSC flags it as: Invalid object type for field "<parent_node>").
           // Star ratings for the business come from Google Business Profile.
           "contactPoint": { "@type": "ContactPoint", "telephone": "+1-438-365-5410", "contactType": "customer service", "email": "info@brandses.com", "availableLanguage": ["en", "fr"] },
-          // Verified profiles only. TODO(Connor): add Google Business Profile
-          // share link (g.page/...) and Instagram URL if one exists.
-          "sameAs": ["https://www.facebook.com/brandseinc"],
+          // Verified profiles only: real Facebook page + the Maps listing URL
+          // Connor confirmed resolves to the Google Business Profile. No
+          // business Instagram exists (searched Sept 2026) — add here + in
+          // siteConfig.social + Footer if one is ever created.
+          "sameAs": [
+            "https://www.facebook.com/brandseinc",
+            "https://www.google.com/maps/search/?api=1&query=Service%20d%27Arbres%20Brandse%20Inc%2C%20Saint-Lazare%2C%20QC"
+          ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Tree Services",

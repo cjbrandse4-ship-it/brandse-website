@@ -43,10 +43,13 @@ export default function BlogPostPage({ post }: Props) {
     "author": {
       "@type": "Person",
       "name": post.author,
+      "jobTitle": "Founder & Owner",
+      "worksFor": { "@id": "https://www.servicedarbresbrandse.com/#organization" },
     },
     "publisher": {
       "@type": "Organization",
       "name": "Service d'Arbres Brandse Inc",
+      "@id": "https://www.servicedarbresbrandse.com/#organization",
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.servicedarbresbrandse.com/logo-schema.png",
@@ -167,6 +170,28 @@ export default function BlogPostPage({ post }: Props) {
             </div>
           </div>
         </article>
+
+        {/* Author bio — real authorship signal (E-E-A-T / AEO) */}
+        <section className="bg-white pb-12">
+          <div className="max-w-3xl mx-auto px-4">
+            <div className="flex items-start gap-4 bg-gray-50 rounded-2xl border border-gray-100 p-6">
+              <div className="w-14 h-14 rounded-full bg-[#2D5016] text-white flex items-center justify-center font-bold text-xl shrink-0">
+                CB
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900">Connor Brandse</p>
+                <p className="text-sm text-gray-500 mb-2">
+                  {isFr ? 'Fondateur et propriétaire, Service d\'Arbres Brandse Inc' : 'Founder & Owner, Service d\'Arbres Brandse Inc'}
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {isFr
+                    ? 'Connor dirige Service d\'Arbres Brandse, une entreprise d\'arboriculture licenciée et assurée CNESST basée à Saint-Lazare. Depuis 2020, lui et son équipe offrent l\'abattage, l\'élagage, l\'essouchage et le service d\'urgence 24/7 dans 23 communautés de l\'Ouest-de-l\'Île et de Vaudreuil-Soulanges.'
+                    : 'Connor runs Service d\'Arbres Brandse, a licensed, CNESST-insured tree service based in Saint-Lazare. Since 2020, he and his crew have provided tree removal, pruning, stump grinding, and 24/7 emergency service across 23 communities in the West Island and Vaudreuil-Soulanges.'}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Post Navigation */}
         <section className="bg-gray-50 py-12 border-t border-gray-100">
