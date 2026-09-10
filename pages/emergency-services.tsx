@@ -8,6 +8,8 @@ import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
+import { pageDates } from '../data/pageDates';
+import LastUpdated from '../components/LastUpdated';
 
 export default function EmergencyServicesPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -104,6 +106,7 @@ export default function EmergencyServicesPage() {
       ? "Intervention d'urgence 24/7 pour arbres tombés, dommages de tempête et situations dangereuses dans l'Ouest de l'Île de Montréal."
       : "24/7 emergency tree removal for storm damage, fallen trees, and hazardous situations in West Island Montreal.",
     slug: getLocalizedPath('/emergency-services'),
+    dateModified: pageDates['/emergency-services'],
   });
 
   return (
@@ -257,6 +260,7 @@ export default function EmergencyServicesPage() {
         </section>
       </main>
 
+      <LastUpdated date={pageDates['/emergency-services']} lang={lang} />
       <Footer />
     </>
   );

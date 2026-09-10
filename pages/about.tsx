@@ -36,8 +36,7 @@ export default function AboutPage() {
       "availableLanguage": ["en", "fr"]
     },
     "sameAs": [
-      "https://www.facebook.com/brandsetreeservice",
-      "https://www.instagram.com/brandsetreeservice"
+      "https://www.facebook.com/brandseinc"
     ]
   };
 

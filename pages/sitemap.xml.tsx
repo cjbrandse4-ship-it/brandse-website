@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next';
 import { locations } from '../data/locations';
 import { blogPosts } from '../data/blogPosts';
+import { pageDates, cityPagesDate } from '../data/pageDates';
 
 // Static-page release date — bump when site structure or copy materially
 // changes. Matters less than `lastmod` lying every request: Google discounts
@@ -17,16 +18,19 @@ interface SitemapEntry {
 function generateSitemap(): string {
   const domain = 'https://www.servicedarbresbrandse.com';
 
+  // Service pages read their true lastmod from data/pageDates.ts — the same
+  // source as the visible "Last updated" line and schema dateModified.
   const staticPages: SitemapEntry[] = [
     { path: '/', priority: '1.0', changefreq: 'weekly', lastmod: STATIC_PAGES_RELEASE },
     { path: '/services', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
-    { path: '/tree-removal', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
-    { path: '/stump-grinding', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
-    { path: '/tree-trimming', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
-    { path: '/hedge-trimming', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
-    { path: '/tree-planting', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
-    { path: '/emergency-services', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
-    { path: '/hard-to-reach-tree-removal', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
+    { path: '/tree-removal', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/tree-removal'] },
+    { path: '/stump-grinding', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/stump-grinding'] },
+    { path: '/tree-trimming', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/tree-trimming'] },
+    { path: '/hedge-trimming', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/hedge-trimming'] },
+    { path: '/tree-planting', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/tree-planting'] },
+    { path: '/emergency-services', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/emergency-services'] },
+    { path: '/hard-to-reach-tree-removal', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/hard-to-reach-tree-removal'] },
+    { path: '/tree-removal-cost', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/tree-removal-cost'] },
     { path: '/about', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
     { path: '/gallery', priority: '0.6', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
     { path: '/blog', priority: '0.7', changefreq: 'weekly', lastmod: STATIC_PAGES_RELEASE },
@@ -38,7 +42,7 @@ function generateSitemap(): string {
     path: `/${l.slug}`,
     priority: '0.7',
     changefreq: 'monthly',
-    lastmod: STATIC_PAGES_RELEASE,
+    lastmod: cityPagesDate,
   }));
 
   // Blog `lastmod` reads from the post's own `date` — frozen at publication so

@@ -8,6 +8,8 @@ import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
+import { pageDates } from '../data/pageDates';
+import LastUpdated from '../components/LastUpdated';
 
 export default function HedgeTrimmingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -97,6 +99,7 @@ export default function HedgeTrimmingPage() {
       ? "Services professionnels de taille de haies de cèdres et entretien saisonnier dans l'Ouest de l'Île de Montréal."
       : "Professional cedar hedge trimming, precision shaping, height reduction, and seasonal maintenance across West Island Montreal.",
     slug: getLocalizedPath('/hedge-trimming'),
+    dateModified: pageDates['/hedge-trimming'],
   });
 
   return (
@@ -230,6 +233,7 @@ export default function HedgeTrimmingPage() {
         {/* CTA */}
 </main>
 
+      <LastUpdated date={pageDates['/hedge-trimming']} lang={lang} />
       <Footer />
     </>
   );

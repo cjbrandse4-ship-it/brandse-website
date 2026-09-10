@@ -8,6 +8,8 @@ import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
+import { pageDates } from '../data/pageDates';
+import LastUpdated from '../components/LastUpdated';
 
 export default function StumpGrindingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -79,6 +81,7 @@ export default function StumpGrindingPage() {
       ? "Essouchage complet sous le niveau du sol avec équipement Vermeer professionnel dans l'Ouest de l'Île de Montréal."
       : "Complete stump grinding and removal below ground level with professional Vermeer equipment in West Island Montreal.",
     slug: getLocalizedPath('/stump-grinding'),
+    dateModified: pageDates['/stump-grinding'],
   });
 
   return (
@@ -220,6 +223,7 @@ export default function StumpGrindingPage() {
         {/* CTA */}
 </main>
 
+      <LastUpdated date={pageDates['/stump-grinding']} lang={lang} />
       <Footer />
     </>
   );

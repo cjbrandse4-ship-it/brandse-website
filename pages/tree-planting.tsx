@@ -8,6 +8,8 @@ import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
+import { pageDates } from '../data/pageDates';
+import LastUpdated from '../components/LastUpdated';
 
 export default function TreePlantingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -97,6 +99,7 @@ export default function TreePlantingPage() {
       ? "Services de plantation d'arbres avec conseils sur le choix d'espèces, évaluation du sol et plantation professionnelle pour les propriétés de l'Ouest de l'Île de Montréal."
       : "Tree planting services with expert species selection, soil assessment, and professional installation for West Island Montreal properties.",
     slug: getLocalizedPath('/tree-planting'),
+    dateModified: pageDates['/tree-planting'],
   });
 
   return (
@@ -233,6 +236,7 @@ export default function TreePlantingPage() {
         {/* CTA */}
 </main>
 
+      <LastUpdated date={pageDates['/tree-planting']} lang={lang} />
       <Footer />
     </>
   );

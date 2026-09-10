@@ -8,6 +8,8 @@ import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
+import { pageDates } from '../data/pageDates';
+import LastUpdated from '../components/LastUpdated';
 
 export default function TreeTrimmingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -88,6 +90,7 @@ export default function TreeTrimmingPage() {
       ? "Services experts d'élagage et de taille pour maintenir la santé des arbres dans l'Ouest de l'Île de Montréal."
       : "Expert tree trimming and pruning services — deadwooding, crown reduction, and structural pruning — to maintain tree health in West Island Montreal.",
     slug: getLocalizedPath('/tree-trimming'),
+    dateModified: pageDates['/tree-trimming'],
   });
 
   return (
@@ -231,6 +234,7 @@ export default function TreeTrimmingPage() {
         {/* CTA */}
 </main>
 
+      <LastUpdated date={pageDates['/tree-trimming']} lang={lang} />
       <Footer />
     </>
   );

@@ -8,6 +8,8 @@ import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
+import { pageDates } from '../data/pageDates';
+import LastUpdated from '../components/LastUpdated';
 
 export default function TreeRemovalPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -81,6 +83,13 @@ export default function TreeRemovalPage() {
       titleFr: "Arbres difficiles d'accès",
       descEn: 'Tall or boxed-in trees reached safely with our CELA DT25 spider lift.',
       descFr: 'Arbres hauts ou enclavés atteints en sécurité avec notre nacelle araignée CELA DT25.'
+    },
+    {
+      href: '/tree-removal-cost',
+      titleEn: 'What Does Tree Removal Cost?',
+      titleFr: "Combien coûte l'abattage ?",
+      descEn: '2026 price guide — ranges by tree size, cost factors, and permit fees.',
+      descFr: 'Guide des prix 2026 — fourchettes par taille, facteurs de coût et frais de permis.'
     }
   ];
 
@@ -90,6 +99,7 @@ export default function TreeRemovalPage() {
       ? "Services professionnels d'abattage d'arbres dans l'Ouest de l'Île de Montréal. Arboriculteurs certifiés pour traiter en toute sécurité les arbres dangereux."
       : "Professional tree removal services in West Island Montreal. Certified arborists handle hazardous, dead, or unwanted trees safely.",
     slug: getLocalizedPath('/tree-removal'),
+    dateModified: pageDates['/tree-removal'],
   });
 
   return (
@@ -235,6 +245,7 @@ export default function TreeRemovalPage() {
         {/* CTA */}
 </main>
 
+      <LastUpdated date={pageDates['/tree-removal']} lang={lang} />
       <Footer />
     </>
   );

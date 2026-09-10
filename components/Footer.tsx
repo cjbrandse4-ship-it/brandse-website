@@ -60,7 +60,6 @@ export default function Footer() {
           <p className="text-sm text-gray-400 mb-4">{t.common.tagline}</p>
           <div className="flex gap-3">
             <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
-            <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
           </div>
         </div>
 

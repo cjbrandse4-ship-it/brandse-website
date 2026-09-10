@@ -34,7 +34,11 @@ class MyDocument extends Document<MyDocumentProps> {
           // Saint-Lazare) for NAP consistency. Keep the two in sync — a
           // mismatch between site schema and GBP hurts local rankings.
           "@type": "TreeService",
+          // Stable entity id — every Service/city schema references this node
+          // instead of embedding its own copy of the organization.
+          "@id": "https://www.servicedarbresbrandse.com/#organization",
           "name": "Service d'Arbres Brandse Inc",
+          "alternateName": "Brandse Tree Service",
           "url": "https://www.servicedarbresbrandse.com",
           "logo": "https://www.servicedarbresbrandse.com/logo-schema.png",
           "image": "https://www.servicedarbresbrandse.com/og-image.jpg",
@@ -55,9 +59,13 @@ class MyDocument extends Document<MyDocumentProps> {
             { "@type": "City", "name": "Pointe-des-Cascades" }, { "@type": "City", "name": "Saint-Clet" },
             { "@type": "City", "name": "Lachine" }
           ],
+          // Matches the visible hours copy site-wide (Footer/contact:
+          // "Monday-Friday 8am-6pm, 24/7 for emergencies"). 24/7 emergency
+          // availability is deliberately NOT encoded as opening hours.
+          // TODO(Connor): confirm — if you also work Saturdays, add it here
+          // AND in data/translations.ts + public/llms.txt so all three agree.
           "openingHoursSpecification": [
-            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "18:00" },
-            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "16:00" }
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" }
           ],
           "priceRange": "$$",
           // No aggregateRating/review here — Google disallows "self-serving"
@@ -65,15 +73,32 @@ class MyDocument extends Document<MyDocumentProps> {
           // (GSC flags it as: Invalid object type for field "<parent_node>").
           // Star ratings for the business come from Google Business Profile.
           "contactPoint": { "@type": "ContactPoint", "telephone": "+1-438-365-5410", "contactType": "customer service", "email": "info@brandses.com", "availableLanguage": ["en", "fr"] },
-          "sameAs": ["https://www.facebook.com/brandsetreeservice", "https://www.instagram.com/brandsetreeservice"]
+          // Verified profiles only. TODO(Connor): add Google Business Profile
+          // share link (g.page/...) and Instagram URL if one exists.
+          "sameAs": ["https://www.facebook.com/brandseinc"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Tree Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Removal", "url": "https://www.servicedarbresbrandse.com/tree-removal" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stump Grinding & Removal", "url": "https://www.servicedarbresbrandse.com/stump-grinding" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Trimming & Pruning", "url": "https://www.servicedarbresbrandse.com/tree-trimming" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hedge Trimming", "url": "https://www.servicedarbresbrandse.com/hedge-trimming" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Planting", "url": "https://www.servicedarbresbrandse.com/tree-planting" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Tree Services", "url": "https://www.servicedarbresbrandse.com/emergency-services" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hard-to-Reach Tree Removal", "url": "https://www.servicedarbresbrandse.com/hard-to-reach-tree-removal" } }
+            ]
+          }
         }) }} />
         {/* WebSite Schema */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
+          "@id": "https://www.servicedarbresbrandse.com/#website",
           "name": "Service d'Arbres Brandse Inc",
           "url": "https://www.servicedarbresbrandse.com",
-          "inLanguage": ["en", "fr"]
+          "inLanguage": ["en-CA", "fr-CA"],
+          "publisher": { "@id": "https://www.servicedarbresbrandse.com/#organization" }
         }) }} />
       </Head>
       <body className="antialiased">

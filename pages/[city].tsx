@@ -6,8 +6,11 @@ import { MapPin, CheckCircle, TreePine, Shield, Scissors, Sprout, AlertTriangle,
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
+import Breadcrumbs from '../components/Breadcrumbs';
+import LastUpdated from '../components/LastUpdated';
 import { useLanguage } from '../lib/useLanguage';
-import { siteConfig } from '../lib/seo';
+import { siteConfig, ORG_ID } from '../lib/seo';
+import { cityPagesDate } from '../data/pageDates';
 import { locations, getLocation, getLocationSlug, citySeo, Location } from '../data/locations';
 import { useState } from 'react';
 
@@ -35,11 +38,11 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         <span className="font-semibold text-gray-900 pr-4">{q}</span>
         <ChevronDown className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
-      {open && (
-        <div className="px-6 pb-4">
-          <p className="text-gray-600 leading-relaxed">{a}</p>
-        </div>
-      )}
+      {/* Answer stays in the DOM (schema/visible-content parity for
+          crawlers) — only its visibility toggles. */}
+      <div className={`px-6 pb-4 ${open ? '' : 'hidden'}`}>
+        <p className="text-gray-600 leading-relaxed">{a}</p>
+      </div>
     </div>
   );
 }
@@ -72,55 +75,32 @@ export default function CityPage({ location }: Props) {
     })),
   };
 
+  // A Service node referencing the single org entity (ORG_ID) — NOT another
+  // TreeService with a synthetic local address. One business, 23 service
+  // areas; the org's real address/hours live once in _document.tsx.
+  // No aggregateRating — self-serving review markup is disallowed by Google.
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'TreeService',
-    name: siteConfig.name,
-    description: metaDesc,
-    url: `${siteConfig.domain}${path}`,
-    telephone: siteConfig.contact.phone,
-    email: siteConfig.contact.email,
-    image: siteConfig.defaultImage,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: city,
-      addressRegion: 'QC',
-      addressCountry: 'CA',
-      postalCode: location.postalCodes[0],
-    },
-    areaServed: {
-      '@type': 'City',
-      name: city,
-    },
-    priceRange: '$$',
-    openingHoursSpecification: [
+    '@graph': [
       {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '07:00',
-        closes: '18:00',
+        '@type': 'Service',
+        serviceType: 'Tree Services',
+        name: lang === 'fr' ? `Services d'arbres à ${city}` : `Tree Services in ${city}`,
+        description: metaDesc,
+        url: `${siteConfig.domain}${path}`,
+        provider: { '@id': ORG_ID },
+        areaServed: { '@type': 'City', name: city },
       },
+      // dateModified lives on a WebPage node — schema.org does not define it
+      // on Service.
       {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Saturday',
-        opens: '08:00',
-        closes: '16:00',
+        '@type': 'WebPage',
+        '@id': `${siteConfig.domain}${path}#webpage`,
+        url: `${siteConfig.domain}${path}`,
+        dateModified: cityPagesDate,
+        about: { '@id': ORG_ID },
       },
     ],
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Tree Services',
-      itemListElement: [
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tree Removal' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Stump Grinding' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tree Trimming' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hedge Trimming' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tree Planting' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Emergency Tree Service' } },
-      ],
-    },
-    // No aggregateRating — self-serving review markup on our own business
-    // entity is disallowed by Google (see note in _document.tsx).
   };
 
   return (
@@ -137,6 +117,10 @@ export default function CityPage({ location }: Props) {
         />
       </Head>
       <Header />
+      <Breadcrumbs items={[
+        { name: lang === 'fr' ? 'Accueil' : 'Home', href: lang === 'fr' ? '/fr' : '/' },
+        { name: city }
+      ]} />
 
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center">
@@ -302,6 +286,7 @@ export default function CityPage({ location }: Props) {
           </div>
         </div>
       </section>
+      <LastUpdated date={cityPagesDate} lang={lang} />
       <Footer />
     </>
   );

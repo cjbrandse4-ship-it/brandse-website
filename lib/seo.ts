@@ -18,8 +18,9 @@ export const siteConfig = {
     address: { streetAddress: "2489 Rue Sandmere", addressLocality: "Saint-Lazare", addressRegion: "QC", postalCode: "J7T 0A7", addressCountry: "CA" }
   },
   social: {
-    facebook: "https://www.facebook.com/brandsetreeservice",
-    instagram: "https://www.instagram.com/brandsetreeservice"
+    // Verified profile. TODO(Connor): add Instagram here + in Footer + in
+    // the _document.tsx sameAs if an account exists.
+    facebook: "https://www.facebook.com/brandseinc"
   },
   rating: {
     value: "5.0",
@@ -43,33 +44,46 @@ export const siteConfig = {
 // entity and links each service back via `provider`. Avoids the duplicate-
 // LocalBusiness pattern that emerges when every service page declares its
 // own TreeService entity.
+// Stable identifier for the business entity declared in _document.tsx.
+// Every other schema node references this instead of duplicating the org.
+export const ORG_ID = `${siteConfig.domain}/#organization`;
+
 export function buildServiceSchema(args: {
   name: string;
   description: string;
   slug: string;
+  dateModified?: string; // YYYY-MM-DD — freshness signal for AI/answer engines
 }) {
+  const url = `${siteConfig.domain}${args.slug}`;
   return {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": args.name,
-    "name": args.name,
-    "description": args.description,
-    "url": `${siteConfig.domain}${args.slug}`,
-    "provider": {
-      "@type": "TreeService",
-      "name": siteConfig.name,
-      "url": siteConfig.domain,
-      "telephone": siteConfig.contact.phone,
-      "image": siteConfig.defaultImage,
-      "address": { "@type": "PostalAddress", ...siteConfig.contact.address }
-      // No aggregateRating — self-serving review markup on our own business
-      // entity is disallowed by Google (see note in _document.tsx).
-    },
-    "areaServed": siteConfig.serviceAreas.map(name => ({ "@type": "City", name })),
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "CAD",
-      "availability": "https://schema.org/InStock"
-    }
+    "@graph": [
+      {
+        "@type": "Service",
+        "serviceType": args.name,
+        "name": args.name,
+        "description": args.description,
+        "url": url,
+        // Reference — not a copy — of the org entity (see ORG_ID note above).
+        // No aggregateRating anywhere: self-serving review markup on our own
+        // business entity is disallowed by Google (see note in _document.tsx).
+        "provider": { "@id": ORG_ID },
+        "areaServed": siteConfig.serviceAreas.map(name => ({ "@type": "City", name })),
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "CAD",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      // dateModified is a CreativeWork property — schema.org does not define
+      // it on Service, so the freshness signal rides a companion WebPage node.
+      ...(args.dateModified ? [{
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        "url": url,
+        "dateModified": args.dateModified,
+        "about": { "@id": ORG_ID }
+      }] : []),
+    ],
   };
 }

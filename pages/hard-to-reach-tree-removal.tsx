@@ -8,6 +8,8 @@ import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
+import { pageDates } from '../data/pageDates';
+import LastUpdated from '../components/LastUpdated';
 
 export default function HardToReachPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -91,6 +93,7 @@ export default function HardToReachPage() {
       ? "Abattage et élagage d'arbres hauts ou difficiles d'accès avec une nacelle araignée CELA DT25 (25 m) dans l'Ouest de l'Île de Montréal."
       : "High and hard-to-reach tree removal and pruning using a CELA DT25 spider lift (25 m) in West Island Montreal.",
     slug: getLocalizedPath('/hard-to-reach-tree-removal'),
+    dateModified: pageDates['/hard-to-reach-tree-removal'],
   });
 
   return (
@@ -257,6 +260,7 @@ export default function HardToReachPage() {
         </section>
       </main>
 
+      <LastUpdated date={pageDates['/hard-to-reach-tree-removal']} lang={lang} />
       <Footer />
     </>
   );

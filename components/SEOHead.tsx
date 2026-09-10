@@ -36,9 +36,9 @@ export default function SEOHead({ title, description, path = '/', image, lang = 
       <link rel="alternate" hrefLang="fr" href={`${siteConfig.domain}${lang === 'fr' ? path : altPath}`} />
       <link rel="alternate" hrefLang="x-default" href={`${siteConfig.domain}${lang === 'en' ? path : altPath}`} />
       <meta name="geo.region" content="CA-QC" />
-      <meta name="geo.placename" content="Montreal, West Island" />
-      <meta name="geo.position" content="45.4715;-73.8103" />
-      <meta name="ICBM" content="45.4715, -73.8103" />
+      <meta name="geo.placename" content="Saint-Lazare, QC" />
+      <meta name="geo.position" content="45.4001;-74.1342" />
+      <meta name="ICBM" content="45.4001, -74.1342" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
