@@ -128,7 +128,7 @@ export default function ChristmasLightsPage() {
         {/* Hero */}
         <section className="relative flex items-center justify-center min-h-[60vh]">
           <Image
-            src="/gallery/spider-lift.jpg"
+            src="/gallery/christmas-lights-hero.jpg"
             alt=""
             aria-hidden="true"
             fill
@@ -136,7 +136,9 @@ export default function ChristmasLightsPage() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gray-900/80" />
+          {/* Lighter overlay than other heroes — the dusk shot carries its
+              own contrast and the lit trees should glow through. */}
+          <div className="absolute inset-0 bg-gray-900/60" />
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
             <nav className="flex items-center justify-center gap-2 text-sm text-gray-300 mb-6">
               <Link href={getLocalizedPath('/')} className="hover:text-white">{isFr ? 'Accueil' : 'Home'}</Link>
