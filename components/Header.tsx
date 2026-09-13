@@ -15,6 +15,7 @@ const serviceLinks = [
   { key: 'treePlanting', href: '/tree-planting' },
   { key: 'emergency', href: '/emergency-services' },
   { key: 'hardToReach', href: '/hard-to-reach-tree-removal' },
+  { key: 'christmasLights', href: '/christmas-lights' },
 ];
 
 export default function Header() {

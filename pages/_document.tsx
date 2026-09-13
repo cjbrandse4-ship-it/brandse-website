@@ -91,7 +91,8 @@ class MyDocument extends Document<MyDocumentProps> {
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hedge Trimming", "url": "https://www.servicedarbresbrandse.com/hedge-trimming" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tree Planting", "url": "https://www.servicedarbresbrandse.com/tree-planting" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Tree Services", "url": "https://www.servicedarbresbrandse.com/emergency-services" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hard-to-Reach Tree Removal", "url": "https://www.servicedarbresbrandse.com/hard-to-reach-tree-removal" } }
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hard-to-Reach Tree Removal", "url": "https://www.servicedarbresbrandse.com/hard-to-reach-tree-removal" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Christmas Light Installation on Trees", "url": "https://www.servicedarbresbrandse.com/christmas-lights" } }
             ]
           }
         }) }} />

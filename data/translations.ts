@@ -65,6 +65,10 @@ export const translations = {
       hardToReach: {
         title: 'Hard-to-Reach Tree Removal',
         desc: 'Tall, hazardous, or hard-to-access trees handled with our CELA DT25 spider lift — reaches up to 25 m (82 ft), fits through a garden gate, and protects your lawn.'
+      },
+      christmasLights: {
+        title: 'Christmas Light Installation',
+        desc: 'Professional holiday lighting on trees up to 80 ft with our spider lift — from $349, with in-season maintenance and January takedown included.'
       }
     },
     home: {
@@ -311,6 +315,10 @@ export const translations = {
       hardToReach: {
         title: 'Arbres difficiles d\'accès',
         desc: 'Arbres hauts, dangereux ou difficiles d\'accès traités avec notre nacelle araignée CELA DT25 — portée jusqu\'à 25 m (82 pi), passe par un portail de jardin et protège votre pelouse.'
+      },
+      christmasLights: {
+        title: 'Lumières de Noël',
+        desc: 'Installation professionnelle de lumières de Noël dans les arbres jusqu\'à 80 pi grâce à notre nacelle araignée — à partir de 349 $, entretien en saison et enlèvement en janvier inclus.'
       }
     },
     home: {

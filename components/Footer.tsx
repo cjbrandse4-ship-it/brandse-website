@@ -17,6 +17,7 @@ export default function Footer() {
     { key: 'treePlanting', href: '/tree-planting' },
     { key: 'emergency', href: '/emergency-services' },
     { key: 'hardToReach', href: '/hard-to-reach-tree-removal' },
+    { key: 'christmasLights', href: '/christmas-lights' },
   ];
 
   return (

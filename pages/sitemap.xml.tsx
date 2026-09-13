@@ -31,6 +31,7 @@ function generateSitemap(): string {
     { path: '/emergency-services', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/emergency-services'] },
     { path: '/hard-to-reach-tree-removal', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/hard-to-reach-tree-removal'] },
     { path: '/tree-removal-cost', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/tree-removal-cost'] },
+    { path: '/christmas-lights', priority: '0.8', changefreq: 'monthly', lastmod: pageDates['/christmas-lights'] },
     { path: '/about', priority: '0.8', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
     { path: '/gallery', priority: '0.6', changefreq: 'monthly', lastmod: STATIC_PAGES_RELEASE },
     { path: '/blog', priority: '0.7', changefreq: 'weekly', lastmod: STATIC_PAGES_RELEASE },

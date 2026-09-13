@@ -44,6 +44,7 @@ const SERVICE_OPTIONS = [
   { value: 'pruning',        en: 'Pruning & Trimming',   fr: 'Émondage et élagage' },
   { value: 'hedge-trimming', en: 'Hedge Trimming',       fr: 'Taille de haies' },
   { value: 'emergency',      en: 'Emergency',            fr: 'Urgence' },
+  { value: 'christmas-lights', en: 'Christmas Lights',   fr: 'Lumières de Noël' },
   { value: 'other',          en: 'Other',                fr: 'Autre' },
 ];
 

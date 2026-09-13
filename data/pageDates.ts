@@ -11,6 +11,7 @@ export const pageDates: Record<string, string> = {
   '/emergency-services': '2026-07-14',
   '/hard-to-reach-tree-removal': '2026-07-14',
   '/tree-removal-cost': '2026-09-09',
+  '/christmas-lights': '2026-09-13',
 };
 
 // All 23 city pages share locations.ts as their content source; its last
