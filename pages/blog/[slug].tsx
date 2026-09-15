@@ -92,24 +92,24 @@ export default function BlogPostPage({ post }: Props) {
       />
 
       <main>
-        {/* Hero */}
-        <section className="relative">
-          <div className="h-64 sm:h-80 w-full bg-gray-200 relative">
-            <Image
-              src={post.image}
-              alt={content.title}
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          </div>
-          <div className="max-w-3xl mx-auto px-4 -mt-20 relative z-10">
+        {/* Hero — content-driven height with the image filling behind it, so
+            long titles always stay on the darkened photo (the old fixed-height
+            + negative-margin layout let long titles spill white-on-white). */}
+        <section className="relative bg-gray-800">
+          <Image
+            src={post.image}
+            alt={content.title}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-black/20" />
+          <div className="relative max-w-3xl mx-auto px-4 pt-36 sm:pt-44 pb-10">
             <span className="inline-block bg-[#2D5016] text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
               {post.category}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight drop-shadow-lg">
               {content.title}
             </h1>
           </div>
