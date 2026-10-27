@@ -119,6 +119,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
           <p>&copy; {new Date().getFullYear()} Service d&apos;Arbres Brandse Inc. {t.common.rights}</p>
           <div className="flex gap-4 mt-2 sm:mt-0">
+            <Link href={getLocalizedPath('/privacy-policy')} className="hover:text-gray-300 transition-colors">{isFr ? 'Politique de confidentialité' : 'Privacy Policy'}</Link>
             <Link href={getLocalizedPath('/cookie-policy')} className="hover:text-gray-300 transition-colors">{isFr ? 'Politique de cookies' : 'Cookie Policy'}</Link>
           </div>
         </div>

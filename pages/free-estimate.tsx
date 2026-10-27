@@ -90,6 +90,8 @@ const copy = {
     submitPromise: 'Reply in 2 hours',
     submitting: 'Sending…',
     callbackPromise: 'We\'ll call you back within 2 hours during business hours.',
+    consent: 'By submitting, you agree that Service d\'Arbres Brandse may call or text you about your request, including with an AI assistant. Reply STOP to stop texts. See our',
+    consentLink: 'Privacy Policy',
     bookingUrgency: 'Booking 1-2 weeks out',
     priceAnchor: 'Most tree removals: $800–3,500.',
     priceAnchorNote: 'Quotes always free.',
@@ -157,6 +159,7 @@ const copy = {
     // Footer
     footerCopyright: '© 2026 Service d\'Arbres Brandse Inc.',
     footerCookies: 'Cookie Policy',
+    footerPrivacy: 'Privacy Policy',
   },
   fr: {
     metaTitle: 'Devis Gratuit pour Services d\'Arbres | Ouest de l\'Île & Vaudreuil | Brandse',
@@ -190,6 +193,8 @@ const copy = {
     submitPromise: 'Réponse en 2 heures',
     submitting: 'Envoi en cours…',
     callbackPromise: 'Nous vous rappelons dans les 2 heures pendant les heures d\'ouverture.',
+    consent: 'En soumettant ce formulaire, vous acceptez que Service d\'Arbres Brandse vous appelle ou vous texte au sujet de votre demande, y compris au moyen d\'un assistant IA. Répondez STOP pour ne plus recevoir de textos. Voir notre',
+    consentLink: 'politique de confidentialité',
     bookingUrgency: 'Réservations 1-2 semaines à l\'avance',
     priceAnchor: 'La plupart des abattages : 800 $ – 3 500 $.',
     priceAnchorNote: 'Les devis sont toujours gratuits.',
@@ -243,6 +248,7 @@ const copy = {
     barForm: 'Devis',
     footerCopyright: '© 2026 Service d\'Arbres Brandse Inc.',
     footerCookies: 'Politique de cookies',
+    footerPrivacy: 'Politique de confidentialité',
   },
 } as const;
 
@@ -614,6 +620,13 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
                 <p className="flex items-center justify-center gap-1.5 text-xs text-gray-500">
                   <Clock className="w-3.5 h-3.5" /> {c.callbackPromise}
                 </p>
+
+                <p className="text-[11px] leading-snug text-gray-500 text-center">
+                  {c.consent}{' '}
+                  <Link href={isFr ? '/fr/privacy-policy' : '/privacy-policy'} className="underline hover:text-gray-700">
+                    {c.consentLink}
+                  </Link>.
+                </p>
               </form>
 
               <div className="mt-4 pt-4 border-t border-gray-100 text-center text-sm">
@@ -841,6 +854,7 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
             </div>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs justify-center sm:justify-end">
               <span>{c.footerCopyright}</span>
+              <Link href={isFr ? '/fr/privacy-policy' : '/privacy-policy'} className="hover:text-white">{c.footerPrivacy}</Link>
               <Link href={isFr ? '/fr/cookie-policy' : '/cookie-policy'} className="hover:text-white">{c.footerCookies}</Link>
             </div>
           </div>

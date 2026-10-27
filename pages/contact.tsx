@@ -161,6 +161,15 @@ export default function ContactPage() {
                   <Send className="w-5 h-5" />
                   {sending ? t.contact.sending : t.contact.sendMessage}
                 </button>
+
+                <p className="text-xs leading-snug text-gray-500">
+                  {lang === 'fr'
+                    ? "En soumettant ce formulaire, vous acceptez que Service d'Arbres Brandse vous appelle ou vous texte au sujet de votre demande, y compris au moyen d'un assistant IA. Répondez STOP pour ne plus recevoir de textos. Voir notre"
+                    : "By submitting, you agree that Service d'Arbres Brandse may call or text you about your request, including with an AI assistant. Reply STOP to stop texts. See our"}{' '}
+                  <Link href={getLocalizedPath('/privacy-policy')} className="underline hover:text-gray-700">
+                    {lang === 'fr' ? 'politique de confidentialité' : 'Privacy Policy'}
+                  </Link>.
+                </p>
               </form>
             </div>
 
