@@ -12,12 +12,22 @@ const SMTP_PASS = process.env.SMTP_PASS;
 const SMTP_FROM = process.env.SMTP_FROM || SMTP_USER;
 const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || SMTP_USER; // where to send notifications
 
+// Nobody fills in a name, email and phone and picks the dropdowns in under 2.5 s; scripts do.
+const MIN_FILL_MS = 2500;
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email, phone, area, message } = req.body;
+  const { name, email, phone, area, message, hp, ms } = req.body;
+
+  // Bot trap: `hp` is a hidden field people never see (bots fill every field), and `ms` is how long
+  // the form was open. Answer OK either way so bots don't learn they were caught; just don't forward.
+  if (hp || (typeof ms === 'number' && ms < MIN_FILL_MS)) {
+    console.warn('[Contact] dropped likely bot submission', { hp: !!hp, ms });
+    return res.status(200).json({ ok: true });
+  }
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Missing required fields' });

@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, useRef, useEffect, FormEvent } from 'react';
 import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -297,6 +297,10 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  // Bot trap (see pages/api/contact.ts): hidden field + how long the form was open.
+  const [trap, setTrap] = useState('');
+  const openedAt = useRef(0);
+  useEffect(() => { openedAt.current = Date.now(); }, []);
 
   // Active seasonal promotion (null outside campaign windows / before mount).
   const activePromo = useActivePromotion(lang);
@@ -343,6 +347,8 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
           phone: form.phone,
           area: form.city,
           message: composedMessage,
+          hp: trap,
+          ms: Date.now() - openedAt.current,
         }),
       });
       if (!res.ok) throw new Error();
@@ -504,6 +510,13 @@ export default function FreeEstimatePage({ initialLang }: { initialLang: 'en' | 
               )}
 
               <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+                {/* Bot trap: off-screen and hidden from screen readers; real visitors never fill it. */}
+                <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+                  <label>Website
+                    <input type="text" name="website" tabIndex={-1} autoComplete="off" value={trap}
+                      onChange={(e) => setTrap(e.target.value)} />
+                  </label>
+                </div>
                 <FormField label={c.nameLabel} error={errors.name}>
                   <input
                     type="text"

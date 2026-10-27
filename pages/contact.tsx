@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, useRef, useEffect, FormEvent } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, Clock, MapPin, Send, CheckCircle, XCircle } from 'lucide-react';
 import Header from '../components/Header';
@@ -21,6 +21,10 @@ export default function ContactPage() {
   });
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  // Bot trap (see pages/api/contact.ts): hidden field + how long the form was open.
+  const [trap, setTrap] = useState('');
+  const openedAt = useRef(0);
+  useEffect(() => { openedAt.current = Date.now(); }, []);
 
   const areas = t.common.areas as string[];
 
@@ -33,7 +37,7 @@ export default function ContactPage() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, hp: trap, ms: Date.now() - openedAt.current }),
       });
       if (!res.ok) throw new Error();
       setStatus('success');
@@ -88,6 +92,13 @@ export default function ContactPage() {
               )}
 
               <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Bot trap: off-screen and hidden from screen readers; real visitors never fill it. */}
+                <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+                  <label>Website
+                    <input type="text" name="website" tabIndex={-1} autoComplete="off" value={trap}
+                      onChange={(e) => setTrap(e.target.value)} />
+                  </label>
+                </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">{t.contact.nameLabel}</label>
                   <input
