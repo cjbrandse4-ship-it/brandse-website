@@ -212,13 +212,19 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         {
           h2: 'The Pruning We Do',
           paragraphs: [
-            "Beyond deadwooding, thinning and crown raising, we do crown reduction, which shortens long limbs to take weight and wind load off a large tree, a common need for silver maples on West Island lots. Structural pruning on young trees sets up one strong trunk and well-spaced branches, which prevents splits decades later. Clearance pruning lifts branches off roofs, chimneys and driveways.",
+            "Crown thinning takes out selected interior branches so light and air get through and the tree catches less wind and ice. Beyond deadwooding, thinning and crown raising, we do crown reduction, which shortens long limbs to take weight and wind load off a large tree, a common need for silver maples on West Island lots. Structural pruning on young trees sets up one strong trunk and well-spaced branches, which prevents splits decades later. Clearance pruning lifts branches off roofs, chimneys and driveways.",
+          ],
+        },
+        {
+          h2: 'Pruning Mistakes That Do Lasting Damage',
+          paragraphs: [
+            "Topping, cutting the trunk or big limbs back to stubs, is the worst of them. The tree answers with a flush of fast, weakly attached shoots that break easily in storms, so a topped tree ends up more dangerous than one that was never pruned. Flush cuts that remove the branch collar wound the trunk, long stubs left behind invite decay, and taking more than a quarter of the canopy in one season starves the tree. Our arborists follow ISA pruning standards and make each cut just outside the branch collar, where the tree can close it.",
           ],
         },
         {
           h2: 'When to Prune in Quebec',
           paragraphs: [
-            "Late winter, from February to early April before buds open, is the best time for most deciduous trees: the tree is dormant, its structure is easy to see, and cuts close quickly once growth starts. Maples may drip sap when pruned in late winter. It looks alarming but does not harm the tree. Oaks are pruned only while dormant, as a precaution against oak wilt. Dead, broken or hazardous branches come off at any time of year. For more, read our [tree pruning guide for West Island homeowners](/blog/tree-pruning-guide-west-island).",
+            "Late winter, from February to early April before buds open, is the best time for most deciduous trees: the tree is dormant, its structure is easy to see, and cuts close quickly once growth starts. Maples may drip sap when pruned in late winter. It looks alarming but does not harm the tree. Oaks are pruned only while dormant, as a precaution against oak wilt. Dead, broken or hazardous branches come off at any time of year. For the rest of the year's tree care, see our [seasonal tree care calendar](/blog/seasonal-tree-care-west-island).",
           ],
         },
         {
@@ -253,13 +259,19 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         {
           h2: "Les types d'émondage et d'élagage que nous faisons",
           paragraphs: [
-            "En plus de l'enlèvement du bois mort, de l'éclaircissage et du rehaussement de la cime, nous faisons la réduction de cime, qui raccourcit les longues branches pour alléger un gros arbre et réduire sa prise au vent, un besoin fréquent pour les érables argentés des terrains de l'Ouest-de-l'Île. La taille de formation des jeunes arbres établit un tronc unique et solide et des branches bien espacées, ce qui évite des fentes des décennies plus tard. La taille de dégagement éloigne les branches du toit, de la cheminée et de l'entrée.",
+            "L'éclaircissage de la cime retire des branches intérieures choisies pour laisser passer la lumière et l'air, et l'arbre offre moins de prise au vent et au verglas. En plus de l'enlèvement du bois mort, de l'éclaircissage et du rehaussement de la cime, nous faisons la réduction de cime, qui raccourcit les longues branches pour alléger un gros arbre et réduire sa prise au vent, un besoin fréquent pour les érables argentés des terrains de l'Ouest-de-l'Île. La taille de formation des jeunes arbres établit un tronc unique et solide et des branches bien espacées, ce qui évite des fentes des décennies plus tard. La taille de dégagement éloigne les branches du toit, de la cheminée et de l'entrée.",
+          ],
+        },
+        {
+          h2: "Les erreurs d'émondage qui font des dommages durables",
+          paragraphs: [
+            "L'étêtage, qui consiste à couper le tronc ou les grosses branches en moignons, est la pire. L'arbre répond par une poussée de rejets rapides et mal attachés qui cassent facilement pendant les tempêtes : un arbre étêté devient plus dangereux qu'un arbre jamais émondé. Les coupes rases qui enlèvent le col de la branche blessent le tronc, les longs chicots laissés en place invitent la pourriture, et retirer plus du quart de la cime en une saison affame l'arbre. Nos arboriculteurs suivent les normes d'élagage de l'ISA et coupent juste à l'extérieur du col de la branche, là où l'arbre peut refermer la plaie.",
           ],
         },
         {
           h2: "Quand émonder au Québec",
           paragraphs: [
-            "La fin de l'hiver, de février au début d'avril avant l'ouverture des bourgeons, est le meilleur moment pour la plupart des feuillus : l'arbre est en dormance, sa structure est facile à voir et les coupes se referment vite au retour de la croissance. Les érables peuvent couler de la sève s'ils sont émondés à la fin de l'hiver. C'est impressionnant, mais sans danger pour l'arbre. Les chênes ne sont émondés qu'en dormance, par précaution contre le flétrissement du chêne. Les branches mortes, cassées ou dangereuses s'enlèvent en toute saison. Pour en savoir plus, lisez notre [guide d'émondage et d'élagage pour l'Ouest-de-l'Île](/blog/tree-pruning-guide-west-island).",
+            "La fin de l'hiver, de février au début d'avril avant l'ouverture des bourgeons, est le meilleur moment pour la plupart des feuillus : l'arbre est en dormance, sa structure est facile à voir et les coupes se referment vite au retour de la croissance. Les érables peuvent couler de la sève s'ils sont émondés à la fin de l'hiver. C'est impressionnant, mais sans danger pour l'arbre. Les chênes ne sont émondés qu'en dormance, par précaution contre le flétrissement du chêne. Les branches mortes, cassées ou dangereuses s'enlèvent en toute saison. Pour l'entretien du reste de l'année, voyez notre [calendrier d'entretien des arbres saison par saison](/blog/seasonal-tree-care-west-island).",
           ],
         },
         {
@@ -309,7 +321,13 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         {
           h2: 'Height Limits and Neighbours',
           paragraphs: [
-            "Many municipalities limit hedge height, especially in front yards and near corners where a hedge can block drivers' view. Rules differ by city; read [hedge trimming bylaws in Pointe-Claire and Dorval](/blog/hedge-trimming-pointe-claire-dorval) or check your city's bylaw. If the hedge sits on the property line, talk with your neighbour before reducing its height.",
+            "Many municipalities, Pointe-Claire and Dorval among them, limit hedge height, especially in front yards and near corners where a hedge can block drivers' view, and a city can send a notice with a deadline to trim. Rules differ by city and by zone, so check your city's bylaw, or ask us during the estimate and we'll look it up. If the hedge sits on the property line, talk with your neighbour before reducing its height.",
+          ],
+        },
+        {
+          h2: 'Doing It Yourself or Hiring a Crew',
+          paragraphs: [
+            "A hedge under two metres is a reasonable job with hand shears or an electric trimmer. Tall hedges, long property lines and hedges along fences or near wires are another matter: holding a powered trimmer above shoulder height for hours is tiring and risky, and an uneven cut shows for a whole season. A crew with commercial equipment finishes in a fraction of the time and leaves an even face that grows back dense.",
           ],
         },
         {
@@ -323,7 +341,7 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         { q: 'How often should a cedar hedge be trimmed?', a: "At least once a year, ideally between late June and mid-August. Fast-growing hedges look best with a second light trim in early September." },
         { q: 'Can you fix a hedge that has brown or bare patches?', a: "Patches caused by cutting into old wood rarely fill in on cedars. Thin spots from shade or winter damage can recover with good care. We'll tell you whether trimming or replacing sections makes more sense." },
         { q: 'Do you trim hedges other than cedar?', a: "Yes: cedar, spruce and ornamental hedges." },
-        { q: 'Is there a height limit for hedges?', a: "In many municipalities, yes, especially for front-yard hedges and near intersections. Limits vary by city. See our post on [Pointe-Claire and Dorval hedge bylaws](/blog/hedge-trimming-pointe-claire-dorval)." },
+        { q: 'Is there a height limit for hedges?', a: "In many municipalities, yes, especially for front-yard hedges and near intersections. Limits vary by city and zone; we can check yours during the estimate." },
         { q: 'How much does hedge trimming cost?', a: "It depends on the hedge's length, height and access. We give free written quotes." },
       ],
     },
@@ -350,7 +368,13 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         {
           h2: 'Hauteur maximale et voisins',
           paragraphs: [
-            "Bien des municipalités limitent la hauteur des haies, surtout en cour avant et près des coins de rue, où une haie peut nuire à la visibilité des automobilistes. Les règles varient selon la ville; lisez [la taille de haies à Pointe-Claire et Dorval](/blog/hedge-trimming-pointe-claire-dorval) ou consultez le règlement de votre ville. Si la haie est sur la ligne de terrain, parlez-en avec votre voisin avant d'en réduire la hauteur.",
+            "Bien des municipalités, dont Pointe-Claire et Dorval, limitent la hauteur des haies, surtout en cour avant et près des coins de rue, où une haie peut nuire à la visibilité des automobilistes, et une ville peut envoyer un avis avec un délai pour tailler. Les règles varient selon la ville et la zone : consultez le règlement de votre ville, ou demandez-nous lors de la soumission et nous vérifierons pour vous. Si la haie est sur la ligne de terrain, parlez-en avec votre voisin avant d'en réduire la hauteur.",
+          ],
+        },
+        {
+          h2: 'Tailler soi-même ou engager une équipe',
+          paragraphs: [
+            "Une haie de moins de deux mètres se taille raisonnablement aux cisailles ou au taille-haie électrique. Les haies hautes, les longues lignes de terrain et les haies le long d'une clôture ou près des fils sont une autre histoire : tenir un taille-haie motorisé au-dessus des épaules pendant des heures est épuisant et risqué, et une coupe inégale se voit toute la saison. Une équipe avec de l'équipement commercial finit en une fraction du temps et laisse une face égale qui repousse bien fournie.",
           ],
         },
         {
@@ -364,7 +388,7 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         { q: 'À quelle fréquence tailler une haie de cèdres ?', a: "Au moins une fois par année, idéalement entre la fin juin et la mi-août. Les haies à croissance rapide sont plus belles avec une deuxième taille légère au début de septembre." },
         { q: 'Pouvez-vous réparer une haie brune ou dégarnie ?', a: "Les trous causés par une coupe dans le vieux bois se remplissent rarement sur les cèdres. Les zones clairsemées dues à l'ombre ou aux dommages hivernaux peuvent se rétablir avec de bons soins. Nous vous dirons s'il vaut mieux tailler ou remplacer certaines sections." },
         { q: "Taillez-vous d'autres haies que les cèdres ?", a: "Oui : haies de cèdres, d'épinettes et ornementales." },
-        { q: 'Y a-t-il une hauteur maximale pour les haies ?', a: "Dans bien des municipalités, oui, surtout pour les haies en cour avant et près des intersections. Les limites varient selon la ville. Voyez notre article sur [les règlements de Pointe-Claire et Dorval](/blog/hedge-trimming-pointe-claire-dorval)." },
+        { q: 'Y a-t-il une hauteur maximale pour les haies ?', a: "Dans bien des municipalités, oui, surtout pour les haies en cour avant et près des intersections. Les limites varient selon la ville et la zone; nous pouvons vérifier les vôtres lors de la soumission." },
         { q: 'Combien coûte la taille de haies ?', a: "Cela dépend de la longueur, de la hauteur et de l'accès. Nous offrons des soumissions écrites gratuites." },
       ],
     },
@@ -467,7 +491,14 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         {
           h2: 'What to Do While You Wait',
           paragraphs: [
-            "Get everyone away from the tree and anything it is touching. If wires are involved, stay at least 10 metres away, treat every line as live, and call Hydro-Québec first at 1 800 790-2424. Don't try to cut a fallen tree yourself: trunks and limbs under tension can spring back with deadly force. Once everyone is safe, take photos and video from several angles before anything is moved; your insurer will want them. The full checklist: [what to do when a tree falls on your property](/blog/emergency-tree-services-guide).",
+            "Get everyone away from the tree and anything it is touching. If it hit the house and you see cracked walls or a sagging ceiling, or you smell gas, get out and stay out of the rooms under or beside the tree. If wires are involved, stay at least 10 metres away, treat every line as live, and call Hydro-Québec first at 1 800 790-2424. Call 911 if anyone is hurt or there is a risk of fire. Don't try to cut a fallen tree yourself: trunks and limbs under tension can spring back with deadly force. Once everyone is safe, take photos and video from several angles before anything is moved; your insurer will want them.",
+          ],
+        },
+        {
+          h2: 'After a Storm: What Is Urgent and What Can Wait',
+          paragraphs: [
+            "Before you go outside, look from your windows for downed trees, hanging branches and anything resting on the house or on wires. A fallen line can energize the ground around it, so stay out of that area completely until Hydro-Québec says the line is dead. Don't shake or knock ice off branches: it breaks more of them and brings ice and wood down on you.",
+            "Call us right away for a tree or large limb on the house, a tree against a power line, a tree blocking your driveway or street, or a large broken branch hanging over a door or walkway. Scattered small branches, a tree that lost part of its canopy but still stands straight, bark damage, or a broken limb lying on the ground away from anything can wait a day or two for a scheduled visit. After a big storm, have the trees that are still standing checked too: cracked limbs and loosened roots from the same storm can fail later.",
           ],
         },
         {
@@ -479,13 +510,19 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         {
           h2: 'Insurance Claims',
           paragraphs: [
-            "Home insurance often covers removal when a tree damages an insured structure such as your house, garage or fence; a tree that falls without hitting anything is often not covered. Policies vary, so call your insurer early. We document the job with photos and an itemized invoice you can submit with your claim.",
+            "Home insurance often covers removal when a tree damages an insured structure such as your house, garage or fence; a tree that falls without hitting anything is often not covered. Policies vary, so call your insurer early, and keep every receipt: emergency tarping, temporary repairs and the removal itself. We document the job with photos and an itemized invoice you can submit with your claim.",
+          ],
+        },
+        {
+          h2: 'Ice Storms: Which Trees Break First',
+          paragraphs: [
+            "Freezing rain is the biggest storm risk for trees here. Silver maples break first: their wood is weak, and their wide branch angles catch and hold ice. Willows, poplars and Manitoba maples are close behind. Even red oaks and sugar maples can lose large limbs once ice builds past 15 to 20 millimetres, while cedars and spruces usually bend and shed the load. The western tip of the island, [Sainte-Anne-de-Bellevue](/sainte-anne-de-bellevue) and [Senneville](/senneville), sits between Lac des Deux Montagnes and Lac Saint-Louis and is especially exposed; long-time residents still remember 1998.",
           ],
         },
         {
           h2: 'Preventing the Next Emergency',
           paragraphs: [
-            "Most trees that fail in storms gave warning signs first: dead limbs, cracks, fungus at the base, a new lean, or an ash killed by the emerald ash borer. An inspection or a [pruning](/tree-trimming) before ice storm season costs far less than an emergency call. Use our [after-storm tree inspection checklist](/blog/after-storm-tree-inspection-west-island) to spot trouble early.",
+            "Most trees that fail in storms gave warning signs first: dead limbs, cracks, fungus at the base, a new lean, or an ash killed by the emerald ash borer. Thinning the crown removes interior branches so there is less surface to collect ice, and taking out dead wood, weak forks with bark pinched between the stems, and narrow-angled limbs removes the parts most likely to fail. For a valuable tree close to the house, steel cables between the main limbs help it carry the load during an ice storm. An inspection or a [pruning](/tree-trimming) before ice storm season costs far less than an emergency call.",
           ],
         },
       ],
@@ -495,6 +532,8 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         { q: 'Does an emergency removal cost more?', a: "Yes. A 24/7 emergency response costs more than a planned removal. See our [tree removal cost guide](/tree-removal-cost) for planned-removal prices." },
         { q: 'Will my insurance pay for the removal?', a: "Often, when the tree damaged an insured structure like your house, garage or fence. Check with your insurer; we provide photos and an itemized invoice for your claim." },
         { q: 'How fast can you get here?', a: "For dangerous situations, a crew can often be on site within hours. Call (438) 365-5410 and we'll tell you when to expect us." },
+        { q: 'Can storm damage wait until morning?', a: "Often, yes. If nothing is resting on the house, a wire, the driveway or a path people use, small branches, a broken limb lying away from everything, or a tree that lost part of its crown but stands straight can wait for a scheduled visit. If you're not sure, call and describe it." },
+        { q: 'Should I knock the ice off my branches?', a: "No. Shaking or hitting iced branches breaks more of them and brings ice and wood down on you. Let it melt, and stay out from under heavily loaded trees." },
       ],
     },
     fr: {
@@ -508,7 +547,14 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         {
           h2: 'Quoi faire en attendant',
           paragraphs: [
-            "Éloignez tout le monde de l'arbre et de tout ce qu'il touche. S'il y a des fils, restez à au moins 10 mètres, considérez chaque fil comme sous tension et appelez d'abord Hydro-Québec au 1 800 790-2424. N'essayez pas de couper vous-même un arbre tombé : un tronc ou une branche sous tension peut se détendre avec une force mortelle. Une fois tout le monde en sécurité, prenez des photos et des vidéos sous plusieurs angles avant que quoi que ce soit soit déplacé; votre assureur les demandera. La liste complète : [que faire quand un arbre tombe sur votre propriété](/blog/emergency-tree-services-guide).",
+            "Éloignez tout le monde de l'arbre et de tout ce qu'il touche. S'il a frappé la maison et que vous voyez des murs fissurés ou un plafond affaissé, ou que vous sentez une odeur de gaz, sortez et n'entrez plus dans les pièces sous l'arbre ou à côté. S'il y a des fils, restez à au moins 10 mètres, considérez chaque fil comme sous tension et appelez d'abord Hydro-Québec au 1 800 790-2424. Appelez le 911 si quelqu'un est blessé ou s'il y a un risque d'incendie. N'essayez pas de couper vous-même un arbre tombé : un tronc ou une branche sous tension peut se détendre avec une force mortelle. Une fois tout le monde en sécurité, prenez des photos et des vidéos sous plusieurs angles avant que quoi que ce soit soit déplacé; votre assureur les demandera.",
+          ],
+        },
+        {
+          h2: "Après une tempête : ce qui est urgent et ce qui peut attendre",
+          paragraphs: [
+            "Avant de sortir, regardez par les fenêtres : arbres tombés, branches suspendues, tout ce qui repose sur la maison ou sur des fils. Un fil tombé peut électrifier le sol autour de lui; restez complètement à l'écart de cette zone jusqu'à ce qu'Hydro-Québec confirme que la ligne est hors tension. Ne secouez pas et ne frappez pas les branches pour enlever la glace : vous en casserez d'autres et ferez tomber glace et bois sur vous.",
+            "Appelez-nous tout de suite pour un arbre ou une grosse branche sur la maison, un arbre appuyé sur un fil électrique, un arbre qui bloque l'entrée ou la rue, ou une grosse branche cassée suspendue au-dessus d'une porte ou d'un passage. Des petites branches éparpillées, un arbre qui a perdu une partie de sa cime mais reste bien droit, de l'écorce abîmée ou une branche cassée au sol loin de tout peuvent attendre un jour ou deux une visite planifiée. Après une grosse tempête, faites aussi vérifier les arbres restés debout : des branches fissurées et des racines ébranlées par la même tempête peuvent céder plus tard.",
           ],
         },
         {
@@ -520,13 +566,19 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         {
           h2: "Réclamations d'assurance",
           paragraphs: [
-            "L'assurance habitation couvre souvent l'enlèvement quand un arbre endommage une structure assurée comme la maison, le garage ou la clôture; un arbre qui tombe sans rien toucher n'est souvent pas couvert. Les polices varient, alors appelez votre assureur rapidement. Nous documentons les travaux avec des photos et une facture détaillée à joindre à votre réclamation.",
+            "L'assurance habitation couvre souvent l'enlèvement quand un arbre endommage une structure assurée comme la maison, le garage ou la clôture; un arbre qui tombe sans rien toucher n'est souvent pas couvert. Les polices varient, alors appelez votre assureur rapidement et gardez tous vos reçus : bâchage d'urgence, réparations temporaires et enlèvement de l'arbre. Nous documentons les travaux avec des photos et une facture détaillée à joindre à votre réclamation.",
+          ],
+        },
+        {
+          h2: 'Verglas : les arbres qui cassent en premier',
+          paragraphs: [
+            "La pluie verglaçante est le plus grand risque de tempête pour les arbres d'ici. Les érables argentés cassent en premier : leur bois est faible et leurs branches très ouvertes captent et retiennent la glace. Les saules, les peupliers et les érables à Giguère suivent de près. Même les chênes rouges et les érables à sucre peuvent perdre de grosses branches quand la glace dépasse 15 à 20 millimètres, alors que les cèdres et les épinettes plient et se délestent habituellement. La pointe ouest de l'île, [Sainte-Anne-de-Bellevue](/sainte-anne-de-bellevue) et [Senneville](/senneville), entre le lac des Deux Montagnes et le lac Saint-Louis, est particulièrement exposée; les résidents de longue date se souviennent encore de 1998.",
           ],
         },
         {
           h2: 'Prévenir la prochaine urgence',
           paragraphs: [
-            "La plupart des arbres qui cèdent pendant une tempête montraient des signes avant-coureurs : branches mortes, fissures, champignons à la base, nouvelle inclinaison ou frêne tué par l'agrile. Une inspection ou un [émondage](/tree-trimming) avant la saison du verglas coûte bien moins cher qu'un appel d'urgence. Servez-vous de notre [liste de vérification après la tempête](/blog/after-storm-tree-inspection-west-island) pour repérer les problèmes tôt.",
+            "La plupart des arbres qui cèdent pendant une tempête montraient des signes avant-coureurs : branches mortes, fissures, champignons à la base, nouvelle inclinaison ou frêne tué par l'agrile. L'éclaircissage de la cime retire des branches intérieures pour laisser moins de surface où la glace s'accumule, et l'enlèvement du bois mort, des fourches faibles avec écorce incluse et des branches à angle étroit retire les parties les plus susceptibles de céder. Pour un arbre de valeur près de la maison, des câbles d'acier entre les branches principales (haubanage) l'aident à porter la charge pendant le verglas. Une inspection ou un [émondage](/tree-trimming) avant la saison du verglas coûte bien moins cher qu'un appel d'urgence.",
           ],
         },
       ],
@@ -536,6 +588,8 @@ export const serviceGuides: Record<ServiceKey, { en: GuideContent; fr: GuideCont
         { q: "Une intervention d'urgence coûte-t-elle plus cher ?", a: "Oui. Une intervention d'urgence 24/7 coûte plus cher qu'un abattage planifié. Voyez notre [guide des prix d'abattage](/tree-removal-cost) pour les prix d'un abattage planifié." },
         { q: "Mon assurance paiera-t-elle l'enlèvement ?", a: "Souvent, quand l'arbre a endommagé une structure assurée comme la maison, le garage ou la clôture. Vérifiez auprès de votre assureur; nous fournissons photos et facture détaillée pour votre réclamation." },
         { q: 'En combien de temps pouvez-vous arriver ?', a: "Pour les situations dangereuses, une équipe peut souvent être sur place en quelques heures. Appelez le (438) 365-5410 et nous vous dirons quand nous attendre." },
+        { q: 'Les dommages de tempête peuvent-ils attendre au matin ?', a: "Souvent, oui. Si rien ne repose sur la maison, un fil, l'entrée ou un passage, les petites branches, une branche cassée au sol loin de tout ou un arbre qui a perdu une partie de sa cime mais reste droit peuvent attendre une visite planifiée. En cas de doute, appelez-nous et décrivez la situation." },
+        { q: 'Dois-je enlever la glace de mes branches ?', a: "Non. Secouer ou frapper des branches glacées en casse d'autres et fait tomber glace et bois sur vous. Laissez fondre et restez à l'écart des arbres très chargés." },
       ],
     },
   },

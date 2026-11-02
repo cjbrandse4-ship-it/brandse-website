@@ -47,13 +47,13 @@ function generateSitemap(): string {
     lastmod: cityPagesDate,
   }));
 
-  // Blog `lastmod` reads from the post's own `date` — frozen at publication so
-  // unchanged posts don't re-trigger crawls every deploy.
+  // Blog `lastmod` reads from the post's own `updated` (or publish `date`) —
+  // frozen per post so unchanged posts don't re-trigger crawls every deploy.
   const blogPages: SitemapEntry[] = blogPosts.map((p) => ({
     path: `/blog/${p.slug}`,
     priority: '0.6',
     changefreq: 'monthly',
-    lastmod: p.date,
+    lastmod: p.updated ?? p.date,
   }));
 
   const allPages = [...staticPages, ...locationPages, ...blogPages];

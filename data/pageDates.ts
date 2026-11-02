@@ -5,10 +5,10 @@
 export const pageDates: Record<string, string> = {
   '/tree-removal': '2026-11-01',
   '/stump-grinding': '2026-11-01',
-  '/tree-trimming': '2026-11-01',
-  '/hedge-trimming': '2026-11-01',
+  '/tree-trimming': '2026-11-02',
+  '/hedge-trimming': '2026-11-02',
   '/tree-planting': '2026-11-01',
-  '/emergency-services': '2026-11-01',
+  '/emergency-services': '2026-11-02',
   '/hard-to-reach-tree-removal': '2026-07-14',
   '/tree-removal-cost': '2026-11-01',
   '/christmas-lights': '2026-09-13',

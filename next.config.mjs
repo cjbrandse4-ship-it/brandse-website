@@ -11,6 +11,21 @@ const oldFrSlugs = {
   '/fr/tree-removal-cost': '/fr/cout-abattage-arbre',
 };
 
+// Thin blog posts merged into stronger pages (2026-11-02): slug -> [EN page,
+// FR page]. Each post's EN and FR address 301s to the page that absorbed it.
+const mergedPosts = {
+  'emergency-tree-services-guide': ['/emergency-services', '/fr/urgence-arbres'],
+  'after-storm-tree-inspection-west-island': ['/emergency-services', '/fr/urgence-arbres'],
+  'ice-storm-tree-damage-sainte-anne-senneville': ['/emergency-services', '/fr/urgence-arbres'],
+  'hedge-trimming-pointe-claire-dorval': ['/hedge-trimming', '/fr/taille-de-haies'],
+  'tree-pruning-guide-west-island': ['/tree-trimming', '/fr/emondage'],
+  'spring-tree-maintenance': ['/blog/seasonal-tree-care-west-island', '/fr/blog/seasonal-tree-care-west-island'],
+  'summer-tree-care-ile-bizard-ile-perrot': ['/blog/seasonal-tree-care-west-island', '/fr/blog/seasonal-tree-care-west-island'],
+  'fall-tree-care': ['/blog/seasonal-tree-care-west-island', '/fr/blog/seasonal-tree-care-west-island'],
+  'fall-tree-maintenance-beaconsfield-baie-durfe': ['/blog/seasonal-tree-care-west-island', '/fr/blog/seasonal-tree-care-west-island'],
+  'why-professional-services-matter': ['/blog/choosing-arborist-west-island-montreal', '/fr/blog/choosing-arborist-west-island-montreal'],
+};
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -56,6 +71,10 @@ const nextConfig = {
         destination: '/fr/cout-abattage-arbre',
         permanent: true,
       },
+      ...Object.entries(mergedPosts).flatMap(([slug, [en, fr]]) => [
+        { source: `/blog/${slug}`, destination: en, permanent: true },
+        { source: `/fr/blog/${slug}`, destination: fr, permanent: true },
+      ]),
     ];
   },
 };

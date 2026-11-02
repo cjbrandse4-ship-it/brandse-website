@@ -43,6 +43,7 @@ export default function BlogPostPage({ post }: Props) {
     "description": content.metaDescription,
     "image": post.image,
     "datePublished": post.date,
+    "dateModified": post.updated ?? post.date,
     "author": {
       "@type": "Person",
       "name": post.author,
@@ -127,11 +128,20 @@ export default function BlogPostPage({ post }: Props) {
             </span>
             <span className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
-              {new Date(post.date).toLocaleDateString(
+              {new Date(post.date + 'T00:00:00').toLocaleDateString(
                 isFr ? 'fr-CA' : 'en-CA',
                 { year: 'numeric', month: 'long', day: 'numeric' }
               )}
             </span>
+            {post.updated && (
+              <span>
+                {isFr ? 'Mis à jour le ' : 'Updated '}
+                {new Date(post.updated + 'T00:00:00').toLocaleDateString(
+                  isFr ? 'fr-CA' : 'en-CA',
+                  { year: 'numeric', month: 'long', day: 'numeric' }
+                )}
+              </span>
+            )}
             <span className="flex items-center gap-1">
               <Clock className="w-4 h-4" />
               {post.readingTime}
