@@ -10,6 +10,7 @@ import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
 import { pageDates } from '../data/pageDates';
 import LastUpdated from '../components/LastUpdated';
+import ServiceGuide from '../components/ServiceGuide';
 
 export default function TreePlantingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -212,6 +213,8 @@ export default function TreePlantingPage() {
             </div>
           </div>
         </section>
+
+        <ServiceGuide service="treePlanting" />
 
         {/* Related Services */}
         <section className="py-16 bg-gray-50">

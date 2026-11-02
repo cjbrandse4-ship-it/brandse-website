@@ -8,12 +8,15 @@ export interface BlogPost {
   category: string;
   en: {
     title: string;
+    // Shorter <title> tag when the full title runs past ~60 characters.
+    seoTitle?: string;
     excerpt: string;
     metaDescription: string;
     body?: string[];
   };
   fr: {
     title: string;
+    seoTitle?: string;
     excerpt: string;
     metaDescription: string;
     body?: string[];
@@ -31,6 +34,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Seasonal Tips',
     en: {
       title: 'Essential Spring Tree Maintenance Tips for Montreal Homeowners',
+      seoTitle: "Spring Tree Care Tips for Montreal Homes | Brandse",
       excerpt: 'Get your trees ready for the growing season with these essential spring maintenance tips tailored for the West Island climate.',
       metaDescription: 'Prepare your trees for spring in Montreal. Learn essential maintenance tips including pruning, mulching, and inspecting for winter damage.',
       body: [
@@ -44,6 +48,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: "Conseils essentiels d'entretien printanier des arbres",
+      seoTitle: "Entretien printanier des arbres : conseils | Brandse",
       excerpt: "Préparez vos arbres pour la saison de croissance avec ces conseils d'entretien printanier adaptés au climat de l'Ouest de l'Île.",
       metaDescription: "Préparez vos arbres pour le printemps à Montréal. Apprenez les conseils d'entretien essentiels incluant l'élagage et l'inspection.",
       body: [
@@ -114,6 +119,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Essouchage vs Enlèvement complet : Lequel choisir ?',
+      seoTitle: "Essouchement ou enlèvement de souche ? | Brandse",
       excerpt: "Comprenez les différences entre l'essouchage et l'enlèvement complet de la souche pour faire le meilleur choix pour votre terrain.",
       metaDescription: "Comparez les méthodes d'essouchage et d'enlèvement de souche. Découvrez quelle option convient le mieux à votre cour et votre budget.",
       body: [
@@ -224,6 +230,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: "Les meilleurs arbres indigènes à planter dans l'Ouest de l'Île",
+      seoTitle: "Arbres indigènes à planter, Ouest-de-l'Île | Brandse",
       excerpt: "Vous cherchez à ajouter un nouvel arbre à votre propriété ? Découvrez les meilleures espèces indigènes pour le climat de Montréal.",
       metaDescription: "Découvrez les meilleurs arbres indigènes à planter dans l'Ouest de l'Île de Montréal. Améliorez votre aménagement paysager.",
       body: [
@@ -247,6 +254,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Seasonal Tips',
     en: {
       title: 'Fall Tree Care Checklist: Preparing for the Quebec Winter',
+      seoTitle: "Fall Tree Care Checklist for Quebec Winters | Brandse",
       excerpt: 'Winter is tough on trees. Follow this fall checklist to ensure your trees survive the freezing temperatures and heavy snow.',
       metaDescription: 'Prepare your trees for the harsh Quebec winter with our comprehensive fall tree care checklist. Tips on watering, mulching, and protection.',
       body: [
@@ -261,6 +269,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: "Liste de vérification d'automne : Préparer l'hiver québécois",
+      seoTitle: "Entretien d'automne des arbres au Québec | Brandse",
       excerpt: "L'hiver est dur pour les arbres. Suivez cette liste pour vous assurer que vos arbres survivent aux températures glaciales.",
       metaDescription: "Préparez vos arbres pour le rude hiver québécois avec notre liste de vérification d'automne. Conseils sur l'arrosage et la protection.",
       body: [
@@ -284,6 +293,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Local News',
     en: {
       title: 'Why Hiring a Certified Arborist Matters in the West Island',
+      seoTitle: "Why Hire a Certified Arborist, West Island | Brandse",
       excerpt: 'Not all tree cutters are arborists. Learn why certification, insurance, and expertise are crucial when hiring tree services.',
       metaDescription: 'Understand the importance of hiring a certified arborist in Montreal. Protect your property and ensure safe, professional tree care.',
       body: [
@@ -298,6 +308,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Pourquoi embaucher un arboriculteur certifié est crucial',
+      seoTitle: "Pourquoi embaucher un arboriculteur certifié | Brandse",
       excerpt: "Tous les coupeurs d'arbres ne sont pas des arboriculteurs. Apprenez pourquoi la certification et l'assurance sont cruciales.",
       metaDescription: "Comprenez l'importance d'embaucher un arboriculteur certifié à Montréal. Protégez votre propriété et assurez des soins professionnels.",
       body: [
@@ -321,6 +332,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Regulations',
     en: {
       title: 'Tree Removal Permits in Pointe-Claire, Dorval & Beaconsfield',
+      seoTitle: "Tree Removal Permits: Pointe-Claire, Dorval, Beaconsfield",
       excerpt: 'Each West Island city has its own tree removal bylaws. Learn the permit requirements, costs, and penalties for Pointe-Claire, Dorval, and Beaconsfield before cutting down a single branch.',
       metaDescription: 'Tree removal permit guide for Pointe-Claire, Dorval & Beaconsfield. Learn costs, application steps, and penalties. Free help from Brandse.',
       body: [
@@ -334,6 +346,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Permis d\'abattage d\'arbres à Pointe-Claire, Dorval et Beaconsfield',
+      seoTitle: "Permis d'abattage : Pointe-Claire, Dorval, Beaconsfield",
       excerpt: 'Chaque ville de l\'Ouest de l\'Île a ses propres règlements sur l\'abattage d\'arbres. Découvrez les exigences, coûts et pénalités pour Pointe-Claire, Dorval et Beaconsfield.',
       metaDescription: 'Guide des permis d\'abattage d\'arbres à Pointe-Claire, Dorval et Beaconsfield. Coûts, démarches et pénalités. Aide gratuite de Brandse.',
       body: [
@@ -356,6 +369,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Tree Health',
     en: {
       title: "Emerald Ash Borer in Kirkland & Baie-D'Urf\u00e9 \u2014 What Homeowners Should Know",
+      seoTitle: "Emerald Ash Borer in Kirkland & Baie-D'Urfé | Brandse",
       excerpt: "The emerald ash borer has devastated ash trees across the West Island. Learn how to identify the pest, when treatment works, and when removal is the only safe option in Kirkland and Baie-D'Urf\u00e9.",
       metaDescription: "Emerald ash borer guide for Kirkland & Baie-D'Urf\u00e9 homeowners. Identify signs, treatment options, and when to remove. Call Brandse.",
       body: [
@@ -369,6 +383,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: "L'agrile du fr\u00eane \u00e0 Kirkland et Baie-D'Urf\u00e9 \u2014 Ce que les propri\u00e9taires doivent savoir",
+      seoTitle: "Agrile du frêne à Kirkland et Baie-D'Urfé | Brandse",
       excerpt: "L'agrile du fr\u00eane a d\u00e9vast\u00e9 les fr\u00eanes de l'Ouest de l'\u00cele. Apprenez \u00e0 identifier ce ravageur, quand traiter et quand l'abattage est la seule option s\u00e9curitaire \u00e0 Kirkland et Baie-D'Urf\u00e9.",
       metaDescription: "Guide sur l'agrile du fr\u00eane pour Kirkland et Baie-D'Urf\u00e9. Signes, traitements et abattage. Appelez Service d'Arbres Brandse.",
       body: [
@@ -391,6 +406,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Tree Planting',
     en: {
       title: 'Best Trees to Plant in Dollard-des-Ormeaux & Pierrefonds',
+      seoTitle: "Best Trees to Plant in DDO & Pierrefonds | Brandse",
       excerpt: 'Choosing the right tree for your yard in DDO or Pierrefonds means picking species that thrive in Zone 5b. Here are our top recommendations and the ones to avoid.',
       metaDescription: 'Best trees to plant in DDO & Pierrefonds. Native and ornamental species for Zone 5b, plus trees to avoid. Expert advice from Brandse.',
       body: [
@@ -404,6 +420,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Meilleurs arbres \u00e0 planter \u00e0 Dollard-des-Ormeaux et Pierrefonds',
+      seoTitle: "Arbres à planter à DDO et Pierrefonds | Brandse",
       excerpt: 'Choisir le bon arbre pour votre cour \u00e0 DDO ou Pierrefonds signifie s\u00e9lectionner des esp\u00e8ces adapt\u00e9es \u00e0 la Zone 5b. Voici nos meilleures recommandations et les arbres \u00e0 \u00e9viter.',
       metaDescription: 'Meilleurs arbres pour DDO et Pierrefonds. Esp\u00e8ces indig\u00e8nes et ornementales pour Zone 5b, arbres \u00e0 \u00e9viter. Conseils de Brandse.',
       body: [
@@ -426,6 +443,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Emergency',
     en: {
       title: 'Ice Storm Tree Damage in Sainte-Anne-de-Bellevue & Senneville',
+      seoTitle: "Ice Storm Tree Damage, Sainte-Anne & Senneville | Brandse",
       excerpt: 'Ice storms are a major threat to trees in the western tip of the West Island. Learn which species are most vulnerable, how to prevent damage, and what to do after a storm hits.',
       metaDescription: 'Ice storm tree damage guide for Sainte-Anne-de-Bellevue & Senneville. Prevention, safety, and 24hr emergency service from Brandse.',
       body: [
@@ -439,6 +457,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Dommages aux arbres par le verglas \u00e0 Sainte-Anne-de-Bellevue et Senneville',
+      seoTitle: "Verglas et arbres : Sainte-Anne et Senneville | Brandse",
       excerpt: 'Les temp\u00eates de verglas sont une menace majeure pour les arbres de la pointe ouest de l\'\u00cele. D\u00e9couvrez les esp\u00e8ces vuln\u00e9rables, la pr\u00e9vention et quoi faire apr\u00e8s une temp\u00eate.',
       metaDescription: 'Dommages de verglas aux arbres \u00e0 Sainte-Anne-de-Bellevue et Senneville. Pr\u00e9vention, s\u00e9curit\u00e9 et urgence 24h. Appelez Brandse.',
       body: [
@@ -461,6 +480,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Seasonal Tips',
     en: {
       title: "Summer Tree Care Guide for \u00cele-Bizard & L'\u00cele-Perrot Homeowners",
+      seoTitle: "Summer Tree Care, Île-Bizard & L'Île-Perrot | Brandse",
       excerpt: "Hot summers can stress your trees just as much as cold winters. Learn how to keep your trees healthy through the heat in \u00cele-Bizard and L'\u00cele-Perrot with proper watering, pest monitoring, and mulching.",
       metaDescription: "Summer tree care tips for \u00cele-Bizard & L'\u00cele-Perrot. Watering, heat stress, pest control, and mulching advice from Brandse arborists.",
       body: [
@@ -474,6 +494,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: "Guide d'entretien estival des arbres pour les propri\u00e9taires de l'\u00cele-Bizard et L'\u00cele-Perrot",
+      seoTitle: "Entretien estival, Île-Bizard et L'Île-Perrot | Brandse",
       excerpt: "Les \u00e9t\u00e9s chauds stressent vos arbres autant que les hivers froids. Apprenez \u00e0 garder vos arbres en sant\u00e9 \u00e0 l'\u00cele-Bizard et L'\u00cele-Perrot avec un arrosage ad\u00e9quat et un suivi des ravageurs.",
       metaDescription: "Soins estivaux des arbres \u00e0 \u00cele-Bizard et L'\u00cele-Perrot. Arrosage, stress thermique, ravageurs et paillis. Conseils de Brandse.",
       body: [
@@ -496,6 +517,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Seasonal Tips',
     en: {
       title: "Fall Tree Maintenance in Beaconsfield & Baie-D'Urf\u00e9",
+      seoTitle: "Fall Tree Care in Beaconsfield & Baie-D'Urfé | Brandse",
       excerpt: "Preparing your trees for winter is critical in Beaconsfield and Baie-D'Urf\u00e9. Learn about leaf cleanup, pre-winter pruning, protecting young trees, and cabling weak branches before the cold hits.",
       metaDescription: "Fall tree maintenance tips for Beaconsfield & Baie-D'Urf\u00e9. Pruning, tree wrap, cabling, and leaf cleanup advice from Brandse arborists.",
       body: [
@@ -509,6 +531,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: "Entretien automnal des arbres \u00e0 Beaconsfield et Baie-D'Urf\u00e9",
+      seoTitle: "Arbres à l'automne : Beaconsfield, Baie-D'Urfé | Brandse",
       excerpt: "Pr\u00e9parer vos arbres pour l'hiver est essentiel \u00e0 Beaconsfield et Baie-D'Urf\u00e9. D\u00e9couvrez le ramassage des feuilles, l'\u00e9lagage pr\u00e9-hivernal, la protection des jeunes arbres et le haubanage.",
       metaDescription: "Entretien automnal des arbres \u00e0 Beaconsfield et Baie-D'Urf\u00e9. \u00c9lagage, protection hivernale et haubanage. Conseils de Brandse.",
       body: [
@@ -522,41 +545,6 @@ export const blogPosts: BlogPost[] = [
     },
   },
   {
-    id: 15,
-    slug: 'tree-removal-cost-west-island-montreal',
-    image: 'https://images.pexels.com/photos/8821021/pexels-photo-8821021.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-    author: 'Connor Brandse',
-    date: '2026-07-01',
-    readingTime: '7 min read',
-    category: 'Pricing',
-    en: {
-      title: 'How Much Does Tree Removal Cost in the West Island of Montreal? (2026 Price Guide)',
-      excerpt: 'Tree removal costs vary widely depending on size, location, and complexity. Here is an honest breakdown of 2026 pricing for the West Island so you know what to expect before getting quotes.',
-      metaDescription: 'Tree removal cost guide for West Island Montreal (2026). Price ranges by size, factors affecting cost, and permit fees. Call Brandse.',
-      body: [
-        'One of the most common questions we receive at Service d\'Arbres Brandse is "how much will it cost to remove my tree?" It is a fair question, and unfortunately the answer is always "it depends." Tree removal pricing varies significantly based on the size of the tree, its location on the property, proximity to structures and power lines, whether it is alive or dead, and the difficulty of access for equipment. That said, we believe in transparency, so here is an honest breakdown of what tree removal typically costs across the West Island of Montreal in 2026.',
-        '## Price Ranges by Tree Size\n\nSmall trees under 10 metres tall — such as ornamental crabapples, Japanese lilacs, or young maples — generally cost between $500 and $1,200 to remove including cleanup. Medium trees between 10 and 18 metres — mature silver maples, birch, or ash — typically range from $1,200 to $3,000. Large trees over 18 metres — towering oaks, sugar maples, or mature pines — start at $3,000 and can reach $5,500 or more for complex removals. These ranges include felling, limbing, chipping the brush, and cutting the trunk into manageable sections. Stump grinding is usually an additional $200 to $500 depending on stump diameter and root spread.',
-        '## Factors That Increase the Cost\n\nSeveral factors can push a tree removal well above the base price range. Limited access is the most common — if the tree is in a backyard with no gate wide enough for equipment, crews must carry everything by hand, which dramatically increases labour time. Proximity to Hydro-Qu\u00e9bec power lines requires specialized techniques and sometimes coordination with the utility, adding cost and scheduling complexity. Dead trees are often more expensive to remove than living ones because the wood is unpredictable and brittle, making climbing dangerous and requiring more careful rigging. Trees leaning toward a house or tangled with a neighbour\'s tree also demand precision work that takes longer.',
-        '## Permit Costs by City\n\nDon\'t forget that most West Island municipalities require a permit before you can remove a tree. Permit fees vary by city: Pointe-Claire charges $50 to $100, Dorval is similar, Beaconsfield can reach $150, and Kirkland\'s fees are in the $75 to $125 range. DDO, Pierrefonds, Sainte-Anne-de-Bellevue, and Senneville each have their own fee schedules. Some cities also require replacement planting — one or two new trees for every tree removed — which adds $200 to $600 for the purchase and planting of replacement stock. At Service d\'Arbres Brandse, we include permit handling in our removal services at no extra charge.',
-        '## Why the Cheapest Quote Is Often the Riskiest\n\nWhen you are comparing tree removal quotes, be cautious of prices that seem significantly lower than others. Unlicensed operators without proper insurance are a serious problem in the tree care industry. If a worker is injured on your property and the company has no workers\' compensation coverage, you could be held liable. If the tree falls on your neighbour\'s fence or car and the company has no liability insurance, the damage comes out of your pocket. Ask every company for proof of liability insurance (minimum $2 million), workers\' compensation registration, and any applicable certifications. A licensed arborist\'s quote may be higher, but it includes the protection and quality workmanship you deserve.',
-        '## Get an Honest Quote from Brandse\n\nAt Service d\'Arbres Brandse, we provide detailed written quotes that break down exactly what is included — tree removal, brush chipping, trunk disposal, stump grinding if requested, and permit handling. There are no hidden fees and no surprises on the day of the job. We carry full liability insurance and workers\' compensation, and our crew members are trained in safe work practices. We serve every community in the West Island of Montreal, from Dorval to Senneville and everywhere in between. Call us at (438) 365-5410 or book a free estimate through our website. We are happy to visit your property, assess the tree, and give you a transparent price before any work begins.',
-      ],
-    },
-    fr: {
-      title: 'Combien co\u00fbte l\'abattage d\'un arbre dans l\'Ouest de l\'\u00cele de Montr\u00e9al? (Guide des prix 2026)',
-      excerpt: 'Le co\u00fbt d\'abattage d\'arbres varie selon la taille, l\'emplacement et la complexit\u00e9. Voici un aper\u00e7u honn\u00eate des prix 2026 pour l\'Ouest de l\'\u00cele afin de savoir \u00e0 quoi vous attendre.',
-      metaDescription: 'Guide des co\u00fbts d\'abattage d\'arbres dans l\'Ouest de l\'\u00cele (2026). Prix par taille, facteurs et permis. Appelez Brandse au (438) 365-5410.',
-      body: [
-        'L\'une des questions les plus fr\u00e9quentes que nous recevons chez Service d\'Arbres Brandse est \u00ab combien co\u00fbtera l\'abattage de mon arbre ? \u00bb C\'est une question l\u00e9gitime, et malheureusement la r\u00e9ponse est toujours \u00ab \u00e7a d\u00e9pend \u00bb. Les prix d\'abattage varient consid\u00e9rablement selon la taille de l\'arbre, son emplacement sur la propri\u00e9t\u00e9, la proximit\u00e9 des structures et lignes \u00e9lectriques, s\'il est vivant ou mort, et la difficult\u00e9 d\'acc\u00e8s pour l\'\u00e9quipement. Cela dit, nous croyons en la transparence, alors voici un aper\u00e7u honn\u00eate des co\u00fbts typiques dans l\'Ouest de l\'\u00cele en 2026.',
-        '## Fourchettes de prix par taille d\'arbre\n\nLes petits arbres de moins de 10 m\u00e8tres \u2014 comme les pommetiers ornementaux, lilas japonais ou jeunes \u00e9rables \u2014 co\u00fbtent g\u00e9n\u00e9ralement entre 500 $ et 1 200 $ incluant le nettoyage. Les arbres moyens entre 10 et 18 m\u00e8tres \u2014 \u00e9rables argent\u00e9s matures, bouleaux ou fr\u00eanes \u2014 se situent typiquement entre 1 200 $ et 3 000 $. Les grands arbres de plus de 18 m\u00e8tres \u2014 ch\u00eanes imposants, \u00e9rables \u00e0 sucre ou pins matures \u2014 commencent \u00e0 3 000 $ et peuvent atteindre 5 500 $ ou plus pour les abattages complexes. L\'essouchage est g\u00e9n\u00e9ralement en suppl\u00e9ment, entre 200 $ et 500 $ selon le diam\u00e8tre de la souche.',
-        '## Facteurs qui augmentent le co\u00fbt\n\nPlusieurs facteurs peuvent pousser le co\u00fbt bien au-del\u00e0 de la fourchette de base. L\'acc\u00e8s limit\u00e9 est le plus courant \u2014 si l\'arbre est dans une cour arri\u00e8re sans portail assez large pour l\'\u00e9quipement, les \u00e9quipes doivent tout transporter \u00e0 la main, augmentant consid\u00e9rablement le temps de travail. La proximit\u00e9 des lignes d\'Hydro-Qu\u00e9bec n\u00e9cessite des techniques sp\u00e9cialis\u00e9es et parfois une coordination avec le service public. Les arbres morts sont souvent plus co\u00fbteux \u00e0 abattre que les vivants car le bois est impr\u00e9visible et cassant, rendant l\'escalade dangereuse. Les arbres pench\u00e9s vers une maison exigent un travail de pr\u00e9cision plus long.',
-        '## Co\u00fbts des permis par ville\n\nN\'oubliez pas que la plupart des municipalit\u00e9s de l\'Ouest de l\'\u00cele exigent un permis avant l\'abattage. Les frais varient selon la ville : Pointe-Claire facture entre 50 $ et 100 $, Dorval est similaire, Beaconsfield peut atteindre 150 $, et Kirkland se situe entre 75 $ et 125 $. DDO, Pierrefonds, Sainte-Anne-de-Bellevue et Senneville ont chacune leurs propres bar\u00e8mes. Certaines villes exigent aussi la plantation de remplacement \u2014 un ou deux arbres pour chaque arbre abattu \u2014 ajoutant 200 $ \u00e0 600 $ pour l\'achat et la plantation. Chez Service d\'Arbres Brandse, la gestion des permis est incluse dans nos services sans frais suppl\u00e9mentaires.',
-        '## Pourquoi la soumission la moins ch\u00e8re est souvent la plus risqu\u00e9e\n\nQuand vous comparez les soumissions, m\u00e9fiez-vous des prix nettement inf\u00e9rieurs aux autres. Les op\u00e9rateurs sans licence ni assurance ad\u00e9quate sont un probl\u00e8me s\u00e9rieux dans l\'industrie de l\'arboriculture. Si un travailleur se blesse sur votre propri\u00e9t\u00e9 et que l\'entreprise n\'a pas de couverture CNESST, vous pourriez \u00eatre tenu responsable. Si l\'arbre tombe sur la cl\u00f4ture du voisin et que l\'entreprise n\'a pas d\'assurance responsabilit\u00e9, les dommages sont \u00e0 vos frais. Demandez \u00e0 chaque entreprise une preuve d\'assurance responsabilit\u00e9 (minimum 2 millions $), l\'inscription CNESST et les certifications applicables.',
-        '## Obtenez une soumission honn\u00eate de Brandse\n\nChez Service d\'Arbres Brandse, nous fournissons des soumissions \u00e9crites d\u00e9taill\u00e9es pr\u00e9cisant exactement ce qui est inclus \u2014 abattage, d\u00e9chiquetage des branches, disposition du tronc, essouchage si demand\u00e9 et gestion des permis. Il n\'y a pas de frais cach\u00e9s ni de surprises le jour des travaux. Nous d\u00e9tenons une assurance responsabilit\u00e9 compl\u00e8te et une couverture CNESST, et nos \u00e9quipiers sont form\u00e9s aux pratiques de travail s\u00e9curitaires. Nous desservons toutes les communaut\u00e9s de l\'Ouest de l\'\u00cele, de Dorval \u00e0 Senneville. Appelez-nous au (438) 365-5410 ou r\u00e9servez une estimation gratuite via notre site web. Nous serons heureux de visiter votre propri\u00e9t\u00e9 et vous donner un prix transparent.',
-      ],
-    },
-  },
-  {
     id: 16,
     slug: 'hedge-trimming-pointe-claire-dorval',
     image: 'https://images.pexels.com/photos/24595769/pexels-photo-24595769.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
@@ -566,6 +554,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Services',
     en: {
       title: 'Hedge Trimming in Pointe-Claire & Dorval — Bylaws and Best Practices',
+      seoTitle: "Hedge Trimming Bylaws: Pointe-Claire & Dorval | Brandse",
       excerpt: 'Learn the municipal hedge height rules for Pointe-Claire and Dorval, the best trimming schedule, and why cedar hedges need special care.',
       metaDescription: 'Hedge trimming rules for Pointe-Claire & Dorval. Learn municipal height limits, best timing, cedar care tips, and when to hire a pro.',
       body: [
@@ -579,6 +568,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Taille de haies à Pointe-Claire et Dorval — Règlements et bonnes pratiques',
+      seoTitle: "Taille de haies à Pointe-Claire et Dorval | Brandse",
       excerpt: 'Découvrez les règlements municipaux sur la hauteur des haies à Pointe-Claire et Dorval, le meilleur calendrier de taille et les soins spéciaux pour les haies de cèdres.',
       metaDescription: 'Taille de haies à Pointe-Claire et Dorval. Hauteurs permises, meilleur moment pour tailler et conseils pour les cèdres.',
       body: [
@@ -601,6 +591,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Services',
     en: {
       title: 'When You Need a Crane for Tree Removal in Kirkland & DDO',
+      seoTitle: "Crane Tree Removal in Kirkland & DDO | Brandse",
       excerpt: 'Tight backyards and hydro lines make crane-assisted tree removal the safest option in many Kirkland and DDO neighbourhoods. Here is what to expect.',
       metaDescription: 'Crane tree removal in Kirkland & DDO. Learn when a crane is needed, why it can be safer and faster, and what it costs.',
       body: [
@@ -614,6 +605,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Quand faut-il une grue pour l\'abattage d\'arbres à Kirkland et DDO',
+      seoTitle: "Abattage à la grue à Kirkland et DDO | Brandse",
       excerpt: 'Les cours arrière étroites et les lignes d\'Hydro-Québec rendent l\'abattage par grue la solution la plus sûre dans plusieurs quartiers de Kirkland et DDO.',
       metaDescription: 'Abattage d\'arbres par grue à Kirkland et DDO. Quand une grue est nécessaire, pourquoi c\'est plus sûr et combien ça coûte.',
       body: [
@@ -636,6 +628,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Tree Health',
     en: {
       title: 'Signs Your Tree Is Dying — A Guide for Pierrefonds & Roxboro Homeowners',
+      seoTitle: "Signs Your Tree Is Dying: Pierrefonds-Roxboro | Brandse",
       excerpt: 'Learn how to spot the warning signs of a dying tree before it becomes a safety hazard on your Pierrefonds or Roxboro property.',
       metaDescription: 'Signs your tree is dying in Pierrefonds & Roxboro. Leaf loss, bark damage, fungal growth, and when to save vs. remove a tree.',
       body: [
@@ -649,6 +642,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Signes qu\'un arbre est en train de mourir — Guide pour les propriétaires de Pierrefonds et Roxboro',
+      seoTitle: "Arbre mourant : les signes à Pierrefonds | Brandse",
       excerpt: 'Apprenez à reconnaître les signes avant-coureurs d\'un arbre mourant avant qu\'il ne devienne un danger sur votre propriété à Pierrefonds ou Roxboro.',
       metaDescription: 'Signes qu\'un arbre meurt à Pierrefonds et Roxboro. Feuilles, écorce, champignons et quand sauver ou abattre un arbre.',
       body: [
@@ -684,6 +678,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Guide d\'élagage pour les propriétaires de l\'Ouest de l\'Île',
+      seoTitle: "Guide d'émondage et d'élagage, Ouest-de-l'Île | Brandse",
       excerpt: 'Tout ce que vous devez savoir pour bien élaguer vos arbres — les bons types de coupes, les bonnes saisons et les erreurs qui causent des dommages permanents.',
       metaDescription: 'Guide d\'élagage pour l\'Ouest de l\'Île. Types de taille, meilleures saisons, erreurs courantes et impact sur la valeur de votre propriété.',
       body: [
@@ -706,6 +701,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Emergency',
     en: {
       title: 'After the Storm: Tree Inspection Checklist for West Island Homeowners',
+      seoTitle: "After-Storm Tree Inspection Checklist | Brandse",
       excerpt: 'A step-by-step guide for safely assessing tree damage after a storm on your West Island property, including when to call for emergency help.',
       metaDescription: 'Post-storm tree inspection checklist for the West Island. What to check, what is an emergency, and when to call a pro.',
       body: [
@@ -719,6 +715,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Après la tempête : liste de vérification pour les propriétaires de l\'Ouest de l\'Île',
+      seoTitle: "Après la tempête : inspecter vos arbres | Brandse",
       excerpt: 'Un guide étape par étape pour évaluer les dommages aux arbres en toute sécurité après une tempête sur votre propriété de l\'Ouest de l\'Île.',
       metaDescription: 'Inspection des arbres après une tempête dans l\'Ouest de l\'Île. Quoi vérifier, quoi est urgent et quand appeler un pro.',
       body: [
@@ -741,6 +738,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Property',
     en: {
       title: 'Tree Roots vs. Foundations — Protecting Your West Island Home',
+      seoTitle: "Tree Roots vs. Foundations, West Island | Brandse",
       excerpt: 'Learn which tree species threaten foundations, the warning signs of root damage, and how to protect your West Island home without losing your trees.',
       metaDescription: 'Tree roots vs. foundations in the West Island. Problem species, warning signs, root barriers, and when tree removal is necessary.',
       body: [
@@ -754,6 +752,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Racines d\'arbres vs fondations — Protéger votre maison de l\'Ouest de l\'Île',
+      seoTitle: "Racines d'arbres et fondations de maison | Brandse",
       excerpt: 'Découvrez quelles espèces d\'arbres menacent les fondations, les signes de dommages aux racines et comment protéger votre maison sans perdre vos arbres.',
       metaDescription: 'Racines d\'arbres vs fondations dans l\'Ouest de l\'Île. Espèces problématiques, signes d\'alerte et solutions de prévention.',
       body: [
@@ -776,6 +775,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Advice',
     en: {
       title: 'How to Choose a Tree Service Company in the West Island',
+      seoTitle: "How to Choose a Tree Service, West Island | Brandse",
       excerpt: 'Not all tree companies are created equal. Learn what to look for — and what red flags to avoid — when hiring an arborist in the West Island of Montreal.',
       metaDescription: 'How to choose a tree service in the West Island. ISA certification, insurance, red flags, questions to ask, and why local matters.',
       body: [
@@ -789,6 +789,7 @@ export const blogPosts: BlogPost[] = [
     },
     fr: {
       title: 'Comment choisir une entreprise d\'arbres dans l\'Ouest de l\'Île',
+      seoTitle: "Choisir une entreprise d'arbres, Ouest-de-l'Île | Brandse",
       excerpt: 'Toutes les entreprises d\'arbres ne se valent pas. Apprenez quoi rechercher — et quels signaux d\'alarme éviter — quand vous engagez un arboriste dans l\'Ouest de l\'Île.',
       metaDescription: 'Comment choisir un service d\'arbres dans l\'Ouest de l\'Île. Certification ISA, assurance, signaux d\'alarme et questions à poser.',
       body: [

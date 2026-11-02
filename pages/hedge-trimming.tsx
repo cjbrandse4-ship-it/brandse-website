@@ -10,14 +10,15 @@ import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
 import { pageDates } from '../data/pageDates';
 import LastUpdated from '../components/LastUpdated';
+import ServiceGuide from '../components/ServiceGuide';
 
 export default function HedgeTrimmingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
   const isFr = lang === 'fr';
 
   const pageTitle = isFr
-    ? "Taille de Haies et Arbustes | Ouest de l'Île de Montréal | Brandse"
-    : "Hedge Trimming & Shrub Pruning | West Island Montreal | Brandse";
+    ? "Taille de haies | Ouest-de-l'Île de Montréal | Brandse"
+    : "Hedge Trimming | West Island Montreal | Brandse";
   const pageDesc = isFr
     ? "Taille de haies professionnelle, taille d'arbustes et entretien paysager dans l'Ouest de l'Île de Montréal. Estimations gratuites."
     : 'Professional hedge trimming, shrub pruning & landscape maintenance in West Island Montreal. Free estimates.';
@@ -80,9 +81,9 @@ export default function HedgeTrimmingPage() {
     {
       href: '/tree-trimming',
       titleEn: 'Tree Trimming',
-      titleFr: 'Élagage',
+      titleFr: 'Émondage',
       descEn: 'Expert pruning for trees of all sizes.',
-      descFr: 'Élagage expert pour arbres de toutes tailles.'
+      descFr: 'Émondage expert pour arbres de toutes tailles.'
     },
     {
       href: '/tree-planting',
@@ -209,6 +210,8 @@ export default function HedgeTrimmingPage() {
             </div>
           </div>
         </section>
+
+        <ServiceGuide service="hedgeTrimming" />
 
         {/* Related Services */}
         <section className="py-16 bg-gray-50">

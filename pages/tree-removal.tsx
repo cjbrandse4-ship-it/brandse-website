@@ -10,13 +10,14 @@ import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
 import { pageDates } from '../data/pageDates';
 import LastUpdated from '../components/LastUpdated';
+import ServiceGuide from '../components/ServiceGuide';
 
 export default function TreeRemovalPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
   const isFr = lang === 'fr';
 
   const pageTitle = isFr
-    ? "Services d'Abattage d'Arbres | Ouest de l'Île de Montréal | Brandse"
+    ? "Abattage d'arbres | Ouest-de-l'Île de Montréal | Brandse"
     : "Professional Tree Removal | West Island Montreal | Brandse";
   const pageDesc = isFr
     ? "Services d'abattage d'arbres sécuritaires et efficaces dans l'Ouest de l'Île de Montréal. Arboriculteurs certifiés. Soumission gratuite!"
@@ -73,9 +74,9 @@ export default function TreeRemovalPage() {
     {
       href: '/tree-trimming',
       titleEn: 'Tree Trimming',
-      titleFr: 'Élagage',
+      titleFr: 'Émondage',
       descEn: 'Expert pruning to maintain tree health and improve safety.',
-      descFr: "Élagage expert pour maintenir la santé de l'arbre et assurer la sécurité."
+      descFr: "Émondage expert pour maintenir la santé de l'arbre et assurer la sécurité."
     },
     {
       href: '/hard-to-reach-tree-removal',
@@ -178,7 +179,7 @@ export default function TreeRemovalPage() {
                 <div className="text-lg text-gray-600 space-y-4">
                   <p>
                     {isFr
-                      ? "Bien que nous fassions tout notre possible pour préserver les arbres grâce à l'élagage, l'abattage est parfois la seule option sécuritaire. Un arbre mort, malade ou structurellement compromis pose un risque majeur pour votre propriété, surtout lors des violentes tempêtes fréquentes au Québec."
+                      ? "Bien que nous fassions tout notre possible pour préserver les arbres grâce à l'émondage, l'abattage est parfois la seule option sécuritaire. Un arbre mort, malade ou structurellement compromis pose un risque majeur pour votre propriété, surtout lors des violentes tempêtes fréquentes au Québec."
                       : 'While we do everything possible to preserve trees through trimming, removal is sometimes the only safe option. A dead, diseased, or structurally compromised tree poses a major risk to your property, especially during Quebec\'s frequent severe storms.'}
                   </p>
                 </div>
@@ -221,6 +222,8 @@ export default function TreeRemovalPage() {
             </div>
           </div>
         </section>
+
+        <ServiceGuide service="treeRemoval" />
 
         {/* Related Services */}
         <section className="py-16 bg-gray-50">

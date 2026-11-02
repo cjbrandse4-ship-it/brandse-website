@@ -11,9 +11,9 @@ import { useLanguage } from '../lib/useLanguage';
 import { siteConfig, ORG_ID } from '../lib/seo';
 import { pageDates } from '../data/pageDates';
 
-// Price figures mirror the published 2026 cost guide
-// (/blog/tree-removal-cost-west-island-montreal). If prices change, update
-// BOTH places — mismatched numbers across pages destroys AI-answer trust.
+// The single home for tree-removal pricing. The 2026 cost-guide blog post was
+// merged in here (its URL 301s to this page), so these figures are the only
+// copy — mismatched numbers across pages destroys AI-answer trust.
 
 export default function TreeRemovalCostPage() {
   const { lang, getLocalizedPath } = useLanguage();
@@ -21,8 +21,8 @@ export default function TreeRemovalCostPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const pageTitle = isFr
-    ? "Combien coûte l'abattage d'un arbre ? Prix 2026 Ouest-de-l'Île | Brandse"
-    : 'How Much Does Tree Removal Cost? 2026 West Island Prices | Brandse';
+    ? "Coût d'abattage d'arbre, Ouest-de-l'Île (2026) | Brandse"
+    : 'Tree Removal Cost in the West Island (2026 Prices) | Brandse';
   const pageDesc = isFr
     ? "Abattage d'arbre dans l'Ouest de l'Île : 500 $ à 5 500 $+ selon la taille. Tableau de prix 2026 par taille d'arbre, facteurs de coût et frais de permis par ville."
     : 'Tree removal in West Island Montreal costs $500 to $5,500+ depending on size. 2026 price table by tree size, cost factors, and permit fees by city.';
@@ -60,15 +60,36 @@ export default function TreeRemovalCostPage() {
         'Accès limité — cour arrière sans portail assez large pour l\'équipement (notre nacelle araignée compacte réduit souvent ce surcoût)',
         'Proximité des lignes électriques d\'Hydro-Québec — techniques spécialisées et coordination requises',
         'Proximité des structures — maison, piscine, clôture, cabanon : démontage par sections au gréage',
-        'État de l\'arbre — un arbre mort ou instable est plus dangereux et plus long à démonter en sécurité',
+        'État de l\'arbre — un arbre mort ou instable est plus dangereux et plus long à démonter en sécurité : le bois mort est cassant et imprévisible, ce qui exige plus de gréage',
+        'Arbre penché vers la maison ou emmêlé dans l\'arbre du voisin — chaque section doit être descendue avec précision',
         'Urgence vs planifié — une intervention d\'urgence 24/7 coûte plus cher qu\'un abattage planifié',
       ]
     : [
         'Limited access — a backyard with no gate wide enough for equipment (our compact spider lift often reduces this surcharge)',
         'Proximity to Hydro-Québec power lines — specialized techniques and coordination required',
         'Proximity to structures — house, pool, fence, shed: sectional dismantling with rigging',
-        'Tree condition — a dead or unstable tree is more dangerous and slower to take down safely',
+        'Tree condition — a dead or unstable tree is more dangerous and slower to take down safely: dead wood is brittle and unpredictable, so it needs more rigging',
+        'Leaning toward the house or tangled with a neighbour\'s tree — every section has to be lowered with precision',
         'Emergency vs. scheduled — 24/7 emergency response costs more than a planned removal',
+      ];
+
+  // What every written quote itemizes — carried over from the merged cost guide.
+  const included = isFr
+    ? [
+        'Abattage et démontage de l\'arbre',
+        'Déchiquetage des branches',
+        'Tronçonnage et disposition du tronc',
+        'Essouchage, si vous le demandez',
+        'Demande de permis à votre ville — sans frais supplémentaires',
+        'Nettoyage complet du terrain',
+      ]
+    : [
+        'Felling and dismantling the tree',
+        'Chipping all the brush',
+        'Cutting up and hauling away the trunk',
+        'Stump grinding, if you ask for it',
+        'The permit application to your city — at no extra charge',
+        'Full cleanup of your yard',
       ];
 
   const permitCities = [
@@ -83,14 +104,16 @@ export default function TreeRemovalCostPage() {
         { q: 'Combien coûte l\'abattage d\'un arbre moyen dans l\'Ouest de l\'Île ?', a: 'Un arbre moyen de 10 à 18 mètres — érable argenté mature, bouleau ou frêne — coûte généralement entre 1 200 $ et 3 000 $ à abattre, incluant l\'ébranchage, le déchiquetage des branches et le tronçonnage du tronc.' },
         { q: 'L\'essouchage est-il inclus dans le prix ?', a: 'Habituellement non — l\'essouchage est un service distinct qui ajoute généralement 200 $ à 500 $ selon le diamètre de la souche. Nos soumissions écrites détaillent chaque élément pour qu\'il n\'y ait aucune surprise.' },
         { q: 'Ai-je besoin d\'un permis et combien coûte-t-il ?', a: 'La plupart des municipalités de l\'Ouest de l\'Île exigent un permis avant d\'abattre un arbre. Les frais varient de 50 $ à 150 $ selon la ville. Nous gérons la demande de permis dans le cadre de notre service.' },
-        { q: 'Pourquoi la soumission la moins chère est-elle risquée ?', a: 'Des opérateurs sans licence ni assurance offrent parfois des prix très bas. Si un travailleur se blesse sur votre propriété ou si l\'arbre endommage votre maison, vous pourriez être tenu responsable. Exigez toujours une preuve d\'assurance responsabilité et CNESST.' },
+        { q: 'Pourquoi la soumission la moins chère est-elle risquée ?', a: 'Des opérateurs sans licence ni assurance offrent parfois des prix très bas. Si un travailleur se blesse sur votre propriété ou si l\'arbre endommage votre maison ou la clôture du voisin, vous pourriez être tenu responsable. Exigez toujours une preuve d\'assurance responsabilité (minimum 2 millions $) et l\'inscription à la CNESST.' },
+        { q: 'Dois-je replanter un arbre après l\'abattage ?', a: 'Certaines villes l\'exigent : un ou deux arbres de remplacement pour chaque arbre abattu. L\'achat et la plantation ajoutent généralement 200 $ à 600 $. Nous vous indiquons si votre ville l\'exige lors de la demande de permis, et nous pouvons faire la plantation.' },
         { q: 'L\'hiver est-il moins cher pour abattre un arbre ?', a: 'Souvent, oui. Le sol gelé protège la pelouse et facilite l\'accès de l\'équipement, les couronnes sans feuilles se démontent plus vite, et l\'horaire est plus flexible. C\'est l\'un des meilleurs moments de l\'année pour planifier un abattage non urgent.' },
       ]
     : [
         { q: 'How much does it cost to remove a medium tree in the West Island?', a: 'A medium tree of 10 to 18 metres — a mature silver maple, birch, or ash — typically costs $1,200 to $3,000 to remove, including limbing, chipping the brush, and cutting the trunk into sections.' },
         { q: 'Is stump grinding included in the price?', a: 'Usually not — stump grinding is a separate service that typically adds $200 to $500 depending on stump diameter. Our written quotes itemize everything so there are no surprises.' },
         { q: 'Do I need a permit, and how much does it cost?', a: 'Most West Island municipalities require a permit before removing a tree. Fees range from about $50 to $150 depending on the city. We handle the permit application as part of our service.' },
-        { q: 'Why is the cheapest quote often the riskiest?', a: 'Unlicensed, uninsured operators sometimes offer very low prices. If a worker is injured on your property or the tree damages your home, you could be held liable. Always ask for proof of liability and CNESST workers\' compensation insurance.' },
+        { q: 'Why is the cheapest quote often the riskiest?', a: 'Unlicensed, uninsured operators sometimes offer very low prices. If a worker is injured on your property or the tree damages your home or your neighbour\'s fence, you could be held liable. Always ask for proof of liability insurance (at least $2 million) and CNESST workers\' compensation registration.' },
+        { q: 'Do I have to replant after a removal?', a: 'Some cities require it: one or two replacement trees for every tree removed. Buying and planting them typically adds $200 to $600. We tell you whether your city requires it when we file the permit, and we can do the planting.' },
         { q: 'Is winter cheaper for tree removal?', a: 'Often, yes. Frozen ground protects your lawn and improves equipment access, leafless crowns come down faster, and scheduling is more flexible. It\'s one of the best times of year to book a non-emergency removal.' },
       ];
 
@@ -228,8 +251,41 @@ export default function TreeRemovalCostPage() {
             </div>
             <p className="text-sm text-gray-500 mt-4">
               {isFr
-                ? 'Les autres villes ont leurs propres grilles tarifaires — consultez votre page de ville pour les règles locales.'
-                : 'Other cities have their own fee schedules — see your city page for local rules.'}
+                ? 'Les autres villes ont leurs propres grilles tarifaires — consultez votre page de ville pour les règles locales. Certaines villes exigent aussi un ou deux arbres de remplacement par arbre abattu (200 $ à 600 $ pour l\'achat et la plantation).'
+                : 'Other cities have their own fee schedules — see your city page for local rules. Some cities also require one or two replacement trees for every tree removed ($200 to $600 to buy and plant).'}
+            </p>
+          </div>
+        </section>
+
+        {/* What the quote includes */}
+        <section className="py-14 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              {isFr ? 'Ce que comprend notre soumission écrite' : 'What Our Written Quote Includes'}
+            </h2>
+            <p className="text-gray-600 mb-8">
+              {isFr
+                ? 'Chaque soumission détaille exactement ce qui est inclus, pour qu\'il n\'y ait ni frais cachés ni surprise le jour des travaux. Nous visitons votre terrain, évaluons l\'arbre et vous donnons un prix transparent avant de commencer.'
+                : 'Every quote spells out exactly what is included, so there are no hidden fees and no surprises on the day of the job. We visit your property, assess the tree, and give you a transparent price before any work begins.'}
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-4">
+              {included.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-[#2D5016] shrink-0 mt-1" />
+                  <span className="text-gray-700 leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-gray-600 mt-8">
+              {isFr ? 'Prévoyez un abattage ? Voyez aussi notre ' : 'Planning a removal? See also our '}
+              <Link href={getLocalizedPath('/tree-removal')} className="text-[#2D5016] font-semibold hover:underline">
+                {isFr ? "service d'abattage d'arbres" : 'tree removal service'}
+              </Link>
+              {isFr ? ' et l\'' : ' and '}
+              <Link href={getLocalizedPath('/stump-grinding')} className="text-[#2D5016] font-semibold hover:underline">
+                {isFr ? 'essouchement' : 'stump grinding'}
+              </Link>
+              .
             </p>
           </div>
         </section>

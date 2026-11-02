@@ -10,16 +10,17 @@ import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
 import { pageDates } from '../data/pageDates';
 import LastUpdated from '../components/LastUpdated';
+import ServiceGuide from '../components/ServiceGuide';
 
 export default function TreeTrimmingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
   const isFr = lang === 'fr';
 
   const pageTitle = isFr
-    ? "Élagage et Taille d'Arbres | Ouest de l'Île de Montréal | Brandse"
+    ? "Émondage d'arbres | Ouest-de-l'Île de Montréal | Brandse"
     : "Tree Trimming & Pruning | West Island Montreal | Brandse";
   const pageDesc = isFr
-    ? "Élagage expert, taille et réduction de cime dans l'Ouest de l'Île de Montréal. Améliorez la santé, la sécurité et l'esthétique de vos arbres. Arboriculteurs certifiés."
+    ? "Émondage et élagage d'arbres dans l'Ouest-de-l'Île : bois mort, éclaircissage, réduction de cime. Arboriculteurs certifiés. Soumission gratuite."
     : "Expert tree trimming, pruning & crown reduction in West Island Montreal. Improve tree health, safety & aesthetics. Certified arborists.";
 
   const techniques = [
@@ -73,7 +74,7 @@ export default function TreeTrimmingPage() {
       titleEn: 'Tree Removal',
       titleFr: "Abattage d'arbres",
       descEn: 'When pruning is not enough, safe and efficient tree removal.',
-      descFr: "Quand l'élagage ne suffit pas, abattage sécuritaire et efficace."
+      descFr: "Quand l'émondage ne suffit pas, abattage sécuritaire et efficace."
     },
     {
       href: '/hedge-trimming',
@@ -85,9 +86,9 @@ export default function TreeTrimmingPage() {
   ];
 
   const serviceSchema = buildServiceSchema({
-    name: isFr ? "Élagage d'arbres" : "Tree Trimming",
+    name: isFr ? "Émondage d'arbres" : "Tree Trimming",
     description: isFr
-      ? "Services experts d'élagage et de taille pour maintenir la santé des arbres dans l'Ouest de l'Île de Montréal."
+      ? "Services experts d'émondage et d'élagage pour maintenir la santé des arbres dans l'Ouest de l'Île de Montréal."
       : "Expert tree trimming and pruning services — deadwooding, crown reduction, and structural pruning — to maintain tree health in West Island Montreal.",
     slug: getLocalizedPath('/tree-trimming'),
     dateModified: pageDates['/tree-trimming'],
@@ -109,7 +110,7 @@ export default function TreeTrimmingPage() {
       <Breadcrumbs items={[
         { name: isFr ? 'Accueil' : 'Home', href: getLocalizedPath('/') },
         { name: 'Services', href: getLocalizedPath('/services') },
-        { name: isFr ? "Élagage d'arbres" : 'Tree Trimming' }
+        { name: isFr ? "Émondage d'arbres" : 'Tree Trimming' }
       ]} />
 
       <main>
@@ -131,18 +132,18 @@ export default function TreeTrimmingPage() {
               <ChevronRight className="w-4 h-4" />
               <Link href={getLocalizedPath('/services')} className="hover:text-white">Services</Link>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-white">{isFr ? 'Élagage' : 'Tree Trimming'}</span>
+              <span className="text-white">{isFr ? 'Émondage' : 'Tree Trimming'}</span>
             </nav>
             <div className="inline-flex items-center bg-[#2D5016]/30 text-white border border-[#2D5016]/60 px-4 py-1.5 rounded-full mb-6 font-semibold text-sm uppercase tracking-wider backdrop-blur-sm">
               <Scissors className="w-4 h-4 mr-2" />
               {isFr ? 'Soins Arboricoles' : 'Arboricultural Care'}
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-              {isFr ? "Élagage et Taille d'Arbres" : 'Professional Tree Trimming'}
+              {isFr ? "Émondage et élagage d'arbres" : 'Professional Tree Trimming'}
             </h1>
             <p className="text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
               {isFr
-                ? "Améliorez la santé, la structure et la beauté de vos arbres grâce à des techniques d'élagage approuvées par l'industrie."
+                ? "Améliorez la santé, la structure et la beauté de vos arbres grâce à des techniques d'émondage approuvées par l'industrie."
                 : 'Improve the health, structure, and beauty of your trees with industry-approved pruning techniques.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -162,12 +163,12 @@ export default function TreeTrimmingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  {isFr ? "La Science de l'Élagage" : 'The Science of Pruning'}
+                  {isFr ? "La science de l'émondage" : 'The Science of Pruning'}
                 </h2>
                 <div className="text-lg text-gray-600 space-y-4">
                   <p>
                     {isFr
-                      ? "L'élagage est bien plus qu'une simple coupe de branches. C'est une intervention chirurgicale sur un organisme vivant. Une mauvaise taille (comme l'étêtage) peut causer des dommages irréversibles, affaiblir l'arbre et éventuellement nécessiter un abattage complet."
+                      ? "L'émondage est bien plus qu'une simple coupe de branches. C'est une intervention chirurgicale sur un organisme vivant. Une mauvaise taille (comme l'étêtage) peut causer des dommages irréversibles, affaiblir l'arbre et éventuellement nécessiter un abattage complet."
                       : 'Pruning is much more than just cutting branches. It\'s a surgical intervention on a living organism. Improper pruning (like topping) can cause irreversible damage, weaken the tree, and eventually require complete removal.'}
                   </p>
                   <p>
@@ -210,6 +211,8 @@ export default function TreeTrimmingPage() {
             </div>
           </div>
         </section>
+
+        <ServiceGuide service="treeTrimming" />
 
         {/* Related Services */}
         <section className="py-16 bg-gray-50">

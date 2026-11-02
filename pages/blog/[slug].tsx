@@ -31,7 +31,9 @@ export default function BlogPostPage({ post }: Props) {
   const content = post[lang];
   const body = content.body || [content.excerpt];
 
-  const pageTitle = `${content.title} | Service d'Arbres Brandse`;
+  // Google cuts titles off around 60 characters: long posts carry a shorter
+  // seoTitle for the <title> tag, while the H1 keeps the full title.
+  const pageTitle = content.seoTitle ?? `${content.title} | Brandse`;
 
   const articleSchema = {
     "@context": "https://schema.org",

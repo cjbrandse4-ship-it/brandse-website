@@ -10,13 +10,14 @@ import { useLanguage } from '../lib/useLanguage';
 import { buildServiceSchema } from '../lib/seo';
 import { pageDates } from '../data/pageDates';
 import LastUpdated from '../components/LastUpdated';
+import ServiceGuide from '../components/ServiceGuide';
 
 export default function StumpGrindingPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
   const isFr = lang === 'fr';
 
   const pageTitle = isFr
-    ? "Services d'Essouchage | Ouest de l'Île de Montréal | Brandse"
+    ? "Essouchement et essouchage | Ouest-de-l'Île | Brandse"
     : "Stump Grinding Services | West Island Montreal | Brandse";
   const pageDesc = isFr
     ? "Essouchage professionnel dans l'Ouest de l'Île de Montréal. Enlèvement complet des souches, nettoyage du site, prix compétitifs. Estimations gratuites."
@@ -199,6 +200,8 @@ export default function StumpGrindingPage() {
             </div>
           </div>
         </section>
+
+        <ServiceGuide service="stumpGrinding" />
 
         {/* Related Services */}
         <section className="py-16 bg-gray-50">

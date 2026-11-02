@@ -2,6 +2,7 @@ import { GetServerSideProps } from 'next';
 import { locations } from '../data/locations';
 import { blogPosts } from '../data/blogPosts';
 import { pageDates, cityPagesDate } from '../data/pageDates';
+import { toFrPath } from '../lib/frPaths';
 
 // Static-page release date — bump when site structure or copy materially
 // changes. Matters less than `lastmod` lying every request: Google discounts
@@ -57,24 +58,27 @@ function generateSitemap(): string {
 
   const allPages = [...staticPages, ...locationPages, ...blogPages];
 
-  const urls = allPages.flatMap((page) => [
+  const urls = allPages.flatMap((page) => {
+    const frPath = toFrPath(page.path);
+    return [
     `  <url>
     <loc>${domain}${page.path}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${domain}${page.path}" />
-    <xhtml:link rel="alternate" hreflang="fr" href="${domain}/fr${page.path === '/' ? '' : page.path}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${domain}${frPath}" />
   </url>`,
     `  <url>
-    <loc>${domain}/fr${page.path === '/' ? '' : page.path}</loc>
+    <loc>${domain}${frPath}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${domain}${page.path}" />
-    <xhtml:link rel="alternate" hreflang="fr" href="${domain}/fr${page.path === '/' ? '' : page.path}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${domain}${frPath}" />
   </url>`,
-  ]);
+    ];
+  });
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

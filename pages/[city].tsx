@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, CheckCircle, TreePine, Shield, Scissors, Sprout, AlertTriangle, Phone, ArrowRight, ChevronDown, Wrench, HelpCircle, Leaf } from 'lucide-react';
+import { MapPin, CheckCircle, TreePine, Shield, Scissors, Sprout, AlertTriangle, Phone, ArrowRight, ChevronDown, Wrench, HelpCircle, Leaf, DollarSign } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
@@ -237,6 +237,15 @@ export default function CityPage({ location }: Props) {
                   </Link>
                 ))}
               </div>
+              <Link
+                href={getLocalizedPath('/tree-removal-cost')}
+                className="mt-4 flex items-center gap-3 p-4 rounded-xl border border-[#2D5016]/30 bg-[#2D5016]/5 hover:bg-[#2D5016]/10 transition-colors"
+              >
+                <DollarSign className="h-5 w-5 text-[#2D5016]" />
+                <span className="font-semibold text-gray-900">
+                  {lang === 'fr' ? `Combien coûte un abattage à ${city} ?` : `Tree removal cost in ${city}`}
+                </span>
+              </Link>
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <Link
                   href={`tel:${siteConfig.contact.phone}`}

@@ -72,7 +72,7 @@ export const translations = {
       }
     },
     home: {
-      metaTitle: "Service d'Arbres Brandse | Professional Tree Services West Island Montreal",
+      metaTitle: "Tree Removal & Trimming, West Island Montreal | Brandse",
       metaDesc: "Licensed & CNESST insured tree service serving 23 communities across the West Island of Montreal and Vaudreuil-Soulanges — from Lachine to Rigaud. 24/7 Emergency.",
       heroTitle: 'Professional Tree Care for the West Island',
       heroSubtitle: 'Certified arborists providing safe, reliable tree care across Saint-Lazare, Hudson, Vaudreuil, Pointe-Claire, Beaconsfield, Kirkland, and surrounding areas.',
@@ -297,8 +297,8 @@ export const translations = {
         desc: 'Enlèvement complet des souches à l\'aide d\'équipement professionnel. Nous laissons votre cour propre dans nos 23 zones de service.'
       },
       treeTrimming: {
-        title: 'Élagage et taille',
-        desc: 'Élagage expert pour maintenir la santé des arbres, améliorer leur apparence et assurer la sécurité partout dans l\'Ouest de l\'Île.'
+        title: 'Émondage et élagage',
+        desc: 'Émondage expert pour maintenir la santé des arbres, améliorer leur apparence et assurer la sécurité partout dans l\'Ouest de l\'Île.'
       },
       hedgeTrimming: {
         title: 'Taille de haies',
@@ -322,7 +322,7 @@ export const translations = {
       }
     },
     home: {
-      metaTitle: "Service d'Arbres Brandse | Services d'arbres professionnels Ouest de l'Île",
+      metaTitle: "Abattage et émondage d'arbres, Ouest-de-l'Île | Brandse",
       metaDesc: "Entreprise licenciée et assurée CNESST desservant 23 communautés de l'Ouest de l'Île de Montréal et de Vaudreuil-Soulanges — de Lachine à Rigaud. Urgence 24/7.",
       heroTitle: 'Soins d\'arbres professionnels pour l\'Ouest de l\'Île',
       heroSubtitle: 'Arboriculteurs certifiés offrant des soins sécuritaires à travers Saint-Lazare, Hudson, Vaudreuil, Pointe-Claire, Beaconsfield, Kirkland et les régions avoisinantes.',

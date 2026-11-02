@@ -3,14 +3,14 @@
 // content changes materially. Three consumers read this and stay in sync:
 // the visible "Last updated" line, schema dateModified, and sitemap lastmod.
 export const pageDates: Record<string, string> = {
-  '/tree-removal': '2026-09-09',
-  '/stump-grinding': '2026-05-10',
-  '/tree-trimming': '2026-05-10',
-  '/hedge-trimming': '2026-05-10',
-  '/tree-planting': '2026-05-10',
-  '/emergency-services': '2026-07-14',
+  '/tree-removal': '2026-11-01',
+  '/stump-grinding': '2026-11-01',
+  '/tree-trimming': '2026-11-01',
+  '/hedge-trimming': '2026-11-01',
+  '/tree-planting': '2026-11-01',
+  '/emergency-services': '2026-11-01',
   '/hard-to-reach-tree-removal': '2026-07-14',
-  '/tree-removal-cost': '2026-09-09',
+  '/tree-removal-cost': '2026-11-01',
   '/christmas-lights': '2026-09-13',
 };
 

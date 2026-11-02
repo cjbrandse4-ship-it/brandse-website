@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { siteConfig } from '../lib/seo';
+import { toFrPath, toEnPath } from '../lib/frPaths';
 
 interface Props {
   title: string;
@@ -21,9 +22,7 @@ export default function SEOHead({ title, description, path = '/', image, lang = 
   const url = `${siteConfig.domain}${path}`;
   const ogImage = image || siteConfig.defaultImage;
   const isCustomImage = !!image;
-  const altPath = lang === 'en'
-    ? (path === '/' ? '/fr' : `/fr${path}`)
-    : (path.replace(/^\/fr/, '') || '/');
+  const altPath = lang === 'en' ? toFrPath(path) : toEnPath(path);
   const ogLocale = lang === 'fr' ? 'fr_CA' : 'en_CA';
   const ogLocaleAlt = lang === 'fr' ? 'en_CA' : 'fr_CA';
 
