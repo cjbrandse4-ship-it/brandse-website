@@ -7,6 +7,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import SEOHead from '../../components/SEOHead';
 import Breadcrumbs from '../../components/Breadcrumbs';
+import RichText from '../../components/RichText';
 import { useLanguage } from '../../lib/useLanguage';
 import { blogPosts, BlogPost } from '../../data/blogPosts';
 
@@ -162,7 +163,7 @@ export default function BlogPostPage({ post }: Props) {
                         key={`${i}-${j}`}
                         className="text-gray-600 leading-relaxed mb-6 text-lg"
                       >
-                        {part.trim()}
+                        <RichText text={part.trim()} />
                       </p>
                     );
                   }

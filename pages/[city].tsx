@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import SEOHead from '../components/SEOHead';
 import Breadcrumbs from '../components/Breadcrumbs';
 import LastUpdated from '../components/LastUpdated';
+import RichText, { stripLinks } from '../components/RichText';
 import { useLanguage } from '../lib/useLanguage';
 import { siteConfig, ORG_ID } from '../lib/seo';
 import { cityPagesDate } from '../data/pageDates';
@@ -42,7 +43,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       {/* Answer stays in the DOM (schema/visible-content parity for
           crawlers) — only its visibility toggles. */}
       <div className={`px-6 pb-4 ${open ? '' : 'hidden'}`}>
-        <p className="text-gray-600 leading-relaxed">{a}</p>
+        <p className="text-gray-600 leading-relaxed"><RichText text={a} /></p>
       </div>
     </div>
   );
@@ -71,7 +72,7 @@ export default function CityPage({ location }: Props) {
       name: faq.q,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.a,
+        text: stripLinks(faq.a),
       },
     })),
   };
@@ -91,6 +92,14 @@ export default function CityPage({ location }: Props) {
         url: `${siteConfig.domain}${path}`,
         provider: { '@id': ORG_ID },
         areaServed: { '@type': 'City', name: city },
+        // Real job photos from this city (data/locations.ts).
+        ...(location.photos?.length ? {
+          image: location.photos.map((p) => ({
+            '@type': 'ImageObject',
+            contentUrl: `${siteConfig.domain}${p.src}`,
+            description: p[lang],
+          })),
+        } : {}),
       },
       // dateModified lives on a WebPage node — schema.org does not define it
       // on Service.
@@ -164,7 +173,7 @@ export default function CityPage({ location }: Props) {
 
               {/* Unique city paragraphs */}
               {cityContent.paragraphs.map((p, i) => (
-                <p key={i} className="text-gray-600 text-lg mb-6 leading-relaxed">{p}</p>
+                <p key={i} className="text-gray-600 text-lg mb-6 leading-relaxed"><RichText text={p} /></p>
               ))}
 
               {/* Authoritative source citation — link to the municipality's
@@ -267,6 +276,23 @@ export default function CityPage({ location }: Props) {
             <Wrench className="w-7 h-7 text-[#2D5016]" />
             <h2 className="text-3xl font-bold text-gray-900">{r(lt.recentWorkTitle)}</h2>
           </div>
+          {location.photos && location.photos.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {location.photos.map((photo) => (
+                <figure key={photo.src} className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+                  <Image
+                    src={photo.src}
+                    alt={photo[lang]}
+                    width={photo.width}
+                    height={photo.height}
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="w-full h-auto"
+                  />
+                  <figcaption className="px-5 py-4 text-sm text-gray-600 leading-relaxed">{photo[lang]}</figcaption>
+                </figure>
+              ))}
+            </div>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {cityContent.recentWork.map((item, i) => (
               <div key={i} className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">

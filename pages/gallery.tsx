@@ -33,6 +33,11 @@ const galleryItems: GalleryItem[] = [
     fr: 'Apres — pin abattu en securite, souche coupee au ras, terrain laisse propre',
   },
   {
+    src: '/gallery/spider-lift-spruce-pool-beaconsfield.jpg',
+    en: 'Spider lift reaching over a backyard pool in Beaconsfield to cut back a tall spruce',
+    fr: 'Nacelle araignée au-dessus d\'une piscine creusée à Beaconsfield pour tailler une grande épinette',
+  },
+  {
     src: '/gallery/spider-lift.jpg',
     en: 'Our CELA DT25 spider lift — 82 ft reach for hard-to-access tree work',
     fr: 'Notre nacelle araignee CELA DT25 — portee de 82 pi pour les arbres difficiles d\'acces',

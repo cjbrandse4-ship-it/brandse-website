@@ -16,12 +16,24 @@ export interface CityContent {
   };
 }
 
+// A real job photo taken in this city. en/fr is the description used as both
+// the alt text and the visible caption, so write what the photo shows and
+// where — never place a photo in a city it wasn't taken in.
+export interface CityPhoto {
+  src: string;
+  width: number;
+  height: number;
+  en: string;
+  fr: string;
+}
+
 export interface Location {
   slug: string;
   name: string;
   nearby: string[];
   postalCodes: string[];
   treeSpecies: string[];
+  photos?: CityPhoto[];
   content: CityContent;
 }
 
@@ -72,7 +84,7 @@ export const locations: Location[] = [
   {
     slug: 'hudson',
     name: 'Hudson',
-    nearby: ['Saint-Lazare', 'Vaudreuil', 'Île-Perrot'],
+    nearby: ['Saint-Lazare', 'Vaudreuil', 'Rigaud'],
     postalCodes: ['J0P'],
     treeSpecies: ['Red Oak', 'Sugar Maple', 'White Pine'],
     content: {
@@ -81,6 +93,11 @@ export const locations: Location[] = [
           'Hudson\'s large rural lots and wooded properties along the Ottawa River make it one of the most tree-dense communities we serve. Properties on Main Road, Cameron, and Mount Victoria are surrounded by mature Red Oaks, Sugar Maples, and White Pines — many over 100 years old.',
           'The hilly terrain around Mount Victoria and Alstonvale creates access challenges that require specialized rigging techniques. Many Hudson properties have trees growing on slopes or near waterfront retaining walls where conventional removal methods won\'t work safely.',
           'Hudson\'s tree protection bylaw is one of the strictest in the region — permits are required for removal, and replacement planting is often mandatory. As certified arborists familiar with Hudson\'s regulations, we ensure full compliance and can advise on the best replacement species for your property.',
+          // Permit facts below: Town of Hudson Tree Cutting form (Dec 2023) and
+          // its April 2024 summary of bylaws 767-2024 / 768-2024.
+          'In Hudson, any tree with a trunk 10 cm or more in diameter, measured 1.3 metres above the ground, needs a tree-cutting permit before it comes down. The application asks for the reason (dead or dying, dangerous, diseased, damaging property, or in the way of planned construction) and each tree must be marked with rope or tape for the inspection. The Town warns that processing can take longer than usual, so it pays to apply early. We prepare and file the application with you; here is [how Hudson\'s tree-cutting permit works](/blog/tree-cutting-permit-hudson), step by step.',
+          'Hudson also protects designated remarkable trees: one can only be felled if it is dead, dying or dangerous and a report, produced at the Town\'s expense, shows felling is the only option. On the planting side, the Town reimburses residents for trees they buy and plant, subject to available funds, as long as each tree is over 1.8 m tall and over 3 cm in diameter. We can [plant replacement trees](/tree-planting) that meet those sizes and give you an itemized invoice for your claim.',
+          'Whether it is a dead ash near the house, a leaning pine above the shoreline or a hedge along Main Road, we cover [tree removal](/tree-removal), [pruning](/tree-trimming), [stump grinding](/stump-grinding) and [24/7 emergency service](/emergency-services) across Hudson, from Como to Hudson Heights. Our base in neighbouring Saint-Lazare keeps us close. For typical prices, see [what tree removal costs](/tree-removal-cost).',
         ],
         recentWork: [
           'Removed a storm-damaged 90-foot White Pine on a steep slope near Mount Victoria',
@@ -88,7 +105,10 @@ export const locations: Location[] = [
           'Cleared deadwood from 20+ Sugar Maples on a large Alstonvale lot',
         ],
         faqs: [
-          { q: 'Do I need a permit to cut a tree in Hudson?', a: 'Yes. Hudson has strict tree protection bylaws requiring permits for removal. Replacement planting may also be required. We manage the entire permit process for you.' },
+          { q: 'Do I need a permit to cut a tree in Hudson?', a: 'Yes, for any tree with a trunk 10 cm or more in diameter measured 1.3 m above the ground. Replacement planting may also be required. We manage the entire permit process for you — see [Hudson tree-cutting permits](/blog/tree-cutting-permit-hudson).' },
+          { q: 'How long does a tree-cutting permit take in Hudson?', a: 'It varies. The Town handles requests in the order received and warns that processing times can be longer than usual; an inspector contacts you once your file is assigned. Apply well before you want the work done.' },
+          { q: 'Can a tree company apply for the permit for me?', a: 'Yes. Hudson\'s application has a section for an applicant who is not the owner. We fill it in with you, and you sign as the owner.' },
+          { q: 'Does Hudson help pay for new trees?', a: 'Yes. The Town reimburses residents for trees bought and planted on their property, subject to available funds, if each tree is over 1.8 m tall and over 3 cm in diameter. You send the invoice, a photo of the planted tree and proof of residence; payment comes by cheque within 90 days.' },
           { q: 'Can you work on steep or waterfront properties in Hudson?', a: 'Absolutely. We regularly work on Hudson\'s hilly terrain around Mount Victoria and along the Ottawa River using specialized rigging and crane-assisted removal when needed.' },
           { q: 'What trees grow best in Hudson?', a: 'Red Oak, Sugar Maple, and White Pine thrive in Hudson\'s well-drained soil and hilly terrain. We can recommend the best species based on your specific lot conditions.' },
         ],
@@ -98,6 +118,9 @@ export const locations: Location[] = [
           'Les grands terrains ruraux et les propriétés boisées de Hudson le long de la rivière des Outaouais en font l\'une des communautés les plus densément boisées que nous desservons. Les propriétés sur Main Road, Cameron et Mont Victoria sont entourées de chênes rouges, d\'érables à sucre et de pins blancs matures — dont beaucoup ont plus de 100 ans.',
           'Le terrain vallonné autour du Mont Victoria et d\'Alstonvale crée des défis d\'accès qui nécessitent des techniques de gréage spécialisées. De nombreuses propriétés de Hudson ont des arbres poussant sur des pentes ou près de murs de soutènement en bordure de l\'eau où les méthodes d\'abattage conventionnelles ne fonctionnent pas de manière sécuritaire.',
           'Le règlement de protection des arbres de Hudson est l\'un des plus stricts de la région — des permis sont requis pour l\'abattage et la plantation de remplacement est souvent obligatoire. En tant qu\'arboriculteurs certifiés connaissant les réglementations de Hudson, nous assurons une conformité totale et pouvons vous conseiller sur les meilleures espèces de remplacement.',
+          'À Hudson, tout arbre dont le tronc mesure 10 cm ou plus de diamètre, à 1,3 mètre du sol, exige un permis d\'abattage. La demande précise le motif (arbre mort ou mourant, dangereux, malade, qui endommage une propriété ou nuit à une construction prévue) et chaque arbre doit être identifié avec une corde ou un ruban pour l\'inspection. La Ville prévient que les délais de traitement peuvent être plus longs que d\'habitude, alors mieux vaut faire la demande tôt. Nous préparons et déposons la demande avec vous; voici [comment fonctionne le permis d\'abattage à Hudson](/blog/tree-cutting-permit-hudson), étape par étape.',
+          'Hudson protège aussi ses arbres remarquables : un tel arbre ne peut être abattu que s\'il est mort, mourant ou dangereux et qu\'un rapport, produit aux frais de la Ville, démontre que l\'abattage est la seule solution. Côté plantation, la Ville rembourse aux résidents l\'achat d\'arbres plantés sur leur terrain, sous réserve des fonds disponibles, si chaque arbre mesure plus de 1,8 m de hauteur et plus de 3 cm de diamètre. Nous pouvons [planter des arbres de remplacement](/tree-planting) qui respectent ces dimensions et vous remettre une facture détaillée pour votre demande.',
+          'Qu\'il s\'agisse d\'un frêne mort près de la maison, d\'un pin penché au-dessus de la rive ou d\'une haie le long de Main Road, nous offrons [l\'abattage](/tree-removal), [l\'émondage](/tree-trimming), [l\'essouchement](/stump-grinding) et le [service d\'urgence 24/7](/emergency-services) partout à Hudson, de Como à Hudson Heights. Notre base à Saint-Lazare, juste à côté, nous garde tout près. Pour les prix typiques, voyez [combien coûte l\'abattage d\'un arbre](/tree-removal-cost).',
         ],
         recentWork: [
           'Abattage d\'un pin blanc de 90 pieds endommagé par une tempête sur une pente raide près du Mont Victoria',
@@ -105,7 +128,10 @@ export const locations: Location[] = [
           'Nettoyage du bois mort de plus de 20 érables à sucre sur un grand terrain à Alstonvale',
         ],
         faqs: [
-          { q: 'Ai-je besoin d\'un permis pour couper un arbre à Hudson?', a: 'Oui. Hudson a des règlements stricts de protection des arbres exigeant des permis pour l\'abattage. La plantation de remplacement peut également être requise. Nous gérons tout le processus de permis pour vous.' },
+          { q: 'Ai-je besoin d\'un permis pour couper un arbre à Hudson?', a: 'Oui, pour tout arbre dont le tronc mesure 10 cm ou plus de diamètre à 1,3 m du sol. La plantation de remplacement peut également être requise. Nous gérons tout le processus de permis pour vous — voyez [le permis d\'abattage à Hudson](/blog/tree-cutting-permit-hudson).' },
+          { q: 'Combien de temps faut-il pour obtenir un permis d\'abattage à Hudson?', a: 'Cela varie. La Ville traite les demandes dans l\'ordre de réception et prévient que les délais peuvent être plus longs que d\'habitude; un inspecteur vous contacte une fois votre dossier assigné. Faites la demande bien avant la date souhaitée des travaux.' },
+          { q: 'Une entreprise d\'arbres peut-elle faire la demande de permis pour moi?', a: 'Oui. Le formulaire de Hudson prévoit une section pour un demandeur autre que le propriétaire. Nous le remplissons avec vous et vous signez à titre de propriétaire.' },
+          { q: 'Hudson aide-t-elle à payer de nouveaux arbres?', a: 'Oui. La Ville rembourse aux résidents l\'achat d\'arbres plantés sur leur terrain, sous réserve des fonds disponibles, si chaque arbre mesure plus de 1,8 m de hauteur et plus de 3 cm de diamètre. Vous envoyez la facture, une photo de l\'arbre planté et une preuve de résidence; le paiement est fait par chèque dans les 90 jours.' },
           { q: 'Pouvez-vous travailler sur des terrains en pente ou en bord de l\'eau à Hudson?', a: 'Absolument. Nous travaillons régulièrement sur le terrain vallonné de Hudson autour du Mont Victoria et le long de la rivière des Outaouais en utilisant du gréage spécialisé et l\'abattage assisté par grue au besoin.' },
           { q: 'Quels arbres poussent le mieux à Hudson?', a: 'Le chêne rouge, l\'érable à sucre et le pin blanc prospèrent dans le sol bien drainé et le terrain vallonné de Hudson. Nous pouvons recommander les meilleures espèces selon les conditions de votre terrain.' },
         ],
@@ -118,6 +144,15 @@ export const locations: Location[] = [
     nearby: ['Pointe-Claire', 'Kirkland', "Baie-D'Urfé"],
     postalCodes: ['H9W'],
     treeSpecies: ['Norway Maple', 'White Birch', 'Blue Spruce'],
+    photos: [
+      {
+        src: '/gallery/spider-lift-spruce-pool-beaconsfield.jpg',
+        width: 2000,
+        height: 1500,
+        en: 'Our CELA spider lift on ground-protection mats beside a backyard pool in Beaconsfield, reaching over the pool so our arborist can cut back a tall spruce',
+        fr: "Notre nacelle araignée CELA sur des tapis de protection à côté d'une piscine creusée à Beaconsfield, au-dessus de la piscine pour que notre arboriste taille une grande épinette",
+      },
+    ],
     content: {
       en: {
         paragraphs: [
@@ -201,7 +236,7 @@ export const locations: Location[] = [
   {
     slug: 'vaudreuil',
     name: 'Vaudreuil',
-    nearby: ['Saint-Lazare', 'Île-Perrot', 'Pincourt'],
+    nearby: ['Saint-Lazare', 'Hudson', 'Île-Perrot', 'Pincourt'],
     postalCodes: ['J7V'],
     treeSpecies: ['Silver Maple', 'Balsam Fir', 'White Elm'],
     content: {
@@ -1028,8 +1063,8 @@ export const citySeo: Record<string, { en: CitySeoCopy; fr: CitySeoCopy }> = {
     fr: { title: "Abattage et élagage d'arbres à Pointe-Claire | Brandse", description: "Arboriculteurs certifiés à Pointe-Claire — abattage, élagage et essouchage pour les érables matures et les frênes touchés par l'agrile. Estimation gratuite." },
   },
   'hudson': {
-    en: { title: 'Tree Service in Hudson | Estate & Wooded-Lot Specialists', description: "Tree removal, crane work & pruning on Hudson's large wooded lots and waterfront. Certified arborists who know Hudson's strict tree bylaw. Free quote." },
-    fr: { title: "Service d'arbres à Hudson | Spécialistes des grands terrains", description: "Abattage, travail à la grue et élagage sur les grands terrains boisés de Hudson. Arboriculteurs certifiés connaissant le règlement strict de Hudson." },
+    en: { title: 'Tree Removal & Arborist in Hudson, QC | Brandse', description: "Tree removal, pruning and stump grinding on Hudson's wooded lots, slopes and waterfront. We file your Hudson tree-cutting permit. Free on-site quote." },
+    fr: { title: "Abattage et émondage d'arbres à Hudson | Brandse", description: "Abattage, émondage et essouchement à Hudson : grands terrains boisés, pentes et bord de l'eau. Nous gérons votre permis d'abattage. Soumission gratuite." },
   },
   'beaconsfield': {
     en: { title: 'Tree Removal in Beaconsfield | Ash Borer & Permit Experts', description: 'Beaconsfield tree removal, pruning & stump grinding. We handle Emerald Ash Borer removals and full permit applications. Licensed, insured, free quote.' },

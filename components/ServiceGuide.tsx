@@ -1,32 +1,12 @@
-import Link from 'next/link';
 import Head from 'next/head';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '../lib/useLanguage';
 import { serviceGuides, ServiceKey } from '../data/serviceGuides';
+import RichText, { stripLinks } from './RichText';
 
 // Renders the long-form guide + FAQ under a service page's summary section.
-// Copy lives in data/serviceGuides.ts. Paragraphs may contain
-// [link text](/english-path) — internal paths are localized (French slugs
-// included) through getLocalizedPath.
-function RichText({ text }: { text: string }) {
-  const { getLocalizedPath } = useLanguage();
-  const parts = text.split(/(\[[^\]]+\]\(\/[^)]*\))/g);
-  return (
-    <>
-      {parts.map((part, i) => {
-        const m = part.match(/^\[([^\]]+)\]\((\/[^)]*)\)$/);
-        if (!m) return part;
-        return (
-          <Link key={i} href={getLocalizedPath(m[2])} className="text-[#2D5016] font-semibold underline decoration-[#2D5016]/30 underline-offset-2 hover:decoration-[#2D5016]">
-            {m[1]}
-          </Link>
-        );
-      })}
-    </>
-  );
-}
-
-const stripLinks = (s: string) => s.replace(/\[([^\]]+)\]\(\/[^)]*\)/g, '$1');
+// Copy lives in data/serviceGuides.ts; paragraphs may contain
+// [link text](/english-path) links (see RichText).
 
 export default function ServiceGuide({ service }: { service: ServiceKey }) {
   const { lang } = useLanguage();
