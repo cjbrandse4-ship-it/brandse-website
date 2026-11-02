@@ -87,6 +87,15 @@ export const locations: Location[] = [
     nearby: ['Saint-Lazare', 'Vaudreuil', 'Rigaud'],
     postalCodes: ['J0P'],
     treeSpecies: ['Red Oak', 'Sugar Maple', 'White Pine'],
+    photos: [
+      {
+        src: '/gallery/climber-sectional-tree-removal-hudson.jpg',
+        width: 1500,
+        height: 2000,
+        en: 'Our climber taking down a large tree in sections above a Hudson backyard, with ropes lowering each piece clear of the garage, fences and neighbouring houses',
+        fr: "Notre grimpeur abat un grand arbre par sections au-dessus d'une cour arrière à Hudson, avec des câbles qui descendent chaque morceau loin du garage, des clôtures et des maisons voisines",
+      },
+    ],
     content: {
       en: {
         paragraphs: [
@@ -152,6 +161,13 @@ export const locations: Location[] = [
         en: 'Our CELA spider lift on ground-protection mats beside a backyard pool in Beaconsfield, reaching over the pool so our arborist can cut back a tall spruce',
         fr: "Notre nacelle araignée CELA sur des tapis de protection à côté d'une piscine creusée à Beaconsfield, au-dessus de la piscine pour que notre arboriste taille une grande épinette",
       },
+      {
+        src: '/gallery/cedar-hedge-trimming-beaconsfield.jpg',
+        width: 2000,
+        height: 1500,
+        en: 'Cedar hedge we trimmed along two sides of a Beaconsfield backyard, squared off flat and straight below the overhead power lines',
+        fr: "Haie de cèdres que nous avons taillée sur deux côtés d'une cour arrière à Beaconsfield, droite et nivelée sous les fils électriques",
+      },
     ],
     content: {
       en: {
@@ -196,6 +212,15 @@ export const locations: Location[] = [
     nearby: ['Hudson', 'Vaudreuil', 'Île-Perrot'],
     postalCodes: ['J7T'],
     treeSpecies: ['Red Maple', 'Trembling Aspen', 'White Cedar'],
+    photos: [
+      {
+        src: '/gallery/fallen-tree-on-house-saint-lazare.jpg',
+        width: 2000,
+        height: 1500,
+        en: 'Emergency call in Saint-Lazare: a multi-stem tree down across a house roof, before our crew removed it',
+        fr: "Appel d'urgence à Saint-Lazare : un arbre à plusieurs troncs tombé sur le toit d'une maison, avant que notre équipe l'enlève",
+      },
+    ],
     content: {
       en: {
         paragraphs: [

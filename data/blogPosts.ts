@@ -805,7 +805,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 23,
     slug: 'tree-cutting-permit-hudson',
-    image: '/gallery/spider-lift.jpg',
+    image: '/gallery/climber-sectional-tree-removal-hudson.jpg',
     author: 'Connor Brandse',
     date: '2026-11-01',
     readingTime: '5 min read',

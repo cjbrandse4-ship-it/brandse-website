@@ -38,6 +38,21 @@ const galleryItems: GalleryItem[] = [
     fr: 'Nacelle araignée au-dessus d\'une piscine creusée à Beaconsfield pour tailler une grande épinette',
   },
   {
+    src: '/gallery/climber-sectional-tree-removal-hudson.jpg',
+    en: 'Climber taking down a large tree in sections above a backyard in Hudson',
+    fr: 'Grimpeur abattant un grand arbre par sections au-dessus d\'une cour arrière à Hudson',
+  },
+  {
+    src: '/gallery/fallen-tree-on-house-saint-lazare.jpg',
+    en: 'Emergency call — a tree down across a house roof in Saint-Lazare',
+    fr: 'Appel d\'urgence — un arbre tombé sur le toit d\'une maison à Saint-Lazare',
+  },
+  {
+    src: '/gallery/cedar-hedge-trimming-beaconsfield.jpg',
+    en: 'Cedar hedge trimmed square along two sides of a Beaconsfield backyard',
+    fr: 'Haie de cèdres taillée droite sur deux côtés d\'une cour arrière à Beaconsfield',
+  },
+  {
     src: '/gallery/spider-lift.jpg',
     en: 'Our CELA DT25 spider lift — 82 ft reach for hard-to-access tree work',
     fr: 'Notre nacelle araignee CELA DT25 — portee de 82 pi pour les arbres difficiles d\'acces',
