@@ -323,7 +323,7 @@ export const translations = {
     },
     home: {
       metaTitle: "Abattage et émondage d'arbres, Ouest-de-l'Île | Brandse",
-      metaDesc: "Entreprise licenciée et assurée CNESST desservant 23 communautés de l'Ouest de l'Île de Montréal et de Vaudreuil-Soulanges — de Lachine à Rigaud. Urgence 24/7.",
+      metaDesc: "Abattage, émondage et essouchage d'arbres dans l'Ouest-de-l'Île de Montréal. Entreprise licenciée et assurée CNESST. Urgence 24/7. Soumission gratuite.",
       heroTitle: 'Soins d\'arbres professionnels pour l\'Ouest de l\'Île',
       heroSubtitle: 'Arboriculteurs certifiés offrant des soins sécuritaires à travers Saint-Lazare, Hudson, Vaudreuil, Pointe-Claire, Beaconsfield, Kirkland et les régions avoisinantes.',
       servingTitle: 'Nos zones de service',
