@@ -42,6 +42,7 @@
 Use `templates/content-brief.md` for every new or rewritten page: target query and intent, the questions to answer (from PAA, AI fan-outs, sales calls), required facts/data, internal links, schema, CTA, and what will make it better than the current top results.
 
 ## 6. Video
+Full playbook, including how videos earn real backlinks: `youtube.md`.
 YouTube is heavily cited by Google's AI Overviews, and videos also rank in Google's video results.
 - Title = the question or "[service] in [place]".
 - Say the answer out loud in the first 15 seconds (transcripts get quoted).

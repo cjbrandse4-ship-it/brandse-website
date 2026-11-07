@@ -35,6 +35,15 @@ Most 2026 AI-search statistics come from vendors and agencies with a commercial 
 - B2B SaaS AI citation study — https://derivatex.agency/report/b2b-saas-ai-citation-study/
 - Comparison and alternative pages — https://growthhasten.com/blog/saas-comparison-pages
 
+## YouTube and video
+- Google: qualify outbound links (nofollow/ugc/sponsored) — https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links
+- Google: video structured data — https://developers.google.com/search/docs/appearance/structured-data/video
+- YouTube description links are nofollow — https://jugteam.com/blog/do-links-in-my-youtube-descriptions-provide-backlinks-and-seo-benefits/
+- YouTube and backlink strategy 2026 — https://www.incremys.com/en/resources/blog/youtube-seo-backlinks
+- YouTube link building (embed outreach) — https://backlinkgrid.com/blog/youtube-link-building-strategies
+- Shorts links delinked (Aug 2023) — https://www.tubefilter.com/?p=175414
+- Video SEO, VideoObject and transcripts — https://blckalpaca.at/en/knowledge-base/seo-geo/on-page-seo/video-seo-on-page-videoobject-schema-and-transcripts
+
 ## Updates and measurement
 - 2026 Google update timeline — https://www.digitalapplied.com/blog/google-algorithm-update-history-2026-complete-timeline
 - Measuring AI visibility in GA4 and Search Console — https://targetinternet.com/resources/how-to-measure-ai-search-visibility

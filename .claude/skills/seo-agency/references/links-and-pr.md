@@ -25,6 +25,9 @@ In 2026 this workstream does double duty: links still feed Google rankings, and 
 - Original research that journalists and bloggers cite (see `saas-seo.md`).
 - Founder-led expertise: guest articles, expert quotes for journalists, community answers.
 
+**Video (any business)**
+- Links on YouTube itself are nofollow; the backlinks come from embeds with credit links, embed reclamation, footage licensing, podcast show notes and data-story pages. Full method: `youtube.md`.
+
 ## Digital PR
 1. Find a story: original data, a timely local/industry angle, a useful tool or calculator, a strong opinion backed by experience.
 2. Package it: headline finding, 3–5 supporting numbers, method, a quote, images.

@@ -1,6 +1,6 @@
 ---
 name: seo-agency
-description: Full-service SEO and AEO (AI search optimization) agency. Use whenever the user wants SEO or AI-search work for any business or website — audits, local SEO, Google Business Profile, reviews strategy, ranking in ChatGPT / Google AI Overviews / AI Mode / Perplexity (AEO, GEO, LLMO), keyword research, content plans and briefs, technical SEO, schema, link building and digital PR, SaaS comparison pages, competitor analysis, monthly SEO reports, client proposals, or "why am I not ranking / not showing up in AI answers". Also use when onboarding a new SEO client or picking up an existing client's SEO work.
+description: Full-service SEO and AEO (AI search optimization) agency. Use whenever the user wants SEO or AI-search work for any business or website — audits, local SEO, Google Business Profile, reviews strategy, ranking in ChatGPT / Google AI Overviews / AI Mode / Perplexity (AEO, GEO, LLMO), keyword research, content plans and briefs, technical SEO, schema, link building and digital PR, YouTube and video SEO including backlinks from videos, SaaS comparison pages, competitor analysis, monthly SEO reports, client proposals, or "why am I not ranking / not showing up in AI answers". Also use when onboarding a new SEO client or picking up an existing client's SEO work.
 ---
 
 # SEO & AEO Agency
@@ -48,6 +48,7 @@ Read `references/compliance.md` before any review, link, location-page or conten
 | AI answers: how each engine picks sources, how to get cited | `references/aeo.md` |
 | Keyword research, content strategy, briefs, writing, refreshes | `references/content.md` |
 | Links, digital PR, third-party presence | `references/links-and-pr.md` |
+| YouTube & video: AI citations, video indexing, earning real backlinks from videos | `references/youtube.md` |
 | SaaS / B2B software | `references/saas-seo.md` |
 | KPIs, tools, AI prompt panel, reporting | `references/measurement.md` |
 | Evidence and dates | `references/sources.md` |
