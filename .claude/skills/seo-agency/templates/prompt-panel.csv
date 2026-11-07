@@ -1,0 +1,4 @@
+date,client,prompt,language,intent,engine,run,mentioned,cited,cited_url,position_in_answer,competitors_named,sentiment,notes
+YYYY-MM-DD,Client name,best [service] in [city],en,category,ChatGPT,1,yes/no,yes/no,,,,positive/neutral/negative,
+YYYY-MM-DD,Client name,how much does [service] cost in [city],en,cost,Google AI Mode,1,yes/no,yes/no,,,,,
+YYYY-MM-DD,Client name,[competitor] alternatives,en,comparison,Perplexity,1,yes/no,yes/no,,,,,
