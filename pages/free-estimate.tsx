@@ -12,6 +12,7 @@ import {
 import { siteConfig } from '../lib/seo';
 import { trackLead, FORM_CONVERSION_LABEL } from '../lib/analytics';
 import { useActivePromotion } from '../lib/usePromotion';
+import { SERVICE_OPTIONS, SERVICE_AREAS, isValidCanadianPhone, quoteFormCopy } from '../lib/quoteForm';
 import { testimonials } from '../data/testimonials';
 
 // Official Maps URL API — resolves reliably to the GBP listing. The old
@@ -37,26 +38,9 @@ function formatReviewDate(iso: string, lang: 'en' | 'fr'): string {
 // ──────────────────────────────────────────────────────────────────────────
 // Copy — kept inline (not in data/translations.ts) so this paid-traffic
 // landing page can be iterated on for CRO without touching shared site copy.
+// Form fields, errors and consent come from lib/quoteForm (shared with the
+// compact form on service pages).
 // ──────────────────────────────────────────────────────────────────────────
-const SERVICE_OPTIONS = [
-  { value: 'tree-removal',   en: 'Tree Removal',         fr: 'Abattage d\'arbres' },
-  { value: 'stump-grinding', en: 'Stump Grinding',       fr: 'Essouchage' },
-  { value: 'pruning',        en: 'Pruning & Trimming',   fr: 'Émondage et élagage' },
-  { value: 'hedge-trimming', en: 'Hedge Trimming',       fr: 'Taille de haies' },
-  { value: 'emergency',      en: 'Emergency',            fr: 'Urgence' },
-  { value: 'christmas-lights', en: 'Christmas Lights',   fr: 'Lumières de Noël' },
-  { value: 'other',          en: 'Other',                fr: 'Autre' },
-];
-
-const SERVICE_AREAS = [
-  'Saint-Lazare', 'Pointe-Claire', 'Hudson', 'Beaconsfield',
-  'Vaudreuil-Dorion', 'Kirkland', 'Dollard-des-Ormeaux', 'Dorval',
-  'Senneville', "Baie-d'Urfé", 'Île-Perrot', 'Pincourt', 'Pierrefonds',
-  'Sainte-Anne-de-Bellevue', "L'Île-Bizard", "Notre-Dame-de-l'Île-Perrot",
-  'Terrasse-Vaudreuil', 'Rigaud', 'Les Cèdres', 'Coteau-du-Lac',
-  'Pointe-des-Cascades', 'Saint-Clet', 'Lachine',
-];
-
 const copy = {
   en: {
     metaTitle: 'Free Tree Service Quote | West Island & Vaudreuil | Brandse',
@@ -65,41 +49,12 @@ const copy = {
     skipToForm: 'Skip to quote form',
     heroHeadline: 'Tree Services in West Island, Vaudreuil & Surrounding — Callback in 2 Hours',
     heroSub: 'Free written quote in 24h · Family-owned · Fully insured',
-    formTitle: 'Get your free quote',
-    formIntro: 'Tell us about your tree — we\'ll call you back in under 2 hours.',
-    nameLabel: 'Your name',
-    namePlaceholder: 'First and last name',
-    emailLabel: 'Email',
-    emailPlaceholder: 'your.email@example.com',
-    emailRequired: 'Please enter your email',
-    emailInvalid: 'Please enter a valid email',
-    phoneLabel: 'Phone number',
-    phonePlaceholder: '(438) 555-0123',
-    phoneInvalid: 'Please enter a valid Canadian phone number',
-    cityLabel: 'City',
-    cityPlaceholder: 'Select your city',
-    cityRequired: 'Please pick a city',
-    serviceLabel: 'Service needed',
-    servicePlaceholder: 'Select a service',
-    serviceRequired: 'Please pick a service',
-    addDetails: 'Add details (optional)',
-    hideDetails: 'Hide details',
-    messagePlaceholder: 'Anything else we should know? (size of tree, access, urgency, photos can come by text)',
-    nameRequired: 'Please enter your name',
-    submit: 'Get My Free Quote',
-    submitPromise: 'Reply in 2 hours',
-    submitting: 'Sending…',
-    callbackPromise: 'We\'ll call you back within 2 hours during business hours.',
-    consent: 'By submitting, you agree that Service d\'Arbres Brandse may call or text you about your request, including with an AI assistant. Reply STOP to stop texts. See our',
-    consentLink: 'Privacy Policy',
+    ...quoteFormCopy.en,
     bookingUrgency: 'Booking 1-2 weeks out',
     priceAnchor: 'Most tree removals: $800–3,500.',
     priceAnchorNote: 'Quotes always free.',
-    orCall: 'Or call now:',
     successTitle: 'Sent!',
     successDesc: 'Redirecting to confirmation…',
-    errorTitle: 'Something went wrong',
-    errorDesc: 'Please try calling us directly at (438) 365-5410.',
     // Trust row
     trustGoogle: `${siteConfig.rating.value} on Google`,
     trustGoogleSub: `${siteConfig.rating.count} reviews`,
@@ -168,41 +123,12 @@ const copy = {
     skipToForm: 'Passer au formulaire',
     heroHeadline: 'Services d\'arbres dans l\'Ouest de l\'Île, Vaudreuil et environs — Rappel en 2 heures',
     heroSub: 'Devis écrit gratuit en 24h · Entreprise familiale · Entièrement assuré',
-    formTitle: 'Obtenez votre devis gratuit',
-    formIntro: 'Parlez-nous de votre arbre — nous vous rappelons en moins de 2 heures.',
-    nameLabel: 'Votre nom',
-    namePlaceholder: 'Prénom et nom',
-    emailLabel: 'Courriel',
-    emailPlaceholder: 'votre.courriel@exemple.com',
-    emailRequired: 'Veuillez entrer votre courriel',
-    emailInvalid: 'Veuillez entrer un courriel valide',
-    phoneLabel: 'Numéro de téléphone',
-    phonePlaceholder: '(438) 555-0123',
-    phoneInvalid: 'Veuillez entrer un numéro de téléphone canadien valide',
-    cityLabel: 'Ville',
-    cityPlaceholder: 'Sélectionnez votre ville',
-    cityRequired: 'Veuillez choisir une ville',
-    serviceLabel: 'Service requis',
-    servicePlaceholder: 'Sélectionnez un service',
-    serviceRequired: 'Veuillez choisir un service',
-    addDetails: 'Ajouter des détails (optionnel)',
-    hideDetails: 'Masquer les détails',
-    messagePlaceholder: 'Autre chose à savoir? (taille de l\'arbre, accès, urgence — photos par texto possibles)',
-    nameRequired: 'Veuillez entrer votre nom',
-    submit: 'Obtenir mon devis gratuit',
-    submitPromise: 'Réponse en 2 heures',
-    submitting: 'Envoi en cours…',
-    callbackPromise: 'Nous vous rappelons dans les 2 heures pendant les heures d\'ouverture.',
-    consent: 'En soumettant ce formulaire, vous acceptez que Service d\'Arbres Brandse vous appelle ou vous texte au sujet de votre demande, y compris au moyen d\'un assistant IA. Répondez STOP pour ne plus recevoir de textos. Voir notre',
-    consentLink: 'politique de confidentialité',
+    ...quoteFormCopy.fr,
     bookingUrgency: 'Réservations 1-2 semaines à l\'avance',
     priceAnchor: 'La plupart des abattages : 800 $ – 3 500 $.',
     priceAnchorNote: 'Les devis sont toujours gratuits.',
-    orCall: 'Ou appelez maintenant :',
     successTitle: 'Envoyé !',
     successDesc: 'Redirection vers la confirmation…',
-    errorTitle: 'Une erreur est survenue',
-    errorDesc: 'Veuillez nous appeler directement au (438) 365-5410.',
     trustGoogle: `${siteConfig.rating.value.replace('.', ',')} sur Google`,
     trustGoogleSub: `${siteConfig.rating.count} avis`,
     trustFacebook: '5,0 sur Facebook',
@@ -251,18 +177,6 @@ const copy = {
     footerPrivacy: 'Politique de confidentialité',
   },
 } as const;
-
-// ──────────────────────────────────────────────────────────────────────────
-// Validation
-// ──────────────────────────────────────────────────────────────────────────
-// Canadian phone: accepts any 10-digit North American number, with or
-// without country code, spaces, dashes, parens, or dots.
-function isValidCanadianPhone(raw: string): boolean {
-  const digits = raw.replace(/[^\d]/g, '');
-  if (digits.length === 10) return /^[2-9]\d{9}$/.test(digits);
-  if (digits.length === 11) return digits.startsWith('1') && /^1[2-9]\d{9}$/.test(digits);
-  return false;
-}
 
 // ──────────────────────────────────────────────────────────────────────────
 // Page

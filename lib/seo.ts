@@ -23,8 +23,8 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/brandseinc"
   },
   rating: {
-    value: "5.0",
-    count: 26
+    value: "4.9",
+    count: 30
   },
   serviceAreas: [
     "Pointe-Claire", "Beaconsfield", "Kirkland", "Dorval", "Hudson",

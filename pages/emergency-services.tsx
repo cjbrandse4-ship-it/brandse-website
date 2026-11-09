@@ -11,6 +11,7 @@ import { buildServiceSchema } from '../lib/seo';
 import { pageDates } from '../data/pageDates';
 import LastUpdated from '../components/LastUpdated';
 import ServiceGuide from '../components/ServiceGuide';
+import QuickQuoteForm from '../components/QuickQuoteForm';
 
 export default function EmergencyServicesPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -155,7 +156,7 @@ export default function EmergencyServicesPage() {
               {isFr ? "Service d'Urgence 24/7" : '24/7 Emergency Service'}
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-              {isFr ? 'Intervention Rapide pour Arbres Dangereux' : 'Rapid Response for Hazardous Trees'}
+              {isFr ? "Abattage d'arbres d'urgence 24/7" : '24/7 Emergency Tree Removal'}
             </h1>
             <p className="text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
               {isFr
@@ -167,12 +168,14 @@ export default function EmergencyServicesPage() {
                 <Phone className="mr-2 h-6 w-6" />
                 {isFr ? "Appeler l'Urgence" : 'Call Emergency Now'}
               </a>
-              <Link href={getLocalizedPath('/contact')} className="inline-flex items-center justify-center bg-white/10 border-2 border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold transition-colors">
+              <a href="#quote" className="inline-flex items-center justify-center bg-white/10 border-2 border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold transition-colors">
                 {t.common.getFreeQuote}
-              </Link>
+              </a>
             </div>
           </div>
         </section>
+
+        <QuickQuoteForm service="emergency" source="emergency-services" />
 
         {/* Content */}
         <section className="py-20 bg-white">

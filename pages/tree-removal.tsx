@@ -11,6 +11,7 @@ import { buildServiceSchema } from '../lib/seo';
 import { pageDates } from '../data/pageDates';
 import LastUpdated from '../components/LastUpdated';
 import ServiceGuide from '../components/ServiceGuide';
+import QuickQuoteForm from '../components/QuickQuoteForm';
 
 export default function TreeRemovalPage() {
   const { lang, t, getLocalizedPath } = useLanguage();
@@ -157,15 +158,17 @@ export default function TreeRemovalPage() {
                 : 'Safe, efficient, and reliable solutions for hazardous, dead, or unwanted trees. We handle the most complex situations with state-of-the-art equipment.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={getLocalizedPath('/contact')} className="inline-flex items-center justify-center bg-[#2D5016] hover:bg-[#3a6b1e] text-white text-lg px-8 py-4 rounded-lg font-semibold transition-colors shadow-xl">
+              <a href="#quote" className="inline-flex items-center justify-center bg-[#2D5016] hover:bg-[#3a6b1e] text-white text-lg px-8 py-4 rounded-lg font-semibold transition-colors shadow-xl">
                 {t.common.getFreeQuote}
-              </Link>
+              </a>
               <a href="tel:4383655410" className="inline-flex items-center justify-center bg-white/10 border-2 border-white text-white hover:bg-white hover:text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold transition-colors">
                 <Phone className="mr-2 h-5 w-5" />(438) 365-5410
               </a>
             </div>
           </div>
         </section>
+
+        <QuickQuoteForm service="tree-removal" source="tree-removal" />
 
         {/* Content */}
         <section className="py-20 bg-white">

@@ -139,7 +139,7 @@ export const translations = {
       whyChoose: [
         { title: 'Licensed & CNESST Insured', desc: 'Full liability and workers compensation insurance for your complete protection and peace of mind.' },
         { title: 'Certified Arborists', desc: 'Our team includes ISA certified arborists with extensive knowledge of tree biology and care.' },
-        { title: '15+ Years Experience', desc: 'Over a decade of serving West Island Montreal with professional tree care services.' }
+        { title: '15+ Years Experience', desc: 'Serving West Island Montreal with professional tree care since 2020.' }
       ],
       certTitle: 'Certifications & Credentials',
       certDesc: 'Our commitment to excellence is backed by professional certifications',
@@ -389,7 +389,7 @@ export const translations = {
       whyChoose: [
         { title: 'Licencié et assuré CNESST', desc: 'Assurance responsabilité civile complète et assurance contre les accidents du travail pour votre protection totale.' },
         { title: 'Arboriculteurs certifiés', desc: 'Notre équipe comprend des arboriculteurs certifiés ISA ayant une connaissance approfondie de la biologie des arbres.' },
-        { title: '15+ ans d\'expérience', desc: 'Plus d\'une décennie au service de l\'Ouest de l\'Île de Montréal avec des services professionnels.' }
+        { title: '15+ ans d\'expérience', desc: 'Au service de l\'Ouest de l\'Île de Montréal avec des soins d\'arbres professionnels depuis 2020.' }
       ],
       certTitle: 'Certifications et accréditations',
       certDesc: 'Notre engagement envers l\'excellence est soutenu par des certifications professionnelles',
